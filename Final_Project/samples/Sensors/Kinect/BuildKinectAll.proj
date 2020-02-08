@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>        
+        <SamplesToBuild Include= "Sensors\Kinect\Kinect\Kinect.csproj"/>
+        <SamplesToBuild Include= "Sensors\Kinect\KinectUI\KinectUI.csproj"/>
+        <SamplesToBuild Include= "Misc\ObstacleAvoidance\ObstacleAvoidanceDrive.csproj"/>
+        <SamplesToBuild Include= "Simulation\ReferencePlatform2011\ReferencePlatform2011.csproj"/>
+        <SamplesToBuild Include= "Simulation\ReferencePlatform2011\ReferencePlatform2011IRArray\ReferencePlatform2011IRArray.csproj"/>
+        <SamplesToBuild Include= "Simulation\ReferencePlatform2011\ReferencePlatform2011SonarArray\ReferencePlatform2011SonarArray.csproj"/>
+        <SamplesToBuild Include= "Platforms\ReferencePlatform2011\RobotDashboard\RobotDashboard.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedKinect\SimulatedKinect.csproj"/> 
+    </ItemGroup>
+    <Target Name="Build">
+        <MSBuild Projects="@(SamplesToBuild)"
+            Properties="Configuration=Release" />
+    </Target>
+    <Target Name="CleanAll">
+        <MSBuild Projects="@(SamplesToBuild)"
+            Targets="Clean"
+            StopOnFirstFailure="false"
+            ContinueOnError="true" />
+    </Target>
+</Project>

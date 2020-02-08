@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <string>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\</string>
+  <string>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Dss.Runtime\v4.0_4.0.261.0__31bf3856ad364e35\</string>
+  <string>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Dss.Runtime.Proxy\v4.0_4.0.261.0__31bf3856ad364e35\</string>
+  <string>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Dss.Runtime.Transform\v4.0_4.0.261.0__31bf3856ad364e35\</string>
+</ArrayOfString>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfTextToSpeechUI.Y2008.M08</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Dss.Services.Samples.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.ErrorMessage">
+            <summary>
+              Looks up a localized string similar to An error occured!.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.NodeIsNotClosed">
+             <summary>
+               Looks up a localized string similar to Only this window will be closed.
+            
+            The application and its DSS node will remain running..
+             </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI">
+            <summary>
+            Interaction logic for TextToSpeechUI.xaml
+            </summary>
+            <summary>
+            TextToSpeechUI
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.VisemeProperty">
+            <summary>
+            VisemeProperty
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.#ctor">
+            <summary>
+            Creates a new instance of the user interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.#ctor(Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService)">
+            <summary>
+            Creates a new instance of the user interface
+            </summary>
+            <param name="service">the service that handles communication with the TTS service</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            This method is called when the "Say it!" button is pressed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.ShowFault(W3C.Soap.Fault)">
+            <summary>
+            Displays a fault message
+            </summary>
+            <param name="fault">fault</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI.Viseme">
+            <summary>
+            Gets or sets the most recent viseme that was received from the TTS service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService">
+            <summary>
+            WpfTextToSpeechUIService - Example of using WPF and TTS
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService._ttsPort">
+            <summary>
+            TextToSpeech (TTS) partner service.
+            <remarks>
+            If not configured this will connect to a local instance of the TTS service or create one. You can use
+            a manifest to connect the user interface to a remotely running TTS service.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService.VisemeNotifyHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotify)">
+            <summary>
+            Handle viseme notifications from the TTS service
+            </summary>
+            <param name="viseme">notification</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIService.SayTextFromUi(System.String)">
+            <summary>
+            Sends a say text request to the TTS service
+            </summary>
+            <param name="text">text to be spoken</param>
+            <remarks>
+            This method executes in the context of the WPF dispatcher.
+            Any long running computations or blocking calls would make the
+            user interface unresponsive. We simply hand over to DSS/CCR.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Contract">
+            <summary>
+            WpfTextToSpeechUI contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Contract.Identifier">
+            <summary>
+            DSS contract identifer for WpfTextToSpeechUI
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIState">
+            <summary>
+            WpfTextToSpeechUI state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIOperations">
+            <summary>
+            WpfTextToSpeechUI main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Get">
+            <summary>
+            WpfTextToSpeechUI get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Get.#ctor">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.WpfTextToSpeechUIState,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+    </members>
+</doc>

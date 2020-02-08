@@ -1,0 +1,1084 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iRobotServices.Y2007.M01</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService">
+            <summary>
+            Bumper Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService._state">
+            <summary>
+            Contact Sensor Array State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService._mainPort">
+            <summary>
+            Main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService._subMgrPort">
+            <summary>
+            The subscription manager which keeps track of subscriptions to our Roomba Bumper data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.GetHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.ReplaceHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.UpdateHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Update)">
+            <summary>
+            Update Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.SubscribeHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.BumperService.ReliableSubscribeHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Contract">
+            <summary>
+            Bumper Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier for the Bumper service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers">
+            <summary>
+            iRobot Sensors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.LeftBumper">
+            <summary>
+            Left Bumper Contact Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.RightBumper">
+            <summary>
+            Right Bumper Contact Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.Wall">
+            <summary>
+            Wall Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.VirtualWall">
+            <summary>
+            Virtual Wall Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.CliffLeft">
+            <summary>
+            Left Cliff Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.CliffFrontLeft">
+            <summary>
+            Front Left Cliff Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.CliffFrontRight">
+            <summary>
+            Right Front Cliff Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.CliffRight">
+            <summary>
+            Right Cliff Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.WheelDropLeft">
+            <summary>
+            Left Wheel Drop Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.WheelDropRight">
+            <summary>
+            Right Wheel Drop Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.RoombaBumpers.WheelDropRear">
+            <summary>
+            Rear Wheel Drop Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService">
+            <summary>
+            Implementation class for the IRobotScriptingEngine Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService._state">
+            <summary>
+            iRobot Scripting Engine state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.Start">
+            <summary>
+            Start the Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.ValidateState">
+            <summary>
+            Validate the initial state.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.GetHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddControlHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddControl)">
+            <summary>
+            AddControl Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddDriveHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDrive)">
+            <summary>
+            AddDrive Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddFullHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddFull)">
+            <summary>
+            AddFull Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddLedsHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddLeds)">
+            <summary>
+            AddLeds Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddPlaySongHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlaySong)">
+            <summary>
+            AddPlaySong Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddSafeHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSafe)">
+            <summary>
+            AddSafe Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddSensorsHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSensors)">
+            <summary>
+            AddSensors Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddStartHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStart)">
+            <summary>
+            AddStart Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddDemoHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDemo)">
+            <summary>
+            AddDemo Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddDriveDirectHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDriveDirect)">
+            <summary>
+            AddDriveDirect Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddPlayScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlayScript)">
+            <summary>
+            AddPlayScript Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddQueryListHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddQueryList)">
+            <summary>
+            AddQueryList Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddWaitAngleHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitAngle)">
+            <summary>
+            AddWaitAngle Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddWaitDistanceHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitDistance)">
+            <summary>
+            AddWaitDistance Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddWaitEventHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitEvent)">
+            <summary>
+            AddWaitEvent Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddWaitTimeHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitTime)">
+            <summary>
+            AddWaitTime Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.ClearCurrentScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ClearCurrentScript)">
+            <summary>
+            ClearCurrentScript Handler
+            </summary>
+            <param name="resetCommandList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.ClearCurrentScript">
+            <summary>
+            Clear the current script.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.SaveCurrentScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.SaveCurrentScript)">
+            <summary>
+            Save the current script
+            </summary>
+            <param name="saveCurrentScript"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.DeleteNamedScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.DeleteNamedScript)">
+            <summary>
+            Delete the named script
+            </summary>
+            <param name="deleteNamedScript"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.LoadCurrentScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.LoadCurrentScript)">
+            <summary>
+            Load the Named Script and make it the Current Script
+            </summary>
+            <param name="loadCurrentScript"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddCoverHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddCover)">
+            <summary>
+            AddCover Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddDefineSongHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDefineSong)">
+            <summary>
+            AddDefineSong Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddDigitalOutputsHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDigitalOutputs)">
+            <summary>
+            AddDigitalOutputs Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddForceSeekingDockHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddForceSeekingDock)">
+            <summary>
+            AddForceSeekingDock Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddPowerHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPower)">
+            <summary>
+            AddPower Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddPWMLowSideDriversHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPWMLowSideDrivers)">
+            <summary>
+            AddPWMLowSideDrivers Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddSendIRHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSendIR)">
+            <summary>
+            AddSendIR Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddShowScriptHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddShowScript)">
+            <summary>
+            AddShowScript Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddSpotHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSpot)">
+            <summary>
+            AddSpot Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddStreamHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStream)">
+            <summary>
+            AddStream Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddStreamPauseResumeHandler(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStreamPauseResume)">
+            <summary>
+            AddStreamPauseResume Handler
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineService.AddScriptCommand(Microsoft.Robotics.Services.IRobot.Roomba.RoombaCommand,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.DefaultInsertResponseType,W3C.Soap.Fault})">
+            <summary>
+            Add an iRobot command to our script.
+            </summary>
+            <param name="cmd"></param>
+            <param name="responsePort"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Contract">
+            <summary>
+            IRobotCreateScript Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineState">
+            <summary>
+            The IRobotCreateScript State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineState.CurrentScript">
+            <summary>
+            The Current Script
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineState.SavedScripts">
+            <summary>
+            Saved Scripts
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ClearScript">
+            <summary>
+            Clear the current script.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Script">
+            <summary>
+            Clear the entire command list
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Script.Name">
+            <summary>
+            The script name
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ScriptDefinition">
+            <summary>
+            Clear the entire command list
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ScriptDefinition.Name">
+            <summary>
+            The script name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ScriptDefinition.PacketData">
+            <summary>
+            Packet Data ready
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ScriptDefinition.Commands">
+            <summary>
+            The commands which compose this script
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ScriptDefinition.ExpectedScriptResponseBytes">
+            <summary>
+            Expected Script Response Bytes
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations">
+            <summary>
+            IRobotCreateScript Main Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.#ctor">
+            <summary>
+            Portset Definition
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.Post(System.Object)">
+            <summary>
+            Untyped Post
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit Operator for Port of DsspDefaultLookup
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit Operator for Port of DsspDefaultDrop
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Get}">
+            <summary>
+            Implicit Operator for Port of Get
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ClearCurrentScript}">
+            <summary>
+            Implicit Operator for Port of ClearCurrentScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.SaveCurrentScript}">
+            <summary>
+            Implicit Operator for Port of SaveCurrentScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.LoadCurrentScript}">
+            <summary>
+            Implicit Operator for Port of LoadCurrentScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.DeleteNamedScript}">
+            <summary>
+            Implicit Operator for Port of DeleteNamedScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStart}">
+            <summary>
+            Implicit Operator for Port of AddStart
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddControl}">
+            <summary>
+            Implicit Operator for Port of AddControl
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSafe}">
+            <summary>
+            Implicit Operator for Port of AddSafe
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddFull}">
+            <summary>
+            Implicit Operator for Port of AddFull
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDrive}">
+            <summary>
+            Implicit Operator for Port of AddDrive
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDriveDirect}">
+            <summary>
+            Implicit Operator for Port of AddDriveDirect
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlayScript}">
+            <summary>
+            Implicit Operator for Port of AddPlayScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitAngle}">
+            <summary>
+            Implicit Operator for Port of AddWaitAngle
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitDistance}">
+            <summary>
+            Implicit Operator for Port of AddWaitDistance
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitEvent}">
+            <summary>
+            Implicit Operator for Port of AddWaitEvent
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitTime}">
+            <summary>
+            Implicit Operator for Port of AddWaitTime
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSensors}">
+            <summary>
+            Implicit Operator for Port of AddSensors
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDemo}">
+            <summary>
+            Implicit Operator for Port of AddDemo
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddLeds}">
+            <summary>
+            Implicit Operator for Port of AddLeds
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlaySong}">
+            <summary>
+            Implicit Operator for Port of AddPlaySong
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddQueryList}">
+            <summary>
+            Implicit Operator for Port of AddQueryList
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddCover}">
+            <summary>
+            Implicit Operator for Port of AddCover
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDefineSong}">
+            <summary>
+            Implicit Operator for Port of AddDefineSong
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDigitalOutputs}">
+            <summary>
+            Implicit Operator for Port of AddDigitalOutputs
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddForceSeekingDock}">
+            <summary>
+            Implicit Operator for Port of AddForceSeekingDock
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPower}">
+            <summary>
+            Implicit Operator for Port of AddPower
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPWMLowSideDrivers}">
+            <summary>
+            Implicit Operator for Port of AddPWMLowSideDrivers
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSendIR}">
+            <summary>
+            Implicit Operator for Port of AddSendIR
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddShowScript}">
+            <summary>
+            Implicit Operator for Port of AddShowScript
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSpot}">
+            <summary>
+            Implicit Operator for Port of AddSpot
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStream}">
+            <summary>
+            Implicit Operator for Port of AddStream
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations.op_Implicit(Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.IRobotScriptingEngineOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStreamPauseResume}">
+            <summary>
+            Implicit Operator for Port of AddStreamPauseResume
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Get">
+            <summary>
+            IRobotCreateScript Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddControl">
+            <summary>
+            Add the Control Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDemo">
+            <summary>
+            Add the Demo Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDrive">
+            <summary>
+            Add the Drive Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDriveDirect">
+            <summary>
+            Add the DriveDirect Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddFull">
+            <summary>
+            Add the Full Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddLeds">
+            <summary>
+            Add the Leds Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlaySong">
+            <summary>
+            Add the PlaySong Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPlayScript">
+            <summary>
+            Add the PlayScript Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddQueryList">
+            <summary>
+            Add the QueryList Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSafe">
+            <summary>
+            Add the Safe Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSensors">
+            <summary>
+            Add the Sensors Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStart">
+            <summary>
+            Add the Start Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitAngle">
+            <summary>
+            Add the WaitAngle Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitDistance">
+            <summary>
+            Add the WaitDistance Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitEvent">
+            <summary>
+            Add the WaitEvent Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddWaitTime">
+            <summary>
+            Add the WaitTime Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddCover">
+            <summary>
+            Add the "Cover entire Room" Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDefineSong">
+            <summary>
+            Add the DefineSong Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddDigitalOutputs">
+            <summary>
+            Add the DigitalOutputs Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddForceSeekingDock">
+            <summary>
+            Add the ForceSeekingDock Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPower">
+            <summary>
+            Add the Power Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddPWMLowSideDrivers">
+            <summary>
+            Add the PWMLowSideDrivers Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSendIR">
+            <summary>
+            Add the SendIR Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddShowScript">
+            <summary>
+            Add the ShowScript Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddSpot">
+            <summary>
+            Add the Spot Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStream">
+            <summary>
+            Add the Stream Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.AddStreamPauseResume">
+            <summary>
+            Add the StreamPauseResume Command to the scripting engine.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.ClearCurrentScript">
+            <summary>
+            Clear the Current Script
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.DeleteNamedScript">
+            <summary>
+            Delete the Named Script
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.SaveCurrentScript">
+            <summary>
+            Save the Current Script
+            <remarks>If no name is specified, the current script name will be maintained.</remarks>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.LoadCurrentScript">
+            <summary>
+            Load the Named Script and make it the Current Script
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService">
+            <summary>
+            Roomba Drive Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService._mainPort">
+            <summary>
+            main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService._subMgrPort">
+            <summary>
+            The subscription manager which keeps track of subscriptions to our iRobot Drive data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.GetHandler(Microsoft.Robotics.Services.Drive.Proxy.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet
+            </summary>
+            <param name="httpGet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            HttpPost Handler
+            </summary>
+            <param name="httpPost"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.UpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.Update)">
+            <summary>
+            Update Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.SubscribeHandler(Microsoft.Robotics.Services.Drive.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.ReliableSubscribeHandler(Microsoft.Robotics.Services.Drive.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.EnableDriveHandler(Microsoft.Robotics.Services.Drive.Proxy.EnableDrive)">
+            <summary>
+            EnableDrive Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.SetDrivePowerHandler(Microsoft.Robotics.Services.Drive.Proxy.SetDrivePower)">
+            <summary>
+            SetDrivePower Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InternalDrivePowerHandler(Microsoft.Robotics.Services.Drive.Proxy.SetDrivePower)">
+            <summary>
+            Process the most recent Drive Power command
+            When complete, self activate for the next internal command
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.SetDriveSpeedHandler(Microsoft.Robotics.Services.Drive.Proxy.SetDriveSpeed)">
+            <summary>
+            SetDriveSpeed Handler (meters/second)
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.AllStopHandler(Microsoft.Robotics.Services.Drive.Proxy.AllStop)">
+            <summary>
+            AllStop Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.DriveDistanceHandler(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            DriveDistance Handler
+            </summary>
+            <param name="driveUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.RotateDegreesHandler(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            RotateDegrees Handler
+            </summary>
+            <param name="driveUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.EncoderResetHandler(Microsoft.Robotics.Services.Drive.Proxy.ResetEncoders)">
+            <summary>
+            Resets the encoder tick count to zero on both wheels.
+            Not implemented in this service.
+            </summary>
+            <param name="reset">Request message</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InitState">
+            <summary>
+            Initialize Roomba State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.DriveIRobot(System.Double,System.Double)">
+            <summary>
+            Drive the iRobot
+            </summary>
+            <param name="leftPower"></param>
+            <param name="rightPower"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.UpdateModeHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.UpdateMode)">
+            <summary>
+            Handle Update Mode Notifications
+            </summary>
+            <param name="updateMode"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.ReturnAllHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.UpdateAll)">
+            <summary>
+            Handle Return All Notifications
+            </summary>
+            <param name="notify"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.CreateAndPlayScript(System.Collections.Generic.List{Microsoft.Robotics.Services.IRobot.Roomba.RoombaCommand},Microsoft.Ccr.Core.IPortSet,System.Object)">
+            <summary>
+            Create and Play a Script
+            </summary>
+            <param name="cmdList">The list of scripted commands</param>
+            <param name="responsePort">The Response port</param>
+            <param name="successResponse">The Success Response</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InternalDriveDistanceHandler(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            Internal drive distance operation handler
+            </summary>
+            <param name="driveDistance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InternalRotateDegreesHandler(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            Internal rotate degrees handler
+            </summary>
+            <param name="rotateDegrees"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InternalDriveDistanceImpl(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            Internal DriveDistance Implementation
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.DriveService.InternalRotateDegreesImpl(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            Internal RotateDegrees Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Drive.Contract">
+            <summary>
+            RoombaDrive Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Drive.Contract.Identifier">
+            The Unique Contract Identifier for the RoombaDrive service
+        </member>
+    </members>
+</doc>

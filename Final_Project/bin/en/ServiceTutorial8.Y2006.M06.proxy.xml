@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial8.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:ServiceTutorial8.Proxy.GenericState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GenericState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial8.Proxy.GenericState.Clone">
+             <summary>
+            Clones GenericState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial8.Proxy.GenericState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GenericState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial8.Proxy.GenericState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GenericState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GenericState</returns>
+        </member>
+        <member name="M:ServiceTutorial8.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial8.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

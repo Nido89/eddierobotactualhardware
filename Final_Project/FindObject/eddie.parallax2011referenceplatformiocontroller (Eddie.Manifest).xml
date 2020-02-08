@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parallax2011ReferencePlatformIoControllerState xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:d="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html">
+  <LastStartTime>2012-02-18T11:05:51.6366274-08:00</LastStartTime>
+  <FWVersion>12</FWVersion>
+  <AccelerationRate>5</AccelerationRate>
+  <DefaultResponsePause>50</DefaultResponsePause>
+  <PinPollingInterval>0</PinPollingInterval>
+  <DriveState>
+    <TimeStamp xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+    <LeftWheel xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">
+      <WheelSpeed xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0</WheelSpeed>
+      <MotorState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+        <Name>Left Wheel</Name>
+        <HardwareIdentifier>0</HardwareIdentifier>
+        <CurrentPower>0</CurrentPower>
+        <PowerScalingFactor>1</PowerScalingFactor>
+        <ReversePolarity>false</ReversePolarity>
+        <Pose>
+          <Position xmlns="http://schemas.microsoft.com/robotics/2006/07/physicalmodel.html">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+          </Position>
+          <Orientation xmlns="http://schemas.microsoft.com/robotics/2006/07/physicalmodel.html">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <W>0</W>
+          </Orientation>
+        </Pose>
+      </MotorState>
+      <Radius xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0.0762</Radius>
+      <GearRatio xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0</GearRatio>
+      <EncoderState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+        <TicksSinceReset xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</TicksSinceReset>
+        <CurrentAngle xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</CurrentAngle>
+        <CurrentReading xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</CurrentReading>
+        <TicksPerRevolution xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">36</TicksPerRevolution>
+        <HardwareIdentifier xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</HardwareIdentifier>
+      </EncoderState>
+    </LeftWheel>
+    <RightWheel xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">
+      <WheelSpeed xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0</WheelSpeed>
+      <MotorState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+        <Name>Right Wheel</Name>
+        <HardwareIdentifier>1</HardwareIdentifier>
+        <CurrentPower>0</CurrentPower>
+        <PowerScalingFactor>1</PowerScalingFactor>
+        <ReversePolarity>false</ReversePolarity>
+        <Pose>
+          <Position xmlns="http://schemas.microsoft.com/robotics/2006/07/physicalmodel.html">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+          </Position>
+          <Orientation xmlns="http://schemas.microsoft.com/robotics/2006/07/physicalmodel.html">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <W>0</W>
+          </Orientation>
+        </Pose>
+      </MotorState>
+      <Radius xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0.0762</Radius>
+      <GearRatio xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0</GearRatio>
+      <EncoderState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+        <TicksSinceReset xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</TicksSinceReset>
+        <CurrentAngle xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</CurrentAngle>
+        <CurrentReading xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</CurrentReading>
+        <TicksPerRevolution xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">36</TicksPerRevolution>
+        <HardwareIdentifier xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">0</HardwareIdentifier>
+      </EncoderState>
+    </RightWheel>
+    <DistanceBetweenWheels xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">0.390525</DistanceBetweenWheels>
+    <IsEnabled xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">false</IsEnabled>
+    <DriveDistanceStage xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">InitialRequest</DriveDistanceStage>
+    <RotateDegreesStage xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">InitialRequest</RotateDegreesStage>
+    <DriveState xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">NotSpecified</DriveState>
+  </DriveState>
+  <GpioState>
+    <Pins xmlns="http://schemas.microsoft.com/robotics/2011/08/gpiopinarray.html">
+      <GpioPinState>
+        <Number>1</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>2</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>3</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>4</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>5</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>6</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>7</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>8</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>9</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+      <GpioPinState>
+        <Number>10</Number>
+        <PinState>High</PinState>
+        <PinDirection>In</PinDirection>
+      </GpioPinState>
+    </Pins>
+  </GpioState>
+  <AdcState>
+    <Pins xmlns="http://schemas.microsoft.com/robotics/2011/10/adcpinarray.html">
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>1</Number>
+        <Name>Pin_0</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>2</Number>
+        <Name>Pin_1</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>3</Number>
+        <Name>Pin_2</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>4</Number>
+        <Name>Pin_3</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>5</Number>
+        <Name>Pin_4</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>6</Number>
+        <Name>Pin_5</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>7</Number>
+        <Name>Pin_6</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>8</Number>
+        <Name>Pin_7</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>9</Number>
+        <Name>Pin_8</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>10</Number>
+        <Name>Pin_9</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>11</Number>
+        <Name>Pin_10</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>12</Number>
+        <Name>Pin_11</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>13</Number>
+        <Name>Pin_12</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>14</Number>
+        <Name>Pin_13</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>15</Number>
+        <Name>Pin_14</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>16</Number>
+        <Name>Pin_15</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>17</Number>
+        <Name>Pin_16</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+      <ADCPinState>
+        <TimeStamp>2012-02-18T11:05:51.6366274-08:00</TimeStamp>
+        <Number>18</Number>
+        <Name>Pin_17</Name>
+        <PinValue>0</PinValue>
+      </ADCPinState>
+    </Pins>
+  </AdcState>
+</Parallax2011ReferencePlatformIoControllerState>

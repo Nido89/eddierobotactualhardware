@@ -1,0 +1,671 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimplySim.Construction.Y2010.M02.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHeightFieldEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyHeightFieldEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHeightFieldEntity.Clone">
+             <summary>
+            Clones SimplyHeightFieldEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHeightFieldEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyHeightFieldEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHeightFieldEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyHeightFieldEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyHeightFieldEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySingleShapeEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplySingleShapeEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySingleShapeEntity.Clone">
+             <summary>
+            Clones SimplySingleShapeEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySingleShapeEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplySingleShapeEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySingleShapeEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplySingleShapeEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplySingleShapeEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyDomeEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplySkyDomeEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyDomeEntity.Clone">
+             <summary>
+            Clones SimplySkyDomeEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyDomeEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplySkyDomeEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyDomeEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplySkyDomeEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplySkyDomeEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SerializableTriangleMeshEnvironmentEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SerializableTriangleMeshEnvironmentEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SerializableTriangleMeshEnvironmentEntity.Clone">
+             <summary>
+            Clones SerializableTriangleMeshEnvironmentEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SerializableTriangleMeshEnvironmentEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SerializableTriangleMeshEnvironmentEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SerializableTriangleMeshEnvironmentEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SerializableTriangleMeshEnvironmentEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SerializableTriangleMeshEnvironmentEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriangleMeshEnvironmentEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyTriangleMeshEnvironmentEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriangleMeshEnvironmentEntity.Clone">
+             <summary>
+            Clones SimplyTriangleMeshEnvironmentEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriangleMeshEnvironmentEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyTriangleMeshEnvironmentEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriangleMeshEnvironmentEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyTriangleMeshEnvironmentEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyTriangleMeshEnvironmentEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyPhysicEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyPhysicEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyPhysicEntity.Clone">
+             <summary>
+            Clones SimplyPhysicEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyPhysicEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyPhysicEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyPhysicEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyPhysicEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyPhysicEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyConvexMeshEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyConvexMeshEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyConvexMeshEntity.Clone">
+             <summary>
+            Clones SimplyConvexMeshEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyConvexMeshEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyConvexMeshEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyConvexMeshEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyConvexMeshEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyConvexMeshEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyInvisibleEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyInvisibleEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyInvisibleEntity.Clone">
+             <summary>
+            Clones SimplyInvisibleEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyInvisibleEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyInvisibleEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyInvisibleEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyInvisibleEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyInvisibleEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriggerEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyTriggerEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriggerEntity.Clone">
+             <summary>
+            Clones SimplyTriggerEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriggerEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyTriggerEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTriggerEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyTriggerEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyTriggerEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyBillboard.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNoisyBillboard to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyBillboard.Clone">
+             <summary>
+            Clones SimplyNoisyBillboard
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyBillboard.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNoisyBillboard to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyBillboard.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNoisyBillboard
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNoisyBillboard</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyRTCamera.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNoisyRTCamera to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyRTCamera.Clone">
+             <summary>
+            Clones SimplyNoisyRTCamera
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyRTCamera.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNoisyRTCamera to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNoisyRTCamera.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNoisyRTCamera
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNoisyRTCamera</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyHUDEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDEntity.Clone">
+             <summary>
+            Clones SimplyHUDEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyHUDEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyHUDEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyHUDEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDTextEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyHUDTextEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDTextEntity.Clone">
+             <summary>
+            Clones SimplyHUDTextEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDTextEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyHUDTextEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyHUDTextEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyHUDTextEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyHUDTextEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLensFlareEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyLensFlareEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLensFlareEntity.Clone">
+             <summary>
+            Clones SimplyLensFlareEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLensFlareEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyLensFlareEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLensFlareEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyLensFlareEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyLensFlareEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLightSourceEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyLightSourceEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLightSourceEntity.Clone">
+             <summary>
+            Clones SimplyLightSourceEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLightSourceEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyLightSourceEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyLightSourceEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyLightSourceEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyLightSourceEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNormalMappedEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedEntity.Clone">
+             <summary>
+            Clones SimplyNormalMappedEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNormalMappedEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNormalMappedEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNormalMappedEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedTriangleMesh.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNormalMappedTriangleMesh to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedTriangleMesh.Clone">
+             <summary>
+            Clones SimplyNormalMappedTriangleMesh
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedTriangleMesh.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNormalMappedTriangleMesh to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedTriangleMesh.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNormalMappedTriangleMesh
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNormalMappedTriangleMesh</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedGoldenEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNormalMappedGoldenEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedGoldenEntity.Clone">
+             <summary>
+            Clones SimplyNormalMappedGoldenEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedGoldenEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNormalMappedGoldenEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedGoldenEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNormalMappedGoldenEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNormalMappedGoldenEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedPlane.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyNormalMappedPlane to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedPlane.Clone">
+             <summary>
+            Clones SimplyNormalMappedPlane
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedPlane.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyNormalMappedPlane to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyNormalMappedPlane.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyNormalMappedPlane
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyNormalMappedPlane</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplySkyEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyEntity.Clone">
+             <summary>
+            Clones SimplySkyEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplySkyEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplySkyEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplySkyEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplySkyEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.GlassEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GlassEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.GlassEntity.Clone">
+             <summary>
+            Clones GlassEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.GlassEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GlassEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.GlassEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GlassEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GlassEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTranslucentEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyTranslucentEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTranslucentEntity.Clone">
+             <summary>
+            Clones SimplyTranslucentEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTranslucentEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyTranslucentEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTranslucentEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyTranslucentEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyTranslucentEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.LavaHeightFieldEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current LavaHeightFieldEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.LavaHeightFieldEntity.Clone">
+             <summary>
+            Clones LavaHeightFieldEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.LavaHeightFieldEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current LavaHeightFieldEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.LavaHeightFieldEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes LavaHeightFieldEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized LavaHeightFieldEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyWaterEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyWaterEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyWaterEntity.Clone">
+             <summary>
+            Clones SimplyWaterEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyWaterEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyWaterEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyWaterEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyWaterEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyWaterEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.WaterHeightFieldEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WaterHeightFieldEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.WaterHeightFieldEntity.Clone">
+             <summary>
+            Clones WaterHeightFieldEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.WaterHeightFieldEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WaterHeightFieldEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.WaterHeightFieldEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WaterHeightFieldEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WaterHeightFieldEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTerrainEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimplyTerrainEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTerrainEntity.Clone">
+             <summary>
+            Clones SimplyTerrainEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTerrainEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimplyTerrainEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.SimplyTerrainEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimplyTerrainEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimplyTerrainEntity</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:SimplySim.Robotics.Construction.Entities.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

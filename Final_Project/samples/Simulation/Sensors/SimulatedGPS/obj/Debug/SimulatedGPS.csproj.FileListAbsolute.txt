@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SimulatedGPSSensor.Y2006.M05.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedGPSSensor.Y2006.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedGPSSensor.Y2006.M05.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedGPSSensor.Y2006.M05.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedGPS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedGPS\obj\Debug\User.SimulatedGPSSensor.Y2006.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedGPS\obj\Debug\User.SimulatedGPSSensor.Y2006.M05.pdb

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedIR.Y2006.M05.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Infrared.Proxy.Contract">
+            <summary>
+                       SimulatedIR Service
+                       Simulates an IR distance sensor.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Infrared.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Infrared.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

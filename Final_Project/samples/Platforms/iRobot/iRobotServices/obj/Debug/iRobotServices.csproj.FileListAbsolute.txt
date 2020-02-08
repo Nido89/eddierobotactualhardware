@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.iRobotServices.Y2007.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.iRobotServices.Y2007.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.iRobotServices.Y2007.M01.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.iRobotServices.Y2007.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobotServices\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobotServices\obj\Debug\User.iRobotServices.Y2007.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobotServices\obj\Debug\User.iRobotServices.Y2007.M01.pdb

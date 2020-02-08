@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedCompass.Y2008.M11</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass">
+            <summary>
+            SimPhotoCell Service
+            Simulates a compass sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.CheckForStateChange(System.DateTime)">
+            <summary>
+            Check the hardware value 5 times per second and send a notification if it has changed.
+            </summary>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.InsertEntityNotificationHandlerFirstTime(Microsoft.Robotics.Simulation.Engine.InsertSimulationEntity)">
+            <summary>
+            Called the first time the simulation engine tells us about our entity.  Activate
+            the other handlers and insert ourselves into the service directory.
+            </summary>
+            <param name="ins"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.GetHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.ReplaceHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.ReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Compass.SimulatedCompass.SubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Compass.Contract">
+            <summary>
+            SimulatedCompassService contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.Compass.Contract.Identifier">
+            <summary>
+            DSS contract identifer for SimulatedCompassService
+            </summary>
+        </member>
+    </members>
+</doc>

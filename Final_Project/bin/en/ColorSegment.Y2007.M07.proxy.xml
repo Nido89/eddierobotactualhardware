@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ColorSegment.Y2007.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSegmentState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ColorSegmentState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSegmentState.Clone">
+             <summary>
+            Clones ColorSegmentState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSegmentState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ColorSegmentState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSegmentState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ColorSegmentState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ColorSegmentState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Settings.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Settings to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Settings.Clone">
+             <summary>
+            Clones Settings
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Settings.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Settings to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Settings.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Settings
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Settings</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSet.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ColorSet to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSet.Clone">
+             <summary>
+            Clones ColorSet
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSet.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ColorSet to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorSet.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ColorSet
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ColorSet</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ColorDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorDefinition.Clone">
+             <summary>
+            Clones ColorDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ColorDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ColorDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ColorDefinition</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.SegmentedImage.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SegmentedImage to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.SegmentedImage.Clone">
+             <summary>
+            Clones SegmentedImage
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.SegmentedImage.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SegmentedImage to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.SegmentedImage.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SegmentedImage
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SegmentedImage</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FoundColorAreas.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current FoundColorAreas to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FoundColorAreas.Clone">
+             <summary>
+            Clones FoundColorAreas
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FoundColorAreas.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current FoundColorAreas to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FoundColorAreas.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes FoundColorAreas
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized FoundColorAreas</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorArea.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ColorArea to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorArea.Clone">
+             <summary>
+            Clones ColorArea
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorArea.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ColorArea to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ColorArea.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ColorArea
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ColorArea</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ProcessFrameRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ProcessFrameRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ProcessFrameRequest.Clone">
+             <summary>
+            Clones ProcessFrameRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ProcessFrameRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ProcessFrameRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.ProcessFrameRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ProcessFrameRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ProcessFrameRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FilteredSubscribeRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current FilteredSubscribeRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FilteredSubscribeRequest.Clone">
+             <summary>
+            Clones FilteredSubscribeRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FilteredSubscribeRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current FilteredSubscribeRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.FilteredSubscribeRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes FilteredSubscribeRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized FilteredSubscribeRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ColorSegment.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

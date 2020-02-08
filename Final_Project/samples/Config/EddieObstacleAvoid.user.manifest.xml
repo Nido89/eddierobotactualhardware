@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft Visual Programming Language.-->
+<Manifest xmlns:parallax2011referenceplatformiocontroller="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html" xmlns:user="http://schemas.microsoft.com/2011/11/markrobot.user.html" xmlns:serialcomservice="http://www.microsoft.com/2011/07/serialcomservice.html" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:this="urn:uuid:ed514771-3973-4f13-9489-a509d5730e2e" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+          <dssp:Service>eddie.parallax2011referenceplatformiocontroller.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>parallax2011referenceplatformiocontroller:SerialCOMService</dssp:Name>
+          <dssp:ServiceName>this:SerialCOMService</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Parallax2011ReferencePlatformIoController</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:Service>eddie.serialcomservice.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SerialCOMService</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.user.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.user.html</dssp:Contract>
+          <dssp:Service>eddie.markrobot.user.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>user:ReferencePlatformIOControllerDrive</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/adcpinarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>user:ReferencePlatformControllerADCPinArray</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:UserMarkRobot</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q1="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q1:Drive</dssp:Name>
+          <dssp:ServiceName>this:UserObstacleAvoidanceDrive</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/pantilt.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q2="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q2:Pan_x002F_Tilt</dssp:Name>
+          <dssp:ServiceName>this:UserKinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/depthcamsensor.user.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q3="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q3:DepthCam</dssp:Name>
+          <dssp:ServiceName>this:UserKinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/webcamsensor.user.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q4="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q4:WebCam</dssp:Name>
+          <dssp:ServiceName>this:UserKinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/infraredsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q5="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q5:IRSensorArray</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/09/sonarsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q6="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q6:SonarSensorArray</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/06/battery.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q7="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.user.html">q7:Battery</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:UserRobotDashboard</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/08/kinect.user.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/08/kinect.user.html</dssp:Contract>
+          <dssp:Service>userkinect.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:UserKinect</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html</dssp:Contract>
+          <dssp:Service>eddie.obstacleavoidancedrive.user.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q8="http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html">q8:Drive</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/depthcamsensor.user.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q9="http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html">q9:DepthCamera</dssp:Name>
+          <dssp:ServiceName>this:UserKinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/infraredsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q10="http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html">q10:InfraredSensorArray</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/09/sonarsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name xmlns:q11="http://schemas.microsoft.com/2011/07/obstacleavoidancedrive.user.html">q11:SonarSensorArray</dssp:Name>
+          <dssp:ServiceName>this:UserMarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:UserObstacleAvoidanceDrive</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

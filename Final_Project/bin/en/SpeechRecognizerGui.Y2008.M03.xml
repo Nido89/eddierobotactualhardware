@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpeechRecognizerGui.Y2008.M03</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui">
+            <summary>
+            SpeechRecognizerGui - Interface for configuring the Speech Recognizer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.MaxSpeechEventsToRetain">
+            <summary>
+            Maximum number of past speech events received from the speech recognizer that shall
+            be retained
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.MountServiceWriteBlockSize">
+            <summary>
+            Block size with which files are written to the mount service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui._state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui._mainPort">
+            <summary>
+            Main port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui._srPort">
+            <summary>
+            Speech recognizer partner ports
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui._httpUtilities">
+            <summary>
+            HTTP utilities port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.EventsQueryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQuery)">
+            <summary>
+            Events query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerStateQueryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerStateQuery)">
+            <summary>
+            SpeechRecognizer state query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Http query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.EventsHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Events HTTP query handler
+            </summary>
+            <param name="query"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerStateHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            SpeechRecognizerState HTTP query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Http post handler
+            </summary>
+            <param name="post">Request from the web page</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SaveDictionaryHttpPostHandler(System.Collections.Specialized.NameValueCollection,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            SaveDictionary HTTP post handler
+            </summary>
+            <param name="parameters">Dictionary entries</param>
+            <param name="post">Request from the web page</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.UploadSrgsFileHttpPostHandler(Microsoft.Dss.Core.DsspHttpUtilities.HttpPostRequestData,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            UploadSrgsFile HTTP post handler
+            </summary>
+            <param name="postData"></param>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.UseExistingSrgsFileHttpPostHandler(System.Collections.Specialized.NameValueCollection,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            UseExistingSrgsFile HTTP post handler
+            </summary>
+            <param name="parameters"></param>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerReplaceHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Replace)">
+            <summary>
+            Speech recognizer replace handler
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechDetectedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetected)">
+            <summary>
+            Speech detected handler
+            </summary>
+            <param name="detected"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognized)">
+            <summary>
+            Speech recognized handler
+            </summary>
+            <param name="recognized"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognitionRejectedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejected)">
+            <summary>
+            Speech recognition rejected handler
+            </summary>
+            <param name="rejected"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.WriteFileToMountService(System.String,System.IO.Stream,Microsoft.Ccr.Core.SuccessFailurePort)">
+            <summary>
+            Writes a binary file from a stream to the mount service
+            </summary>
+            <param name="filename">Filename and path where the file shall be store on the mount service</param>
+            <param name="fileStream">Stream containing the file data</param>
+            <param name="responsePort">File writer response port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGui.PostHttpPostParameterError(Microsoft.Dss.Core.DsspHttp.HttpPost,System.String)">
+            <summary>
+            Posts a HTTP error message with a supplied error message back to the client
+            </summary>
+            <param name="post"></param>
+            <param name="errorMsg"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGuiState">
+            <summary>
+            The SpeechRecognizerGui state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGuiState.SpeechRecognizerState">
+            <summary>
+            The speech recognizer's state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGuiState.SpeechEvents">
+            <summary>
+            Past speech events received from speech recognizer
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry">
+            <summary>
+            EventListEntry - A list of events that have occurred
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Detected notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Recognized notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Rejected notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Info on the recognized speech</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.Timestamp">
+            <summary>
+            Timestamp when the event occurred
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.SpeechDetected">
+            <summary>
+            Speech Detected Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.SpeechRecognized">
+            <summary>
+            Speech Recognized Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.RecognitionRejected">
+            <summary>
+            Speech Rejected Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventListEntry.SpeechInformation">
+            <summary>
+            Speech Information
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQueryRequestType">
+            <summary>
+            Events query request type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQueryRequestType.NewerThanTimestamp">
+            <summary>
+            Newer Than Timestamp
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerStateQueryRequestType">
+            <summary>
+            SpeechRecognizer state query request type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.HttpPostSuccess">
+            <summary>
+            HTTP POST success type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.HttpPostSuccess.Instance">
+            <summary>
+            Default response instance
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Contract">
+            <summary>
+            SpeechRecognizerGui Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGuiOperations">
+            <summary>
+            SpeechRecognizerGui Main Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Get">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Get.#ctor">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Dss.ServiceModel.Dssp.DsspResponsePort{Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerGuiState})">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQuery">
+            <summary>
+            Events query operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.SpeechRecognizerStateQuery">
+            <summary>
+            Speech recognizer state query operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQueryResponse">
+            <summary>
+            Events query response
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.EventsQueryResponse.Events">
+            <summary>
+            List of events
+            </summary>
+        </member>
+    </members>
+</doc>

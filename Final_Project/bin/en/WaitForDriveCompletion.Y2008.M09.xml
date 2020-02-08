@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WaitForDriveCompletion.Y2008.M09</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService">
+            <summary>
+            WaitForDriveCompletion Service - Waits for a Canceled or Completed notification from a Differential Drive
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService._state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService._mainPort">
+            <summary>
+            Main service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService._drivePort">
+            <summary>
+            DriveDifferentialTwoWheel partner
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.DriveDistanceUpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            DriveDistanceUpdateHandler - Posts a message on Canceled or Completed
+            </summary>
+            <param name="distance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.RotateDegreesUpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            RotateDegreesUpdateHandler - Posts a message on Canceled or Completed
+            </summary>
+            <param name="rotate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.DriveUpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.Update)">
+            <summary>
+            DriveUpdateHandler - Prevents Update messages from filling the queue
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.ReplaceHandler(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Replace)">
+            <summary>
+            Handles Replace messages
+            </summary>
+            <param name="replace">The Replace request</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.SubscribeHandler(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Subscribe)">
+            <summary>
+            Handles Subscribe messages
+            </summary>
+            <param name="subscribe">The Subscribe request</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionService.WaitHandler(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Wait)">
+            <summary>
+            Wait - Waits for a drive notification of Canceled or Completed
+            </summary>
+            <param name="wait">Wait request</param>
+            <returns>Iterator</returns>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Contract">
+            <summary>
+            WaitForDriveCompletion contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Contract.Identifier">
+            <summary>
+            DSS contract identifer for WaitForDriveCompletion
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionState">
+            <summary>
+            WaitForDriveCompletion state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionState.LastStatus">
+            <summary>
+            LastStatus - Status of the last operation (NOT IMPLEMENTED)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionOperations">
+            <summary>
+            WaitForDriveCompletion main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Get">
+            <summary>
+            WaitForDriveCompletion Get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Get.#ctor">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionState,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Replace">
+            <summary>
+            WaitForDriveCompletion Replace operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Replace.#ctor">
+            <summary>
+            Creates a new instance of Replace
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Replace.#ctor(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionState)">
+            <summary>
+            Creates a new instance of Replace
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Replace.#ctor(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitForDriveCompletionState,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.DefaultReplaceResponseType,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Replace
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Subscribe">
+            <summary>
+            WaitForDriveCompletion subscribe operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Subscribe.#ctor">
+            <summary>
+            Creates a new instance of Subscribe
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType)">
+            <summary>
+            Creates a new instance of Subscribe
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.SubscribeResponseType,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Subscribe
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Wait">
+            <summary>
+            WaitForDriveCompletion get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Wait.#ctor">
+            <summary>
+            Creates a new instance of Wait
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Wait.#ctor(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitRequestType)">
+            <summary>
+            Creates a new instance of Wait
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Wait.#ctor(Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitResponseType,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Wait
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitRequestType">
+            <summary>
+            WaitRequestType
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitRequestType.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitResponseType">
+            <summary>
+            WaitResponseType
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitResponseType.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitResponseType.#ctor(Microsoft.Robotics.Services.Drive.Proxy.DriveStage)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.WaitResponseType.DriveStatus">
+            <summary>
+            DriveStatus - Returns the DriveStage from the Differential Drive
+            </summary>
+        </member>
+    </members>
+</doc>

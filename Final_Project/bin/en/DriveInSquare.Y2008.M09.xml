@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DriveInSquare.Y2008.M09</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.DriveInSquareService">
+            <summary>
+            DriveInSquare - Drives a robot in a geometric pattern
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.DriveInSquareService._state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.DriveInSquareService._mainPort">
+            <summary>
+            Main service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.DriveInSquareService._drivePort">
+            <summary>
+            DriveDifferentialTwoWheel partner
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.DriveInSquareService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.DriveInSquareService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.DriveInSquareService.WaitForCompletion">
+            <summary>
+            WaitForCompletion - Helper function to wait on Completion Port
+            </summary>
+            <returns>Receiver suitable for waiting on</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.DriveInSquareService.DriveDistanceUpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            DriveDistanceUpdateHandler - Posts a message on Canceled or Complete
+            </summary>
+            <param name="distance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.DriveInSquareService.RotateDegreesUpdateHandler(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            RotateDegreesUpdateHandler - Posts a message on Canceled or Complete
+            </summary>
+            <param name="rotate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Contract">
+            <summary>
+            DriveInSquare contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Contract.Identifier">
+            <summary>
+            DSS contract identifer for DriveInSquare
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.DriveInSquareState">
+            <summary>
+            DriveInSquare state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.DriveInSquareOperations">
+            <summary>
+            DriveInSquare main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Get">
+            <summary>
+            DriveInSquare get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Get.#ctor">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Robotics.DriveInSquareState,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">the request message body</param>
+            <param name="responsePort">the response port for the request</param>
+        </member>
+    </members>
+</doc>

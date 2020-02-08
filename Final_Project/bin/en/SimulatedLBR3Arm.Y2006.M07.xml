@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedLBR3Arm.Y2006.M07</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService">
+            <summary>
+            Simulated KUKA LBR3 Robotic Arm Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.GetHandler(Microsoft.Robotics.Services.ArticulatedArm.Get)">
+            <summary>
+            Get LBR3 arm state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.SubscribeHandler(Microsoft.Robotics.Services.ArticulatedArm.Subscribe)">
+            <summary>
+            Subscribe to LBR3 arm service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.SetJointTargetPose(Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPose)">
+            <summary>
+            Informs the LBR3 arm to move to a desired pose
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.SetJointTargetVelocity(Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocity)">
+            <summary>
+            Informs the LBR3 arm to move to a desired velocity
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.LBR3Arm.SimulatedLBR3ArmService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            This is called when the LBR3 service is dropped
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.LBR3Arm.Contract">
+            <summary>
+            KUKA LBR3 Arm contract 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.LBR3Arm.Contract.Identifier">
+            <summary>
+            The unique contract identifier for the LBR3 Arm service
+            </summary>
+        </member>
+    </members>
+</doc>

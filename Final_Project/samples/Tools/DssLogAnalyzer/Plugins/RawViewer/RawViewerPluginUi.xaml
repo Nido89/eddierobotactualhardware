@@ -1,0 +1,22 @@
+﻿<Window x:Class="Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Width="Auto" Title="Raw Viewer Plugin">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <CheckBox Grid.Row="0" Name="_displayLongContent" Checked="_displayLongContent_Checked">Display long content</CheckBox>
+                    <Label Grid.Row="1" Height="{x:Static SystemParameters.BorderWidth}" />
+                    <TextBlock Grid.Row="2" Name="_rawXmlText" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                </Grid>
+                <Slider Name="_selectFrameSlider" VerticalAlignment="Bottom" ValueChanged="_selectFrameSlider_ValueChanged"  SmallChange="1"></Slider>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

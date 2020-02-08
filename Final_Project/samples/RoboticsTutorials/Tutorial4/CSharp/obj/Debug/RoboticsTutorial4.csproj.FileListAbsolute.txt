@@ -1,0 +1,9 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.RoboticsTutorial4.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.RoboticsTutorial4.Y2006.M06.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\Microsoft.Robotics.Services.RoboticsTutorial4.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\Microsoft.Robotics.Services.RoboticsTutorial4.RoboticsTutorial4Form.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\User.RoboticsTutorial4.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\RoboticsTutorials\Tutorial4\CSharp\obj\Debug\User.RoboticsTutorial4.Y2006.M06.pdb

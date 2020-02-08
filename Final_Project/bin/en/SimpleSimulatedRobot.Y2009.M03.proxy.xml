@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleSimulatedRobot.Y2009.M03.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimpleSimulatedRobotState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimpleSimulatedRobotState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimpleSimulatedRobotState.Clone">
+             <summary>
+            Clones SimpleSimulatedRobotState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimpleSimulatedRobotState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimpleSimulatedRobotState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimpleSimulatedRobotState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimpleSimulatedRobotState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimpleSimulatedRobotState</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBase.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MotorBase to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBase.Clone">
+             <summary>
+            Clones MotorBase
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBase.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MotorBase to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBase.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MotorBase
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MotorBase</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBaseWithDrive.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MotorBaseWithDrive to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBaseWithDrive.Clone">
+             <summary>
+            Clones MotorBaseWithDrive
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBaseWithDrive.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MotorBaseWithDrive to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.MotorBaseWithDrive.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MotorBaseWithDrive
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MotorBaseWithDrive</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimulatedWebcamEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedWebcamEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimulatedWebcamEntity.Clone">
+             <summary>
+            Clones SimulatedWebcamEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimulatedWebcamEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedWebcamEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.SimulatedWebcamEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedWebcamEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedWebcamEntity</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Robotics.SimpleSimulatedRobot.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

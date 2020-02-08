@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomSimulatedEntities.Y2009.M03.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.CustomSimulatedEntitiesState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CustomSimulatedEntitiesState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.CustomSimulatedEntitiesState.Clone">
+             <summary>
+            Clones CustomSimulatedEntitiesState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.CustomSimulatedEntitiesState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CustomSimulatedEntitiesState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.CustomSimulatedEntitiesState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CustomSimulatedEntitiesState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CustomSimulatedEntitiesState</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedLRFEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedLRFEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedLRFEntity.Clone">
+             <summary>
+            Clones SimulatedLRFEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedLRFEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedLRFEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedLRFEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedLRFEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedLRFEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedSonarEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedSonarEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedSonarEntity.Clone">
+             <summary>
+            Clones SimulatedSonarEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedSonarEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedSonarEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedSonarEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedSonarEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedSonarEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedIREntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedIREntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedIREntity.Clone">
+             <summary>
+            Clones SimulatedIREntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedIREntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedIREntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedIREntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedIREntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedIREntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedColorSensorEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedColorSensorEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedColorSensorEntity.Clone">
+             <summary>
+            Clones SimulatedColorSensorEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedColorSensorEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedColorSensorEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedColorSensorEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedColorSensorEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedColorSensorEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedBrightnessSensorEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedBrightnessSensorEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedBrightnessSensorEntity.Clone">
+             <summary>
+            Clones SimulatedBrightnessSensorEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedBrightnessSensorEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedBrightnessSensorEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedBrightnessSensorEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedBrightnessSensorEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedBrightnessSensorEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedCompassEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedCompassEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedCompassEntity.Clone">
+             <summary>
+            Clones SimulatedCompassEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedCompassEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedCompassEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedCompassEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedCompassEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedCompassEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedGPSEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulatedGPSEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedGPSEntity.Clone">
+             <summary>
+            Clones SimulatedGPSEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedGPSEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulatedGPSEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.SimulatedGPSEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulatedGPSEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulatedGPSEntity</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Robotics.CustomSimulatedEntities.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

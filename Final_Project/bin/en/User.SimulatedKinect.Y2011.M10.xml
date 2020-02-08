@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.SimulatedKinect.Y2011.M10</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect">
+            <summary>
+            The SimulatedKinect service
+            </summary>
+            <summary>
+            The SimulatedKinect service
+            </summary>
+            <summary>
+            Kinect camera service implementation
+            </summary>   
+            <summary>
+            The SimulatedKinect service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DepthCamAltPort">
+            <summary>
+            The DepthCamAltPort
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.MaxFramesPerSec">
+            <summary>
+            The maximum frames per second that Kinect can deliver
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.PanTiltPortFieldName">
+            <summary>
+            Pan tilt port name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DegreesPerRadian">
+            <summary>
+            Number of degrees per radian.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.WebCamAltPort">
+            <summary>
+            The WebCamAltPort
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.depthCamOps">
+            <summary>
+            The operations port for the depthcam
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.depthCamPartner">
+            <summary>
+            The depthCam partner
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.GetHandler(Microsoft.Robotics.Services.DepthCamSensor.Proxy.Get)">
+            <summary>
+            The DepthCam get handler.
+            </summary>
+            <param name="get">The get request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.ReplaceHandler(Microsoft.Robotics.Services.DepthCamSensor.Proxy.Replace)">
+            <summary>
+            The DepthCam replace handler.
+            </summary>
+            <param name="replace">The replace request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.SubscribeHandler(Microsoft.Robotics.Services.DepthCamSensor.Proxy.Subscribe)">
+            <summary>
+            The DepthCam subscribe handler.
+            </summary>
+            <param name="subscribe">The subscribe request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DepthCamHttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            The DepthCam http GET handler.
+            </summary>
+            <param name="get">The GET request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DepthCamHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            The DepthCam http QUERY handler.
+            </summary>
+            <param name="query">The QUERY request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.GetDepthCamState">
+            <summary>
+            Gets the state of the depth cam.
+            </summary>
+            <returns>The response port</returns>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.state">
+            <summary>
+            The kinect state state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.kinectOps">
+            <summary>
+            The kinect operations port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.kinectSubmgrPort">
+            <summary>
+            The kinect subscription manager
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.xslttransform">
+            <summary>
+            Depth Camera transform used to render the depth cam on a web page.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.kinectEntity">
+            <summary>
+            The kinect entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.pollInterval">
+            <summary>
+            The poll interval
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.pollPort">
+            <summary>
+            The poll Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.pendingFrameRequests">
+            <summary>
+            The pendingFrameResponses
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.frameNumber">
+            <summary>
+            The frameNumber
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect"/> class.
+            </summary>
+            <param name="creationPort">The creation port.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.GetHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.Get)">
+            <summary>
+            Gets the handler.
+            </summary>
+            <param name="get">The get request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.SubscribeHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.Subscribe)">
+            <summary>
+            Subscribe the kinect service.
+            </summary>
+            <param name="subscribe">The subscription request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.SetFrameRateHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SetFrameRate)">
+            <summary>
+            Sets the frame rate handler.
+            </summary>
+            <param name="update">The update.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Http GET handler.
+            </summary>
+            <param name="get">The get request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.KinectServiceHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Implements the Kinect HttpQuery Operation
+            </summary>
+            <param name="query">The HttpQuery Operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.KinectServiceUpdateTiltHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateTilt)">
+            <summary>
+            Implements the Kinect UpdateTilt Operation
+            </summary>
+            <param name="update">The UpdateTilt Operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.KinectServiceQueryPixelMappingHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorImage)">
+            <summary>
+            Implements the Kinect QueryPixelMapping
+            </summary>
+            <param name="query">The QueryPixelMapping</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.KinectServiceQueryRawFrameHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.QueryRawFrame)">
+            <summary>
+            Queries the service for the latest frame.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.KinectServiceHttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Implements the Kinect HttpPost Operation
+            </summary>
+            <param name="post">The HttpPost Operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.SkeletonToDepthImageHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImage)">
+            <summary>
+            Skeleton to depth image handler.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DepthImageToSkeletonHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeleton)">
+            <summary>
+            Depth image to skeleton handler.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.UpdateSkeletalSmoothingHandler(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateSkeletalSmoothing)">
+            <summary>
+            Skeletal smoothing handler.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.Start">
+            <summary>
+            Initialize the simulated kinect camera
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+            <returns>Standard ccr iterator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.LocateCameraEntity(Microsoft.Ccr.Core.PortSet{Microsoft.Robotics.Simulation.Engine.VisualEntity,W3C.Soap.Fault})">
+            <summary>
+            Locates the camera entity.
+            </summary>
+            <param name="responsePort">The response port.</param>
+            <returns>Standard ccr iterator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.DrainPendingRequests(System.DateTime)">
+            <summary>
+            Drains the pending requests.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <returns>Standard ccr iterator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.BuildRawVideoFrame(Microsoft.Kinect.ColorImageFormat,Microsoft.Robotics.Services.Sensors.Kinect.RawKinectFrames)">
+            <summary>
+            Builds the video based data.
+            </summary>
+            <param name="imageFormat">Image format.</param>
+            <param name="rawFrames">The raw frames.</param>
+            <returns>
+            Standard ccr iterator
+            </returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.BuildRawDepthFrame(Microsoft.Kinect.DepthImageFormat,Microsoft.Robotics.Services.Sensors.Kinect.RawKinectFrames)">
+            <summary>
+            Builds the raw depth frame.
+            </summary>
+            <param name="depthFormat">Depth image format.</param>
+            <param name="rawFrames">The raw frames.</param>
+            <returns>
+            Standard ccr iterator
+            </returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.ForwardSubscription(Microsoft.Ccr.Core.IPort,Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.SubscribeResponseType,W3C.Soap.Fault})">
+            <summary>
+            Forwards a subscription to a partner
+            </summary>
+            <param name="partner">The partner.</param>
+            <param name="request">The request.</param>
+            <param name="responsePort">The response port.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.RedirectHttpRequest(System.String,Microsoft.Ccr.Core.IPort,System.Net.HttpListenerContext,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.Core.DsspHttp.HttpResponseType,W3C.Soap.Fault})">
+            <summary>
+            Redirects the HTTP request from an alternate contract to a partner
+            </summary>
+            <param name="contract">The contract.</param>
+            <param name="partner">The partner.</param>
+            <param name="context">The context.</param>
+            <param name="responsePort">The response port.</param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.panTiltState">
+            <summary>
+            Gets or sets the state of the kinect pan/tilt mechanism.
+            Standard Kinect only supports tilt.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.panTiltPort">
+            <summary>
+            Web cam port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnGet(Microsoft.Robotics.Services.PanTilt.Proxy.Get)">
+            <summary>
+            Get handler for state
+            </summary>
+            <param name="get">Self explanatory</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnRotateSingle(Microsoft.Robotics.Services.PanTilt.Proxy.Rotate)">
+            <summary>
+            RotateSingleAxis handler
+            </summary>
+            <param name="rotate">Self explanatory</param>
+            <returns>A task</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnSubscribe(Microsoft.Robotics.Services.PanTilt.Proxy.Subscribe)">
+            <summary>
+            Updates the state of the pan tilt.
+            </summary>
+            <param name="subscribe">Self explanatory</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnReplace(Microsoft.Robotics.Services.PanTilt.Proxy.Replace)">
+            <summary>
+            Replace handler for state
+            </summary>
+            <param name="replace">Self explanatory</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnUpdateMotionBlocked(Microsoft.Robotics.Services.PanTilt.Proxy.UpdateMotionBlocked)">
+            <summary>
+            UpdateMotionBlocked handler.
+            </summary>
+            <param name="update">UpdateMotionBlocked operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnFindJointIndexPosition(Microsoft.Robotics.Services.PanTilt.Proxy.FindJointIndexPosition)">
+            <summary>
+            FindJointIndexPosition handler.
+            </summary>
+            <param name="update">FindJointIndexPosition operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnSetHoldingTorque(Microsoft.Robotics.Services.PanTilt.Proxy.SetHoldingTorque)">
+            <summary>
+            SetHoldingTorque handler.
+            </summary>
+            <param name="update">SetHoldingTorque operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnStartTrajectory(Microsoft.Robotics.Services.PanTilt.Proxy.StartTrajectory)">
+            <summary>
+            StartTrajectory handler.
+            </summary>
+            <param name="update">StartTrajectory operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.OnSetPDGains(Microsoft.Robotics.Services.PanTilt.Proxy.SetPDGains)">
+            <summary>
+            SetPDGains handler.
+            </summary>
+            <param name="update">SetPDGains operation</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.InitialPanTiltState">
+            <summary>
+            Initializes the state of the pan tilt.
+            </summary>
+            <returns>The state</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.UpdateTiltAngle(System.Double)">
+            <summary>
+            Update the tile angle.
+            </summary>
+            <param name="rotationAngleDegrees">Angle to update to.</param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.webCamOps">
+            <summary>
+            The operations port for the webcam
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.webCamPartner">
+            <summary>
+            The webcam partner
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.GetHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Get)">
+            <summary>
+            The WebCam get handler.
+            </summary>
+            <param name="get">The get request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.ReplaceHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Replace)">
+            <summary>
+            The WebCam replace handler.
+            </summary>
+            <param name="replace">The replace request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.SubscribeHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Subscribe)">
+            <summary>
+            The WebCam subscribe handler.
+            </summary>
+            <param name="subscribe">The subscribe request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.WebCamHttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            The WebCam http GET handler.
+            </summary>
+            <param name="get">The GET request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.SimulatedKinect.WebCamHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            The WebCam http QUERY handler.
+            </summary>
+            <param name="query">The QUERY request</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.AccelerationIgnored">
+            <summary>
+              Looks up a localized string similar to Target acceleration specified in rotation message ignored (not supported by this service)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.FrameRateOutOfRange">
+            <summary>
+              Looks up a localized string similar to Frame rate out of range.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.InvalidTiltAngle">
+            <summary>
+              Looks up a localized string similar to Invalid tilt angle.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.PanNotSupported">
+            <summary>
+              Looks up a localized string similar to This service does not support pan rotation..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.ResponseOnMotionCompletedNotSupported">
+            <summary>
+              Looks up a localized string similar to This service does not support delaying Rotation responses until the rotation has completed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Resources.SpeedIgnored">
+            <summary>
+              Looks up a localized string similar to Max speed specified in rotation message ignored (not supported by this service)..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Contract">
+            <summary>
+            The Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedKinect.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier for the SimulatedKinect service
+            </summary>
+        </member>
+    </members>
+</doc>

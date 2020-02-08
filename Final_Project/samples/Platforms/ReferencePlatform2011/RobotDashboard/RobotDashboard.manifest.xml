@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft Visual Programming Language.-->
+<Manifest xmlns:robotdashboard="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html" xmlns:simulateddifferentialdrive="http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html" xmlns:this="urn:uuid:2d4fce8b-4844-44ca-86b4-216694088ac5" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:simulation="http://schemas.microsoft.com/robotics/2006/04/simulation.html" xmlns:simulatedwebcam="http://schemas.microsoft.com/2006/09/simulatedwebcam.html" xmlns:simulationengine="http://schemas.microsoft.com/robotics/2006/04/simulationengine.html" xmlns:simulateddepthcam="http://schemas.microsoft.com/robotics/simulation/services/2011/01/simulateddepthcam.html" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Drive</dssp:Name>
+          <dssp:ServiceName>this:SimulatedGenericDifferentialDrive</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/kinect.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Kinect</dssp:Name>
+          <dssp:ServiceName>this:SimulatedDepthCamera</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/depthcamsensor.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:DepthCam</dssp:Name>
+          <dssp:ServiceName>this:SimulatedDepthCamera</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:dashboard</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Service>http://localhost/IRobotCreateBase</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>simulation:Entity</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SimulatedGenericDifferentialDrive</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/simulation/services/2011/01/simulateddepthcam.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Service>http://localhost/KinectCamera</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>simulation:Entity</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/webcamservice.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>simulateddepthcam:WebCam</dssp:Name>
+          <dssp:ServiceName>this:SimulatedWebcam</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SimulatedDepthCamera</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</dssp:Contract>
+          <dssp:Service>robotdashboard.simulationstate.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SimulationEngine</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2006/09/simulatedwebcam.html</dssp:Contract>
+      <dssp:PartnerList />
+      <Name>this:SimulatedWebcam</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

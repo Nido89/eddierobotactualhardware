@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedBrightnessSensor.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell">
+            <summary>
+            SimPhotoCell Service
+            Simulates a photocell brightness sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.CheckForStateChange(System.DateTime)">
+            <summary>
+            Check the hardware value 5 times per second and send a notification if it has changed.
+            </summary>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.InsertEntityNotificationHandlerFirstTime(Microsoft.Robotics.Simulation.Engine.InsertSimulationEntity)">
+            <summary>
+            Called the first time the simulation engine tells us about our entity.  Activate
+            the other handlers and insert ourselves into the service directory.
+            </summary>
+            <param name="ins"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.GetHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.ReplaceHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.ReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.SimulatedBrightnessCell.SubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.Contract">
+            <summary>
+            SimulatedBrightnessSensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.BrightnessSensor.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedPhotoCell service
+        </member>
+    </members>
+</doc>

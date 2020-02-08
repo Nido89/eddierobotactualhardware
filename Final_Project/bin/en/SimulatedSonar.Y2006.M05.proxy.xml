@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedSonar.Y2006.M05.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.SonarEntity">
+            <summary>
+                       Models a sonar sensor using physics raycasting to determine impact points
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.SonarEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SonarEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.SonarEntity.Clone">
+             <summary>
+            Clones SonarEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.SonarEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SonarEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.SonarEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SonarEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SonarEntity</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.Contract">
+            <summary>
+                       Provides access to a simulated Sonar contract
+                       using physics raycasting and the SonarEntity
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

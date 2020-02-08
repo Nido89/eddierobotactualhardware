@@ -1,0 +1,1421 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModelInterpreter.Y2006.M05.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InterpreterState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current InterpreterState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InterpreterState.Clone">
+             <summary>
+            Clones InterpreterState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InterpreterState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current InterpreterState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InterpreterState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes InterpreterState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized InterpreterState</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebuggerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DebuggerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebuggerState.Clone">
+             <summary>
+            Clones DebuggerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebuggerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DebuggerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebuggerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DebuggerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DebuggerState</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Breakpoint.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Breakpoint to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Breakpoint.Clone">
+             <summary>
+            Clones Breakpoint
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Breakpoint.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Breakpoint to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Breakpoint.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Breakpoint
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Breakpoint</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NodeDisplay.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current NodeDisplay to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NodeDisplay.Clone">
+             <summary>
+            Clones NodeDisplay
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NodeDisplay.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current NodeDisplay to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NodeDisplay.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes NodeDisplay
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized NodeDisplay</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PendingWorkItem.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PendingWorkItem to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PendingWorkItem.Clone">
+             <summary>
+            Clones PendingWorkItem
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PendingWorkItem.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PendingWorkItem to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PendingWorkItem.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PendingWorkItem
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PendingWorkItem</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataObject.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DataObject to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataObject.Clone">
+             <summary>
+            Clones DataObject
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataObject.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DataObject to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataObject.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DataObject
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DataObject</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunningInstance.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RunningInstance to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunningInstance.Clone">
+             <summary>
+            Clones RunningInstance
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunningInstance.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RunningInstance to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunningInstance.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RunningInstance
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RunningInstance</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Subscription.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Subscription to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Subscription.Clone">
+             <summary>
+            Clones Subscription
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Subscription.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Subscription to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Subscription.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Subscription
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Subscription</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySource.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current NotifySource to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySource.Clone">
+             <summary>
+            Clones NotifySource
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySource.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current NotifySource to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySource.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes NotifySource
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized NotifySource</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StepRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current StepRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StepRequest.Clone">
+             <summary>
+            Clones StepRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StepRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current StepRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StepRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes StepRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized StepRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RunRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunRequest.Clone">
+             <summary>
+            Clones RunRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RunRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RunRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RunRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RunRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BreakRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current BreakRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BreakRequest.Clone">
+             <summary>
+            Clones BreakRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BreakRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current BreakRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BreakRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes BreakRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized BreakRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SlowRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SlowRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SlowRequest.Clone">
+             <summary>
+            Clones SlowRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SlowRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SlowRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SlowRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SlowRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SlowRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebugWaitRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DebugWaitRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebugWaitRequest.Clone">
+             <summary>
+            Clones DebugWaitRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebugWaitRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DebugWaitRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DebugWaitRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DebugWaitRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DebugWaitRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChangeStateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ChangeStateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChangeStateRequest.Clone">
+             <summary>
+            Clones ChangeStateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChangeStateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ChangeStateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChangeStateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ChangeStateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ChangeStateRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetInstanceStateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetInstanceStateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetInstanceStateRequest.Clone">
+             <summary>
+            Clones GetInstanceStateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetInstanceStateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetInstanceStateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetInstanceStateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetInstanceStateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetInstanceStateRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetInstanceStateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetInstanceStateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetInstanceStateRequest.Clone">
+             <summary>
+            Clones SetInstanceStateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetInstanceStateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetInstanceStateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetInstanceStateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetInstanceStateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetInstanceStateRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InvokeHandlerRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current InvokeHandlerRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InvokeHandlerRequest.Clone">
+             <summary>
+            Clones InvokeHandlerRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InvokeHandlerRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current InvokeHandlerRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.InvokeHandlerRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes InvokeHandlerRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized InvokeHandlerRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ProgramDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ProgramDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ProgramDefinition.Clone">
+             <summary>
+            Clones ProgramDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ProgramDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ProgramDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ProgramDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ProgramDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ProgramDefinition</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ActivityDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityDefinition.Clone">
+             <summary>
+            Clones ActivityDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ActivityDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ActivityDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ActivityDefinition</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HandlerDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDefinition.Clone">
+             <summary>
+            Clones HandlerDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HandlerDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HandlerDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HandlerDefinition</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnit.Clone">
+             <summary>
+            Clones WorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ExpressionWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ExpressionWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ExpressionWorkUnit.Clone">
+             <summary>
+            Clones ExpressionWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ExpressionWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ExpressionWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ExpressionWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ExpressionWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ExpressionWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Op.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Op to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Op.Clone">
+             <summary>
+            Clones Op
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Op.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Op to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Op.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Op
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Op</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StringLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current StringLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StringLit.Clone">
+             <summary>
+            Clones StringLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StringLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current StringLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.StringLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes StringLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized StringLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ShortLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ShortLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ShortLit.Clone">
+             <summary>
+            Clones ShortLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ShortLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ShortLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ShortLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ShortLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ShortLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.IntLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current IntLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.IntLit.Clone">
+             <summary>
+            Clones IntLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.IntLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current IntLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.IntLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes IntLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized IntLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.LongLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current LongLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.LongLit.Clone">
+             <summary>
+            Clones LongLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.LongLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current LongLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.LongLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes LongLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized LongLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.FloatLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current FloatLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.FloatLit.Clone">
+             <summary>
+            Clones FloatLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.FloatLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current FloatLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.FloatLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes FloatLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized FloatLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DoubleLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DoubleLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DoubleLit.Clone">
+             <summary>
+            Clones DoubleLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DoubleLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DoubleLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DoubleLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DoubleLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DoubleLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DecimalLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DecimalLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DecimalLit.Clone">
+             <summary>
+            Clones DecimalLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DecimalLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DecimalLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DecimalLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DecimalLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DecimalLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ByteLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ByteLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ByteLit.Clone">
+             <summary>
+            Clones ByteLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ByteLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ByteLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ByteLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ByteLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ByteLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CharLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CharLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CharLit.Clone">
+             <summary>
+            Clones CharLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CharLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CharLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CharLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CharLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CharLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BoolLit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current BoolLit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BoolLit.Clone">
+             <summary>
+            Clones BoolLit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BoolLit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current BoolLit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.BoolLit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes BoolLit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized BoolLit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetStateWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetStateWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetStateWorkUnit.Clone">
+             <summary>
+            Clones SetStateWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetStateWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetStateWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SetStateWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetStateWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetStateWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetStateWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetStateWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetStateWorkUnit.Clone">
+             <summary>
+            Clones GetStateWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetStateWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetStateWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.GetStateWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetStateWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetStateWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.JoinWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current JoinWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.JoinWorkUnit.Clone">
+             <summary>
+            Clones JoinWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.JoinWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current JoinWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.JoinWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes JoinWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized JoinWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChoiceWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ChoiceWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChoiceWorkUnit.Clone">
+             <summary>
+            Clones ChoiceWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChoiceWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ChoiceWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ChoiceWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ChoiceWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ChoiceWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.MergeWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MergeWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.MergeWorkUnit.Clone">
+             <summary>
+            Clones MergeWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.MergeWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MergeWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.MergeWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MergeWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MergeWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RequestResponseWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RequestResponseWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RequestResponseWorkUnit.Clone">
+             <summary>
+            Clones RequestResponseWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RequestResponseWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RequestResponseWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.RequestResponseWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RequestResponseWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RequestResponseWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.TypeChoiceWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TypeChoiceWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.TypeChoiceWorkUnit.Clone">
+             <summary>
+            Clones TypeChoiceWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.TypeChoiceWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TypeChoiceWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.TypeChoiceWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TypeChoiceWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TypeChoiceWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataSourceUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DataSourceUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataSourceUnit.Clone">
+             <summary>
+            Clones DataSourceUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataSourceUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DataSourceUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.DataSourceUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DataSourceUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DataSourceUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ResponseOutputWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ResponseOutputWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ResponseOutputWorkUnit.Clone">
+             <summary>
+            Clones ResponseOutputWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ResponseOutputWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ResponseOutputWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ResponseOutputWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ResponseOutputWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ResponseOutputWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotificationOutputWorkUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current NotificationOutputWorkUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotificationOutputWorkUnit.Clone">
+             <summary>
+            Clones NotificationOutputWorkUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotificationOutputWorkUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current NotificationOutputWorkUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotificationOutputWorkUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes NotificationOutputWorkUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized NotificationOutputWorkUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySourceUnit.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current NotifySourceUnit to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySourceUnit.Clone">
+             <summary>
+            Clones NotifySourceUnit
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySourceUnit.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current NotifySourceUnit to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.NotifySourceUnit.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes NotifySourceUnit
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized NotifySourceUnit</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Route.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Route to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Route.Clone">
+             <summary>
+            Clones Route
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Route.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Route to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Route.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Route
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Route</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SinkAddress.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SinkAddress to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SinkAddress.Clone">
+             <summary>
+            Clones SinkAddress
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SinkAddress.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SinkAddress to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.SinkAddress.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SinkAddress
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SinkAddress</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PartnerDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerDefinition.Clone">
+             <summary>
+            Clones PartnerDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PartnerDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PartnerDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PartnerDefinition</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerInstance.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PartnerInstance to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerInstance.Clone">
+             <summary>
+            Clones PartnerInstance
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerInstance.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PartnerInstance to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerInstance.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PartnerInstance
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PartnerInstance</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerConfiguration.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PartnerConfiguration to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerConfiguration.Clone">
+             <summary>
+            Clones PartnerConfiguration
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerConfiguration.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PartnerConfiguration to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerConfiguration.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PartnerConfiguration
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PartnerConfiguration</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerReference.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PartnerReference to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerReference.Clone">
+             <summary>
+            Clones PartnerReference
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerReference.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PartnerReference to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.PartnerReference.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PartnerReference
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PartnerReference</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDiagram.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HandlerDiagram to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDiagram.Clone">
+             <summary>
+            Clones HandlerDiagram
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDiagram.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HandlerDiagram to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerDiagram.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HandlerDiagram
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HandlerDiagram</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityRepresentation.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ActivityRepresentation to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityRepresentation.Clone">
+             <summary>
+            Clones ActivityRepresentation
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityRepresentation.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ActivityRepresentation to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.ActivityRepresentation.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ActivityRepresentation
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ActivityRepresentation</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerRepresentation.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HandlerRepresentation to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerRepresentation.Clone">
+             <summary>
+            Clones HandlerRepresentation
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerRepresentation.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HandlerRepresentation to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.HandlerRepresentation.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HandlerRepresentation
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HandlerRepresentation</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CoreObject.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CoreObject to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CoreObject.Clone">
+             <summary>
+            Clones CoreObject
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CoreObject.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CoreObject to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.CoreObject.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CoreObject
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CoreObject</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnitLog.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WorkUnitLog to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnitLog.Clone">
+             <summary>
+            Clones WorkUnitLog
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnitLog.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WorkUnitLog to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.WorkUnitLog.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WorkUnitLog
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WorkUnitLog</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.ModelInterpreter.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

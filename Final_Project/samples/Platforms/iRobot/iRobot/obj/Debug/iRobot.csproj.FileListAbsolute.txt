@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.IRobot.Y2007.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.IRobot.Y2007.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.IRobot.Y2007.M01.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.IRobot.Y2007.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\Microsoft.Robotics.Services.IRobot.Roomba.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\User.IRobot.Y2007.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\iRobot\iRobot\obj\Debug\User.IRobot.Y2007.M01.pdb

@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpeechRecognizer.Y2008.M02.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState">
+            <summary>
+                       Speech recognizer service state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechRecognizerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.Clone">
+             <summary>
+            Clones SpeechRecognizerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechRecognizerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechRecognizerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechRecognizerState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.IgnoreAudioInput">
+            <summary>
+                       Whether input from the default audio input device shall be ignored
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.GrammarType">
+            <summary>
+                       Type of grammar the recognizer uses
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.DictionaryGrammar">
+            <summary>
+                       Dictionary entries of the dictionary-style grammar, where an entry's key is the
+                       recognizable phrase and its value is the phrase's meaning (semantic value).
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerState.SrgsFileLocation">
+            <summary>
+                       Location of SRGS (Speech Recognition Grammar Specification) file that shall be
+                       used as a grammar.
+                       </summary>
+            <remarks>
+                       SRGS grammars require Microsoft Windows Vista and will not work with Microsoft Windows XP/Server 2003.
+                       </remarks>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarRequest">
+            <summary>
+                       Insert grammar request
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest">
+            <summary>
+                       Modify grammar dictionary request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ModifyGrammarDictionaryRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest.Clone">
+             <summary>
+            Clones ModifyGrammarDictionaryRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ModifyGrammarDictionaryRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ModifyGrammarDictionaryRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ModifyGrammarDictionaryRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.ModifyGrammarDictionaryRequest.DictionaryGrammar">
+            <summary>
+                       Dictionary grammar that shall be used to modify the current dictionary
+                       grammar.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current InsertGrammarRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarRequest.Clone">
+             <summary>
+            Clones InsertGrammarRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current InsertGrammarRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes InsertGrammarRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized InsertGrammarRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarRequest">
+            <summary>
+                       Update grammar request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current UpdateGrammarRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarRequest.Clone">
+             <summary>
+            Clones UpdateGrammarRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current UpdateGrammarRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes UpdateGrammarRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized UpdateGrammarRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarRequest">
+            <summary>
+                       Update or insert grammar request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current UpsertGrammarRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarRequest.Clone">
+             <summary>
+            Clones UpsertGrammarRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current UpsertGrammarRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes UpsertGrammarRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized UpsertGrammarRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarRequest">
+            <summary>
+                       Delete grammar request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DeleteGrammarRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarRequest.Clone">
+             <summary>
+            Clones DeleteGrammarRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DeleteGrammarRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DeleteGrammarRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DeleteGrammarRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest">
+            <summary>
+                       Set SRGS grammar file request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetSrgsGrammarFileRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest.Clone">
+             <summary>
+            Clones SetSrgsGrammarFileRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetSrgsGrammarFileRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetSrgsGrammarFileRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetSrgsGrammarFileRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFileRequest.FileLocation">
+            <summary>
+                       Location of the SRGS grammar file inside the DSS node's /store directory
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest">
+            <summary>
+                       Emulate recognize request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EmulateRecognizeRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest.Clone">
+             <summary>
+            Clones EmulateRecognizeRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EmulateRecognizeRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EmulateRecognizeRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EmulateRecognizeRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognizeRequest.Text">
+            <summary>
+                       Text of speech that shall be emulated
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification">
+            <summary>
+                       Notification that speech has been detected by the speech recognition engine
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation">
+            <summary>
+                       Information on detected, recognized or rejected speech
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechInformation to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation.Clone">
+             <summary>
+            Clones SpeechInformation
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechInformation to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechInformation
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechInformation</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechInformation.StartTime">
+            <summary>
+                       Time at which speech started
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechDetectedNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification.Clone">
+             <summary>
+            Clones SpeechDetectedNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechDetectedNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetectedNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechDetectedNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechDetectedNotification</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification">
+            <summary>
+                       Notification that speech has been recognized by the speech recognition engine
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation">
+            <summary>
+                       Information on the audio input on which speech recognition was performed
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechAudioInformation to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation.Clone">
+             <summary>
+            Clones SpeechAudioInformation
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechAudioInformation to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechAudioInformation
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechAudioInformation</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechAudioInformation.DurationInTicks">
+            <summary>
+                       Duration of speech in ticks. Workaround using ticks because
+                       System.TimeSpan itself cannot be XML serialized
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechRecognizedNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Clone">
+             <summary>
+            Clones SpeechRecognizedNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechRecognizedNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechRecognizedNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechRecognizedNotification</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Confidence">
+            <summary>
+                       Measure of certainty for a recognized phrase returned by the recognition engine
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Text">
+            <summary>
+                       Normalized text obtained by the recognition engine from audio input
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizedNotification.Semantics">
+            <summary>
+                       Semantics of the normalized text obtained by the recognition engine from audio input
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification">
+            <summary>
+                       Notification that speech has been rejected by the speech recognition engine
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechRecognitionRejectedNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification.Clone">
+             <summary>
+            Clones SpeechRecognitionRejectedNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechRecognitionRejectedNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechRecognitionRejectedNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechRecognitionRejectedNotification</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Get">
+            <summary>
+                       SpeechRecognizer Get Operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.InsertGrammarEntry">
+            <summary>
+                       Insert operation which inserts all entries of the supplied grammar dictionary into the current
+                       dictionary. If certain entries exist already a fault is returned and the whole operation fails
+                       without the current dictionary being modified at all.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpdateGrammarEntry">
+            <summary>
+                       Update operation which updates entries that already exist in the current grammar dictionary with
+                       the entries of the supplied dictionary. If certain entries in the supplied dictionary do not
+                       exist in the current dictionary no fault is returned. Instead, only the existing entries are
+                       updated.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.UpsertGrammarEntry">
+            <summary>
+                       Update or insert operation which inserts entries from the supplied grammar directory into the
+                       current dictionary if they do not exist yet or updates entries that already exist with entries
+                       from the supplied directory.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.DeleteGrammarEntry">
+            <summary>
+                       Delete operation which deletes those entries from the current grammar directory whose keys are
+                       equal to one of the entries in the supplied directory. If a key from the supplied directory
+                       does not exist in the current directory no fault is returend. Instead, only the matching entries
+                       are deleted.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SetSrgsGrammarFile">
+            <summary>
+                       Set SRGS grammar file operation which sets the grammar type to SRGS file and tries to load the
+                       specified file, which has to reside inside the DSS node's /store directory. If loading the file
+                       fails a fault is returned and the speech recognizer falls back into the state it was before it
+                       processed this message.
+                       </summary>
+            <remarks>
+                       SRGS grammars require Microsoft Windows Vista and will not work with Microsoft Windows XP/Server 2003.
+                       </remarks>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.EmulateRecognize">
+            <summary>
+                       Speech recognize emulation operation that orders the recognition engine to emulate speech with a
+                       specific content and to act upon this speech. This is mostly used for testing and debugging.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Replace">
+            <summary>
+                       Replace service state operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Subscribe">
+            <summary>
+                       Subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechDetected">
+            <summary>
+                       Speech detected notificaiton
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognized">
+            <summary>
+                       Speech recognized notification
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognitionRejected">
+            <summary>
+                       Speech recognition rejected notification
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.SpeechRecognizerOperations">
+            <summary>
+                       SpeechRecognizer Main Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.GrammarType">
+            <summary>
+                       Grammar type used in the speech recognition service 
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.GrammarType.DictionaryStyle">
+            <summary>
+                       A simple text-to-meaning mapping type grammar
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.GrammarType.Srgs">
+            <summary>
+                       A W3C Speech Recognition Grammar Specification (SRGS) type
+                       grammar
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType">
+            <summary>
+                       Type of which the semantic value can be
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType.Bool">
+            <summary>
+                       Type bool
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType.Float">
+            <summary>
+                       Type float
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType.Int">
+            <summary>
+                       Type int
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType.String">
+            <summary>
+                       Type string
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.RecognizedValueType.Undefined">
+            <summary>
+                       Undefined (not set)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Contract">
+            <summary>
+                       SpeechRecognizer service - Recognizes spoken commands from a defined grammar
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

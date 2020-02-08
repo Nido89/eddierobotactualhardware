@@ -1,0 +1,1132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.CameraSensorUtilities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Contract">
+            <summary>
+            Image Feature Extractor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.Contract.Identifier">
+            <summary>
+            Contract identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities">
+            <summary>
+            Depth Camera Http Utilities 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.QueryType">
+            <summary>
+            Query type constant
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.QueryFormat">
+            <summary>
+            Query format constant
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Rgb">
+            <summary>
+            Query string used when constructing uri for Rgb stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Depth">
+            <summary>
+            Query string used when constructing uri for depth  stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.DepthPlusRgb">
+            <summary>
+            Query string used when constructing uri for depth 8 bits and RGB combined stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Png">
+            <summary>
+            Query string used when requesting png image format.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Raw">
+            <summary>
+            Query string used when requesting raw stream format.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.MediaPng">
+            <summary>
+            Png Media Type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.OctetStream">
+            <summary>
+            Octet Stream used for raw image format.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Ir">
+            <summary>
+            Query string used when constructing uri for ir stream
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.ShiftToByte">
+            <summary>
+            Shift that maps short depth values to byte
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.Dpi">
+            <summary>
+            Dots per inch
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.HttpGetHelper(Microsoft.Dss.Core.DsspHttp.HttpGet,Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.String)">
+            <summary>
+            Provides a standard implementation of HttpGet
+            </summary>
+            <param name="get">The HttpGet message to process</param>
+            <param name="state">The depthcam state</param>
+            <param name="transform">The embedded resource to use as the XSLT transform</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.HttpQueryHelper(Microsoft.Dss.Core.DsspHttp.HttpQuery,Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.String,Microsoft.Dss.Core.DsspHttpUtilities.DsspHttpUtilitiesPort,System.Int32,System.Int32)">
+            <summary>
+            Handles http query request.
+            </summary>
+            <param name="query">The http query</param>
+            <param name="state">Depth camera state</param>
+            <param name="transform"> XSLT transform to be applied</param>
+            <param name="utilitiesPort">Utitilise port to post the response</param>
+            <param name="visibleWidth">Width of a visible image - needed to blend depth and rgb pictures for a visual represenation</param>
+            <param name="visibleHeight">Height of a visible image - needed to blend depth and rgb pictures for a visual represenation</param>
+            <returns>CCR Task Chunk</returns>        
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.HttpQueryHelperBitmapSource(Microsoft.Dss.Core.DsspHttp.HttpQuery,Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.String,Microsoft.Dss.Core.DsspHttpUtilities.DsspHttpUtilitiesPort,System.Int32,System.Int32)">
+            <summary>
+            Handlers http query request for bitmap source format.
+            </summary>
+            <param name="query">The http query</param>
+            <param name="state">Depth camera state</param>
+            <param name="transform"> XSLT transform to be applied</param>
+            <param name="utilitiesPort">Utitilise port to post the response</param>        
+            <param name="visibleWidth">Width of a visible image - needed to blend depth and rgb pictures for a visual represenation</param>
+            <param name="visibleHeight">Height of a visible image - needed to blend depth and rgb pictures for a visual represenation</param>
+            <returns>CCR Task Chunk</returns>                
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.ResizeVisibleImageToMatchDepthImageDimentions(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            We want to scale down the visible image such that the visual and depth matrixes can be overlayed
+            </summary>
+            <param name="webCamData">Original web cam data</param>
+            <param name="visibleImageWidth">Width of the RGB image</param>
+            <param name="visibleImageHeight">Height of the RGB image</param>
+            <param name="depthImageWidth">Width of the depth data</param>
+            <param name="depthImageHeight">Height of the depth data</param>
+            <returns>Scaled down byte array of the webCamData</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.CreateBitmapSourceFromInfraredArray(System.Byte[],System.Int32,System.Int32,System.Windows.Media.PixelFormat)">
+            <summary>
+            Creates bitmap from short array
+            </summary>
+            <param name="visibleImage">Visible image buffer</param>
+            <param name="width">Width in pixels</param>
+            <param name="height">Height in pixels</param>
+            <param name="pixelFormat">Pixel format</param>
+            <returns>Bitmap source instance</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.CreateBitmapSourceFromShortPixelArray(System.Int16[],System.Int32,System.Int32,System.Int32,System.Int16[])">
+            <summary>
+            Creates a BitmapSource from an image
+            </summary>
+            <param name="inBuffer">Input buffer</param>
+            <param name="width">Width of the image</param>
+            <param name="height">Height of the image</param>
+            <param name="maxRangeInMM">Depth camera's max range in MM</param>
+            <param name="outBuffer">Output buffer</param>
+            <returns>A new instance of BitmapSource</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.HttpQueryHelperRawFormat(Microsoft.Dss.Core.DsspHttp.HttpQuery,Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.String,Microsoft.Dss.Core.DsspHttpUtilities.DsspHttpUtilitiesPort)">
+            <summary>
+            Handlers http query request for raw binary format.
+            </summary>
+            <param name="query">The http query</param>
+            <param name="state">Depth camera state</param>
+            <param name="transform"> XSLT transform to be applied</param>
+            <param name="utilitiesPort">Utitilise port to post the response</param>
+            <returns>CCR Task Chunk</returns>   
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.CreateBitmapSourceFromByteArray(System.Byte[],System.Int32,System.Int32,System.Windows.Media.PixelFormat)">
+            <summary>
+            Creates a bitmap source from the image data.
+            </summary>
+            <param name="byteArray">Byte Array containing image data.</param>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+            <param name="pf">Pixel Format of the image</param>
+            <returns>BitmapSource containing the image</returns>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.ConvertVisibleAndDepthToByteArray(System.Byte[],System.Int16[])">
+            <summary>
+            Packs Visible and Depth to 40 bit array with
+            first 2 bytes containing the depth as millimeters and last 3 bytes containing RGB
+            </summary>
+            <param name="visibleImage">Visible Image</param>
+            <param name="depthMap">Depth Map Values</param>
+            <returns>Depth plus rgb image data as byte array </returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorHttpUtilities.ConvertVisibleAndDepthTo32bppByteArray(System.Byte[],System.Int16[])">
+            <summary>
+            Packs Visible and Depth to 32 bpp ARGB image with Depth in A channel.
+            </summary>
+            <param name="visibleImage">Visible Image</param>
+            <param name="depthMap">Depth Map Values</param>
+            <returns>32 bpp image data as byte array </returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorImageMode">
+            <summary>
+            Depth Cam Sensor Image Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorImageMode.Rgb">
+            <summary>
+            Rgb image type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorImageMode.Infrared">
+            <summary>
+            Infrared image type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState">
+            <summary>
+            Depth camera state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.DepthImage">
+            <summary>
+            Gets or sets the Array of 2 dimensional depth map represented the same way as a grayscale image
+            Depth Map size field indicates width and height of depth map.
+            A value of DepthCamSensorReservedSampleValues.NoReading is reserved to indicate 
+                no reading or shadow in the sample
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.VisibleImage">
+            <summary>
+            Gets or sets the optional 24bpp visible spectrum image
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.depthImageSize">
+            <summary>
+            Depth image size
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.Pose">
+            <summary>
+            Gets or sets Depth camera orientation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.TimeStamp">
+            <summary>
+            Gets or sets Timestamp of this measurement
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.horizontalFieldOfView">
+            <summary>
+            Horizontal FOV
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.MaximumRange">
+            <summary>
+            Max range in meters
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.MinimumRange">
+            <summary>
+            Min range in meters
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.FurtherThanMaxDepthValue">
+            <summary>
+            The depth sample value returned by the depth cam when 
+            the range is further than the max value.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.NearerThanMinDepthValue">
+            <summary>
+            The depth sample value returned by the depth cam when
+            the range is nearer than the min value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.UpdateProjectionMatrix">
+            <summary>
+            Computes projection matrix from width, height, fov and caches inverse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.Clone">
+            <summary>
+            Shallow clone
+            </summary>
+            <returns>New instance</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy to another instance
+            </summary>
+            <param name="target">Instance to copy to</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Binary deserialize
+            </summary>
+            <param name="reader">Binary reader instance</param>
+            <returns>Deserialized instance</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Binary serialize
+            </summary>
+            <param name="writer">Binarywriter instance</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.DepthImageSize">
+            <summary>
+            Gets or sets the Dimensions of depth image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.ProjectionMatrix">
+            <summary>
+            Gets or sets projection matrix that converts real world view space points to camera space points
+            Not data member, a cached value based on other data member values
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.InverseProjectionMatrix">
+            <summary>
+            Gets or sets inverse of above projection matrix 
+            Not data member, a cached value based on other data member values
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.FieldOfView">
+            <summary>
+            Gets or sets the horizontal field of view, in radians
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState.ImageMode">
+            <summary>
+            Gets or sets depth cam visible image 
+            (intentionally not serialized, avoids breaking serialized state, 
+            not intended to be passed across a process boundary)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Get">
+            <summary>
+            Get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Replace">
+            <summary>
+            Replace operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Subscribe">
+            <summary>
+            Subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorOperationsPort">
+            <summary>
+            Depth camera operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Common.DepthImageUtilities">
+            <summary>
+            Depth image utilities
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Common.DepthImageUtilities.LargeGradientChangeInMm">
+            <summary>
+            Threshold defining what constitutes a large gradient change.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Common.DepthImageUtilities.ThreeMetersInMm">
+            <summary>
+            Three meters in mm.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.DownSampleDepthImage(Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.Int16[],System.Int32,System.Int32)">
+            <summary>
+            Downsamples depth image using the row and column scaling steps
+            </summary>
+            <param name="depthCamState">Depth cam sensor state with original image buffer</param>
+            <param name="targetDepthImage">Target buffer for downsampled image</param>
+            <param name="columnStep">Column sampling interval</param>
+            <param name="rowStep">Row sampling interval</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.DownSampleDepthImageInternal(Microsoft.Robotics.Services.DepthCamSensor.DepthCamSensorState,System.Int16[],System.Int32,System.Int32)">
+            <summary>
+            Downsamples depth image using the row and column scaling steps
+            </summary>
+            <param name="depthCamState">Depth cam sensor state with original image buffer</param>
+            <param name="targetDepthImage">Target buffer for downsampled image</param>
+            <param name="columnStep">Column sampling interval</param>
+            <param name="rowStep">Row sampling interval</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.CalculateHorizontalDepthProfileAsByteArray(System.Int16[],System.Drawing.Size,System.Int16,System.Int16,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Computes a horizontal depth profile as an array of byte values
+            </summary>
+            <param name="depthData">Depth image</param>
+            <param name="imageSize">Depth image size</param>
+            <param name="noReadingDepthValue">Value indicating depth is not valid</param>
+            <param name="floorDepthValue">Value to use to designate floor</param>
+            <param name="deadZoneColumnsFromImageRightEdge">Zero or more pixel columns on right edge of depth image to ignore</param>
+            <param name="minDepth">Minimum depth value in millimeters</param>
+            <param name="maxDepth">Maximum depth value in millimeters</param>
+            <param name="numberOfBins">Number of bins in the profile</param>
+            <returns>The horizontal profile as byte array</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.CalculateHorizontalDepthProfileAsShortArray(System.Int16[],System.Int32,System.Int32,System.Int16,System.Int16,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Computes a horizontal depth profile as an array of short values
+            </summary>
+            <param name="depthData">Depth image</param>
+            <param name="imageWidth">Depth image width</param>
+            <param name="imageHeight">Depth image height</param>
+            <param name="noReadingDepthValue">Value indicating depth is not valid</param>
+            <param name="floorDepthValue">Value to use to designate floor</param>
+            <param name="deadZoneColumnsFromImageRightEdge">Zero or more pixel columns on right edge of depth image to ignore</param>
+            <param name="minDepth">Minimum depth value in millimeters</param>
+            <param name="maxDepth">Maximum depth value in millimeters</param>
+            <param name="numberOfBins">Number of bins in the profile</param>
+            <returns>The horizontal profile as byte array</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.CalculateHorizontalProfile(System.Int16[],System.Drawing.Size,System.Int16,System.Int16,System.Int32,System.Int32,System.Int32,System.Int32,System.Int16[])">
+            <summary>
+            Computes a horizontal depth profile
+            </summary>
+            <param name="depthData">Depth image</param>
+            <param name="imageSize">Depth image size</param>
+            <param name="noReadingDepthValue">Value indicating depth is not valid</param>
+            <param name="floorDepthValue">Value to use to designate floor</param>
+            <param name="deadZoneAtRightOfImage">Zero or more pixel columns on right edge of depth image to ignore</param>
+            <param name="minDepth">Minimum depth value in millimeters</param>
+            <param name="maxDepth">Maximum depth value in millimeters</param>
+            <param name="numberOfBins">Number of bins in the profile</param>
+            <param name="depthHorizontalProfile">Dpeth profile as short array. If array is null, parameter is ignored</param>
+            <returns>The horizontal profile as byte array</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.CalculateWidthOfOpenSpaceFromDepthHorizontalProfile(System.Int32,System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix@,System.Int16[],System.Int32,System.Single,System.Int32,System.Single@,System.Int32@,System.Int32@,System.Double@,System.Double@,System.Int32@)">
+            <summary>
+            Calculate the width of the observed open space.
+            </summary>
+            <param name="depthImageWidth">Width of the depth image</param>
+            <param name="depthImageHeight">Height of the depth image</param>
+            <param name="pixelColumnCountAtRightImageEdgeToIgnore">Number of pixel columns to ignore on the right edge of the image</param>
+            <param name="invProjMatrix">Inverse projection matrix</param>
+            <param name="horizontalDepthProfileArr">Horizontal depth profile</param>
+            <param name="halfScreenHeight">Half screen height</param>
+            <param name="robotWidthSquared">Width of the robot squared</param>
+            <param name="distanceThresholdForOpenSpaceMillimeters">Depth value considered as obstacle threshold</param>
+            <param name="smallestProjectedWidthSquared">The smallest projected width squared</param>
+            <param name="bestStartIndex">The best starting index</param>
+            <param name="avgDepthOfOpening">Average depth of the opening</param>
+            <param name="nearObstacleIndex">Sum of indices at which an obstacle was observed</param>
+            <param name="nearObstacleCount">Number of pixels at which an obstacle was observed</param>
+            <param name="bestWidthInPixels">Width of the best open space in pixels</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.ComputeWidthSquaredInWorldSpace(System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Computes squared width in meters. Assumes indices are for horizontal profile that is same length as depth image width
+            </summary>
+            <param name="depthImageWidth">Width of the depth image</param>
+            <param name="depthImageHeight">Height of the depth image</param>
+            <param name="invProjMatrix">Inverse projection matrix</param>
+            <param name="halfScreenHeight">Half-height of the image</param>
+            <param name="startDepthOfOpening">Starting depth of the opening</param>
+            <param name="endDepthOfOpening">Ending depth of the opening</param>
+            <param name="startIndexOfOpening">Starting index of the opening</param>
+            <param name="endIndexOfOpening">Ending index of the opening</param>
+            <returns>Returns the computed width in meters</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.LargeNegativeGradientChange(System.Int16*,System.Int32,System.Int32)">
+            <summary>
+            Scan the depth profile for a large negative gradient.
+            </summary>
+            <param name="depthProfile">The horizontal depth profile</param>
+            <param name="i">The index to be checked</param>
+            <param name="depthProfileLength">Length of the depth profile</param>
+            <returns>True if a large negative gradient occurs at the given index</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.LargePositiveGradientChange(System.Int16*,System.Int32)">
+            <summary>
+            Scan the depth profile for a large positive gradient.
+            </summary>
+            <param name="depthProfile">The horizontal depth profile</param>
+            <param name="i">The index to be checked</param>
+            <returns>True if a large positive gradient occurs at the given index</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.FuseDepthProfileWithSonarReadings(System.Int32,System.Int16[],System.Int32,System.Double,System.Int32,System.Double)">
+            <summary>
+            Fuse the depth profile with the current sonar readings.
+            </summary>
+            <param name="minValidDepthCamReadingMillineters">Minimum depth value returned by depth camera</param>
+            <param name="horizontalDepthProfile">The horizontal depth profile.</param>
+            <param name="indexInProfileForLeftSonar">Index into depth profile to fuse left sonar value</param>
+            <param name="leftSonarReading">Left sonar reading in meters</param>
+            <param name="indexInProfileForRightSonar">Index into depth profile to fuse right sonar value</param>
+            <param name="rightSonarReading">Right sonar reading in meters</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.FuseDepthProfilesWithIrReadings(System.Double,System.Int32,System.Int16[],System.Double[],System.Double[],System.Int32,System.Int32)">
+            <summary>
+            Fuse the depth profile with the current IR readings
+            </summary>
+            <param name="depthCamFov">The depth camera field of view</param>
+            <param name="minValidDepthCamReadingMillineters">Minimum depth value returned by depth camera</param>
+            <param name="horizontalDepthProfile">The horizontal depth profile</param>
+            <param name="sensorOrientationsInRadians">Array of sensor orientation values on the XZ (horizontal) plane</param>
+            <param name="sensorReadingsInMeters">Array of sensor readings</param>
+            <param name="sensorIndex">Sensor array start index</param>
+            <param name="sensorCount">Sensor count</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.FuseDepthProfileWithSonarNearValues(System.Int32,System.Double,System.Double,System.Int32,System.Int32,System.Int16*,System.Int32)">
+            <summary>
+            Fuse the horizontal depth profile with near sonar values.
+            </summary>
+            <param name="minValidDepthCamReadingMillineters">Minimum depth value returned by depth camera</param>
+            <param name="leftSonarValue">The left sonar reading</param>
+            <param name="rightSonarValue">The right sonar reading</param>
+            <param name="leftMiddleIndex">Index corresponding to the center of FOV for the left sonar</param>
+            <param name="rightMiddleIndex">Index corresponding to the center of FOV for the right sonar</param>
+            <param name="horizontalDepthPointer">The horizontal depth profile</param>
+            <param name="horizontalProfileIndex">The horizontal index of interest</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.GenerateVectorField(System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Generates a vector field of view space vectors with 1M z value
+            </summary>
+            <param name="width">Width of the vector field to generate</param>
+            <param name="height">Height of the vector field to generate</param>
+            <param name="invProjMatrix">Inverse projection matrix</param>
+            <returns>A vector field of width times height elements</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.ComputeCeilingAndFloorDepthsInPixelSpace(Microsoft.Robotics.PhysicalModel.Pose,System.Single,System.Single,Microsoft.Robotics.PhysicalModel.Matrix,System.Int16[]@,System.Int16[]@,System.Int32,System.Int32,System.Single)">
+            <summary>
+            Computes the depth values of a given floor and ceiling in pixel space
+            </summary>
+            <param name="cameraPose">The camera pose</param>
+            <param name="floorThreshold">The floor threshold</param>
+            <param name="ceilingThreshold">The ceiling threshold</param>
+            <param name="invProjectionMatrix">The inverse projection matrix</param>
+            <param name="floorCeilingMinDepths">The computed min depths of floor and ceiling</param>
+            <param name="floorCeilingMaxDepths">The computed max depths of floor and ceiling</param>
+            <param name="width">Width of the image</param>
+            <param name="height">Height of the image</param>
+            <param name="depthRange">Depth range of the camera</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.ComputeCeilingAndFloorDepthsInPixelSpaceInternal(Microsoft.Robotics.PhysicalModel.Pose@,System.Single,System.Single,Microsoft.Robotics.PhysicalModel.Matrix@,System.Int16[],System.Int16[],System.Int32,System.Int32,System.Single)">
+            <summary>
+            Compute ceiling and floor depths in pixel space
+            </summary>
+            <param name="cameraPose">Pose of the camera</param>
+            <param name="floorThreshold">Threshold for the floor</param>
+            <param name="ceilingThreshold">Threshold for the ceiling</param>
+            <param name="invProjectionMatrix">Inverse camera projection matrix</param>
+            <param name="floorCeilingMinDepths">Floor and ceiling min depths</param>
+            <param name="floorCeilingMaxDepths">Floor and ceiling max depths</param>
+            <param name="width">Widht of the image</param>
+            <param name="height">Height of the image</param>
+            <param name="depthRange">Range of the depthcam</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.FilterOutGroundAndAboveRobotValues(System.Int32,System.Int32,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16[],System.Int16[],System.Int32@)">
+            <summary>
+            Converts any depth value to 254 (255 is reserved), if at that distance, its above a certain height or below ground plane.
+            This method is much faster than passing an inverse projection matrix
+            </summary>
+            <param name="floorHoleAsObstacleDepthThresholdAlongDepthAxisInMillimeters">
+            Threshold on depth beyond floor plane for treating a hole in the floor plane as an obstacle </param>
+            <param name="floorDetectionMarginInMillimeters">Margin for obstacles above floor</param>
+            <param name="preFilterNoReadingDepthValue">Depth value from sensor indicating no reading was available</param>
+            <param name="postFilterNoReadingDepthValue">Depth value to use, to replace sensor no reading values</param>
+            <param name="floorDepthValue">Depth value to use to indicate floor</param>
+            <param name="minValidDepthMillimeters">Mimimum valid depth in millimeters</param>
+            <param name="maxValidDepthMillimeters">Maximum valid depth in millimeters</param>
+            <param name="depthData">The depth image</param>
+            <param name="floorCeilingDepths">The cached floor and ceiling depths</param>
+            <param name="numberOfFloorPixels">Number of floor pixels detected</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Common.DepthImageUtilities.NoDepthReadingSpan">
+            <summary>
+            Class for tracking spans of no reading in the horizontal depth profile
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.DepthImageUtilities.NoDepthReadingSpan.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Construct a NoDepthReadingSpan
+            </summary>
+            <param name="startIndex">Index of the first no-reading</param>
+            <param name="count">Number of no readings in this span</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Common.DepthImageUtilities.NoDepthReadingSpan.StartIndex">
+            <summary>
+            Gets index of the first no-reading in the span
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Common.DepthImageUtilities.NoDepthReadingSpan.Count">
+            <summary>
+            Gets the number of no readings in this span
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Contract">
+            <summary>
+            Standard optimized webcam contract 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.Contract.Identifier">
+            <summary>
+            Unique contract identifier and xml namespace
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState">
+            <summary>
+            Service state for the Generic WebCamSensor contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.NullElement">
+            <summary>
+            Null element marker
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.DefinedElement">
+            <summary>
+            Defined element marker
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.width">
+            <summary>
+            Image width
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.height">
+            <summary>
+            Image height
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.horizontalFieldOfView">
+            <summary>
+            55 degrees is a relatively common horizontal fov, so we pick it as a default
+            It is also the horizontal fov of the cinema hd
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.UpdateProjectionMatrix">
+            <summary>
+            Computes projection matrix from width, height, fov and caches inverse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.UpdateWritableBitmap(System.Windows.Media.Imaging.WriteableBitmap)">
+            <summary>
+            Updates or creates a WriteableBitmap of the image
+            </summary>
+            <remarks>
+            If the supplied <paramref name="input"/> is null or a different size from the image, then
+            a new WriteableBitmap is returned.
+            </remarks>
+            <param name="input">A previously existing WriteableBitmap to update, or null to create a new writeable bitmap</param>
+            <returns>A writeable bitmap</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Clone">
+            <summary>
+            Clones this object
+            </summary>
+            <remarks>This is a shallow clone, avoiding copying the image data</remarks>
+            <returns>A shallow clone of this object</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copies this object to the target
+            </summary>
+            <remarks>This assumes that target is the correct type</remarks>
+            <param name="target">A WebCamSensorState instance to copy to</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize from a binary stream
+            </summary>
+            <param name="reader">The binary reader to deserialize from</param>
+            <returns>The deserialized instance (always the current object)</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize to a binary stream
+            </summary>
+            <param name="writer">The stream to serialize too</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.DeviceName">
+            <summary>
+            Gets or sets the device that generated the image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.TimeStamp">
+            <summary>
+            Gets or sets the Timestamp of the image. This should always be in UTC time
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Width">
+            <summary>
+            Gets or sets the width in pixels of the image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Height">
+            <summary>
+            Gets or sets the height in pixels of the image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Stride">
+            <summary>
+            Gets or sets the stride in bytes of the image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Data">
+            <summary>
+            Gets or sets the raw image data in PixelFormat.Bgr24
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.HorizontalFieldOfView">
+            <summary>
+            Gets or sets Horizontal field of view (in radians)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.ProjectionMatrix">
+            <summary>
+            Gets or sets projection matrix that converts real world view space points to camera space points
+            Not data member, a cached value based on other data member values
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.InverseProjectionMatrix">
+            <summary>
+            Gets or sets inverse of above projection matrix 
+            Not data member, a cached value based on other data member values
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.Bitmap">
+            <summary>
+            Gets a System.Drawing.Bitmap of the image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState.BitmapSource">
+            <summary>
+            Gets a BitmapSource of the image
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations">
+            <summary>
+            The ServicePort for the webcam generic contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Jpeg">
+            <summary>
+            Jpeq tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Gif">
+            <summary>
+            GIF tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Bmp">
+            <summary>
+            Bitmap tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Png">
+            <summary>
+            Png tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.MediaBmp">
+            <summary>
+            Http bmp media tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.MediaPng">
+            <summary>
+            Http PNG tag
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.QueryType">
+            <summary>
+            Query type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Get">
+            <summary>
+            Helper function for the Get message. 
+            This posts a get message to the port.
+            </summary>
+            <returns>The response port for the get message</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Replace(Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState)">
+            <summary>
+            Helper function for the Replace message.
+            This posts a replace message to the port.
+            </summary>
+            <param name="state">The state to replace.</param>
+            <returns>The response port for the replace message.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.Subscribe(Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations)">
+            <summary>
+            Helper function for the Subscribe message.
+            This posts a subscribe message to the port.
+            There is no overload for filtering by type, because the only notification type posted is Replace
+            </summary>
+            <param name="notifyPort">The port that notifications will be posted to.</param>
+            <returns>The response port for the subscribe message.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.HttpGetHelper(Microsoft.Dss.Core.DsspHttp.HttpGet,Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState,System.String)">
+            <summary>
+            Provides a standard implementation of HttpGet
+            </summary>
+            <param name="get">The HttpGet message to process</param>
+            <param name="state">The webcam state</param>
+            <param name="transform">The embedded resource to use as the XSLT transform</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.WebCamSensorOperations.HttpQueryHelper(Microsoft.Dss.Core.DsspHttp.HttpQuery,Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState,System.String,Microsoft.Dss.Core.DsspHttpUtilities.DsspHttpUtilitiesPort)">
+            <summary>
+            Provides a standard implementation of HttpQuery
+            </summary>
+            <param name="query">The HttpQuery message to process</param>
+            <param name="state">The webcam state</param>
+            <param name="transform">The embedded resource to use as the XSLT transform</param>
+            <param name="utilitiesPort">The utilities port used to stream images</param>
+            <returns>Stanard CCR iterator</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Get">
+            <summary>
+            Get message for the webcam generic contract 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Replace">
+            <summary>
+            Replace message for the webcam generic contract
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.Replace.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.Replace.#ctor(Microsoft.Robotics.Services.WebCamSensor.WebCamSensorState)">
+            <summary>
+            Initializing constructor
+            </summary>
+            <param name="body">The initial body value</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Subscribe">
+            <summary>
+            Subscribe message for the webcam generic contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.ArgumentOutOfRange">
+            <summary>
+              Looks up a localized string similar to Argument &apos;{0}&apos; is out of range..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.ArgumentOutOfRangeDetailed">
+            <summary>
+              Looks up a localized string similar to Argument &apos;{0}&apos; is out of range. Valid range is between {1} and {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.DataTooSmall">
+            <summary>
+              Looks up a localized string similar to Data buffer is not big enough to contain this bitmap as a 24bpp image..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.FarPlaneDistanceLessThanZero">
+            <summary>
+              Looks up a localized string similar to Far plane distance less than zero.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.FieldOfViewOutOfRange">
+            <summary>
+              Looks up a localized string similar to Field of view less than 0 or greater than 180 degrees..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.InvalidArgument">
+            <summary>
+              Looks up a localized string similar to Argument &apos;{0}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.InvalidCopyToArgument">
+            <summary>
+              Looks up a localized string similar to CopyTo({0}) requires type {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.InvalidKeyLength">
+            <summary>
+              Looks up a localized string similar to Invalid key length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.InvalidState">
+            <summary>
+              Looks up a localized string similar to The state of the service is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.MapGridResizeInfo">
+            <summary>
+              Looks up a localized string similar to MapGrid Resizing to w: {0} h: {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.NearPlaneDistanceLessThanZero">
+            <summary>
+              Looks up a localized string similar to Near plane distance less than zero..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.NearPlaneGreaterThanOrEqualToFarPlaneDistance">
+            <summary>
+              Looks up a localized string similar to Near plane greater than or equal to far plane distance..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.NullArgument">
+            <summary>
+              Looks up a localized string similar to Argument &apos;{0}&apos; is null..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.StrideDoesNotMatch">
+            <summary>
+              Looks up a localized string similar to Stride does not match that expected by Bitmap.LockBits, unable to create a bitmap..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Properties.Resources.UnexpectedProjectionMatrix">
+            <summary>
+              Looks up a localized string similar to Unexpected projection matrix.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Common.MathUtilities">
+            <summary>
+            Math utilities
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.QuaternionToEulerRadians(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Converts a quaternion to an Euler rotation vector in Radians
+            </summary>
+            <param name="quat">The quaternion to convert to euler angles</param>
+            <returns>Vector with x=roll, y=heading, z = pitch</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.EulerRadiansToQuaternion(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Converts an Euler rotation vector in Radians to a quaternion
+            </summary>
+            <param name="value">Vector with x=roll, y=heading, z = pitch</param>
+            <returns>A quaternion representing the euler angles in value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.CalculateDifferenceInHeadings(System.Double,System.Double)">
+            <summary>
+            Return the angle difference between the two headings using the first argument as the basis
+            (heading delta is relative to the first heading. Negative delta is counter clockwise from first heading
+            </summary>
+            <param name="firstHeading">The first angle in radians</param>
+            <param name="secondHeading">The second angle in radians</param>
+            <returns>The difference between the angles in degrees</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.CalculateMoments(System.Boolean,System.Int32[],System.Double,System.Int32,System.Double[]@)">
+            <summary>
+            Calcualte moments 
+            </summary>
+            <param name="normalizeRange">True to normalize moments, false otherwise</param>
+            <param name="projection">Array to compute moments from</param>
+            <param name="mean">Computed mean</param>
+            <param name="count">Number of values used to compute the mean</param>
+            <param name="moments">Returns the computed moments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.TransformVector(System.Nullable{Microsoft.Robotics.PhysicalModel.Pose},Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Transforms a vector using the supplied pose
+            </summary>
+            <param name="pose">Pose to apply</param>
+            <param name="position">Image feature position</param>
+            <returns>Vector after transformation is applied</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.DegreesToCartesianUnitVector(System.Double)">
+            <summary>
+            Converts degress to a two element cartesian unit vector (origin to point on a unit circle)
+            </summary>
+            <param name="compassReading">Compass reading to convert to a byte vector</param>
+            <returns>The byte vector representation of the compass</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.CartesianUnitVectorToHeadingDegrees(System.Byte[])">
+            <summary>
+            Converts two element cartesian unit vector (origin to point on a unit circle) to a heading in degrees
+            </summary>
+            <param name="vector">Byte vector representing cartesian 2D vector in [1,1]</param>
+            <returns>Compass reading in degrees</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertPixelSpaceToViewSpace(System.Int32,System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Int32)">
+            <summary>
+            Converts a coordinate in screen space to a vector in view space
+            </summary>
+            <param name="x">X-coordinate with range [0, screenWidth-1]</param>
+            <param name="y">Y-coordinate with range [0, screenHeight-1]</param>
+            <param name="z">Z-coordinate with range [0, maxValidDepth] in mm</param>
+            <param name="invProjectionMatrix">Inverse projection matrix of the camera</param>
+            <param name="screenWidth">Width of the camera view plane in pixel space</param>
+            <param name="screenHeight">Height of the camera view plane in pixel space</param>
+            <returns>Viewspace vector</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertPixelSpaceToViewSpaceInMillimeters(System.Int32,System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Int32)">
+            <summary>
+            Converts a coordinate in screen space to a vector in view space in millimeters
+            Allows for working in the native resolution of the depth camera with less conversions
+            </summary>
+            <param name="x">X-coordinate with range [0, screenWidth-1]</param>
+            <param name="y">Y-coordinate with range [0, screenHeight-1]</param>
+            <param name="z">Z-coordinate with range [0, maxValidDepth] in mm</param>
+            <param name="invProjectionMatrix">Inverse projection matrix of the camera</param>
+            <param name="screenWidth">Width of the camera view plane in pixel space</param>
+            <param name="screenHeight">Height of the camera view plane in pixel space</param>
+            <returns>Viewspace vector with depth in millimeters</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertViewSpaceToPixelSpaceWithDepthInMillimeters(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Int32)">
+            <summary>
+            Converts a vector in view space to a vector in screen space
+            </summary>
+            <param name="viewSpaceVector">View space vector</param>
+            <param name="projectionMatrix">Projection matrix</param>
+            <param name="screenWidth">Screen width</param>
+            <param name="screenHeight">Screen height</param>
+            <returns>Pixel space vector</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertViewSpaceToPixelSpace(Microsoft.Robotics.PhysicalModel.Vector3@,Microsoft.Robotics.PhysicalModel.Matrix@,System.Int32,System.Int32)">
+            <summary>
+            Converts a vector in view space to a vector in screen space
+            </summary>
+            <param name="viewSpaceVector">View space vector</param>
+            <param name="projectionMatrix">Projection matrix</param>
+            <param name="screenWidth">Screen width</param>
+            <param name="screenHeight">Screen height</param>
+            <returns>Pixel space vector</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ComputeTranslationScaleTransform(System.Int32,System.Int32,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Compute a ST matrix that maps [(0,0), (W,H)] => [(-1,-1), (1,1)]
+            </summary>
+            <param name="width">The width of the image</param>
+            <param name="height">The height of the image</param>
+            <param name="matrixAx">Element at first row, first column</param>
+            <param name="matrixBx">Element at first row, second column</param>
+            <param name="matrixAy">Element at second row, first column</param>
+            <param name="matrixBy">Element at second row, second column</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertPixelSpaceToViewSpace(System.Int32,System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Transform a vector from screen to view space using provided ST matrix to map to NDC space
+            </summary>
+            <param name="x">X coordinate in pixel space</param>
+            <param name="y">Y coordinate in pixel space</param>
+            <param name="depthValueInMillimeters">Depth value in pixel space</param>
+            <param name="invProjectionMatrix">Inverse of the camera's projection matrix</param>
+            <param name="width">Width of the image in pixels</param>
+            <param name="matrixAx">Element at first row, first column</param>
+            <param name="matrixBx">Element at first row, second column</param>
+            <param name="matrixAy">Element at second row, first column</param>
+            <param name="matrixBy">Element at second row, second column</param>
+            <returns>Position in 3d space with respect to the camera</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ConvertPixelSpaceToViewSpace(System.Int32,System.Int32,Microsoft.Robotics.PhysicalModel.Matrix,System.Int32,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Transform a vector from screen to view space using provided ST matrix to map to NDC space
+            </summary>
+            <param name="x">X coordinate in pixel space</param>
+            <param name="y">Y coordinate in pixel space</param>
+            <param name="invProjectionMatrix">Inverse of the camera's projection matrix</param>
+            <param name="width">Width of the image in pixels</param>
+            <param name="matrixAx">Element at first row, first column</param>
+            <param name="matrixBx">Element at first row, second column</param>
+            <param name="matrixAy">Element at second row, first column</param>
+            <param name="matrixBy">Element at second row, second column</param>
+            <returns>Position in 3d space with respect to the camera</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.TransformVector(Microsoft.Robotics.PhysicalModel.Vector4,Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Transforms vector
+            </summary>
+            <param name="vector">Vector to transform</param>
+            <param name="matrix">Matrix with affine transform</param>
+            <returns>Transformed vector</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.ComputeProjectionMatrix(System.Single,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Computes projection matrix
+            </summary>
+            <param name="horizontalFovInRadians">Camera horizonal field of view</param>
+            <param name="widthInPixels">Camera image width</param>
+            <param name="heightInPixels">Camera image height</param>
+            <param name="maximumRange">Depth maximum range</param>
+            <returns>Projection matrix</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.CreatePerspectiveFieldOfView(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Compute projection matrix given a field of view
+            </summary>
+            <param name="fieldOfView">Camera horizontal FOV</param>
+            <param name="aspectRatioWidthToHeight">Image aspect ratio</param>
+            <param name="nearPlaneDistance">Near plane distance</param>
+            <param name="farPlaneDistance">Far plane distance</param>
+            <returns>Perspective matrix</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.Invert(Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Matrix inversion from reflector since I don't feel like rewriting myself at the moment
+            </summary>
+            <param name="matrix">Matrix to invert</param>
+            <returns>Inverted matrix</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.MathUtilities.InvertInternal(Microsoft.Robotics.PhysicalModel.Matrix@)">
+            <summary>
+            Inverts matrix
+            </summary>
+            <param name="matrix">Matrix to invert</param>
+            <returns>Inverted matrix</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Common.Utilities">
+            <summary>
+            Helper functions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Common.Utilities.watch">
+            <summary>
+            Stop watch instance
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Common.Utilities.GetServiceAbsolutePath(System.String)">
+            <summary>
+            This helper method is used to extract the service absolute path from
+            the service identifier.
+            </summary>
+            <param name="serviceIdentifier">Service identifier</param>
+            <returns>Service absolute path</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Common.Utilities.ElapsedSecondsSinceStart">
+            <summary>
+            Gets elapsed time, in seconds since class initialization
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Common.Utilities.ElapsedMilliseconds">
+            <summary>
+            Gets elapsed time, in milliseconds since class initialization
+            </summary>
+        </member>
+    </members>
+</doc>

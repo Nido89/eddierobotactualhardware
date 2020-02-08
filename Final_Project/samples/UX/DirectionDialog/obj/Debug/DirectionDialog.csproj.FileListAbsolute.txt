@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.DirectionDialog.Y2006.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.DirectionDialog.Y2006.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.DirectionDialog.Y2006.M08.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.DirectionDialog.Y2006.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\User.DirectionDialog.Y2006.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\DirectionDialog\obj\Debug\User.DirectionDialog.Y2006.M08.pdb

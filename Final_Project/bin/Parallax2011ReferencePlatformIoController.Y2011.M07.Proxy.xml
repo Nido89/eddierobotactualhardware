@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Parallax2011ReferencePlatformIoController.Y2011.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Parallax2011ReferencePlatformIoControllerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Parallax2011ReferencePlatformIoControllerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Parallax2011ReferencePlatformIoControllerState.Clone">
+             <summary>
+            Clones Parallax2011ReferencePlatformIoControllerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Parallax2011ReferencePlatformIoControllerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Parallax2011ReferencePlatformIoControllerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Parallax2011ReferencePlatformIoControllerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Parallax2011ReferencePlatformIoControllerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Parallax2011ReferencePlatformIoControllerState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.ReferencePlatform.Parallax2011ReferencePlatformIoController.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

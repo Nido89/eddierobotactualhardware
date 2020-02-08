@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextToSpeech.Y2006.M05.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState">
+            <summary>
+                       Text To Speech Service state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TextToSpeechState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Clone">
+             <summary>
+            Clones TextToSpeechState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TextToSpeechState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TextToSpeechState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TextToSpeechState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Voices">
+            <summary>
+                       List of available voices
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Voice">
+            <summary>
+                       Voice which will say text
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Volume">
+            <summary>
+                       Volume of voice (range: 0 to 100)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.Rate">
+            <summary>
+                       Rate of speech (range: -10 to 10)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.SpeechText">
+            <summary>
+                       Text to be spoken
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.TextToSpeechState.DisableAudioOutput">
+            <summary>
+                       Output audio
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest">
+            <summary>
+                       Text to be spoken asynchronously
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SayTextRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest.Clone">
+             <summary>
+            Clones SayTextRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SayTextRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SayTextRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SayTextRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextRequest.SpeechText">
+            <summary>
+                       Text to be spoken
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest">
+            <summary>
+                       Text to be spoken synchronously
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SayTextSynchRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest.Clone">
+             <summary>
+            Clones SayTextSynchRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SayTextSynchRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SayTextSynchRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SayTextSynchRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynchRequest.SpeechText">
+            <summary>
+                       Text to be spoken
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest">
+            <summary>
+                       Request body for the SetRate message
+                       </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRate" />
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetRateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest.Clone">
+             <summary>
+            Clones SetRateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetRateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetRateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetRateRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRateRequest.Rate">
+            <summary>
+                       The new speech rate.
+                       This must be between -10 and 10.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest">
+            <summary>
+                       Request body for the SetVolume message
+                       </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolume" />
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetVolumeRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest.Clone">
+             <summary>
+            Clones SetVolumeRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetVolumeRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetVolumeRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetVolumeRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolumeRequest.Volume">
+            <summary>
+                       The new speech volume.
+                       This must be between 0 and 100.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest">
+            <summary>
+                       Request body for the SetVoice message
+                       </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice" />
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetVoiceRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest.Clone">
+             <summary>
+            Clones SetVoiceRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetVoiceRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetVoiceRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetVoiceRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoiceRequest.Voice">
+            <summary>
+                       The new voice to use.
+                       This must be in the list in the state.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification">
+            <summary>
+                       Viseme notification
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current VisemeNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.Clone">
+             <summary>
+            Clones VisemeNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current VisemeNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes VisemeNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized VisemeNotification</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.Viseme">
+            <summary>
+                       Current viseme
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.NextViseme">
+            <summary>
+                       Next viseme
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.AudioPositionInTicks">
+            <summary>
+                       Audio position in ticks. Workaround using ticks because
+                       System.TimeSpan itself cannot be XML serialized
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.DurationInTicks">
+            <summary>
+                       Duration in ticks. Workaround using ticks because
+                       System.TimeSpan itself cannot be XML serialized
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotification.Emphasis">
+            <summary>
+                       Emphasis
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Get">
+            <summary>
+                       returns the text to speech state
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Replace">
+            <summary>
+                       Changes all writable text to speech settings
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayText">
+            <summary>
+                       Will say the text asynchronously
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SayTextSynch">
+            <summary>
+                       Will say the text (blocking)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetRate">
+            <summary>
+                       Set the speech rate
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVolume">
+            <summary>
+                       Set the speech volume
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SetVoice">
+            <summary>
+                       Set the speech voice
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Subscribe">
+            <summary>
+                       Subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.VisemeNotify">
+            <summary>
+                       Viseme notificaiton
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.FaultNotify">
+            <summary>
+                       Fault notificaiton
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.SpeechTextOperations">
+            <summary>
+                       the text to speech operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Contract">
+            <summary>
+                       Main text to speech implementation class
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

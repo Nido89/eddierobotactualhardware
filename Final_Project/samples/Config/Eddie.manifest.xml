@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft Visual Programming Language.-->
+<Manifest xmlns:markrobot="http://schemas.microsoft.com/2011/11/markrobot.html" xmlns:robotdashboard="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html" xmlns:serialcomservice="http://www.microsoft.com/2011/07/serialcomservice.html" xmlns:kinect="http://schemas.microsoft.com/robotics/2011/08/kinect.html" xmlns:this="urn:uuid:4015bc35-dee4-446f-a685-9be3810067b6" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:parallax2011referenceplatformiocontroller="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Drive</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/depthcamsensor.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:DepthCam</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/webcamsensor.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:WebCam</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/infraredsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:IRSensorArray</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/09/sonarsensorarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:SonarSensorArray</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/pantilt.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Pan_x002F_Tilt</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/06/battery.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Battery</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:RobotDashboard</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+          <dssp:Service>eddie.parallax2011referenceplatformiocontroller.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>parallax2011referenceplatformiocontroller:SerialCOMService</dssp:Name>
+          <dssp:ServiceName>this:SerialCOMService</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Parallax2011ReferencePlatformIoController</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:Service>eddie.serialcomservice.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SerialCOMService</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/08/kinect.html</dssp:Contract>
+      <dssp:PartnerList />
+      <Name>this:Kinect</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.html</dssp:Contract>
+          <dssp:Service>Eddie.markrobot.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>markrobot:ReferencePlatformIOControllerDrive</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/adcpinarray.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>markrobot:ReferencePlatformControllerADCPinArray</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:MarkRobot</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

@@ -1,0 +1,2968 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulationCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.PathManager">
+            <summary>
+            Contains methods for resolving media files references
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PathManager.GetMediaFileRootDirectory">
+            <summary>
+            Returns the preferred root directory for media files.  Media files are not
+            required to be under this directory but it is recommended.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PathManager.GetRelativeMediaFilePath(System.String)">
+            <summary>
+            If the specified fullPath is in or under the directory returned by 
+            GetMediaFileRootDirectory(), this method returns a path to the file
+            relative to the root directory.  Otherwise, it returns the passed filename.
+            </summary>
+            <param name="fullPath"></param>
+            <returns>A path to the passed filename relative to GetMediaFileRootDirectory()</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PathManager.GetFullPathForMediaFile(System.String)">
+            <summary>
+            Returns a fully qualified path to a media file using the TryGetFullPathForMediaFile method.
+            It throws an exception if the file is not found.
+            </summary>
+            <param name="fileName">Filename we're searching for</param>
+            <returns>Full path to the file</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PathManager.TryGetFullPathForMediaFile(System.String,System.String@)">
+            <summary>
+            Returns true if the fileName can be fully qualified and it represents an actual file.  The
+            following steps are used to fully qualify the filename:
+            1.  If the filename is null or empty, it cannot be qualified.
+            2.  If the filename already contains a fully qualified path under LayoutPaths.RootDir, it is returned as-is.
+            3.  If the filename is relative to the GetMediaFileRootDirectory() then return that fully qualified path.
+            4.  If the filename is relative to any previously successful root directory, then return that fully qualified path.
+            This method does not throw an exception if the file cannot be found.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.OpenFileNameEditor">
+            <summary>
+            This class implements a generic open filename UITypeEditor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.OpenFileNameEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns the edit style for this UITypeEditor.  In this case it is always Modal.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.OpenFileNameEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Presents an open file dialog and returns the selected filename.
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.DDSOpenFileNameEditor">
+            <summary>
+            This class implements an open filename UITypeEditor customized for DDS files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.DDSOpenFileNameEditor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.TextureOpenFileNameEditor">
+            <summary>
+            This class implements an open filename UITypeEditor customized for DDS, JPG, and BMP files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TextureOpenFileNameEditor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MeshOpenFileNameEditor">
+            <summary>
+            This class implements an open filename UITypeEditor customized for OBJ files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.MeshOpenFileNameEditor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.FXOpenFileNameEditor">
+            <summary>
+            This class implements an open filename UITypeEditor customized for FX files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.FXOpenFileNameEditor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.EntityStateEditor">
+            <summary>
+            Used by the simulation editor to edit entity state fields
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.EntityStateEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns the edit style
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.EntityStateEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Edits the value in the property grid 
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.EntityStateTypeConverter">
+            <summary>
+            Used by the simulation editor to convert entity types to strings
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.EntityStateTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Indicates whether this type converter can perform the conversion
+            </summary>
+            <param name="context"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.EntityStateTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the entity from a string
+            </summary>
+            <param name="context"></param>
+            <param name="info"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.EntityStateTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts a string to an entity
+            </summary>
+            <param name="context"></param>
+            <param name="info"></param>
+            <param name="value"></param>
+            <param name="destType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.UIMath">
+            <summary>
+            A class to handle conversions for the Simulator Editor User Interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.UIMath.Hundredths(System.Double)">
+            <summary>
+            Rounds a number to the nearest hundredth
+            </summary>
+            <param name="raw"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.UIMath.QuaternionToEuler(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Converts a quaternion to an Euler rotation vector
+            </summary>
+            <param name="quat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.UIMath.EulerToQuaternion(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Converts an Euler rotation vector to a quaternion
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.FlagsUITypeEditor">
+            <summary>
+            Provides UI to edit bitwise flags classes in the property grid
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.FlagsUITypeEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns the edit style for this UITypeEditor.  In this case it is always DropDown
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.FlagsUITypeEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            Presents a dropdown dialog box
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.FlagsUITypeEditor.IsDropDownResizable">
+            <summary>
+            This property always returns true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ExpandableObjectListConverter">
+            <summary>
+            Expands a list out in a property grid with a [+] so that all the children become sub items.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ExpandableObjectListConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="value"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ExpandableObjectListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Contract">
+            <summary>
+            Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Contract.Identifier">
+            <summary>
+            Contract identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode">
+            <summary>
+            When two materials come in contact the physics engine needs a way to combine the
+            two sets of coefficients. Other than trial and error, there is no sure way to choose
+            this combination mode, for each pair of shapes/materials
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode.Unspecified">
+            <summary>
+            Default, physics engine will use defau;t
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode.Min">
+            <summary>
+            Use smallest set of values
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode.Multiply">
+            <summary>
+            Combine by multiplying together
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode.Average">
+            <summary>
+            Combine by averaging
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.CoefficientsCombineMode.Max">
+            <summary>
+            Use largest set of values
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MaterialProperties">
+            <summary>
+            Describes the material covering a physical shape. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.Name">
+            <summary>
+            Name for material. Named materials can be cached and re-used
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.Restitution">
+            <summary>
+            Restitution coefficient. Smaller values, less bounce.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.DynamicFriction">
+            <summary>
+            Dynamic friction coefficient. Must be less than 1.0 and static friction;
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.StaticFriction">
+            <summary>
+            Static friction coefficient. Must be larger than dynamic friction. It can be larger than 1.0
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.MaterialIndex">
+            <summary>
+            Identifier for material. If supplied on creation, physics engine will look up material and re-use instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialProperties.Advanced">
+            <summary>
+            Advanced optional properties
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.MaterialProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.MaterialProperties.#ctor(System.String,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="restitution"></param>
+            <param name="dynamicFriction"></param>
+            <param name="staticFriction"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties">
+            <summary>
+            Advanced physical properties for material
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.AnisotropicStaticFriction">
+            <summary>
+            Static friction coefficient along a particular axis of motion
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.AnisotropicDynamicFriction">
+            <summary>
+            Dynamic friction coefficient along a particular axis of motion
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.AnisotropyDirection">
+            <summary>
+            Body axis where anisotropic friction applies. 
+            <remarks>If the body has a motion component along this axis, the anisotropic coefficients will be used</remarks>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.Spring">
+            <summary>
+            Material spring properties. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.RestitutionCombineMode">
+            <summary>
+            When two shapes collide this mode instructs the physics engine on how to combine the
+            restitution coefficients
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.FrictionCombineMode">
+            <summary>
+            When two shapes collide this mode instructs the physics engine on how to combine the
+            friction coefficients
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialAdvancedProperties.Optical">
+            <summary>
+            Array of values that specify material properties related to optical or other forms of radiation        
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MaterialOpticalProperties">
+            <summary>
+            Optical and radiation related material properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialOpticalProperties.WaveLength">
+            <summary>
+            Wavelength that these properties apply to
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialOpticalProperties.DiffuseReflectance">
+            <summary>
+            Reflectance ratio independent of the observer's angle of view.The ratio is between that of reflected power vs incident power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialOpticalProperties.SpecularReflectance">
+            <summary>
+            Reflectance ratio dependent of the observer's angle of view.The ratio is between that of reflected power vs incident power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MaterialOpticalProperties.Transmittance">
+            <summary>
+            Fraction of incident light that passes through material
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers">
+            <summary>
+            Entity simulation behaviors
+            </summary>
+            <remarks>Use these modifiers override physics simulation of an entity</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.Dynamic">
+            <summary>
+            Default behavior, physics fully models the entity and the entity interacts with the environment
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.Kinematic">
+            <summary>
+            Entity is modelled as an object of infinite mass, not subject to simulated effects, that can not be affected by other objects. It must be moved explicitly.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.IgnoreGravity">
+            <summary>
+            Entity is impervious to gravity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.DisableRotationX">
+            <summary>
+            Entity can not rotate around its X axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.DisableRotationY">
+            <summary>
+            Entity can not rotate around its Y axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.DisableRotationZ">
+            <summary>
+            Entity can not rotate around its Z axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.DisableCollisions">
+            <summary>
+            Entity does not collide with other entities
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntitySimulationModifiers.LockCenterOfMass">
+            <summary>
+            Disable altering center of mass when computing inertia tensor.
+            Locks center of mass to what it was initially specified to be.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MassDensity">
+            <summary>
+            Mass and density for entities and shapes. 
+            </summary>
+            <remarks>
+            If mass and density are both zero, the entity will be considered static. 
+            It cannot be moved and it will have infinite mass
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.Mass">
+            <summary>
+            Mass in SI units for the shape. If density is specified, dont set Mass, it will be calculated
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.InertiaTensor">
+            <summary>
+            Diagonal mass space inertia tensor in bodies mass frame. Physics will compute if all zeroes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.CenterOfMass">
+            <summary>
+            Optional override for the center of mass. It specifies offset and orientation (from the default),
+            in the local coordinate frame of the entity. If not set, physics will 
+            calculate the center of mass from the shape descriptions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.Density">
+            <summary>
+            Optional density (SI units) of the shape. Density should not be specified
+            if mass is specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.LinearDamping">
+            <summary>
+            Linear damping applied to body
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.AngularDamping">
+            <summary>
+            Anglular damping applied to body
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MassDensity.MassLocalPose">
+            <summary>
+            MassLocalPose is simply a transformation applied to the diagonal inertia to move 
+            it away from its default pose (centered on the origin with no rotation).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Shapes">
+            <summary>
+            Shape identifiers
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.Box">
+            <summary>
+            Box
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.Sphere">
+            <summary>
+            Sphere
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.Capsule">
+            <summary>
+            Capsule
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.Wheel">
+            <summary>
+            Vehicle wheel with embedded drive, suspension and tire friction models
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.TriangleMesh">
+            <summary>
+            Triangle mesh shape generated from supplied vertex and index buffers
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.ConvexMesh">
+            <summary>
+            Convex shape generated from supplied vertex and index buffers of a triangle mesh that is convex
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Shapes.HeightField">
+            <summary>
+            Height field shape generated from array of height samples
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ShapeProperties">
+            <summary>
+            Common shape properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Name">
+            <summary>
+            Entity scope name. Must be unique within an entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.ShapeId">
+            <summary>
+            Shape identifier.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.AvailableShapeIds">
+            <summary>
+            Shape identifiers that are available to choose from
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Dimensions">
+            <summary>
+            Bounding box dimensions. Box orientation:
+            Width is parallel to the X axis 
+            height parallel to Y axis
+            Depth towards positive Z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Radius">
+            <summary>
+            Optional radius of bounding sphere. If dimensions are set, radius can be 0
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Material">
+            <summary>
+            Material description for the shape
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.MassDensity">
+            <summary>
+            Mass/weight properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Advanced">
+            <summary>
+            Advanced properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.LocalPose">
+            <summary>
+            Local position and orientation within the entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.TextureFileName">
+            <summary>
+            Texture file name, to be used when creating meash from physics
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.DiffuseColor">
+            <summary>
+            Diffuse color value, to be used when creating mesh from physics
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.EnableContactNotifications">
+            <summary>
+            Enables contact notifications for this shape
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeProperties.ContactFilter">
+            <summary>
+            Detailed filtering on contact notifications
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeProperties.#ctor(Microsoft.Robotics.Simulation.Physics.Shapes)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="shapeIdentification"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeProperties.#ctor(System.String,Microsoft.Robotics.Simulation.Physics.Shapes)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="shapeIdentification"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeProperties.#ctor(Microsoft.Robotics.Simulation.Physics.ShapeProperties)">
+            <summary>
+            Internal initialization constructor
+            </summary>
+            <param name="shapeProperties"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeProperties.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties">
+            <summary>
+            Advanced physical properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.MassSpaceIntertiaTensor">
+            <summary>
+            Inertia tensor for calculating angular momentum
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.LinearDamping">
+            <summary>
+            Linear damping applied to this entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.AngularDamping">
+            <summary>
+            Angular damping applied to this entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.PhysicsCalculationPasses">
+            <summary>
+            Number of calculation passes to perform, per frame. Higher is more time consuming but
+            with more accurate results
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.IsTrigger">
+            <summary>
+            If true this shape will generate trigger notifications when other shapes enter its volume
+            </summary>
+            <remarks>A triger shape can be hollow allowing notifications when object enter an area or volume, with this shape defining that volume</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.TriggerNotificationPort">
+            <summary>
+            Target Port for notifications on trigger shapes. Used if IsTrigger is true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.SkinWidth">
+            <summary>
+            Specifies the amount to inflate the convex mesh by when the new convex hull generator is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ShapeAdvancedProperties.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.HeightFieldSample">
+            <summary>
+            Height field sample structure
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldSample.Height">
+            <summary>
+            Height value, scaled by height field vertical scale value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldSample.MaterialIndex0Low">
+            <summary>
+            Low order bits for material index 0
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldSample.MaterialIndex1Low">
+            <summary>
+            Low order bits for material index 1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties">
+            <summary>
+            Height field shape properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.HeightScale">
+            <summary>
+            Multiplier for height field sample height values for conversion to world Y coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.RowScale">
+            <summary>
+            Multiplier for height field rows for conversion to world X coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.ColumnScale">
+            <summary>
+            Multiplier for height field rows for conversion to world Z coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.MaterialIndexHigh">
+            <summary>
+            High order bits for fully qualifying material index in each sample
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.HoleMaterialIndex">
+            <summary>
+            Material index that designates holes;
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.ColumnCount">
+            <summary>
+            Columns in the heightfield sample array
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.RowCount">
+            <summary>
+            Rows in the heightfield sample array
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.VerticalExtent">
+            <summary>
+            Extent on the Y axis where the physics engine will consider collisions.
+            A large extent allows objects to exist below the height field but still generate
+            collisions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.ConvexEdgeThreshold">
+            <summary>
+            Used by collision detection to increase/decrease contact points for edges 
+            in between angled faces. Larger values will decrease edge contacts
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.TextureUScale">
+            <summary>
+            Specifies the scale for U texture coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.TextureVScale">
+            <summary>
+            Specifies the scale for V texture coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.HeightSamples">
+            <summary>
+            Height samples
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.#ctor(System.String,System.Int32,System.Single,System.Int32,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name">Shape name</param>
+            <param name="rowCount">Number of rows in height field</param>
+            <param name="rowScale">Scale of row values. Multiple this number by number of rows to get the heightfield span, in meters</param>
+            <param name="columnCount">Number of columns in height field</param>
+            <param name="columnScale">Scale of column values. Multiple this number by number of columns to get the heightfield span, in meters</param>
+            <param name="heightScale">Scale of height field samples. Applied to every height field sample Height value</param>
+            <param name="verticalExtent">How far below 0 (relative to heighfield) does the height field extent. Used for collision detection. A large negative value should be used (e.g -1000)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties.#ctor(System.String,System.Int32,System.Single,System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name">Shape name</param>
+            <param name="rowCount">Number of rows in height field</param>
+            <param name="rowScale">Scale of row values. Multiple this number by number of rows to get the heightfield span, in meters</param>
+            <param name="columnCount">Number of columns in height field</param>
+            <param name="columnScale">Scale of column values. Multiple this number by number of columns to get the heightfield span, in meters</param>
+            <param name="heightScale">Scale of height field samples. Applied to every height field sample Height value</param>
+            <param name="verticalExtent">How far below 0 (relative to heighfield) does the height field extent. Used for collision detection. A large negative value should be used (e.g -1000)</param>
+            <param name="textureUScale">Scale of horizontal texture coordinates over the heightfield.  Multiply this number by number of columns to get the maximum U texture coordinate.</param>
+            <param name="textureVScale">Scale of vertical texture coordinates over the heightfield.  Multiply this number by number of rows to get the maximum V texture coordinate.</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.BoxShapeProperties">
+            <summary>
+             Box shape properties
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.BoxShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.BoxShapeProperties.#ctor(System.Single,Microsoft.Robotics.PhysicalModel.Pose,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="dimensions"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.BoxShapeProperties.#ctor(System.String,System.Single,Microsoft.Robotics.PhysicalModel.Pose,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="dimensions"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties">
+            <summary>
+            A sphere shape
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties.#ctor(System.Single,Microsoft.Robotics.PhysicalModel.Pose,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties.#ctor(System.String,System.Single,Microsoft.Robotics.PhysicalModel.Pose,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties.HorizontalSlices">
+            <summary>
+            Controls how finely tesselated the sphere is
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.SphereShapeProperties.VerticalSlices">
+            <summary>
+            Controls how finely tesselated the sphere is
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.CapsuleShapeProperties">
+            <summary>
+            Capsule shape properties (cylinder with hemispherical ends).
+            <remarks>Capsule dimensions should use 
+            Shape.Dimensions.Y for height of the cylinder portion of the capsule and Shape.Radius for the width
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.CapsuleShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.CapsuleShapeProperties.#ctor(System.Single,Microsoft.Robotics.PhysicalModel.Pose,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="radius"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.CapsuleShapeProperties.#ctor(System.String,System.Single,Microsoft.Robotics.PhysicalModel.Pose,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="mass"></param>
+            <param name="pose"></param>
+            <param name="radius"></param>
+            <param name="height"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties">
+            <summary>
+            Shape based on arbitrary geometry (list of vertices)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.#ctor(System.String,Microsoft.Robotics.Simulation.Physics.Shapes)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="name"></param>
+            <param name="shapeIDentification"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties._processedMeshResource">
+            <summary>
+            Position vertices
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.ProcessedMeshResource">
+            <summary>
+            Local file name to preprocessed binary file generated from mesh data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.Index16Bits">
+            <summary>
+            Indicates that the index buffer is 16 bits
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.IndexBuffer">
+            <summary>
+            Index buffer data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.VertexBuffer">
+            <summary>
+            Vertex buffer data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.FaceCount">
+            <summary>
+            Number of triangle faces
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.MeshShapeProperties.VertexCount">
+            <summary>
+            Number of vertices
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties">
+            <summary>
+            An arbitrary triangle mesh 
+            </summary>
+            <remarks>Vertices should be ordered as triangle lists</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.IsHeightField">
+            <summary>
+            True if this represents a height field
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.VerticalExtent">
+            <summary>
+            Used for heightfields only, determines depth under heightfield that collision detection is active
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.VerticalAxis">
+            <summary>
+            Used for height fields only. Specifies orientation of heightfield 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.#ctor(System.String,System.Int32,System.Int32,System.Object,System.Object)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="faceCount"></param>
+            <param name="vertexCount"></param>
+            <param name="indexBuffer">Array of 32 bit integer indices</param>
+            <param name="vertexBuffer">Array of Vector4 vertices</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties.#ctor(System.String,System.String)">
+            <summary>
+            Creates a triangle mesh from a preprocessed binary file
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ConvexMeshShapeProperties">
+            <summary>
+            Given an arbitrary triangle mesh, a convex shape will be used to describe it
+            <remarks>Vertices should be ordered as triangle lists</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ConvexMeshShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ConvexMeshShapeProperties.#ctor(System.String,System.Int32,System.Int32,System.Object,System.Object)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="faceCount"></param>
+            <param name="vertexCount"></param>
+            <param name="indexBuffer">Array of 32 bit indices</param>
+            <param name="vertexBuffer">Array of Vector4 vertices</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ConvexMeshShapeProperties.#ctor(System.String,System.String)">
+            <summary>
+            Creates a triangle mesh from a preprocessed binary file
+            </summary>
+            <param name="name"></param>
+            <param name="preprocessedMeshResource"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.WheelShapeBehavior">
+            <summary>
+            Defines wheel physics behavior
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeBehavior.UseLateralSlipVelocity">
+            <summary>
+            Lateral slip model is used
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeBehavior.UseLongitudalSlipVelocity">
+            <summary>
+            Longitudal slip model is used
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeBehavior.OverrideAxleSpeed">
+            <summary>
+            If set, wheel uses speed control, not motor torque control
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties">
+            <summary>
+            Advanced shape that models a wheel with tires mounted on an axle with suspension
+            <remarks>Use Shape.Radius to define wheel radius</remarks>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.InnerRadius">
+            <summary>
+            Inner radius that combined with Radius defines tire width
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.Suspension">
+            <summary>
+            Suspension Properties. Optional
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.SuspensionTravel">
+            <summary>
+            Maximum travel on -Y axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.Flags">
+            <summary>
+            Wheel behavior modifiers
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.AxleSpeed">
+            <summary>
+            Axle speed in radians/sec
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.TireLateralForceFunction">
+            <summary>
+            Lateral tire force properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.TireLongitudalForceFunction">
+            <summary>
+            Longitudal tire force properties (direction of travel)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.BrakeTorque">
+            <summary>
+            Brake torque to apply to wheel
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.WheelShapeProperties.#ctor(System.String,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="mass"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.WheelShape">
+            <summary>
+            Wheel shape 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Shape">
+            <summary>
+            Shape instance. Models behavior of the shape, while <see cref="T:Microsoft.Robotics.Simulation.Physics.ShapeProperties"/> models the state of the shape
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Shape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Shape.#ctor(Microsoft.Robotics.Simulation.Physics.ShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Shape.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Shape.InternalHandle">
+            <summary>
+            Simulation internal use
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Shape.State">
+            <summary>
+            Base accessor for common shape state. Does not serialize.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Shape.Parent">
+            <summary>
+            Parent entity
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.WheelShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.WheelShape.#ctor(Microsoft.Robotics.Simulation.Physics.WheelShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.WheelShape.WheelState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.BoxShape">
+            <summary>
+            Box shape
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.BoxShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.BoxShape.#ctor(Microsoft.Robotics.Simulation.Physics.BoxShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.BoxShape.BoxState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.CapsuleShape">
+            <summary>
+            Capsule shape
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.CapsuleShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.CapsuleShape.#ctor(Microsoft.Robotics.Simulation.Physics.CapsuleShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.CapsuleShape.CapsuleState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.SphereShape">
+            <summary>
+            Sphere shape
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.SphereShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.SphereShape.#ctor(Microsoft.Robotics.Simulation.Physics.SphereShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.SphereShape.SphereState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.TriangleMeshShape">
+            <summary>
+            Triangle mesh shape
+            </summary>
+            <remarks>This shape can be used to model a complicated, triangle based mesh, using the exact geometry for physics collisions.
+            Shapes of this type will not be moveable (they are fixed in space)</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TriangleMeshShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.TriangleMeshShape.#ctor(Microsoft.Robotics.Simulation.Physics.TriangleMeshShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.TriangleMeshShape.TriangleMeshState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ConvexMeshShape">
+            <summary>
+            Convex mesh shape
+            </summary>
+            <remarks>This shape should be used to generated simplified convex meshes for collision, out of more complicated geometric meshes, commonly loaded from files</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ConvexMeshShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ConvexMeshShape.#ctor(Microsoft.Robotics.Simulation.Physics.ConvexMeshShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.ConvexMeshShape.ConvexMeshState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.HeightFieldShape">
+            <summary>
+            Height field shape
+            </summary>
+            <remarks>Use this shape to model terrain</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.HeightFieldShape.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.HeightFieldShape.#ctor(Microsoft.Robotics.Simulation.Physics.HeightFieldShapeProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.HeightFieldShape.HeightFieldState">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ContactNotificationStage">
+            <summary>
+            Stage of contact between two shapes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ContactNotificationStage.Started">
+            <summary>
+            Notification of initial contact
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ContactNotificationStage.Finished">
+            <summary>
+            Notification that contact has stopped
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.EntityContactNotification">
+            <summary>
+            Contact notification, generated when one or more physics shapes from two entities touch
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityContactNotification.Stage">
+            <summary>
+            Contact stage
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityContactNotification.TotalNormalForce">
+            <summary>
+            Total perpendicular force applied to keep penetration from occuring
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityContactNotification.TotalFrictionForce">
+            <summary>
+            Total tangenial force between entities
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityContactNotification.ShapeContacts">
+            <summary>
+            Local shape within the entity involved in the collision
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.EntityJointBreakNotification">
+            <summary>
+            Joint break notification, generated when a joint breaks in the simulator
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityJointBreakNotification.BreakingImpulse">
+            <summary>
+            Impulse which caused the joint to break
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityJointBreakNotification.BrokenJoint">
+            <summary>
+            Joint that was broken
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.EntityJointBreakNotification.AttachedEntities">
+            <summary>
+            Entities attached to the joint
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter">
+            <summary>
+            Contact notification filter, applied on every contact to reduce notification load
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter.Stages">
+            <summary>
+            Contact stages allowed
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter.NormalForceThreshold">
+            <summary>
+            Perpendicular force threshold
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter.FrictionForceThreshold">
+            <summary>
+            Tangenial force threshold for notification
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.ContactNotificationFilter.#ctor(System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="normalThreshold">Normal (perpendicular) force threshold before notification is generated</param>
+            <param name="frictionThreshold">Friction (tangential) force threshold before notification is generated</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ShapeContact">
+            <summary>
+            Contact information for a shape
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContact.LocalShape">
+            <summary>
+            Shape within the entity that was involved in this contact
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContact.Points">
+            <summary>
+            List of world coordinate points where the collision within the shape occured
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.ShapeContactPoint">
+            <summary>
+            Contact information for a point on a shape surface
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContactPoint.Position">
+            <summary>
+            Position vector in world space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContactPoint.Normal">
+            <summary>
+            Normal vector for shape surface
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContactPoint.NormalForce">
+            <summary>
+            Normal force (perpendicular to surface)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.ShapeContactPoint.FrictionForce">
+            <summary>
+            Friction force (tangential to surface)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.RaycastImpactPoint">
+            <summary>
+            Raycast impact point
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastImpactPoint.Position">
+            <summary>
+            World Space Coordinates of an impact point. 
+            Last coordinate is distance of impact from raycast origin
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastImpactPoint.ReadingIndex">
+            <summary>
+            Assuming an array of size abs(startAngle-EndAngle)/AngleIncrement the index
+            indicate where in that array the impact occured. This is the order the impact 
+            was found during the raycasting sweep.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastImpactPoint.Material">
+            <summary>
+            Material properties of the shape the impact point belongs to
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.RaycastResult">
+            <summary>
+            Raycast operation results
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastResult.ImpactPoints">
+            <summary>
+            List of impacts. If no shape was within range, the list will be empty
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastResult.SampleCount">
+            <summary>
+            Total number of raycasts performed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.RaycastProperties">
+            <summary>
+            Raycast operation properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.OriginPose">
+            <summary>
+            Position and orientation of the origin point for the ray cast
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.StartAngle">
+            <summary>
+            Start angle in degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.EndAngle">
+            <summary>
+            End angle in degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.AngleIncrement">
+            <summary>
+            Angle increment in degrees that determines number of discrete rays to generate
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.Range">
+            <summary>
+            Distance, in world standard units, for ray casting range
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.RaycastProperties.ScanInterval">
+            <summary>
+            Not used
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.RaycastProperties.FromSingleRay(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Creates a RaycastProperties instance representing a single ray specified in 
+            world coordinates.
+            </summary>
+            <param name="from">This is the origin for the ray cast</param>
+            <param name="to">This is the destination for the raycast. No object further from the origin than this point will be detected.</param>
+            <returns>A RaycastProperties instance ready to be passed to the physics engine.</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Contract">
+            <summary>
+            Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Contract.Identifier">
+            <summary>
+            Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Partners">
+            <summary>
+            Standard entity relationships for simulated services
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Partners.Entity">
+            <summary>
+            Entity partner. Value is entity instance name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Partners.ColladaScene">
+            <summary>
+            ColladaScene partner. Value is Collada file name
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Partners.CreateEntityPartner(System.String)">
+            <summary>
+            Static constructor
+            </summary>
+            <param name="entityName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Partners.CreateColladaScenePartner(System.String)">
+            <summary>
+            Static constructor
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.PublishedCategories">
+            <summary>
+            Optional: A service may choose to publish categories.  These categories are
+            available for use in the [Category] attribute for any service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.PublishedCategories.SimulationService">
+            <summary>
+            Category for all services that interact in the simulation environment
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.PublishedCategories.EnvironmentConstructor">
+            <summary>
+            Indicates a simulation environment constructor. Constructors load world entities
+            that can be static, dynamic, height fields, and large scale structures
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.RenderMode">
+            <summary>
+            Enumeration of rendering modes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.Full">
+            <summary>
+            Full shading and lighting, solid object rendering
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.Wireframe">
+            <summary>
+            Wireframe only
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.Physics">
+            <summary>
+            Physics primitive view
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.Combined">
+            <summary>
+            Combined physics and fully rendered
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.None">
+            <summary>
+            No rendering
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderMode.Floorplan">
+            <summary>
+            Top-down orthographic view
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.SimulationState">
+            <summary>
+            Simulation engine state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.Gravity">
+            <summary>
+            Gravity vector
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.RenderMode">
+            <summary>
+            Current rendering mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.FramesPerSecond">
+            <summary>
+            Current rendering rate for the selected camera view
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.Pause">
+            <summary>
+            Stops frame updates of all entities and all physics simulation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.CameraPosition">
+            <summary>
+            The position of the default camera in world coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.CameraLookAt">
+            <summary>
+            The position the default camera is looking at in world coordinates
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.CameraFieldOfView">
+            <summary>
+            The horizontal half-angle of the viewport in radians
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.CameraNearPlane">
+            <summary>
+            The distance from the camera to the near clipping plane
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.CameraFarPlane">
+            <summary>
+            The distance from the camera to the far clipping plane
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.Lights">
+            <summary>
+            Deprecated: Around for backwards compatibility
+            World lights
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.Entities">
+            <summary>
+            Runtime only list of entities. For serialization we create XML DOM instances of all entities
+            and put them in the SerializedEntities list
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.SimulationState.SerializedEntities">
+            <summary>
+            Entities in XML DOM form that can be serialized
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.RenderingAssets">
+            <summary>
+            Rendering assets for entity instance
+            </summary>
+            <remarks>All file paths should be relative to the store\media directory, or as simple filenames with no path</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderingAssets.Mesh">
+            <summary>
+            Mesh file 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderingAssets.DefaultTexture">
+            <summary>
+            Texture (applied to all shapes within entity) file
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.RenderingAssets.Effect">
+            <summary>
+            DirectX pixel and vertex shader effect file
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.EntityState">
+            <summary>
+            Entity state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.Name">
+            <summary>
+            Entity name. The simulation engine will only accept a single instance for the same name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.Assets">
+            <summary>
+            asset location
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.Pose">
+            <summary>
+            Current pose, in world space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.Velocity">
+            <summary>
+            Current linear velocity, in world space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.AngularVelocity">
+            <summary>
+            Current angular velocity, in world space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.MassDensity">
+            <summary>
+            entity mass or density values
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.PhysicsPrimitives">
+            <summary>
+            List of shapes that approximate the entity to the physics simulation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.EntityState.Flags">
+            <summary>
+            Modifies modeling of entire entity
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.EntityState.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.ObjectList">
+            <summary>
+            Simulation internal use. List of serialized entities
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.ObjectList.XmlNodes">
+            <summary>
+            List of serialized (into XML DOM) entities
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.ObjectList.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.ObjectList.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="nodes"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Entity">
+            <summary>
+            Entity definition
+            </summary>
+            <remarks>This class is the base type for all user defined simulation entities</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Entity.NeedsReplacement">
+            <summary>
+            Internal use: marks this entity for replacement
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Entity.SuspendUpdates">
+            <summary>
+            Internal use:  suspends physics engine updates on this entity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Entity.State">
+            <summary>
+            State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Entity.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Entity.PreSerialize">
+            <summary>
+            Called on each Entity before it is serialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Entity.PostDeserialize">
+            <summary>
+            Called on each Entity after it has been deserialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Entity.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Entity.InternalHandle">
+            <summary>
+            Simulation internal use
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.LightEntityType">
+            <summary>
+            Types of light sources
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntityType.None">
+            <summary>
+            No light
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntityType.Directional">
+            <summary>
+            Directional
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntityType.Omni">
+            <summary>
+            Omni-directional (no directional bias, like a light orb)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntityType.Spot">
+            <summary>
+            Spot light
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.LightEntity">
+            <summary>
+            Base class for light entities
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntity.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntity.Type">
+            <summary>
+            Light type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntity.Color">
+            <summary>
+            HDR color plus alpha. Normal range is 0.0f to 1.0f
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.LightEntity.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.TypeConversion">
+            <summary>
+            Helper type conversion routines
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.FromXNA(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            XNA to PhysicalModel Vector3
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.FromXNA(Microsoft.Xna.Framework.Vector4)">
+            <summary>
+            XNA to PhysicalModel Vector4
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.FromXNA(Microsoft.Xna.Framework.Quaternion)">
+            <summary>
+            XNA to PhysicalModel Quaternion
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.FromXNA(Microsoft.Xna.Framework.Matrix)">
+            <summary>
+            XNA to PhysicalModel Matrix
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToXNA(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Physical Model to XNA Vector3
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToXNA(Microsoft.Robotics.PhysicalModel.Vector4)">
+            <summary>
+            Physical Model to XNA Vector4
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToXNA(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Physical Model to XNA Quaternion
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToXNA(Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Physical Model to XNA Matrix
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToXNA(Microsoft.Robotics.PhysicalModel.Ray)">
+            <summary>
+            Physical Model to XNA Ray
+            </summary>
+            <param name="source">Physical Model Ray to convert</param>
+            <returns>Equivalent XNA Ray</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToVector3(Microsoft.Xna.Framework.Vector4)">
+            <summary>
+            We ignore the W component to avoid divide by zero with vectors
+            Will result in incorrect behavior if you work with position coordinates where w != 1
+            </summary>
+            <param name="vector4"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToVector4(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Converts 3D position to 4D, with 1 in the w component
+            </summary>
+            <param name="vector3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.ToNormal4(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Converts 3D normal to 4D, with 0 in the w component
+            </summary>
+            <param name="normal3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.Vertex4DToVertex3D(Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored)">
+            <summary>
+            Converts a vertex with a 4D position to a vertex with a 3D position
+            </summary>
+            <param name="position4DNormalTexturedColored"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.TypeConversion.VectorToColor(Microsoft.Robotics.PhysicalModel.Vector4)">
+            <summary>
+            Converts a 4d vector to a color (x, y, z, w) => (r, g, b, a)
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.SceneGeometry">
+            <summary>
+            Simulation internal use. Captures physics engine geometry of all simulated shapes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.PointCount">
+            <summary>
+            Number of Point vertices
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.LineCount">
+            <summary>
+            Number of lines
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.TriangleCount">
+            <summary>
+            Number of triangles
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.Points">
+            <summary>
+            Point vertex list
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.Lines">
+            <summary>
+            Line list (two vertices per line)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.SceneGeometry.Triangles">
+            <summary>
+            Triangle list ( 3 vertices per triangle)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, and texture information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="nx"></param>
+            <param name="ny"></param>
+            <param name="nz"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormalTextured,Microsoft.Robotics.Simulation.Engine.PositionNormalTextured)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormalTextured,Microsoft.Robotics.Simulation.Engine.PositionNormalTextured)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormalTextured.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, texture, and instance information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.InstanceId">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="nx"></param>
+            <param name="ny"></param>
+            <param name="nz"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedInstanced.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, texture, and instance information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.InstanceId">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="texture"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced,Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced,Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionTexturedInstanced.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionTextured">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, texture, and instance information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTextured.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTextured.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionTextured.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="texture"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionTextured,Microsoft.Robotics.Simulation.Engine.PositionTextured)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionTextured,Microsoft.Robotics.Simulation.Engine.PositionTextured)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionTextured.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionTextured.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, texture, and color information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.Color">
+            <summary>
+            Color element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector4)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="nx"></param>
+            <param name="ny"></param>
+            <param name="nz"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColored.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, texture, and color information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.Color">
+            <summary>
+            Color element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector4)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="nx"></param>
+            <param name="ny"></param>
+            <param name="nz"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.op_Equality(Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored,Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.op_Inequality(Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored,Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.Position4DNormalTexturedColored.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, texture, color, and instance id information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.TextureCoordinates">
+            <summary>
+            Texture coordinate element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.Color">
+            <summary>
+            Color element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.InstanceId">
+            <summary>
+            InstanceId element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector4,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+            <param name="color"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.#ctor(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector4,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="normal"></param>
+            <param name="texture"></param>
+            <param name="color"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="nx"></param>
+            <param name="ny"></param>
+            <param name="nz"></param>
+            <param name="u"></param>
+            <param name="v"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+            <param name="instanceId"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormalTexturedColoredInstanced.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionColored">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position and color information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionColored.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionColored.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionColored.Color">
+            <summary>
+            Color element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector4)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="position"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+            <param name="r"></param>
+            <param name="g"></param>
+            <param name="b"></param>
+            <param name="a"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionColored,Microsoft.Robotics.Simulation.Engine.PositionColored)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionColored,Microsoft.Robotics.Simulation.Engine.PositionColored)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionColored.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionColored.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.Position">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Position.Position4">
+            <summary>
+            Position element (named Position4 to avoid conflict with class name)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position.#ctor(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position.op_Equality(Microsoft.Robotics.Simulation.Engine.Position,Microsoft.Robotics.Simulation.Engine.Position)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position.op_Inequality(Microsoft.Robotics.Simulation.Engine.Position,Microsoft.Robotics.Simulation.Engine.Position)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.Position.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.Position.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormal">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position and normal information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormal.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormal.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormal.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormal.#ctor(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormal.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormal,Microsoft.Robotics.Simulation.Engine.PositionNormal)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormal.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormal,Microsoft.Robotics.Simulation.Engine.PositionNormal)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormal.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormal.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormal.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced">
+            <summary>
+            Simulation internal use. A vertex element definition which includes position, normal, and instance ID information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.VertexDeclaration">
+            <summary>
+            Declaration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.Position">
+            <summary>
+            Position element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.Normal">
+            <summary>
+            Normal element
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.InstanceId">
+            <summary>
+            InstanceId element
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.#ctor(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.op_Equality(Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced)">
+            <summary>
+            Equality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.op_Inequality(Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced,Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced)">
+            <summary>
+            In-quality operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.Equals(System.Object)">
+            <summary>
+            Object instance quality
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.GetHashCode">
+            <summary>
+            Retrieves hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Engine.PositionNormalInstanced.StrideSize">
+            <summary>
+            Size in bytes of this vertex declaration
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Engine.Constraint">
+            <summary>
+            Defines the mouse movement constraints in the sim editor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.MoveXYZ">
+            <summary>
+            Translate in X, Y, and Z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.MoveXZ">
+            <summary>
+            Translate in X and Z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.MoveX">
+            <summary>
+            Translate in X
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.MoveY">
+            <summary>
+            Translate in Y
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.MoveZ">
+            <summary>
+            Translate in Z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.RotateXYZ">
+            <summary>
+            Rotate around X, Y, and Z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.RotateX">
+            <summary>
+            Rotate around X
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.RotateY">
+            <summary>
+            Rotate around Y
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Engine.Constraint.RotateZ">
+            <summary>
+            Rotate around Z
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.FlagsEditor">
+            <summary>
+            Custom control that displays check boxes for a editing a enumeration. 
+            Each enumeration element is assumed to be a bit in a bitfield.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.FlagsEditor.#ctor(System.Enum)">
+            <summary>
+            Create flags editor control from an enumeration value.
+            The control uses the passed in type to determine 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.FlagsEditor.EnumToUInt64(System.Enum)">
+            <summary>
+            The enumeration needs to be converted to an integral type, and a UInt64 is plenty big enough.
+            </summary>
+            <param name="value">Enumeration value to convert</param>
+            <returns>Integral representation of enumeration</returns>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.FlagsEditor.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.FlagsEditor.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.FlagsEditor.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.FlagsEditor.Flags">
+            <summary>
+            Gets the current flags value
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.PropertyDialog">
+            <summary>
+            A dialog box which displays a property grid
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PropertyDialog.#ctor(System.Object)">
+            <summary>
+            PropertyDialog constructor.  target specifies object to examine
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.PropertyDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PropertyDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.PropertyDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

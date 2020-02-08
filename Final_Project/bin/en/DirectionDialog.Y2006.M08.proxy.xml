@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DirectionDialog.Y2006.M08.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState">
+            <summary>
+                       DirectionDialogState
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DirectionDialogState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState.Clone">
+             <summary>
+            Clones DirectionDialogState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DirectionDialogState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DirectionDialogState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DirectionDialogState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogState.Buttons">
+            <summary>
+                       Buttons - List of buttons on the Form
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button">
+            <summary>
+                       Button info for messages
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Button to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Clone">
+             <summary>
+            Clones Button
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Button to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Button
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Button</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Name">
+            <summary>
+                       The Button Name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Direction">
+            <summary>
+                       The Button Direction
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Button.Pressed">
+            <summary>
+                       Pressed - Set to true if the button is pressed
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest">
+            <summary>
+                       Notification message type for Button Press
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ButtonPressRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.Clone">
+             <summary>
+            Clones ButtonPressRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ButtonPressRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ButtonPressRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ButtonPressRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.Name">
+            <summary>
+                       The Button Name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPressRequest.Direction">
+            <summary>
+                       The Button Direction
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest">
+            <summary>
+                       Notification message type for Button Release
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ButtonReleaseRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.Clone">
+             <summary>
+            Clones ButtonReleaseRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ButtonReleaseRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ButtonReleaseRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ButtonReleaseRequest</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.Name">
+            <summary>
+                       The Button Name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonReleaseRequest.Direction">
+            <summary>
+                       The Button Direction
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Get">
+            <summary>
+                       Get - Gets the state
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Replace">
+            <summary>
+                       Replace - Replaces the state
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonPress">
+            <summary>
+                       ButtonPress - Message sent when a button is pressed
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonRelease">
+            <summary>
+                       ButtonRleases - Message sent when a button is released
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Subscribe">
+            <summary>
+                       Subscribe - Request message for subscriptions
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.DirectionDialogOperations">
+            <summary>
+                       Main Operations Port for the service
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection">
+            <summary>
+                       Button Directions
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection.Stop">
+            <summary>
+                       Stop
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection.Forwards">
+            <summary>
+                       Forwards
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection.Backwards">
+            <summary>
+                       Backwards
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection.Left">
+            <summary>
+                       Left
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.ButtonDirection.Right">
+            <summary>
+                       Right
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Contract">
+            <summary>
+                       Direction Dialog service - Provides four direction arrows (plus Stop) for controlling a robot
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

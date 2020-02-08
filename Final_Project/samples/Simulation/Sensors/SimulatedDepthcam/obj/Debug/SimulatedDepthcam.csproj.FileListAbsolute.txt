@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SimulatedDepthcam.Y2011.M02.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedDepthcam.Y2011.M02.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedDepthcam.Y2011.M02.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedDepthcam.Y2011.M02.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\User.SimulatedDepthcam.Y2011.M02.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedDepthcam\obj\Debug\User.SimulatedDepthcam.Y2011.M02.pdb

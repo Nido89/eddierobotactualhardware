@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:cg="http://schemas.microsoft.com/robotics/2007/04/codegenerator.html">
+  <PropertyGroup>
+    <ReferencePath>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319</ReferencePath>
+    <StartWorkingDirectory>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\</StartWorkingDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\dsshost32.exe</StartProgram>
+    <StartArguments>-port:50000 -tcpport:50001 -manifest:"C:\Users\EWHA\Microsoft Robotics Dev Studio 4\AutonomusDrive\AutonomusDrive.manifest.xml"</StartArguments>
+  </PropertyGroup>
+</Project>

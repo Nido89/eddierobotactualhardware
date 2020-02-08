@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.GameController.Y2006.M09.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.GameController.Y2006.M09.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.GameController.Y2006.M09.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.GameController.Y2006.M09.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\Microsoft.Robotics.Services.GameController.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\User.GameController.Y2006.M09.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\GameController\obj\Debug\User.GameController.Y2006.M09.pdb

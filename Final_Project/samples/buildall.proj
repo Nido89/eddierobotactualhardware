@@ -1,0 +1,91 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <SamplesToBuild Include= "Technologies\Speech\SpeechRecognizer\SpeechRecognizer.csproj"/>
+        <SamplesToBuild Include= "Technologies\Speech\SpeechRecognizerGui\SpeechRecognizerGui.csproj"/>
+        <SamplesToBuild Include= "Technologies\Speech\TextToSpeech\TextToSpeech.csproj"/>
+        <SamplesToBuild Include= "Technologies\Vision\BlobTracker\BlobTracker.csproj"/>
+        <SamplesToBuild Include= "Technologies\Vision\BlobTrackerCalibrate\BlobTrackerCalibrate.csproj"/>
+        <SamplesToBuild Include= "Technologies\Vision\ColorSegment\ColorSegment.csproj"/>
+        <SamplesToBuild Include= "Technologies\Vision\SimpleVision\SimpleVision.csproj"/>
+        <SamplesToBuild Include= "Sensors\IpCamera\IpCamera.csproj"/>
+        <SamplesToBuild Include= "Sensors\SickLRF\SickLRF.csproj"/>
+        <SamplesToBuild Include= "Sensors\WebCam\WebCam.csproj"/>
+        <SamplesToBuild Include= "Sensors\CameraSensorUtilities\CameraSensorUtilities.csproj"/>
+        <SamplesToBuild Include= "Misc\DriveInSquare\DriveInSquare.csproj"/>
+        <SamplesToBuild Include= "Misc\Explorer\Explorer.csproj"/>
+        <SamplesToBuild Include= "Misc\Utility\Utility.csproj"/>
+        <SamplesToBuild Include= "Misc\WaitForDriveCompletion\WaitForDriveCompletion.csproj"/>
+        <SamplesToBuild Include= "Platforms\iRobot\iRobot\iRobot.csproj"/>
+        <SamplesToBuild Include= "Platforms\iRobot\iRobotServices\iRobotServices.csproj"/>
+        <SamplesToBuild Include= "Platforms\LEGO\NXT\V2\NxtBrick\NxtBrick.csproj"/>
+        <SamplesToBuild Include= "Platforms\LEGO\NXT\V2\NxtCommon\NxtCommon.csproj"/>
+        <SamplesToBuild Include= "Platforms\LEGO\NXT\V2\MindSensors\MindSensors.csproj"/>
+        <SamplesToBuild Include= "Platforms\LEGO\NXT\V2\HiTechnic\HiTechnic.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial1\CSharp\ServiceTutorial1.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial10\CSharp\ServiceTutorial10.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial2\CSharp\ServiceTutorial2.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial3\CSharp\ServiceTutorial3.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial4\CSharp\ServiceTutorial4.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial5\CSharp\ServiceTutorial5.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial6\CSharp\ServiceTutorial6.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial7\CSharp\ServiceTutorial7.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial8\CSharp\ServiceTutorial8.csproj"/>
+        <SamplesToBuild Include= "ServiceTutorials\Tutorial9\CSharp\ServiceTutorial9.csproj"/>
+        <SamplesToBuild Include= "UX\GameController\GameController.csproj"/>
+        <SamplesToBuild Include= "UX\JoystickForm\JoystickForm.csproj"/>
+        <SamplesToBuild Include= "UX\XInputGamepad\XInputGamepad.csproj"/>
+        <SamplesToBuild Include= "RoboticsTutorials\Tutorial1\CSharp\RoboticsTutorial1.csproj"/>
+        <SamplesToBuild Include= "RoboticsTutorials\Tutorial2\CSharp\RoboticsTutorial2.csproj"/>
+        <SamplesToBuild Include= "RoboticsTutorials\Tutorial3\CSharp\RoboticsTutorial3.csproj"/>
+        <SamplesToBuild Include= "RoboticsTutorials\Tutorial4\CSharp\RoboticsTutorial4.csproj"/>
+        <SamplesToBuild Include= "RoboticsTutorials\Tutorial7\CSharp\RoboticsTutorial7.csproj"/>
+        <SamplesToBuild Include= "Simulation\ArticulatedArms\LBR3\SimulatedLBR3Arm.csproj"/>
+        <SamplesToBuild Include= "Simulation\DifferentialDrive\SimulatedDifferentialDrive.csproj"/>
+        <SamplesToBuild Include= "Simulation\EmbeddedSim\EmbeddedSim.csproj"/>
+        <SamplesToBuild Include= "Simulation\JointMover\JointMover.csproj"/>
+        <SamplesToBuild Include= "Simulation\PursuitCamera\PursuitCamera.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\Bumper\SimulatedBumper.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\Infrared\SimulatedIR.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\LaserRangeFinder\SimulatedLRF.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedBrightnessSensor\SimulatedBrightnessSensor.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedColorSensor\SimulatedColorSensor.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedCompass\SimulatedCompass.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedGPS\SimulatedGPS.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedWebcam\SimulatedWebcam.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\Sonar\SimulatedSonar.csproj"/>
+        <SamplesToBuild Include= "Simulation\Sensors\SimulatedDepthcam\SimulatedDepthcam.csproj"/>
+        <SamplesToBuild Include= "Simulation\SimulatedFourByFourDrive\SimulatedFourByFourDrive.csproj"/>
+        <SamplesToBuild Include= "Simulation\SimulatedIRobotLite\SimulatedIRobotLite.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Advanced\Multiple Simulated Robots\MultipleSimulatedRobots.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Advanced\Multiple Simulated Sensors\MultipleSimulatedSensors.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Advanced\Simulated Articulated Entities\SimulatedArticulatedEntities.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Beginner\Simple Robot With Drive\SimpleSimulatedRobot.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Beginner\Simulation Empty Project\SimulationEmptyProject.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Intermediate\Apartment Scene\ApartmentScene.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Intermediate\Custom Simulated Entities\CustomSimulatedEntities.csproj"/>
+        <SamplesToBuild Include= "SimulationTutorials\Advanced\EntityUI\EntityUI.csproj"/>
+        <SamplesToBuild Include= "UX\DirectionDialog\DirectionDialog.csproj"/>
+        <SamplesToBuild Include= "UX\SimpleDashboard\SimpleDashboard.csproj"/>
+        <SamplesToBuild Include= "UX\WpfTextToSpeechUI\WpfTextToSpeechUI.csproj"/>
+        <SamplesToBuild Include= "Tools\DssLogAnalyzer\DssLogAnalyzer.csproj"/>
+        <SamplesToBuild Include= "Platforms\ReferencePlatform2011\SerialCOMService\SerialCOMService.csproj"/>
+        <SamplesToBuild Include= "Platforms\ReferencePlatform2011\RobotDashboard\RobotDashboard.csproj"/>
+        <SamplesToBuild Include= "Platforms\ReferencePlatform2011\MarkRobot\MarkRobot.csproj"/>
+    </ItemGroup>
+
+    <Import Project="UX\XBoxControllerViewer\XBoxCtrlViewer.proj" Condition="'$(DoBuildSilverlightSamples)'=='yes'"></Import>
+
+    <Import Project="Sensors\Kinect\BuildKinectAll.proj" Condition="'$(DoBuildKinectSamples)'=='yes'"></Import>
+    <Import Project="Sensors\Kinect\BuildKinectMicArray.proj" Condition="'$(DoBuildKinectSpeechSamples)'=='yes'"></Import>
+
+    <Target Name="Build">
+        <MSBuild Projects="@(SamplesToBuild)"
+            Properties="Configuration=Debug" />
+    </Target>
+    <Target Name="CleanAll">
+        <MSBuild Projects="@(SamplesToBuild)"
+            Targets="Clean"
+            StopOnFirstFailure="false"
+            ContinueOnError="true" />
+    </Target>
+</Project>

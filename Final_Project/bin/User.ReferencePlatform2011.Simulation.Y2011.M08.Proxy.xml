@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.ReferencePlatform2011.Simulation.Y2011.M08.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ReferencePlatform2011State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011State.Clone">
+             <summary>
+            Clones ReferencePlatform2011State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ReferencePlatform2011State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ReferencePlatform2011State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ReferencePlatform2011State</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011Entity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ReferencePlatform2011Entity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011Entity.Clone">
+             <summary>
+            Clones ReferencePlatform2011Entity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011Entity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ReferencePlatform2011Entity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.ReferencePlatform2011Entity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ReferencePlatform2011Entity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ReferencePlatform2011Entity</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.ReferencePlatform2011.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

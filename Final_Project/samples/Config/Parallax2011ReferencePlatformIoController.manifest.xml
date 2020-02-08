@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft Visual Programming Language.-->
+<Manifest xmlns:parallax2011referenceplatformiocontroller="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html" xmlns:serialcomservice="http://www.microsoft.com/2011/07/serialcomservice.html" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:this="urn:uuid:90bb81fa-bcde-4ea9-b6c5-51eb0398337b" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+          <dssp:Service>Parallax2011ReferencePlatformIoController.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>parallax2011referenceplatformiocontroller:SerialCOMService</dssp:Name>
+          <dssp:ServiceName>this:SerialCOMService</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Parallax2011ReferencePlatformIoController</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:Service>serialcomservice.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SerialCOMService</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

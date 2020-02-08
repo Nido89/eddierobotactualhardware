@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SimpleDashboard.Y2006.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimpleDashboard.Y2006.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimpleDashboard.Y2006.M01.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimpleDashboard.Y2006.M01.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\Microsoft.Robotics.Services.SimpleDashboard.DriveControl.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\User.SimpleDashboard.Y2006.M01.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\SimpleDashboard\obj\Debug\User.SimpleDashboard.Y2006.M01.pdb

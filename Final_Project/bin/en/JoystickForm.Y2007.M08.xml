@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JoystickForm.Y2007.M08</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService">
+            <summary>
+            JoystickFormService - Displays a form that acts as a joystick
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.ReplaceHandler(Microsoft.Robotics.Services.GameController.Proxy.Replace)">
+            <summary>
+            ReplaceHandler
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.PollHandler(Microsoft.Robotics.Services.GameController.Proxy.Poll)">
+            <summary>
+            PollHandler - NOT IMPLEMENTED
+            </summary>
+            <param name="submit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.ChangeControllerHandler(Microsoft.Robotics.Services.GameController.Proxy.ChangeController)">
+            <summary>
+            ChangeControllerHandler - NOT SUPPORTED
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.UpdateAxesHandler(Microsoft.Robotics.Services.GameController.Proxy.UpdateAxes)">
+            <summary>
+            UpdateAxesHandler
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.UpdateButtonsHandler(Microsoft.Robotics.Services.GameController.Proxy.UpdateButtons)">
+            <summary>
+            UpdateButtonsHandler
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.UpdatePovHatsHandler(Microsoft.Robotics.Services.GameController.Proxy.UpdatePovHats)">
+            <summary>
+            UpdatePovHatsHandler
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.UpdateSlidersHandler(Microsoft.Robotics.Services.GameController.Proxy.UpdateSliders)">
+            <summary>
+            UpdateSlidersHandler
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.SubscribeHandler(Microsoft.Robotics.Services.GameController.Proxy.Subscribe)">
+            <summary>
+            SubscribeHandler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickFormService.GetControllersHandler(Microsoft.Robotics.Services.GameController.Proxy.GetControllers)">
+            <summary>
+            GetControllersHandler
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.JoystickForm.Contract">
+            <summary>
+            Joystick Form contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.JoystickForm.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI">
+            <summary>
+            JoystickUI - Form for displaying the joystick
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI.#ctor(Microsoft.Robotics.Services.GameController.Proxy.GameControllerOperations)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="fwdPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI.OnClosed(System.EventArgs)">
+            <summary>
+            OnClosed - Signal to the main service that the form is closing
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.JoystickForm.JoystickUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

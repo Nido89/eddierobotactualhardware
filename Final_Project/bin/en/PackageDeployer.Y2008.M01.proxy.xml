@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PackageDeployer.Y2008.M01.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current QueryPackageInstallationMountpointRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointRequest.Clone">
+             <summary>
+            Clones QueryPackageInstallationMountpointRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current QueryPackageInstallationMountpointRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes QueryPackageInstallationMountpointRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized QueryPackageInstallationMountpointRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current QueryPackageInstallationMountpointResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointResponse.Clone">
+             <summary>
+            Clones QueryPackageInstallationMountpointResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current QueryPackageInstallationMountpointResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.QueryPackageInstallationMountpointResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes QueryPackageInstallationMountpointResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized QueryPackageInstallationMountpointResponse</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.DeployPackageRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DeployPackageRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.DeployPackageRequest.Clone">
+             <summary>
+            Clones DeployPackageRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.DeployPackageRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DeployPackageRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.DeployPackageRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DeployPackageRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DeployPackageRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.RunPackageRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RunPackageRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.RunPackageRequest.Clone">
+             <summary>
+            Clones RunPackageRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.RunPackageRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RunPackageRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.RunPackageRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RunPackageRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RunPackageRequest</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.PackageDeployerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PackageDeployerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.PackageDeployerState.Clone">
+             <summary>
+            Clones PackageDeployerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.PackageDeployerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PackageDeployerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.PackageDeployerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PackageDeployerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PackageDeployerState</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.PackageDeployer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

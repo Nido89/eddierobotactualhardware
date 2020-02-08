@@ -1,0 +1,15 @@
+newmtl blinn1SG
+illum 2
+Ka .20 .20 .20
+Kd .80 .80 .80
+Ks .50 .50 .50
+Ns 64.00
+map_Kd IRobot-Create-Body.bmp
+
+newmtl initialShadingGroup
+illum 2
+Ka .00 .00 .00
+Kd .50 .50 .50
+Ks 1.00 1.00 1.00
+Ns 1.00
+

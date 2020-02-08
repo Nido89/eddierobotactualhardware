@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedIRobotLite.Y2007.M02</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService">
+            <summary>
+            Simulated iRobot Lite Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService._state">
+            <summary>
+            Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.DefineAscendingSong(System.Int32)">
+            <summary>
+            Define two ascending notes
+            </summary>
+            <param name="songId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.DefineDecendingSong(System.Int32)">
+            <summary>
+            Define two descending notes
+            </summary>
+            <param name="songId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.GetHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            HttpPost Handler
+            </summary>
+            <param name="submit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.SubscribeHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.ConnectHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.Connect)">
+            <summary>
+            Connect Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.ConfigureHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.Configure)">
+            <summary>
+            Configure Handler
+            </summary>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.RoombaSetModeHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.RoombaSetMode)">
+            <summary>
+            RoombaSetMode Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.RoombaSetLedsHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.RoombaSetLeds)">
+            <summary>
+            RoombaSetLeds Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.RoombaPlaySongHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.RoombaPlaySong)">
+            <summary>
+            RoombaPlaySong Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.RoombaGetSensorsHandler(Microsoft.Robotics.Services.IRobot.Roomba.Proxy.RoombaGetSensors)">
+            <summary>
+            RoombaGetSensors Handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.CreateDriveDirectHandler(Microsoft.Robotics.Services.IRobot.Create.Proxy.CreateDriveDirect)">
+            <summary>
+            CreateDriveDirect Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateAllHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateAll)">
+            <summary>
+            UpdateAll Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateBumpsCliffsAndWallsHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateBumpsCliffsAndWalls)">
+            <summary>
+            UpdateBumpsCliffsAndWalls Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdatePoseHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdatePose)">
+            <summary>
+            UpdatePose Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdatePowerHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdatePower)">
+            <summary>
+            UpdatePower Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateModeHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateMode)">
+            <summary>
+            UpdateMode Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateCliffDetailHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateCliffDetail)">
+            <summary>
+            UpdateCliffDetail Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateTelemetryHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateTelemetry)">
+            <summary>
+            UpdateTelemetry Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.UpdateNotificationsHandler(Microsoft.Robotics.Services.IRobot.SensorUpdates.Proxy.UpdateNotifications)">
+            <summary>
+            UpdateNotifications Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Custom Drop Handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.InsertEntityNotificationHandlerFirstTime(Microsoft.Robotics.Simulation.Engine.InsertSimulationEntity)">
+            <summary>
+            This handler receives an announcement from the simulation engine that
+            contains a pointer to the entity associated with this service.
+            </summary>
+            <param name="ins"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.ContactHandler(Microsoft.Robotics.Simulation.Physics.EntityContactNotification)">
+            <summary>
+            This handler receives a notification when the bumper contact state changes
+            </summary>
+            <param name="contact"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.StartTimer(System.Int32)">
+            <summary>
+            Start the timer
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.TimerHandler(System.DateTime)">
+            <summary>
+            The Timer Handler fires every _tickInterval milliseconds
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.SimulatedIRobotLiteService.WaitForNextTimer">
+            <summary>
+            Wait for _tickInterval before calling the TimerHandler
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity">
+            <summary>
+            An IR distance sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.DispersionConeAngle">
+            <summary>
+            angle is in degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.Samples">
+            <summary>
+            the number of rays in each direction
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.MaximumRange">
+            <summary>
+            Default value is 30 inches converted to meters
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.#ctor">
+            <summary>
+            Default constructor used when this entity is deserialized
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.#ctor(System.String,Microsoft.Robotics.PhysicalModel.Pose)">
+            <summary>
+            Initialization constructor used when this entity is built programmatically
+            </summary>
+            <param name="name"></param>
+            <param name="initialPose"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.Initialize(Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Robotics.Simulation.Physics.PhysicsEngine)">
+            <summary>
+            Initialize the IR Distance sensor
+            </summary>
+            <param name="device"></param>
+            <param name="physicsEngine"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.Update(Microsoft.Robotics.Simulation.Engine.FrameUpdate)">
+            <summary>
+            Update the IR distance sensor
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.Render(Microsoft.Robotics.Simulation.Engine.VisualEntity.RenderMode,Microsoft.Robotics.Simulation.Engine.MatrixTransforms,Microsoft.Robotics.Simulation.Engine.CameraEntity)">
+            <summary>
+            Frame render
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.RaycastProperties">
+            <summary>
+            Raycast configuration
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.IREntity.Distance">
+            <summary>
+            The shortest distance to an impact point
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.Contract">
+            <summary>
+            SimulatedIRobotLite Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.SimulatedIRobotLite.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedIRobotLite service
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XInputGamepad.Y2006.M09</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService">
+            <summary>
+            Provides access to an Xbox 360 controller such as a gamepad.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.PollHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.Poll)">
+            <summary>
+            Polls the controller to update the current state.\n If the state has changed, then appropriate notifications are sent.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.ReplaceHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.SubscribeHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.Subscribe)">
+            <summary>
+            Handles subscribe requests.
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.ControllerChangedHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerChanged)">
+            <summary>
+            This handler is called when a controller is plugged in or removed.
+            </summary>
+            <param name="controllerChanged"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.SetVibrationHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.SetVibration)">
+            <summary>
+            Handler to set the controller vibration.
+            </summary>
+            <param name="setVibration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadService.QueryControllersHandler(Microsoft.Robotics.Services.Sample.XInputGamepad.QueryControllers)">
+            <summary>
+            Returns information about all connected controllers.
+            </summary>
+            <param name="queryControllers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Contract">
+            <summary>
+            Xinput Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Contract.Identifier">
+            The Unique Contract Identifier for the Xinput service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState">
+            <summary>
+            Specifies the state of the XInput controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.TimeStamp">
+            <summary>
+            Indicates time of the controller's state update.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.Controller">
+            <summary>
+            Indicates controller state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.DPad">
+            <summary>
+            Indicates the state of the directional pad.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.Buttons">
+            <summary>
+            Identifies the state of the buttons.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.Triggers">
+            <summary>
+            Identifies the state of the triggers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.Thumbsticks">
+            <summary>
+            Identifies the state of the thumbsticks.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadState.Vibration">
+            <summary>
+            Identifies the state of the vibration motors.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex">
+            <summary>
+            Identifies the player index.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex.One">
+            <summary>
+            Player index (1)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex.Two">
+            <summary>
+            Player index (2)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex.Three">
+            <summary>
+            Player index (3)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex.Four">
+            <summary>
+            Player index (4)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.PlayerIndex.Any">
+            <summary>
+            Player index (not specified)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType">
+            <summary>
+            Identifies the controller type.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.NotSelected">
+            <summary>
+            Controller type is not specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.GamePad">
+            <summary>
+            Controller is a gamepad
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.Wheel">
+            <summary>
+            Controller is a steering wheel
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.ArcadeStick">
+            <summary>
+            Controller is a joystick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.FlightStick">
+            <summary>
+            Controller is a flight control stick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerType.DancePad">
+            <summary>
+            Controller is a dance pad
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Controller">
+            <summary>
+            This class represents a controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Controller.TimeStamp">
+            <summary>
+            Indicates the time of the controller change.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Controller.PlayerIndex">
+            <summary>
+            Identifies the player index.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Controller.IsConnected">
+            <summary>
+            Indicates whether a controller is connected.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Controller.IsValid">
+            <summary>
+            True if the controller is valid.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerCaps">
+            <summary>
+            Represents the capabilities of a controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerCaps.ControllerType">
+            <summary>
+            Type type of the controller.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad">
+            <summary>
+            Identifies the state of the directional pad.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad.TimeStamp">
+            <summary>
+            Identifies the time of the directional pad input.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad.Left">
+            <summary>
+            Indicates if the directional pad is pressed left.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad.Down">
+            <summary>
+            Indicates if the directional pad is pressed down.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad.Right">
+            <summary>
+            Indicates if the directional pad is pressed right.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.DPad.Up">
+            <summary>
+            Indicates if the directional pad is pressed up.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons">
+            <summary>
+            Identifies the state of the controller buttons.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.TimeStamp">
+            <summary>
+            Identifies the time of the button input.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.A">
+            <summary>
+            Identifies whether the A button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.B">
+            <summary>
+            Identifies whether the B button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.X">
+            <summary>
+            Identifies whether the X button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.Y">
+            <summary>
+            Identifies whether the Y button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.Back">
+            <summary>
+            Identifies whether the Back button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.Start">
+            <summary>
+            Identifies whether the Start button was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.LeftStick">
+            <summary>
+            Identifies whether the left thumbstick was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.RightStick">
+            <summary>
+            Identifies whether the right thumbstick was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.LeftShoulder">
+            <summary>
+            Identifies whether the left shoulder (bumper) was pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons.RightShoulder">
+            <summary>
+            Identifies whether the right shoulder (bumper) was pressed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Triggers">
+            <summary>
+            Identifies the state of the controller's triggers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Triggers.TimeStamp">
+            <summary>
+            Identifies the time of the trigger input.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Triggers.Left">
+            <summary>
+            Identifies the left trigger value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Triggers.Right">
+            <summary>
+            Identifies the right trigger value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks">
+            <summary>
+            Identifies the thumbsticks state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks.TimeStamp">
+            <summary>
+            Identifies the time of the thumbstick input.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks.LeftX">
+            <summary>
+            Identifies the X value of left thumbstick.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks.LeftY">
+            <summary>
+            Identifies the Y value of left thumbstick.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks.RightX">
+            <summary>
+            Identifies the X value of right thumbstick.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks.RightY">
+            <summary>
+            Identifies the Y value of right thumbstick.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.PollRequest">
+            <summary>
+            A request to cause the service to update the state of the controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Vibration">
+            <summary>
+            Identifies the vibration motors' state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Vibration.TimeStamp">
+            <summary>
+            Identifies the time of the vibration motors change.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Vibration.Left">
+            <summary>
+            Identifies the value of the left vibration motor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Vibration.Right">
+            <summary>
+            Identifies the value of the right vibration motor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.QueryControllersRequest">
+            <summary>
+            A request to return information about the current controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.QueryControllersResponse">
+            <summary>
+            The response that contains information about the current controllers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.QueryControllersResponse.Controllers">
+            <summary>
+            A list of capabilities for each controller.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.XInputGamepadOperations">
+            <summary>
+            The operations supported by this service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Subscribe">
+            <summary>
+            A subscribe operation requests the service to send notifications to another service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Get">
+            <summary>
+            Gets the current state of the controller.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Replace">
+            <summary>
+            Sets the current state of the game controller.
+            This raises an event when a subscription is initially established.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Poll">
+            <summary>
+            Polls the controller to update the current state.\n If the state has changed, then appropriate notifications are sent.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Poll.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Poll.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.PollRequest)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerChanged">
+            <summary>
+            Send this message to change which controller this service instance is using.
+            This event is raised when the controller is changed or when the controller is connected or disconnected
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerChanged.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ControllerChanged.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.Controller)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.DPadChanged">
+            <summary>
+            Indicates when the directional pad position changes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.DPadChanged.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.DPadChanged.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.DPad)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.ButtonsChanged">
+            <summary>
+            Indicates when one or more buttons are pressed or released on the controller.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ButtonsChanged.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ButtonsChanged.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.Buttons)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.TriggersChanged">
+            <summary>
+            Indicates when a trigger's value when it is pressed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.TriggersChanged.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.TriggersChanged.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.Triggers)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.ThumbsticksChanged">
+            <summary>
+            Indicates when a thumbstick position changes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ThumbsticksChanged.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.ThumbsticksChanged.#ctor(Microsoft.Robotics.Services.Sample.XInputGamepad.Thumbsticks)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.SetVibration">
+            <summary>
+            Sets the amount of vibration in the left and right rumble motors.
+            The left motor is the low-frequency rumble motor.
+            The right motor is the high-frequency rumble motor.
+            This notification is raised when the vibration settings are changed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.QueryControllers">
+            <summary>
+            Gets the list of attached controllers.
+            </summary>
+        </member>
+    </members>
+</doc>

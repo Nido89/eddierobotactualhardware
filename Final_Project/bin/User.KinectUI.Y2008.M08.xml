@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.KinectUI.Y2008.M08</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Dss.Services.Samples.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.ErrorMessage">
+            <summary>
+              Looks up a localized string similar to An error occured!.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.Properties.Resources.NodeIsNotClosed">
+             <summary>
+               Looks up a localized string similar to Only this window will be closed.
+            
+            The application and its DSS node will remain running..
+             </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.KinectUI">
+            <summary>
+            Main UI window - responsible for showing the user interface, accepting user input and communicating with KinectUIService when there is need to talk to Kinect service
+            </summary>
+            <summary>
+            KinectUI
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.VisemeProperty">
+            <summary>
+            Viseme Property
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.kinectUIService">
+            <summary>
+            Reference to DSS service for sending operations to the Kinect Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.recentFrameRateContainer">
+            <summary>
+            Used to integrate recent frame readings to come up with a reasonable running FPS average
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.lastFrameUpdatedTime">
+            <summary>
+            Used to calculate running FPS
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.runningFPS">
+            <summary>
+            Framerate achieved
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.greenBrush">
+            <summary>
+            Green Brush
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.redBrush">
+            <summary>
+            Red Brush
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.yellowBrush">
+            <summary>
+            Yellow Brush
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.wheatBrush">
+            <summary>
+            Wheat Brush
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.viewUpdatedAtLeastOnce">
+            <summary>
+            View was updated atleast once
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DisplayWindowWidth">
+            <summary>
+            We need this when pre-processing skeletal frame to calculate point positions relative to the depth frame
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DisplayWindowHeight">
+            <summary>
+            We need this when pre-processing skeletal frame to calculate point positions relative to the depth frame
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.ColorImageWidth">
+            <summary>
+            We need this when pre-processing skeletal frame to calculate point positions relative to the color image
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.ColorImageHeight">
+            <summary>
+            We need this when pre-processing skeletal frame to calculate point positions relative to the color image
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.MaxValidDepth">
+            <summary>
+            We need this when processing depth values
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.#ctor">
+            <summary>
+            Creates a new instance of the user interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.KinectUI_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Show a message when Kinect UI was closed without shutting down the node.
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.#ctor(Microsoft.Dss.Services.Samples.KinectUI.KinectUIService)">
+            <summary>
+            Creates a new instance of the user interface
+            </summary>
+            <param name="service">The service that handles communication with the Kinect service</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawFrame(Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor)">
+            <summary>
+            Draw the frame
+            </summary>
+            <param name="framePreProcessor">Frame preprocessor</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawRGBImage(Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor)">
+            <summary>
+            Draw the RGB Image
+            </summary>
+            <param name="framePreProcessor">Frame preprocessor</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawDepthImage(Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor)">
+            <summary>
+            Overlay depth image
+            </summary>
+            <param name="framePreProcessor">Pre processed frame</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawSkeletons(Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor)">
+            <summary>
+            A method for drawing all joints and bones
+            </summary>
+            <param name="framePreProcessor">Pre processed frame, including skeletal data</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawBodySegments(Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation,System.Windows.Media.Brush)">
+            <summary>
+            Draws bones
+            </summary>        
+            <param name="skeleton">PreProcessed Skeleton data</param>
+            <param name="currentSkeletonBrush">Brush for the skeleton</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.UpdateAdditionalSkeletalInfoField(Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation)">
+            <summary>
+            Sets the text for skeletal tracking quality (i.e. clipped bottom, etc)
+            </summary>
+            <param name="theSkeleton">Skeleton data</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawJoints(Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation)">
+            <summary>
+            Draws joint points. Uses different colors to indicate the quality of joint tracking
+            </summary>
+            <param name="theSkeleton">The Skeleton Info</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DrawBodySegment(Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation,System.Windows.Media.Brush,System.Int32,Microsoft.Kinect.JointType[])">
+            <summary>
+            Draw a collection of connected bones
+            </summary>
+            <param name="theSkeleton">Skeletal data</param>
+            <param name="brush">Brush color</param>
+            <param name="thickness">Thickness of the bone (we may use different thickenss for better visualization)</param>
+            <param name="ids">Joint IDs to connect</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.RegisterFrameRead">
+            <summary>
+            Used to calculate FPS
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.CalculateEffectiveFrameRate">
+            <summary>
+            Calculate FPS
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.UpdateState(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState)">
+            <summary>
+            Callback to update UI elements that represent KinectService state(config) such as image resolution, etc
+            </summary>
+            <param name="state">Kinect state</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.UpdateControlValuesBasedOnState(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState)">
+            <summary>
+            Update Control Values based on state
+            </summary>
+            <param name="state">Kinect state</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.UpdateImmutableControlsOnFirstStateRead(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState)">
+            <summary>
+            We want to disable controls that can't be used due to config state (i.e. can't choose to view video if video frame read was not configured)
+            </summary>
+            <param name="state">Kinect state</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.ShowFault(W3C.Soap.Fault)">
+            <summary>
+            Displays a fault message
+            </summary>
+            <param name="fault">Error raised</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.OnUpdateTilt(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Update tilt value in the control
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.TransformSmoothChecked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Transform smoothing checkbox updated
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.FieldUpdated(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Transform field updated
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.UpdateTransformSmooth">
+            <summary>
+            Update smoothing parameters
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.VideoCB_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle video check box events
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.DepthCB_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle depth check box events
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.SkeletalCB_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handle skeletal check box events
+            </summary>
+            <param name="sender">The parameter is not used.</param>
+            <param name="e">The parameter is not used.</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUI.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService">
+            <summary>
+            KinectUIService - Example of using Kinect service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.mainPort">
+            <summary>
+            UI will use this port to post operations to
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.lastStateReadTime">
+            <summary>
+            Used to guage frequency of reading the state (which is much lower than that of reading frames)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.frameQueryFailed">
+            <summary>
+            We don't want to flood logs with same errors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.tiltPollFailed">
+            <summary>
+            We don't want to flood logs with same errors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.kinectPort">
+            <summary>
+            Kinect partner service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.frameProcessor">
+            <summary>
+            Frame Pre Processor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.wpfServicePort">
+            <summary>
+            WPF service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.userInterface">
+            <summary>
+            Main UI window to do "Invokes" on when data is ready for visualization
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            By default we will query all 3 frame types
+            </summary>
+            <param name="creationPort">Creation port</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.Initialize">
+            <summary>
+            Initialize Kinect UI serice
+            </summary>
+            <returns>CCR Iterator</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.ReadKinectLoop">
+            <summary>
+            Main read loop
+            Read raw frame from Kinect service, then process it asynchronously, then request UI update
+            </summary>
+            <returns>A standard CCR iterator.</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.UpdateUI(Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor)">
+            <summary>
+            Update the UI for each frame
+            </summary>
+            <param name="processedFrames">Processed Frames</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.UpdateState(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState)">
+            <summary>
+            Update the kinect state on the UI
+            </summary>
+            <param name="kinectState">Kinect State</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.UpdateTilt(System.Int32)">
+            <summary>
+            Update the tilt angle on the kinect
+            </summary>
+            <param name="degrees">Angle in degrees</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.UpdateSkeletalSmoothing(System.Boolean,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Send a request to Kinect service to update smoothing parameters
+            </summary>
+            <param name="transformSmooth">A value indicating whether to apply transform smooth</param>
+            <param name="smoothing">The amount of smoothing to be applied</param>
+            <param name="correction">The amount of correction to be applied</param>
+            <param name="prediction">The amount of prediction to be made</param>
+            <param name="jitterRadius">The radius for jitter processing</param>
+            <param name="maxDeviationRadius">Maximum deviation radius</param>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.IncludeDepth">
+            <summary>
+            Gets or sets a value indicating whether to render depth information
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.IncludeVideo">
+            <summary>
+            Gets or sets a value indicating whether to render video information
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.KinectUIService.IncludeSkeletons">
+            <summary>
+            Gets or sets a value indicating whether to render skeleton information
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Contract">
+            <summary>
+            KinectUI contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.Contract.Identifier">
+            <summary>
+            DSS contract identifer for KinectUI
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.KinectUIState">
+            <summary>
+            KinectUI state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.KinectUIOperations">
+            <summary>
+            KinectUI main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Get">
+            <summary>
+            KinectUI get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Get.#ctor">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">The request message body</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.Services.Samples.KinectUI.KinectUIState,W3C.Soap.Fault})">
+            <summary>
+            Creates a new instance of Get
+            </summary>
+            <param name="body">The request message body</param>
+            <param name="responsePort">The response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor">
+            <summary>
+            Responsibility of this class is to take a raw frame and turn it into a format that can be consumed by UI w/o having to do any service calls in the process
+            For Video - it menas nothing to do (as RawFrame's planar image for RGB is directly consumable by UI)
+            For Depth - it means turning Kinect Depth frame into a grayscale (with optional coloring of players)
+            For Skeletons - it means pre-calculating all Joint positions and storing those in JointPoints container such that UI only needs to connect the dots
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.BlueIndex">
+            <summary>
+            Blue byte offset in Color stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.GreenIndex">
+            <summary>
+            Green byte offset in Color stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.RedIndex">
+            <summary>
+            Red byte offset in Color stream.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.kinectPort">
+            <summary>
+            Need to interact with main Kinect service for coordinate calculations of skeletal data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectOperations)">
+            <summary>
+            We need to initialize Kinect port - since we'll be talking to the service
+            </summary>
+            <param name="kinectPort">Kinect port</param>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.RawFrames">
+            <summary>
+            Cached raw frames as they were read from the Kinect Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.DepthColordBytes">
+            <summary>
+            Processed depth image - ready to be consumed by the UI
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.AllSkeletons">
+            <summary>
+            Joint coordinates that will be used by UI to draw the seletons. 7 skeleton structs are preallocated
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.cachedJointPoint">
+            <summary>
+            Used to pass a point from JointToPointCoordinates() to ProcessSkeletons()
+            </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.SetRawFrame(Microsoft.Robotics.Services.Sensors.Kinect.RawKinectFrames)">
+            <summary>
+            Invoked right after a raw frame was obtained from Kinect service
+            </summary>
+            <param name="frames">Raw frame as recieved from Kinect sensor</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.GetDepthBytes">
+            <summary>
+            Convert Kinect depth array to color bytes (grayscale with optional player coloring)
+            </summary>
+            <returns>Depth image array</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.ColorPlayers(System.Int16,System.Byte[],System.Int32)">
+            <summary>
+            Use different colors for different players. 
+            </summary>
+            <param name="depthReadingToExamine">Depth reading to examine</param>
+            <param name="colorFrame">Color image frame</param>
+            <param name="index">Player index</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.GetDistanceWithPlayerIndex(System.Int16)">
+            <summary>
+            Depth bytes to millimeter in 'PlayerIndex' format
+            </summary>
+            <param name="depth">Depth value to extract distance out of</param>        
+            <returns>Distance in millimeter</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.GetPlayerIndex(System.Int16)">
+            <summary>
+            Self explanatory
+            </summary>
+            <param name="depth">Depth value to extract player index out of</param>
+            <returns>0 = no player, 1 = 1st player, 2 = 2nd player... </returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.ProcessSkeletons">
+            <summary>
+            Convert raw skeletal structure into one we can visualize (with window coordinates)
+            </summary>
+            <returns>CCR Iterator</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.FramePreProcessor.JointToPointCoordinates(Microsoft.Kinect.Joint)">
+            <summary>
+            The skeleton data, the color image data, and the depth data are based on different 
+            coordinate systems. To show consistent images from all three streams in the sample’s 
+            display window, we need to convert coordinates in skeleton space to image space by 
+            following steps
+            /// </summary>
+            <param name="joint">Joint to get coordinates for</param>
+            <returns>CCR Iterator</returns>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.VisualizableJoint">
+            <summary>
+            Joint information used in visualizing the skeletons
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.VisualizableJoint.JointCoordiantes">
+            <summary>
+            Visualizable coordinates of the joint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.VisualizableJoint.TrackingState">
+            <summary>
+            Gets or sets the tracking state. Is one of the following - Tracked, Inferred, Not Tracked
+            </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation">
+            <summary>
+            Joint coordinates that will be used by UI to draw the seletons
+            </summary>
+        </member>
+        <member name="F:Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation.JointPoints">
+            <summary>
+            Pre-allocated joint points
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation.SkeletonQuality">
+            <summary>
+            Gets or sets the skeleton quality
+            </summary>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.KinectUI.VisualizableSkeletonInformation.IsSkeletonActive">
+            <summary>
+            Gets or sets a value indicating whether or not this skeleton is tracked by Kinect
+            </summary>
+        </member>
+    </members>
+</doc>

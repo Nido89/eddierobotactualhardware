@@ -1,0 +1,5 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ServiceTutorial8.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ServiceTutorial8.Y2006.M06.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\ServiceTutorials\Tutorial8\CSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\ServiceTutorials\Tutorial8\CSharp\obj\Debug\User.ServiceTutorial8.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\ServiceTutorials\Tutorial8\CSharp\obj\Debug\User.ServiceTutorial8.Y2006.M06.pdb

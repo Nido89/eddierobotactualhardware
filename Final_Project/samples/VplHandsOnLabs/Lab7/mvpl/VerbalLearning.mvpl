@@ -1,0 +1,17 @@
+<RoboticsProject Version="RoboticsDevStudio2008" xmlns="clr-namespace:Microsoft.Robotics.Authoring.Project;assembly=Microsoft.VisualProgrammingLanguage.Editor">
+  <RoboticsProject.Settings>
+    <ProjectSettings Year="2008" Month="9" IsServiceCompiled="False" KeyFile="C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\mrisamples.snk" ContractPrefix="http://schemas.microsoft.com" ClrNamespacePrefix="Robotics" IncludeDebuggingInformation="True" CodeGenerationTarget="NET20" />
+  </RoboticsProject.Settings>
+  <Dataflow Source="Diagrams.xml.compressed" />
+  <ManifestFile Comment="" Source="iRobot.Drive.Manifest.xml">
+    <TextFile Source="irobot (iRobot.Drive.Manifest).xml" />
+  </ManifestFile>
+  <ManifestFile Comment="" Source="MobileRobots.P3DX.Simulation.Manifest.xml">
+    <TextFile Source="MobileRobots.P3DX.SimulationEngineState.xml" />
+  </ManifestFile>
+  <ConfigFile Source="FlexibleDialog.Config.xml" />
+  <ManifestFile Comment="" Source="IRobot.Create.Simulation.Manifest.xml">
+    <TextFile Source="IRobot.Create.SimulationEngineState.xml" />
+  </ManifestFile>
+  <ConfigFile Source="SpeechRecognizer.Config.xml" />
+</RoboticsProject>

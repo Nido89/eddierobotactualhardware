@@ -1,0 +1,38 @@
+﻿<Window x:Class="Microsoft.Dss.Services.Samples.WpfTextToSpeechUI.TextToSpeechUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="198" Width="285"
+    Title="TTS User Interface"
+        Name="self"
+>
+
+    <StackPanel>
+        <Label Content="_Text:" Target="{Binding ElementName=_text}"/>
+        <DockPanel>
+            <Button 
+                Margin="4"
+                Padding="4 2 4 2"
+                Content="_Say it!"
+                DockPanel.Dock="Right" 
+                VerticalAlignment="Center"
+                Click="Button_Click"
+                />
+            <TextBox 
+                Margin="4"
+                Name="_text"
+                VerticalAlignment="Center"
+                />
+        </DockPanel>
+        <Label
+            Content="Viseme:"
+            />
+        <TextBlock
+            Text="{Binding ElementName=self, Path=Viseme.Viseme}"
+            HorizontalAlignment="Center"
+            >
+            <TextBlock.LayoutTransform>
+                <ScaleTransform ScaleX="4" ScaleY="4"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+    </StackPanel>
+</Window>

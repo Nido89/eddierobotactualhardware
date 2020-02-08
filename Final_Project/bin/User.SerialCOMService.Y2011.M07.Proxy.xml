@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.SerialCOMService.Y2011.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SerialCOMServiceState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SerialCOMServiceState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SerialCOMServiceState.Clone">
+             <summary>
+            Clones SerialCOMServiceState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SerialCOMServiceState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SerialCOMServiceState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SerialCOMServiceState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SerialCOMServiceState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SerialCOMServiceState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.OpenPortRequestType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current OpenPortRequestType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.OpenPortRequestType.Clone">
+             <summary>
+            Clones OpenPortRequestType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.OpenPortRequestType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current OpenPortRequestType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.OpenPortRequestType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes OpenPortRequestType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized OpenPortRequestType</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClosePortRequestType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ClosePortRequestType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClosePortRequestType.Clone">
+             <summary>
+            Clones ClosePortRequestType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClosePortRequestType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ClosePortRequestType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClosePortRequestType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ClosePortRequestType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ClosePortRequestType</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClearBufferRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ClearBufferRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClearBufferRequest.Clone">
+             <summary>
+            Clones ClearBufferRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClearBufferRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ClearBufferRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.ClearBufferRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ClearBufferRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ClearBufferRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendPacketRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SendPacketRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendPacketRequest.Clone">
+             <summary>
+            Clones SendPacketRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendPacketRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SendPacketRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendPacketRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SendPacketRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SendPacketRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Packet.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Packet to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Packet.Clone">
+             <summary>
+            Clones Packet
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Packet.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Packet to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Packet.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Packet
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Packet</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.GetPacketRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetPacketRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.GetPacketRequest.Clone">
+             <summary>
+            Clones GetPacketRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.GetPacketRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetPacketRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.GetPacketRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetPacketRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetPacketRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendAndGetRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SendAndGetRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendAndGetRequest.Clone">
+             <summary>
+            Clones SendAndGetRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendAndGetRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SendAndGetRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.SendAndGetRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SendAndGetRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SendAndGetRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SerialComService.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

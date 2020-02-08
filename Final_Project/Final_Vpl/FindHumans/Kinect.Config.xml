@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KinectState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2011/08/kinect.html">
+	<FrameRate>30</FrameRate>
+	<TiltDegrees>15</TiltDegrees>
+	<DeviceID>0</DeviceID>
+	<UseColor>false</UseColor>
+	<UseDepth>false</UseDepth>
+	<UseSkeletalTracking>true</UseSkeletalTracking>
+	<ColorImageFormat>Undefined</ColorImageFormat>
+	<DepthImageFormat>Undefined</DepthImageFormat>
+	<DepthStreamRange>Default</DepthStreamRange>
+	<TransformSmooth>false</TransformSmooth>
+	<SkeletalEngineTransformSmoothParameters>
+		<Smoothing>0</Smoothing>
+		<Correction>0</Correction>
+		<Prediction>0</Prediction>
+		<JitterRadius>0</JitterRadius>
+		<MaxDeviationRadius>0</MaxDeviationRadius>
+	</SkeletalEngineTransformSmoothParameters>
+	<IsDepthServiceUpdateEnabled>false</IsDepthServiceUpdateEnabled>
+	<IsWebCamServiceUpdateEnabled>false</IsWebCamServiceUpdateEnabled>
+</KinectState>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextToSpeechState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2006/05/texttospeech.html">
+	<Voices />
+	<Voice>Microsoft Anna</Voice>
+	<Volume>100</Volume>
+	<Rate>0</Rate>
+	<SpeechText />
+</TextToSpeechState>

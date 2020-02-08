@@ -1,0 +1,3 @@
+REM Build the Parallax Service
+dssprojectmigration /b- Parallax2011ReferencePlatformIoController
+msbuild Parallax2011ReferencePlatformIoController\Parallax2011ReferencePlatformIoController.csproj

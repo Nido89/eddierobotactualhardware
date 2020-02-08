@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpeechRecognizer.Y2008.M02</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities">
+            <summary>
+            Utility methods for dealing with speech recognition grammars
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.BuildSrgsGrammar(System.IO.Stream)">
+            <summary>
+            Builds a grammar object from a W3C Speech Recognition Grammar Specification (SRGS)
+            compliant XML file.
+            </summary>
+            <param name="grammarStream">Stream providing access to the XML file</param>
+            <returns>The constructed grammar object</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.BuildDictionaryGrammar(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Builds a grammar object from a dictionary of text-to-meaning mappings.
+            </summary>
+            <param name="dictionary">The dictionary with the mappings</param>
+            <returns>The constructed grammar object</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.InsertDictionary(System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Inserts new entries into an existing dictionary. Throws an exception if an entry already exists.
+            </summary>
+            <param name="dictionary">Dictionary into which entries are inserted</param>
+            <param name="newEntries">Entries which are inserted</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.UpdateDictionary(System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Updates existing entries in a dictionary with values of another dictionary
+            </summary>
+            <param name="dictionary">Dictionary which shall be update</param>
+            <param name="entries">Updated entries</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.UpsertDictionary(System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Inserts new entries into an existing dictionary or updates existing entries if they exist already
+            </summary>
+            <param name="dictionary">Dictionary that shall be modified</param>
+            <param name="entries">Entries to insert/update the existing dictionary</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarUtilities.DeleteDictionary(System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Deletes entries from an existing dictionary
+            </summary>
+            <param name="dictionary">Dictionary from which entries shall be deleted</param>
+            <param name="entries">Entries that shall be deleted</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarType">
+            <summary>
+            Grammar type used in the speech recognition service 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarType.DictionaryStyle">
+            <summary>
+            A simple text-to-meaning mapping type grammar
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.GrammarType.Srgs">
+            <summary>
+            A W3C Speech Recognition Grammar Specification (SRGS) type
+            grammar
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue">
+            <summary>
+            Semantic value class that aims to represent the data contained in a
+            <see cref="T:System.Speech.Recognition.SemanticValue"/> instance. While
+            SemanticValue is not serializable, this class is. This conversion is
+            transparent to a partner service, that is, the partner service has to
+            deal with SemanticValue instances only.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.#ctor(System.String,System.Speech.Recognition.SemanticValue)">
+            <summary>
+            Constructor that creates an instance from a SemanticValue object's 
+            internal data. The newly created instance aims to represent the same
+            data a SemanticValue object does.
+            </summary>
+            <param name="keyName">The key under which this semantic value instance is
+            referenced by its parent. Can be null for the the root value</param>
+            <param name="semanticValue"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.ToSemanticValue">
+            <summary>
+            Creates a SemanticValue instance from this object
+            </summary>
+            <returns>The created semantic value instance or null if this object's
+            value is not set</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Clone">
+            <summary>
+            Creates a clone of the current instance
+            </summary>
+            <returns>clone of the current instance (deeply cloned)</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copys the values of the current instance to the target instance
+            </summary>
+            <param name="target">target instance</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize the values of the current instance
+            </summary>
+            <param name="reader">reader from which to deserialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.DeserializeValue(System.IO.BinaryReader)">
+            <summary>
+            Deserializes the Value of the current instance
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.DeserializeKeyName(System.IO.BinaryReader)">
+            <summary>
+            Deserializes the KeyName of the current instance
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.DeserializeChildren(System.IO.BinaryReader)">
+            <summary>
+            Deserializes the Children of the current instance
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serializes the current instance using binary serialization
+            </summary>
+            <param name="writer">The writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.SerializeChildren(System.IO.BinaryWriter)">
+            <summary>
+            Serializes the Value of the current instance
+            </summary>
+            <param name="writer">The writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.SerializeKeyName(System.IO.BinaryWriter)">
+            <summary>
+            Serializes the Value of the current instance
+            </summary>
+            <param name="writer">The writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.SerializeValue(System.IO.BinaryWriter)">
+            <summary>
+            Serializes the Value of the current instance
+            </summary>
+            <param name="writer">The writer to which to serialize</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.KeyName">
+            <summary>
+            The key under which this semantic value instance is referenced
+            by its parent
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Confidence">
+            <summary>
+            A relative measure of the certainty as to the correctness of the semantic
+            parsing that returned the current object
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.TypeOfValue">
+            <summary>
+            Type of which the semantic value is
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.ValueBool">
+            <summary>
+            The semantic boolean value
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.ValueInt">
+            <summary>
+            The semantic int value
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.ValueFloat">
+            <summary>
+            The semantic float value
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.ValueString">
+            <summary>
+            The semantic string value
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Value">
+            <summary>
+            The semantic value
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedSemanticValue.Children">
+            <summary>
+            A collection of semantic value children
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType">
+            <summary>
+            Type of which the semantic value can be
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType.Bool">
+            <summary>
+            Type bool
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType.Float">
+            <summary>
+            Type float
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType.Int">
+            <summary>
+            Type int
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType.String">
+            <summary>
+            Type string
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.RecognizedValueType.Undefined">
+            <summary>
+            Undefined (not set)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer">
+            <summary>
+            SpeechRecognizer service - Recognizes spoken commands from a defined grammar
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.MountServiceReadBlockSize">
+            <summary>
+            Block size with which files are read from the mount service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer._state">
+            <summary>
+            Speech recognition service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer._mainPort">
+            <summary>
+            The service's main port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer._subMgrPort">
+            <summary>
+            Subscription manager port for handling speech recognition event subscriptions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer._loadGrammarResponsePort">
+            <summary>
+            Success/failure port LoadGrammar waits on and the speech recognition engine
+            callback posts to
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.Start">
+            <summary>
+            Starts service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.LoadGrammarOnStartup">
+            <summary>
+            Loads grammar on service startup
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.StartService">
+            <summary>
+            Wrapper around base.Start() call; needed because base.Start() cannot
+            be called from inside an iterator
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.InsertGrammarEntryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.InsertGrammarEntry)">
+            <summary>
+            Insert grammar entry handler
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.UpdateGrammarEntryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpdateGrammarEntry)">
+            <summary>
+            Update handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.UpsertGrammarEntryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpsertGrammarEntry)">
+            <summary>
+            Upsert handler
+            </summary>
+            <param name="upsert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.DeleteGrammarEntryHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.DeleteGrammarEntry)">
+            <summary>
+            Delete handler
+            </summary>
+            <param name="delete"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SetSrgsGrammarFileHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SetSrgsGrammarFile)">
+            <summary>
+            Set SRGS grammar file handler
+            </summary>
+            <param name="setSrgsGrammarFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.EmulateRecognizeHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.EmulateRecognize)">
+            <summary>
+            Eemulate recognize handler
+            </summary>
+            <param name="speech"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.ReplaceHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Replace)">
+            <summary>
+            Replace handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SubscribeHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Subscribe)">
+            <summary>
+            Subscription handler
+            </summary>
+            <param name="subscribe">Subscription message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechDetectedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechDetected)">
+            <summary>
+            Speech detected operation (not supported, just used for notifications to subscribers)
+            </summary>
+            <param name="detected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechRecognizedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognized)">
+            <summary>
+            Speech recognized operation (not supported, just used for notifications to subscribers)
+            </summary>
+            <param name="recognized"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechDetectedHandler(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognitionRejected)">
+            <summary>
+            Speech recognition rejected operation (not supported, just used for
+            notifications to subscribers)
+            </summary>
+            <param name="rejected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechDetectedHandler(System.Object,System.Speech.Recognition.SpeechDetectedEventArgs)">
+            <summary>
+            Speech detected event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechRecognizedHandler(System.Object,System.Speech.Recognition.SpeechRecognizedEventArgs)">
+            <summary>
+            Speech recognized event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.SpeechRecognitionRejectedHandler(System.Object,System.Speech.Recognition.SpeechRecognitionRejectedEventArgs)">
+            <summary>
+            Speech recognition rejected event handler
+            </summary>
+            <param name="sender"></param>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.LoadGrammar(Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.LoadGrammarRequest,Microsoft.Ccr.Core.SuccessFailurePort)">
+            <summary>
+            Loads a grammar into the speech recognition engine; MUST run exclusive
+            </summary>
+            <param name="request">Request that contains the new grammar to load</param>
+            <param name="response">Response port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.RecognizerUpdateReachedHandler(System.Object,System.Speech.Recognition.RecognizerUpdateReachedEventArgs)">
+            <summary>
+            On speech recognizer ready for update callback, called by recognition engine
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.LoadGrammarCompletedHandler(System.Object,System.Speech.Recognition.LoadGrammarCompletedEventArgs)">
+            <summary>
+            On grammar loaded callback, called by recognition engine
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.ReadFileFromMountService(System.String,Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.FileReaderPort)">
+            <summary>
+            Reads a binary file from the mount service and writes it into a memory stream
+            </summary>
+            <param name="filename">Relative path to the file on the mount service</param>
+            <param name="readReaderPort">Response port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.PostActionNotSupported(Microsoft.Dss.ServiceModel.Dssp.DsspOperation)">
+            <summary>
+            Posts an ActionNotSupported DSSP fault code to the response port of the passed in
+            DSSP operation
+            </summary>
+            <param name="operation"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizer.FileReaderPort">
+            <summary>
+            File reader response port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState">
+            <summary>
+            Speech recognizer service state
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.#ctor">
+            <summary>
+            Speech recognizer state constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.Recognizer">
+            <summary>
+            Speech recognition engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.IgnoreAudioInput">
+            <summary>
+            Whether input from the default audio input device shall be ignored
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.GrammarType">
+            <summary>
+            Type of grammar the recognizer uses
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.DictionaryGrammar">
+            <summary>
+            Dictionary entries of the dictionary-style grammar, where an entry's key is the
+            recognizable phrase and its value is the phrase's meaning (semantic value).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.SrgsFileLocation">
+            <summary>
+            Location of SRGS (Speech Recognition Grammar Specification) file that shall be
+            used as a grammar.
+            </summary>
+            <remarks>
+            SRGS grammars require Microsoft Windows Vista and will not work with Microsoft Windows XP/Server 2003.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState.Grammar">
+            <summary>
+            The grammar object used in the recognition engine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.InsertGrammarRequest">
+            <summary>
+            Insert grammar request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.ModifyGrammarDictionaryRequest">
+            <summary>
+            Modify grammar dictionary request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.ModifyGrammarDictionaryRequest.DictionaryGrammar">
+            <summary>
+            Dictionary grammar that shall be used to modify the current dictionary
+            grammar.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpdateGrammarRequest">
+            <summary>
+            Update grammar request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpsertGrammarRequest">
+            <summary>
+            Update or insert grammar request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.DeleteGrammarRequest">
+            <summary>
+            Delete grammar request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SetSrgsGrammarFileRequest">
+            <summary>
+            Set SRGS grammar file request
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SetSrgsGrammarFileRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SetSrgsGrammarFileRequest.FileLocation">
+            <summary>
+            Location of the SRGS grammar file inside the DSS node's /store directory
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.EmulateRecognizeRequest">
+            <summary>
+            Emulate recognize request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.EmulateRecognizeRequest.Text">
+            <summary>
+            Text of speech that shall be emulated
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechDetectedNotification">
+            <summary>
+            Notification that speech has been detected by the speech recognition engine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechInformation">
+            <summary>
+            Information on detected, recognized or rejected speech
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechInformation.StartTime">
+            <summary>
+            Time at which speech started
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizedNotification">
+            <summary>
+            Notification that speech has been recognized by the speech recognition engine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechAudioInformation">
+            <summary>
+            Information on the audio input on which speech recognition was performed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechAudioInformation.Duration">
+            <summary>
+            Duration of speech
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechAudioInformation.DurationInTicks">
+            <summary>
+            Duration of speech in ticks. Workaround using ticks because
+            System.TimeSpan itself cannot be XML serialized
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizedNotification.Confidence">
+            <summary>
+            Measure of certainty for a recognized phrase returned by the recognition engine
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizedNotification.Text">
+            <summary>
+            Normalized text obtained by the recognition engine from audio input
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizedNotification.Semantics">
+            <summary>
+            Semantics of the normalized text obtained by the recognition engine from audio input
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognitionRejectedNotification">
+            <summary>
+            Notification that speech has been rejected by the speech recognition engine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Contract">
+            <summary>
+            SpeechRecognizer Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Contract.Identifier">
+            <summary>
+            The Dss service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerOperations">
+            <summary>
+            SpeechRecognizer Main Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Get">
+            <summary>
+            SpeechRecognizer Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Get.#ctor">
+            <summary>
+            SpeechRecognizer Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            SpeechRecognizer Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognizerState,W3C.Soap.Fault})">
+            <summary>
+            SpeechRecognizer Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.InsertGrammarEntry">
+            <summary>
+            Insert operation which inserts all entries of the supplied grammar dictionary into the current
+            dictionary. If certain entries exist already a fault is returned and the whole operation fails
+            without the current dictionary being modified at all.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpdateGrammarEntry">
+            <summary>
+            Update operation which updates entries that already exist in the current grammar dictionary with
+            the entries of the supplied dictionary. If certain entries in the supplied dictionary do not
+            exist in the current dictionary no fault is returned. Instead, only the existing entries are
+            updated.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.UpsertGrammarEntry">
+            <summary>
+            Update or insert operation which inserts entries from the supplied grammar directory into the
+            current dictionary if they do not exist yet or updates entries that already exist with entries
+            from the supplied directory.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.DeleteGrammarEntry">
+            <summary>
+            Delete operation which deletes those entries from the current grammar directory whose keys are
+            equal to one of the entries in the supplied directory. If a key from the supplied directory
+            does not exist in the current directory no fault is returend. Instead, only the matching entries
+            are deleted.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SetSrgsGrammarFile">
+            <summary>
+            Set SRGS grammar file operation which sets the grammar type to SRGS file and tries to load the
+            specified file, which has to reside inside the DSS node's /store directory. If loading the file
+            fails a fault is returned and the speech recognizer falls back into the state it was before it
+            processed this message.
+            </summary>
+            <remarks>
+            SRGS grammars require Microsoft Windows Vista and will not work with Microsoft Windows XP/Server 2003.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.EmulateRecognize">
+            <summary>
+            Speech recognize emulation operation that orders the recognition engine to emulate speech with a
+            specific content and to act upon this speech. This is mostly used for testing and debugging.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Replace">
+            <summary>
+            Replace service state operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.Subscribe">
+            <summary>
+            Subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechDetected">
+            <summary>
+            Speech detected notificaiton
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognized">
+            <summary>
+            Speech recognized notification
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.SpeechRecognitionRejected">
+            <summary>
+            Speech recognition rejected notification
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.LoadGrammarRequest">
+            <summary>
+            Replace grammar request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.LoadGrammarRequest.GrammarType">
+            <summary>
+            Specifies the type of grammar that shall be set
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizer.LoadGrammarRequest.SrgsFileLocation">
+            <summary>
+            Location of SRGS (Speech Recognition Grammar Specification) file that shall
+            be used as a grammar
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleDashboard.Y2006.M01</name>
+    </assembly>
+    <members>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.DriveControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.DriveControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.DriveControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService">
+            <summary>
+            Simple Dashboard Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimpleDashboardService Default DSS Constuctor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService.Start">
+            <summary>
+            Entry Point for the SimpleDashboard Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService.GetHandler(Microsoft.Robotics.Services.SimpleDashboard.Get)">
+            <summary>
+            Get Handler returns SimpleDashboard State.
+            </summary>
+            <remarks>
+            We declare this handler as an iterator so we can easily do
+            sequential, logically blocking receives, without the need
+            of nested Activate calls. However, this is the standard
+            behavior and could use the default handler except that the
+            way the handlers are hooked up requires an explicit method.
+            </remarks>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService.ReplaceHandler(Microsoft.Robotics.Services.SimpleDashboard.Replace)">
+            <summary>
+            Replace Handler sets SimpleDashboard State
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop Handler shuts down SimpleDashboard
+            </summary>
+            <param name="drop"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState">
+            <summary>
+            SimpleDashboard StateType
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState.Log">
+            <summary>
+            Log - Logging is turned on if true
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState.LogFile">
+            <summary>
+            LogFile - The name of the log file
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState.TranslateScaleFactor">
+            <summary>
+            Adjusts the sensitivity for driving forwards/backwards
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState.RotateScaleFactor">
+            <summary>
+            Adjusts the sensitivity for rotating
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.Contract">
+            <summary>
+            DSS Contract for SimpleDashboard
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SimpleDashboard.Contract.Identifier">
+            <summary>
+            The DSS Namespace for SimpleDashboard
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardOperations">
+            <summary>
+            The SimpleDashboard Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.Get">
+            <summary>
+            DSS Get Definition for SimpleDashboard
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.Get.#ctor">
+            <summary>
+            Default DSS Get Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            DSS GetRequestType Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SimpleDashboard.Replace">
+            <summary>
+            DSS Replace Definition for SimpleDashboard
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.Replace.#ctor">
+            <summary>
+            Default DSS Get Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SimpleDashboard.Replace.#ctor(Microsoft.Robotics.Services.SimpleDashboard.SimpleDashboardState)">
+            <summary>
+            DSS SimpleDashboard StateType Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+    </members>
+</doc>

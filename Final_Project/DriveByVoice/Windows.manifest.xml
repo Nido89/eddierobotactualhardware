@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft DSS Manifest Editor.-->
+<Manifest xmlns:speechrecognizer="http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:this="urn:uuid:98a2b233-d875-4b89-bd38-ddb3dba92957" xmlns:diagram="http://schemas.microsoft.com/2013/09/drivebyvoice/diagram.html" xmlns:texttospeech="http://schemas.microsoft.com/2006/05/texttospeech.html" xmlns:markrobot="http://schemas.microsoft.com/2011/11/markrobot.html" xmlns:robotdashboard="http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html" xmlns:kinect="http://schemas.microsoft.com/robotics/2011/08/kinect.html" xmlns:parallax2011referenceplatformiocontroller="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html" xmlns:speechrecognizergui="http://schemas.microsoft.com/robotics/2008/03/speechrecognizergui.html" xmlns:serialcomservice="http://www.microsoft.com/2011/07/serialcomservice.html" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/07/robotdashboard.html</dssp:Contract>
+      <dssp:AliasList />
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Drive</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/depthcamsensor.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:DepthCam</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/01/webcamsensor.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:WebCam</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/infraredsensorarray.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:IRSensorArray</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/09/sonarsensorarray.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:SonarSensorArray</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/pantilt.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Pan_x002F_Tilt</dssp:Name>
+          <dssp:ServiceName>this:Kinect</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/06/battery.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>robotdashboard:Battery</dssp:Name>
+          <dssp:ServiceName>this:MarkRobot</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:RobotDashboard</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+      <dssp:Service>http://localhost:80/parallax2011referenceplatformiocontroller</dssp:Service>
+      <dssp:AliasList />
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html</dssp:Contract>
+          <dssp:Service>eddie.parallax2011referenceplatformiocontroller (eddie.manifest).xml</dssp:Service>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>parallax2011referenceplatformiocontroller:SerialCOMService</dssp:Name>
+          <dssp:ServiceName>this:SerialCOMService</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Parallax2011ReferencePlatformIoController1</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+      <dssp:AliasList />
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://www.microsoft.com/2011/07/serialcomservice.html</dssp:Contract>
+          <dssp:Service>eddie.serialcomservice (eddie.manifest).xml</dssp:Service>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SerialCOMService</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2011/08/kinect.html</dssp:Contract>
+      <dssp:AliasList />
+      <dssp:PartnerList />
+      <Name>this:Kinect</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.html</dssp:Contract>
+      <dssp:AliasList />
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2011/11/markrobot.html</dssp:Contract>
+          <dssp:Service>eddie.markrobot (eddie.manifest).xml</dssp:Service>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>markrobot:ReferencePlatformIOControllerDrive</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController1</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2011/10/adcpinarray.html</dssp:Contract>
+          <dssp:AliasList />
+          <dssp:PartnerList />
+          <dssp:Name>markrobot:ReferencePlatformControllerADCPinArray</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController1</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:MarkRobot</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html</dssp:Contract>
+      <dssp:Service>http://localhost:80/speechrecognizer</dssp:Service>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html</dssp:Contract>
+          <dssp:Service>speechrecognizer.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:SpeechRecognizer</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+      <dssp:Service>http://localhost:80/texttospeechtts</dssp:Service>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+          <dssp:Service>texttospeechtts.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:TexttoSpeechTTS</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2008/03/speechrecognizergui.html</dssp:Contract>
+      <dssp:Service>http://localhost:80/speechrecognizergui</dssp:Service>
+      <dssp:PartnerList />
+      <Name>this:SpeechRecognizerGui</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2013/09/drivebyvoice/diagram.html</dssp:Contract>
+      <dssp:Service>http://localhost:80/diagram</dssp:Service>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:SpeechRecognizer</dssp:Name>
+          <dssp:ServiceName>this:SpeechRecognizer</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:TexttoSpeechTTS</dssp:Name>
+          <dssp:ServiceName>this:TexttoSpeechTTS</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:Parallax2011ReferencePlatformIoController</dssp:Name>
+          <dssp:ServiceName>this:Parallax2011ReferencePlatformIoController1</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Diagram</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

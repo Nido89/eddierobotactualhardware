@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.KinectUI.Y2008.M08.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIState">
+            <summary>
+                       KinectUI state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current KinectUIState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIState.Clone">
+             <summary>
+            Clones KinectUIState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current KinectUIState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes KinectUIState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized KinectUIState</returns>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Proxy.Get">
+            <summary>
+                       KinectUI get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Proxy.KinectUIOperations">
+            <summary>
+                       KinectUI main operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.KinectUI.Proxy.Contract">
+            <summary>
+                       KinectUIService - Example of using Kinect service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.KinectUI.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

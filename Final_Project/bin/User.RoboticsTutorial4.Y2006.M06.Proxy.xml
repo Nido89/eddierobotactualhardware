@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.RoboticsTutorial4.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.RoboticsTutorial4State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RoboticsTutorial4State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.RoboticsTutorial4State.Clone">
+             <summary>
+            Clones RoboticsTutorial4State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.RoboticsTutorial4State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RoboticsTutorial4State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.RoboticsTutorial4State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RoboticsTutorial4State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RoboticsTutorial4State</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.StopRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current StopRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.StopRequest.Clone">
+             <summary>
+            Clones StopRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.StopRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current StopRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.StopRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes StopRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized StopRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.ForwardRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ForwardRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.ForwardRequest.Clone">
+             <summary>
+            Clones ForwardRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.ForwardRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ForwardRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.ForwardRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ForwardRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ForwardRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.BackwardRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current BackwardRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.BackwardRequest.Clone">
+             <summary>
+            Clones BackwardRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.BackwardRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current BackwardRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.BackwardRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes BackwardRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized BackwardRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnLeftRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TurnLeftRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnLeftRequest.Clone">
+             <summary>
+            Clones TurnLeftRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnLeftRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TurnLeftRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnLeftRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TurnLeftRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TurnLeftRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnRightRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TurnRightRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnRightRequest.Clone">
+             <summary>
+            Clones TurnRightRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnRightRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TurnRightRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.TurnRightRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TurnRightRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TurnRightRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RoboticsTutorial4.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

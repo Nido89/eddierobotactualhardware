@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:cg="http://schemas.microsoft.com/robotics/2007/04/codegenerator.html">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>592d92fe-cc1a-46f3-a4f0-bd9570b4916a</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>FollowMe.Y2013.M09</AssemblyName>
+    <RootNamespace>Robotics</RootNamespace>
+    <AssemblyOriginatorKeyFile>C:/Users/EWHA/Microsoft Robotics Dev Studio 4/samples/mrisamples.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <SignAssembly>true</SignAssembly>
+    <OutputType>Library</OutputType>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags />
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE;INSTRUMENTED</DefineConstants>
+    <DocumentationFile></DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE;INSTRUMENTED</DefineConstants>
+    <DocumentationFile></DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Ccr.Core, Version=4.0.261.0">
+      <SpecificVersion>true</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Base, Version=4.0.261.0">
+      <SpecificVersion>true</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Runtime, Version=4.0.261.0">
+      <SpecificVersion>true</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Runtime.Proxy, Version=4.0.261.0">
+      <SpecificVersion>true</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Ccr.Adapters.WinForms, Version=4.0.261.0">
+      <SpecificVersion>true</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="User.KinectUI.Y2008.M08.Proxy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7f9074033fd3dcf7">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Parallax2011ReferencePlatformIoController.Y2011.M07.Proxy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=96bf0bd635539de5">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RoboticsCommon.Proxy, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility.Y2006.M08.Proxy, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Utility.Y2006.M08, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="User.Kinect.Y2011.M01.Proxy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7f9074033fd3dcf7">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="User.CameraSensorUtilities.Proxy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7f9074033fd3dcf7">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="User.CameraSensorUtilities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7f9074033fd3dcf7">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualC, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.RegularExpressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SMDiagnostics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RoboticsCommon, Version=4.0.261.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Input.Manipulations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="User.Kinect.Y2011.M01, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7f9074033fd3dcf7">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Kinect, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>false</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DiagramService.cs" />
+    <Compile Include="DiagramTypes.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup Condition="'$(DelaySign)'!=''">
+    <ProxyDelaySign>/delaysign+</ProxyDelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent>"C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\dssproxy.exe" /dll:"$(TargetPath)" /proxyprojectpath:"$(ProjectDir)Proxy " /keyfile:"C:/Users/EWHA/Microsoft Robotics Dev Studio 4/samples/mrisamples.snk" $(ProxyDelaySign)  /binpath:". " /referencepath:"C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\ "</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,8 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ApartmentScene.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ApartmentScene.Y2009.M03.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\Microsoft.Robotics.Services.Samples.ImageProcessingResultForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\User.ApartmentScene.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Intermediate\Apartment Scene\obj\Debug\User.ApartmentScene.Y2009.M03.pdb

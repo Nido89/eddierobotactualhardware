@@ -1,0 +1,3206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utility.Y2006.M08</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService">
+            <summary>
+            ByteArrayService - Creates and converts byte arrays
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.GetListHandler(Microsoft.Robotics.Services.Sample.ByteArray.GetList)">
+            <summary>
+            Get a pre-initialized List of Bytes.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.GetArrayHandler(Microsoft.Robotics.Services.Sample.ByteArray.GetArray)">
+            <summary>
+            Get a pre-initialized Byte Array.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.ByteArrayToListHandler(Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayToList)">
+            <summary>
+            Convert a Byte Array to a List of Bytes.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayService.ByteListToArrayHandler(Microsoft.Robotics.Services.Sample.ByteArray.ByteListToArray)">
+            <summary>
+            Convert a List of Bytes to a Byte Array.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.Contract">
+            <summary>
+            ByteArray Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.ByteArray.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteArray">
+            <summary>
+            A Byte Array
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.ByteArray.ByteArray.Data">
+            <summary>
+            The Byte Array Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArray.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteArray.#ctor(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteList">
+            <summary>
+            A Byte List
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.ByteArray.ByteList.Data">
+            <summary>
+            The Byte List Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteList.#ctor">
+            <summary>
+            A Byte List
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.ByteArray.ByteList.#ctor(System.Byte[])">
+            <summary>
+            A Byte List
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayOperations">
+            <summary>
+            ByteArray Main Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.GetList">
+            <summary>
+            Get a Byte Array as a List
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.GetArray">
+            <summary>
+            Get a Byte Array
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteArrayToList">
+            <summary>
+            Convert a Byte Array to a List of Bytes
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.ByteArray.ByteListToArray">
+            <summary>
+            Convert a List of Bytes to a Byte Array
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService">
+            <summary>
+            Implementation class for Vpldatetime
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.GetHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.SubtractTimeSpanFromDateTimeHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromDateTime)">
+            <summary>
+            Subtract TimeSpan From Date Time Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.SubtractDateTimeFromDateTimeHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractDateTimeFromDateTime)">
+            <summary>
+            Subtract Date Time From Date Time Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.SubtractTimeSpanFromTimeSpanHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromTimeSpan)">
+            <summary>
+            Subtract TimeSpan From TimeSpan Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.AddTimeSpanToDateTimeHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToDateTime)">
+            <summary>
+            Add TimeSpan To Date Time Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.AddTimeSpanToTimeSpanHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToTimeSpan)">
+            <summary>
+            Add TimeSpan To TimeSpan Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.CreateTimeSpanHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpan)">
+            <summary>
+            Create TimeSpan Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeHelperService.CreateDateTimeHandler(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTime)">
+            <summary>
+            Create Date/Time Handler
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.Contract">
+            <summary>
+            Vpl DateTime helper Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeState">
+            <summary>
+            The DateTime State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeState.Now">
+            <summary>
+            Now - Current Date/Time
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeState.UtcNow">
+            <summary>
+            UtcNow - Current Date/Time in UTC
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DateTimeState.Today">
+            <summary>
+            Today - Today's date
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.VplDateTimeHelperOperations">
+            <summary>
+            Vpldatetime Main Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.VplDateTimeHelperOperations.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.Get">
+            <summary>
+            Get - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTime">
+            <summary>
+            CreateDateTime - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest">
+            <summary>
+            CreateDateTimeRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Year">
+            <summary>
+            Year
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Month">
+            <summary>
+            Month
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Day">
+            <summary>
+            Day
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Hour">
+            <summary>
+            Hour
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Minute">
+            <summary>
+            Minute
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Second">
+            <summary>
+            Second
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateDateTimeRequest.Millisecond">
+            <summary>
+            Millisecond
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpan">
+            <summary>
+            CreateTimeSpan - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest">
+            <summary>
+            CreateTimeSpanRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest.Days">
+            <summary>
+            Days
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest.Hours">
+            <summary>
+            Hours
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest.Minutes">
+            <summary>
+            Minutes
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest.Seconds">
+            <summary>
+            Seconds
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.CreateTimeSpanRequest.Milliseconds">
+            <summary>
+            Milliseconds
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToDateTime">
+            <summary>
+            Add TimeSpan To DateTime - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToDateTimeRequest">
+            <summary>
+            AddTimeSpanToDateTimeRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToDateTimeRequest.DateTime">
+            <summary>
+            DateTime - The Date/Time to add to
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToDateTimeRequest.TimeSpan">
+            <summary>
+            TimeSpan - The TimeSpan to add
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToTimeSpan">
+            <summary>
+            Add TimeSpan To TimeSpan - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToTimeSpanRequest">
+            <summary>
+            AddTimeSpanToTimeSpanRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToTimeSpanRequest.TimeSpan1">
+            <summary>
+            TimeSpan1 - The TimeSpan to add to
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.AddTimeSpanToTimeSpanRequest.TimeSpan2">
+            <summary>
+            TimeSpan2 - The TimeSpan to add
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromDateTime">
+            <summary>
+            Subtract TimeSpan From DateTime - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromDateTimeRequest">
+            <summary>
+            SubtractTimeSpanFromDateTimeRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromDateTimeRequest.DateTime">
+            <summary>
+            DateTime - Date/Time to subtract from
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromDateTimeRequest.TimeSpan">
+            <summary>
+            TimeSpan - The TimeSpan to subtract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractDateTimeFromDateTime">
+            <summary>
+            Subtract DateTime From DateTime - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractDateTimeFromDateTimeRequest">
+            <summary>
+            SubtractDateTimeFromDateTimeRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractDateTimeFromDateTimeRequest.DateTimeToSubtractFrom">
+            <summary>
+            DateTimeToSubtractFrom
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractDateTimeFromDateTimeRequest.DateTimeToSubtract">
+            <summary>
+            DateTimeToSubtract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromTimeSpan">
+            <summary>
+            Subtract TimeSpan From TimeSpan - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromTimeSpanRequest">
+            <summary>
+            SubtractTimeSpanFromTimeSpanRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromTimeSpanRequest.TimeSpanToSubtractFrom">
+            <summary>
+            TimeSpanToSubtractFrom
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.SubtractTimeSpanFromTimeSpanRequest.TimeSpanToSubtract">
+            <summary>
+            TimeSpanToSubtract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan">
+            <summary>
+            DssTimeSpan - Data type for serialization
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.#ctor">
+            <summary>
+            A Serializable TimeSpan
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.#ctor(System.Int64)">
+            <summary>
+            A Serializable TimeSpan
+            </summary>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.#ctor(System.TimeSpan)">
+            <summary>
+            A Serializable TimeSpan
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.ToTimeSpan">
+            <summary>
+            Convert to TimeSpan
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.op_Implicit(Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan)~System.TimeSpan">
+            <summary>
+            Convert DssTimeSpan to TimeSpan
+            </summary>
+            <param name="dsstime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.op_Implicit(System.TimeSpan)~Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan">
+            <summary>
+            Convert Uri to DssUri
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.ToString">
+            <summary>
+            Returns an appropriate string representation of the current TimeSpan
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Dss TimeSpan
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Clone">
+            <summary>
+            Clone Dss TimeSpan
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Dss TimeSpan
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Dss TimeSpan
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.System#IComparable#CompareTo(System.Object)">
+            <summary>
+            Allows comparison of this instance with another DssTimeSpan or TimeSpan.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Ticks">
+            <summary>
+            Ticks
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Days">
+            Days
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Hours">
+            Hours
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Minutes">
+            Minutes
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Seconds">
+            Seconds
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.Milliseconds">
+            Milliseconds
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.TotalDays">
+            TotalDays
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.TotalHours">
+            TotalHours
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.TotalMinutes">
+            TotalMinutes
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.TotalSeconds">
+            TotalSeconds
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.VplDateTimeHelper.DssTimeSpan.TotalMilliseconds">
+            TotalMilliseconds
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.AlertForm">
+            <summary>
+            AlertForm - Used for Alert dialogs
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.#ctor(Microsoft.Ccr.Core.SuccessFailurePort)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.OnClosed(System.EventArgs)">
+            <summary>
+            Posts the appropriate response when handling the dialog being closed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.Result">
+            <summary>
+            SuccessFailurePort - Used when user clicks OK
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.Message">
+            <summary>
+            Message - Message to display in dialog
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.Countdown">
+            <summary>
+            Time remaining until this dialog times out
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.AlertForm.Timeout">
+            <summary>
+            Gets a value specifying whether this dialog timed out.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm">
+            <summary>
+            ConfirmForm - Used to display Confirm dialog
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.#ctor(Microsoft.Ccr.Core.PortSet{System.Boolean,System.Exception})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.OnClosed(System.EventArgs)">
+            <summary>
+            Posts the appropriate response when handling the dialog being closed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.Result">
+            <summary>
+            Result - Used when user clicks on OK or Cancel
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.Message">
+            <summary>
+            Message - Message to display in dialog
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.Countdown">
+            <summary>
+            Time remaining until this dialog times out
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.Timeout">
+            <summary>
+            Gets a value specifying whether this dialog timed out.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.DialogService">
+            <summary>
+            DialogService - Provides Alert, Confirm and Prompt dialogs
+            </summary>
+            <remarks>Provides a way to display Alert, Confirm or Prompt dialogs using Windows Forms</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.DialogService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.DialogService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.DialogService.AlertHandler(Microsoft.Robotics.Services.Sample.Dialog.Alert)">
+            <summary>
+            Alert Handler - Processes requests for an Alert dialog
+            </summary>
+            <param name="alert">Alert Request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.DialogService.ConfirmHandler(Microsoft.Robotics.Services.Sample.Dialog.Confirm)">
+            <summary>
+            Confirm Handler - Processes requests for a Confirm dialog
+            </summary>
+            <param name="confirm">Confirm request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.DialogService.PromptHandler(Microsoft.Robotics.Services.Sample.Dialog.Prompt)">
+            <summary>
+            Prompt Handler - Processes requests for a Prompt dialog
+            </summary>
+            <param name="prompt">Prompt request</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.Contract">
+            Timer Contract
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Dialog.Contract.Identifier">
+            The Unique Contract Identifier for the Timer service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.DialogOperations">
+            <summary>
+            Simple Dialog Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.Alert">
+            <summary>
+            Alert - Display an Alert Dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.Prompt">
+            <summary>
+            Prompt - Display a Prompt Dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.Confirm">
+            <summary>
+            Confirm - Display a Confirm Dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.AlertRequest">
+            <summary>
+            AlertRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.AlertRequest.Message">
+            <summary>
+            Message - Message to display
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.PromptRequest">
+            <summary>
+            PromptRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptRequest.Message">
+            <summary>
+            Message - Message to display as a prompt
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptRequest.DefaultValue">
+            <summary>
+            DefaultValue - Initial value in the text field
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.PromptResponse">
+            <summary>
+            PromptResponse
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptResponse.Confirmed">
+            <summary>
+            Confirmed - True if OK was pressed, false otherwise
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptResponse.TextData">
+            <summary>
+            TextData - The text that was entered by the user
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.ConfirmRequest">
+            <summary>
+            ConfirmRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmRequest.Message">
+            <summary>
+            Message - Message to display
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.ConfirmResponse">
+            <summary>
+            ConfirmResponse
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.ConfirmResponse.Confirmed">
+            <summary>
+            Confirmed - True if OK was pressed, false otherwise
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Dialog.PromptForm">
+            <summary>
+            PromptForm - Used to display a Prompt dialog
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.#ctor(Microsoft.Ccr.Core.PortSet{System.String,System.Exception})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.OnClosed(System.EventArgs)">
+            <summary>
+            Posts the appropriate response when handling the dialog being closed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.Result">
+            <summary>
+            Result - Used when user clicks on OK or Cancel
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.Message">
+            <summary>
+            Message - Message displayed in dialog
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.DefaultValue">
+            <summary>
+            DefaultValue - Initial value in the textbox
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.Countdown">
+            <summary>
+            Time remaining until this dialog times out
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Dialog.PromptForm.Timeout">
+            <summary>
+            Gets a value specifying whether this dialog timed out.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService">
+            <summary>
+            FlexibleDialogService - Dynamic dialog box
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnGet(Microsoft.Robotics.Services.Sample.FlexDialog.Get)">
+            <summary>
+            OnGet - Return the state of the dialog 
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.DoSendNotification``1(``0)">
+            <summary>
+            DoSendNotification - Send a notification
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnHttpGet(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            OnHttpGet - Return state as a web page
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnHttpQuery(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            OnHttpQuery - Handle Http Query requests
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnHttpPost(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            OnHttpPost - Handle Http Post requests to update the dialog
+            </summary>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnSubscribe(Microsoft.Robotics.Services.Sample.FlexDialog.Subscribe)">
+            <summary>
+            OnSubscribe - Handle subscription messages
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnInsertControl(Microsoft.Robotics.Services.Sample.FlexDialog.InsertControl)">
+            <summary>
+            OnInsertControl - Insert requested control into the dialog
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnDeleteControl(Microsoft.Robotics.Services.Sample.FlexDialog.DeleteControl)">
+            <summary>
+            OnDeleteControl - Delete requested control from dialog
+            </summary>
+            <param name="delete"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnUpdateControl(Microsoft.Robotics.Services.Sample.FlexDialog.UpdateControl)">
+            <summary>
+            OnUpdateControl - Update the requested control on the dialog
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnInsertButton(Microsoft.Robotics.Services.Sample.FlexDialog.InsertButton)">
+            <summary>
+            OnInsertButton - Insert requested button into the dialog
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnDeleteButton(Microsoft.Robotics.Services.Sample.FlexDialog.DeleteButton)">
+            <summary>
+            OnDeleteButton - Delete requested button from the dialog
+            </summary>
+            <param name="delete"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnUpdateButton(Microsoft.Robotics.Services.Sample.FlexDialog.UpdateButton)">
+            <summary>
+            OnUpdateButton - Update the requested button on the dialog
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnButtonPress(Microsoft.Robotics.Services.Sample.FlexDialog.ButtonPress)">
+            <summary>
+            OnButtonPress - Send notification when a button is pressed
+            </summary>
+            <param name="press"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnShow(Microsoft.Robotics.Services.Sample.FlexDialog.Show)">
+            <summary>
+            OnShow - Make the dialog visible / invisible
+            </summary>
+            <param name="show"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnSetTitle(Microsoft.Robotics.Services.Sample.FlexDialog.SetTitle)">
+            <summary>
+            OnSetTitle - Set the title for the dialog
+            </summary>
+            <param name="setTitle"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogService.OnHandOff(Microsoft.Robotics.Services.Sample.FlexDialog.HandOff)">
+            <summary>
+            OnHandOff - Hand control to another dialog (web only)
+            </summary>
+            <param name="handOff"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm">
+            <summary>
+            FlexDialogForm - Form used by Flexible Dialog service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.#ctor(Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogOperations)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mainPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.Initialize(Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState)">
+            <summary>
+            Initialize - Init the Dialog
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.InsertButton(Microsoft.Robotics.Services.Sample.FlexDialog.FlexButton)">
+            <summary>
+            InsertButton - Add a new button to the dialog
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.DeleteButton(Microsoft.Robotics.Services.Sample.FlexDialog.FlexButton)">
+            <summary>
+            DeleteButton - Remove a button from the dialog
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.UpdateButton(Microsoft.Robotics.Services.Sample.FlexDialog.FlexButton)">
+            <summary>
+            UpdateButton - Change the text on a button
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.InsertControl(Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl)">
+            <summary>
+            InsertControl - Add a new control to the dialog
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.DeleteControl(Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl)">
+            <summary>
+            DeleteControl - Remove a control from the dialog
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.UpdateControl(Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl)">
+            <summary>
+            UpdateControl - Replace the text on a control (depends on control type)
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.SetVisibility(System.Boolean)">
+            <summary>
+            SetVisibility - Show or hide the dialog
+            </summary>
+            <param name="visibility"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.SetTitle(System.String)">
+            <summary>
+            SetTitle - Set the dialog's title
+            </summary>
+            <param name="title"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            OnClosing - Signal to the main service that the dialog is being closed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.Contract">
+            <summary>
+            Flexible Dialog contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState">
+            <summary>
+            Flexible Dialog State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState.Title">
+            <summary>
+            Title - Appears in the dialog's title bar
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState.Visible">
+            <summary>
+            Visible - Determines if dialog is visible or not
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState.Controls">
+            <summary>
+            Controls - List of controls on the dialog
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogState.Buttons">
+            <summary>
+            Buttons - List of buttons on the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl">
+            <summary>
+            FlexControl - Defines a control on the dialog
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl.CompareId(Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl)">
+            <summary>
+            CompareId - See if two controls are the same
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl.Id">
+            <summary>
+            Id - Name of the control (must be unique)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl.ControlType">
+            <summary>
+            ControlType - Type of this UI control
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl.Text">
+            <summary>
+            Text - Text that appears in the control
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl.Value">
+            <summary>
+            Value - Data entered into the control (Textbox and MultiLineTextbox)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexButton">
+            <summary>
+            FlexButton - Special case of FlexControl
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType">
+            <summary>
+            FlexControlType - Types of UI controls
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.Label">
+            <summary>
+            Label - Readonly text
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.TextBox">
+            <summary>
+            TextBox - Input text
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.MultiLineTextBox">
+            <summary>
+            MultiLineTextBox - Textbox that can contain line breaks
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.Button">
+            <summary>
+            Button - Pushbutton
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.CheckBox">
+            <summary>
+            CheckBox - True or False
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.RadioButton">
+            <summary>
+            RadioButton - One of many
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.ComboBox">
+            <summary>
+            ComboBox - Combination TextBox and Dropdown List
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.FlexControlType.Seperator">
+            <summary>
+            Seperator - Dividing line
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.ButtonPressRequest">
+            <summary>
+            ButtonPressRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.ButtonPressRequest.Id">
+            <summary>
+            Id - Button id
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.ButtonPressRequest.Pressed">
+            <summary>
+            Pressed - True if pressed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.ShowRequest">
+            <summary>
+            ShowRequest - Sets the Visible property
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.ShowRequest.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.ShowRequest.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="show"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.ShowRequest.Show">
+            <summary>
+            Show - True means visible, False means invisible
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.SetTitleRequest">
+            <summary>
+            SetTitleRequest - Info for setting Title
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.SetTitleRequest.Title">
+            <summary>
+            Title - The title for the dialog's title bar
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.Instance">
+            <summary>
+            Instance - 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.Clone">
+            <summary>
+            Clone - Make a copy of this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            CopyTo - NOT IMPLEMENTED
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize - NOT IMPLEMENTED
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.InternalUpdate.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize - NOT IMPLEMENTED
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification">
+            <summary>
+            HttpNotification
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.FromOperation(Microsoft.Dss.ServiceModel.Dssp.DsspOperation)">
+            <summary>
+            FromOperation - Sends a notification
+            </summary>
+            <param name="operation"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.Operation">
+            <summary>
+            Operation 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.Control">
+            <summary>
+            Control - The control the notification is from
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.Button">
+            <summary>
+            Button - The button the notification is from
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.Title">
+            <summary>
+            Title - Dialog title
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.Show">
+            <summary>
+            Show - True if dialog is visible
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.ButtonPress">
+            <summary>
+            ButtonPress
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.SetTitle">
+            <summary>
+            SetTitle
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HttpNotification.HandOff">
+            <summary>
+            HandOff
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.HandOffMessage">
+            <summary>
+            HandOffMessage - Used to transfer control to another dialog
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HandOffMessage.Title">
+            <summary>
+            Title - Title of the dialog to transfer to
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.FlexDialog.HandOffMessage.Service">
+            <summary>
+            Service - Service to transfer to
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogOperations">
+            <summary>
+            Flexible Dialog Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.Get">
+            <summary>
+            Get - Return the state of the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.Subscribe">
+            <summary>
+            Subscribe - Request nofitications
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.InsertControl">
+            <summary>
+            InsertControl - Add a control to the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.DeleteControl">
+            <summary>
+            DeleteControl - Remove a control from the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.UpdateControl">
+            <summary>
+            UpdateControl - Change a control or its contents
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.UpdateControl.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.UpdateControl.#ctor(Microsoft.Robotics.Services.Sample.FlexDialog.FlexControl)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.InsertButton">
+            <summary>
+            InsertButton - Add a button to the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.DeleteButton">
+            <summary>
+            DeleteButton - Remove a button from the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.UpdateButton">
+            <summary>
+            UpdateButton - Change a button on the dialog
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.ButtonPress">
+            <summary>
+            ButtonPress - Notification of button presses
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.Show">
+            <summary>
+            Show - Display or Hide the dialog
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.Show.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.FlexDialog.Show.#ctor(Microsoft.Robotics.Services.Sample.FlexDialog.ShowRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.SetTitle">
+            <summary>
+            SetTitle - Set dialog Title
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.FlexDialog.HandOff">
+            <summary>
+            HandOff - Switch to another dialog (only applies to web browser)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogService">
+            <summary>
+            LogService - Logs messages
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Log.LogService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Log.LogService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Log.LogService.LogInfoHandler(Microsoft.Robotics.Services.Sample.Log.LogInfo)">
+            <summary>
+            LogInfoHandler - Processes LogInfo requests
+            </summary>
+            <param name="logInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Log.LogService.LogWarningHandler(Microsoft.Robotics.Services.Sample.Log.LogWarning)">
+            <summary>
+            LogWarningHandler - Processes LogWarning requests
+            </summary>
+            <param name="logWarning"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Log.LogService.LogErrorHandler(Microsoft.Robotics.Services.Sample.Log.LogError)">
+            <summary>
+            LogErrorHandler - Processes LogError requests
+            </summary>
+            <param name="logError"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.Contract">
+            <summary>
+            Log Service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Log.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogOperations">
+            <summary>
+            Log Service Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogInfo">
+            <summary>
+            LogInfo - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogWarning">
+            <summary>
+            LogWarning - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogError">
+            <summary>
+            LogError - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogInfoRequest">
+            <summary>
+            LogInfoRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogInfoRequest.Message">
+            <summary>
+            Message - The message to be logged
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogInfoRequest.Category">
+            <summary>
+            Category - Message Category (Activation, Console, Mount, etc.)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogWarningRequest">
+            <summary>
+            LogWarningRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogWarningRequest.Message">
+            <summary>
+            Message - The message to be logged
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogWarningRequest.Category">
+            <summary>
+            Category - Message Category (Activation, Console, Mount, etc.)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Log.LogErrorRequest">
+            <summary>
+            LogErrorRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogErrorRequest.Message">
+            <summary>
+            Message - The message to be logged
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Log.LogErrorRequest.Category">
+            <summary>
+            Category - Message Category (Activation, Console, Mount, etc.)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.MathService">
+            <summary>
+            MathService - Mathematical functions
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.ConstantsHandler(Microsoft.Robotics.Services.Sample.Math.Constants)">
+            <summary>
+            ConstantsHandler - Return constants (Pi, E)
+            </summary>
+            <param name="constants"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.AcosHandler(Microsoft.Robotics.Services.Sample.Math.Acos)">
+            <summary>
+            AcosHandler - Process Arc Cosine (math.Acos(D))
+            </summary>
+            <param name="acos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.AsinHandler(Microsoft.Robotics.Services.Sample.Math.Asin)">
+            <summary>
+            AsinHandler - Process Arc Sine (math.Asin(D))
+            </summary>
+            <param name="asin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.AtanHandler(Microsoft.Robotics.Services.Sample.Math.Atan)">
+            <summary>
+            AtanHandler - Process Arc Tangent (math.Atan(D))
+            </summary>
+            <param name="atan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.Atan2Handler(Microsoft.Robotics.Services.Sample.Math.Atan2)">
+            <summary>
+            Atan2Handler - Process Arc Tangent (math.Atan2(Y, X))
+            </summary>
+            <param name="atan2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.CosHandler(Microsoft.Robotics.Services.Sample.Math.Cos)">
+            <summary>
+            CosHandler - Process Cosine (math.Cos(Angle))
+            </summary>
+            <param name="cos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.ExpHandler(Microsoft.Robotics.Services.Sample.Math.Exp)">
+            <summary>
+            ExpHandler - Process Exponential (math.Exp(Exponent))
+            </summary>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.LogHandler(Microsoft.Robotics.Services.Sample.Math.Log)">
+            <summary>
+            LogHandler - Process Logarithm (math.Log(A, Base))
+            </summary>
+            <param name="log"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.PowHandler(Microsoft.Robotics.Services.Sample.Math.Pow)">
+            <summary>
+            PowHandler - Process Raise to a Power (math.Pow(A, Exponent))
+            </summary>
+            <param name="pow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.RandomHandler(Microsoft.Robotics.Services.Sample.Math.Random)">
+            <summary>
+            RandomHandler - Return a random number (double)
+            </summary>
+            <param name="random"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.RoundHandler(Microsoft.Robotics.Services.Sample.Math.Round)">
+            <summary>
+            RoundHandler - Process Rounding (math.Round(Value, Digits))
+            </summary>
+            <param name="round"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.SinHandler(Microsoft.Robotics.Services.Sample.Math.Sin)">
+            <summary>
+            SinHandler - Process Sine (math.Sin(Angle))
+            </summary>
+            <param name="sin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.SqrtHandler(Microsoft.Robotics.Services.Sample.Math.Sqrt)">
+            <summary>
+            SqrtHandler - Process Square Root (math.Sqrt(A))
+            </summary>
+            <param name="sqrt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.TanHandler(Microsoft.Robotics.Services.Sample.Math.Tan)">
+            <summary>
+            TanHandler - Process Tangent (math.Tan(Angle))
+            </summary>
+            <param name="tan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.TruncateHandler(Microsoft.Robotics.Services.Sample.Math.Truncate)">
+            <summary>
+            TruncateHandler - Process Truncate (math.Truncate(A))
+            </summary>
+            <param name="truncate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.ToRadiansHandler(Microsoft.Robotics.Services.Sample.Math.ToRadians)">
+            <summary>
+            ToRadiansHandler - Convert to Radians from Degrees
+            </summary>
+            <param name="toRadians"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathService.ToDegreesHandler(Microsoft.Robotics.Services.Sample.Math.ToDegrees)">
+            <summary>
+            ToDegreesHandler - Convert to Degrees from Radians
+            </summary>
+            <param name="toDegrees"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Contract">
+            <summary>
+            Math Service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.Contract.Identifier">
+            The Unique Contract Identifier for the Timer service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Response">
+            <summary>
+            Response - Used for all results
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.Response.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.Response.#ctor(System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.Response.Result">
+            <summary>
+            Result - The result of the math operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.MathConstants">
+            <summary>
+            MathConstants - Common constants for use in calculations
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.MathConstants.PI">
+            <summary>
+            Value of Pi
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.MathConstants.E">
+            <summary>
+            Value of e
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.AcosRequest">
+            <summary>
+            AcosRequest - Arcosine (inverse cosine)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.AcosRequest.D">
+            <summary>
+            D - Value between -1 and +1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.AsinRequest">
+            <summary>
+            AsinRequest - Arcsine (inverse sine)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.AsinRequest.D">
+            <summary>
+            D - Value between -1 and +1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.AtanRequest">
+            <summary>
+            AtanRequest - Arctangent (inverse tangent)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.AtanRequest.D">
+            <summary>
+            D - Value to process
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Atan2Request">
+            <summary>
+            Atan2Request - Arctangent with two parameters (for correct quadrant)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.Atan2Request.Y">
+            <summary>
+            Y - Value in Y direction (vertical)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.Atan2Request.X">
+            <summary>
+            X - Value in X direction (horizontal)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.CosRequest">
+            <summary>
+            CosRequest - Cosine of an angle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.CosRequest.Angle">
+            <summary>
+            Angle - Angle in radians
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.ExpRequest">
+            <summary>
+            ExpRequest - Exponential (e raised to a power)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.ExpRequest.Exponent">
+            <summary>
+            Exponent - Power to raise e to
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.LogRequest">
+            <summary>
+            LogRequest - Logarithm of a number with a specified base
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.LogRequest.A">
+            <summary>
+            A - Value to take the log of (must be positive)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.LogRequest.Base">
+            <summary>
+            Base - Logarithm base (usually 2, 10, e)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.PowRequest">
+            <summary>
+            PowRequest - Raises a number to a power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.PowRequest.A">
+            <summary>
+            A - Value to be raised to power (exponent)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.PowRequest.Exponent">
+            <summary>
+            Exponent - Power to raise A to
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.RandomRequest">
+            <summary>
+            RandomRequest - Returns a random number
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.RoundRequest">
+            <summary>
+            RoundRequest - Rounds a number to specified number of places
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.RoundRequest.Value">
+            <summary>
+            Value - Number to be rounded
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.RoundRequest.Digits">
+            <summary>
+            Digits - Number of significant decimal places
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.SinRequest">
+            <summary>
+            SinRequest - Sine of an angle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.SinRequest.Angle">
+            <summary>
+            Angle - Angle in radians
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.SqrtRequest">
+            <summary>
+            SqrtRequest - Square Root of a number
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.SqrtRequest.A">
+            <summary>
+            A - Value to find square root of (must be positive)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.TanRequest">
+            <summary>
+            TanRequest - Tangent of an angle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.TanRequest.Angle">
+            <summary>
+            Angle - Angle in radians
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.TruncateRequest">
+            <summary>
+            TruncateRequest - Truncates a number
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.TruncateRequest.A">
+            <summary>
+            A - Number to be truncated
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.ToRadiansRequest">
+            <summary>
+            ToRadiansRequest - Converts radians to degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.ToRadiansRequest.Angle">
+            <summary>
+            Angle - Angle (in degrees) to convert to Radians
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.ToDegreesRequest">
+            <summary>
+            ToDegreesRequest - Converts degrees to radians
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Math.ToDegreesRequest.Angle">
+            <summary>
+            Angle - Angle (in radians) to conver to Degrees
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.MathOperations">
+            <summary>
+            Operations PortSet for Math Service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Math.MathOperations.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Constants">
+            <summary>
+            Constants
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Acos">
+            <summary>
+            ArcCosine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Asin">
+            <summary>
+            ArcSine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Atan">
+            <summary>
+            ArcTangent
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Atan2">
+            <summary>
+            ArcTangent (two parameter version)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Cos">
+            <summary>
+            Cosine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Exp">
+            <summary>
+            Exponential
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Log">
+            <summary>
+            Logarithm
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Pow">
+            <summary>
+            Raise to a Power
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Random">
+            <summary>
+            Random number
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Round">
+            <summary>
+            Round off a number
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Sin">
+            <summary>
+            Sine
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Sqrt">
+            <summary>
+            Square Root
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Tan">
+            <summary>
+            Tangent
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.Truncate">
+            <summary>
+            Truncate a number
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.ToRadians">
+            <summary>
+            Convert Degrees to Radians
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Math.ToDegrees">
+            <summary>
+            Convert Radians to Degrees
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Properties.Resources.TimeoutWarning">
+            <summary>
+              Looks up a localized string similar to {0} seconds until dialog timeout.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.SoundService">
+            <summary>
+            SoundService - Plays WAV (sound) files and system sounds
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.PlayHandler(Microsoft.Robotics.Services.Sample.Sound.Play)">
+            <summary>
+            PlayHandler - Play a sound file
+            </summary>
+            <param name="play"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.AsteriskHandler(Microsoft.Robotics.Services.Sample.Sound.Asterisk)">
+            <summary>
+            AsteriskHandler - Play the Windows "Asterisk" sound
+            </summary>
+            <param name="asterisk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.BeepHandler(Microsoft.Robotics.Services.Sample.Sound.Beep)">
+            <summary>
+            BeepHandler - Beep (what else?)
+            </summary>
+            <param name="beep"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.ExclamationHandler(Microsoft.Robotics.Services.Sample.Sound.Exclamation)">
+            <summary>
+            ExclamationHandler - Play the Windows "Exclamation" sound
+            </summary>
+            <param name="exclamation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.HandHandler(Microsoft.Robotics.Services.Sample.Sound.Hand)">
+            <summary>
+            HandHandler - Play the Windows "Hand" sound
+            </summary>
+            <param name="hand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Sound.SoundService.QuestionHandler(Microsoft.Robotics.Services.Sample.Sound.Question)">
+            <summary>
+            QuestionHandler - Play the Windows "Question" sound
+            </summary>
+            <param name="question"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Contract">
+            <summary>
+            Sound Service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Sound.Contract.Identifier">
+            The Unique Contract Identifier for the Sound service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.SoundOperations">
+            <summary>
+             Sound Service Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.PlayRequest">
+            <summary>
+            PlayRequest - Play a specified sound file
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.PlayRequest.Filename">
+            <summary>
+            Filename - Name of the WAV (sound) file to play
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.PlayRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Play">
+            <summary>
+            PlaySound - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.AsteriskRequest">
+            <summary>
+            AsteriskRequest - Play the Windows "Asterisk" sound
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.AsteriskRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Asterisk">
+            <summary>
+            Asterisk - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.BeepRequest">
+            <summary>
+            BeepRequest - Play a Beep
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.BeepRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Beep">
+            <summary>
+            Beep - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.ExclamationRequest">
+            <summary>
+            ExclamationRequest - Play the Windows "Exclamation" sound
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.ExclamationRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Exclamation">
+            <summary>
+            Exclamation - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.HandRequest">
+            <summary>
+            HandRequest - Play the Windows "Hand" sound
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.HandRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Hand">
+            <summary>
+            Hand - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.QuestionRequest">
+            <summary>
+            QuestionRequest - Play the Windows "Question" sound
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Sound.QuestionRequest.Synchronous">
+            <summary>
+            Synchronous - True means do not respond until finished
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Sound.Question">
+            <summary>
+            Question - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.StringService">
+            <summary>
+            StringService - Handles Text (String) functions
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor for service
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.IsNullOrEmptyHandler(Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmpty)">
+            <summary>
+            IsNullOrEmptyHandler - Checks if a string is empty
+            </summary>
+            <param name="isNullOrEmpty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.ContainsHandler(Microsoft.Robotics.Services.Sample.StringHelper.Contains)">
+            <summary>
+            ContainsHandler - Checks if specified substring is in a string
+            </summary>
+            <param name="contains"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.EndsWithHandler(Microsoft.Robotics.Services.Sample.StringHelper.EndsWith)">
+            <summary>
+            EndsWithHandler - Checks if string ends with specified substring
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.IndexOfHandler(Microsoft.Robotics.Services.Sample.StringHelper.IndexOf)">
+            <summary>
+            IndexOfHandler - Finds location of a specified substring in a string
+            </summary>
+            <param name="indexOf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.InsertHandler(Microsoft.Robotics.Services.Sample.StringHelper.Insert)">
+            <summary>
+            InsertHandler - Inserts one string into another one
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.JoinHandler(Microsoft.Robotics.Services.Sample.StringHelper.Join)">
+            <summary>
+            JoinHandler - Concatenates an array of strings with a separator (Opposite of Split)
+            </summary>
+            <param name="join"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.LastIndexOfHandler(Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOf)">
+            <summary>
+            LastIndexOfHandler - Locates specified substring backwards from the end of string
+            </summary>
+            <param name="lastIndexOf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.PadHandler(Microsoft.Robotics.Services.Sample.StringHelper.Pad)">
+            <summary>
+            PadHandler - Pads out a string
+            </summary>
+            <param name="pad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.RemoveHandler(Microsoft.Robotics.Services.Sample.StringHelper.Remove)">
+            <summary>
+            RemoveHandler - Removes specified substring from a string
+            </summary>
+            <param name="remove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.ReplaceHandler(Microsoft.Robotics.Services.Sample.StringHelper.Replace)">
+            <summary>
+            ReplaceHandler - Replaces specified substring in a string
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.SplitHandler(Microsoft.Robotics.Services.Sample.StringHelper.Split)">
+            <summary>
+            SplitHandler - Splits a string into many strings based on a token
+            </summary>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.StartsWithHandler(Microsoft.Robotics.Services.Sample.StringHelper.StartsWith)">
+            <summary>
+            StartsWithHandler - Checks if a string starts with specified substring
+            </summary>
+            <param name="startsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.SubStringHandler(Microsoft.Robotics.Services.Sample.StringHelper.SubString)">
+            <summary>
+            SubStringHandler - Extracts a substring from a string
+            </summary>
+            <param name="subString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.ToLowerHandler(Microsoft.Robotics.Services.Sample.StringHelper.ToLower)">
+            <summary>
+            ToLowerHandler - Converts a string to Lowercase
+            </summary>
+            <param name="toLower"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.ToUpperHandler(Microsoft.Robotics.Services.Sample.StringHelper.ToUpper)">
+            <summary>
+            ToUpperHandler - Converts a string to Uppercase
+            </summary>
+            <param name="toUpper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringService.TrimHandler(Microsoft.Robotics.Services.Sample.StringHelper.Trim)">
+            <summary>
+            TrimHandler - Trims spaces off a string
+            </summary>
+            <param name="trim"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Contract">
+            <summary>
+            String Service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.StringHelper.Contract.Identifier">
+            The Unique Contract Identifier for the String service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.StringOperations">
+            <summary>
+            String Service Operations PortSet
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StringOperations.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyRequest">
+            <summary>
+            IsNullOrEmptyRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyRequest.String">
+            <summary>
+            String - The string to check
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyResponse">
+            <summary>
+            IsNullOrEmptyResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyRequest)">
+            <summary>
+            FromRequest - Performs the Is Null Or Empty function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmptyResponse.IsNullOrEmpty">
+            <summary>
+            IsNullOrEmpty - True if the string is empty or null (does not exist)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IsNullOrEmpty">
+            <summary>
+            IsNullOrEmpty - Operation to see if a string is empty (null means there is no string)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ContainsRequest">
+            <summary>
+            ContainsRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ContainsRequest.String">
+            <summary>
+            String - The string to search in
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ContainsRequest.Query">
+            <summary>
+            Query - The string to look for
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ContainsResponse">
+            <summary>
+            ContainsResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.ContainsResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.ContainsRequest)">
+            <summary>
+            FromRequest - Performs the Contains function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ContainsResponse.Contains">
+            <summary>
+            Contains - True if string contains the query string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Contains">
+            <summary>
+            Contains - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithRequest">
+            <summary>
+            EndsWithRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithRequest.String">
+            <summary>
+            String - The string to search in
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithRequest.Query">
+            <summary>
+            Query - The string to search for
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithRequest.IgnoreCase">
+            <summary>
+            IgnoreCase - Ignore case during search if true
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithResponse">
+            <summary>
+            EndsWithResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.EndsWithRequest)">
+            <summary>
+            FromRequest - Performs the Ends With function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.EndsWithResponse.EndsWith">
+            <summary>
+            EndsWith - String was found if true
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.EndsWith">
+            <summary>
+            EndsWith - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfRequest">
+            <summary>
+            IndexOfRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfRequest.String">
+            <summary>
+            String - The string to search in
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfRequest.Query">
+            <summary>
+            Query - The string to search for
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfRequest.StartIndex">
+            <summary>
+            StartIndex - Starting position for the search
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfResponse">
+            <summary>
+            IndexOfResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.IndexOfRequest)">
+            <summary>
+            FromRequest - Performs the Index Of function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.IndexOfResponse.IndexOf">
+            <summary>
+            IndexOf - The index where the string was found, otherwise -1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.IndexOf">
+            <summary>
+            IndexOf - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.InsertRequest">
+            <summary>
+            InsertRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.InsertRequest.String">
+            <summary>
+            String - The string to insert into
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.InsertRequest.Insertion">
+            <summary>
+            Insertion - The text to be inserted
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.InsertRequest.StartIndex">
+            <summary>
+            StartIndex - The position to insert at
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.InsertResponse">
+            <summary>
+            InsertResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.InsertResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.InsertRequest)">
+            <summary>
+            FromRequest - Performs the Insert function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.InsertResponse.Inserted">
+            <summary>
+            Inserted - The output string (with inserted text)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Insert">
+            <summary>
+            Insert - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.JoinRequest">
+            <summary>
+            JoinRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.JoinRequest.Separator">
+            <summary>
+            Separator - The text to insert between the strings
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.JoinRequest.Strings">
+            <summary>
+            Strings - The array of strings to join
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.JoinResponse">
+            <summary>
+            JoinResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.JoinResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.JoinRequest)">
+            <summary>
+            FromRequest - Performs the Join function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.JoinResponse.Joined">
+            <summary>
+            Joined - The output (joined) string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Join">
+            <summary>
+            Join - Operation to combine array of strings with separator in between
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfRequest">
+            <summary>
+            LastIndexOfRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfRequest.String">
+            <summary>
+            String - The string to search in
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfRequest.Query">
+            <summary>
+            Query - The string to look for
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfRequest.StartIndex">
+            <summary>
+            StartIndex - Starting position for the search
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfResponse">
+            <summary>
+            LastIndexOfResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfRequest)">
+            <summary>
+            FromRequest - Performs the Last Index Of function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOfResponse.LastIndexOf">
+            <summary>
+            LastIndexOf - Starting position of the string if found, otherwise -1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.LastIndexOf">
+            <summary>
+            LastIndexOf - Operation to find a query string searching backwards
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.PadRequest">
+            <summary>
+            PadRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.PadRequest.String">
+            <summary>
+            String - The string to be padded
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.PadRequest.LeftPadding">
+            <summary>
+            LeftPadding - Number of padding characters on the left (can be zero)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.PadRequest.RightPadding">
+            <summary>
+            RightPadding - Number of padding character on the right (can be zero)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.PadRequest.PaddingChar">
+            <summary>
+            PaddingChar - Character to pad with (defaults to space)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.PadResponse">
+            <summary>
+            PadResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.PadResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.PadRequest)">
+            <summary>
+            FromRequest - Perform the Pad function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.PadResponse.Padded">
+            <summary>
+            Padded - The output string (with padding)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Pad">
+            <summary>
+            Pad - Operation to pad a string (on left and/or right) with a character
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.RemoveRequest">
+            <summary>
+            RemoveRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.RemoveRequest.String">
+            <summary>
+            String - The string to be changed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.RemoveRequest.StartIndex">
+            <summary>
+            StartIndex - Starting position in the string
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.RemoveRequest.Count">
+            <summary>
+            Count - Number of characters to delete
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.RemoveResponse">
+            <summary>
+            RemoveResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.RemoveResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.RemoveRequest)">
+            <summary>
+            FromRequest - Performs the Remove function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.RemoveResponse.Removed">
+            <summary>
+            Removed - The output string (with text removed)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Remove">
+            <summary>
+            Remove - Operation to delete a portion of a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceRequest">
+            <summary>
+            ReplaceRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceRequest.String">
+            <summary>
+            String - The string to be changed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceRequest.OldValue">
+            <summary>
+            OldValue - The search string (to be replaced)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceRequest.NewValue">
+            <summary>
+            NewValue - The replacement string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceResponse">
+            <summary>
+            ReplaceResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.ReplaceRequest)">
+            <summary>
+            FromRequest - Performs the Replace function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ReplaceResponse.Replaced">
+            <summary>
+            Replaced - The output string (after replacement)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Replace">
+            <summary>
+            Replace - Operation to replace all occurrences of a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.SplitRequest">
+            <summary>
+            SplitRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SplitRequest.String">
+            <summary>
+            String - The string to split up
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SplitRequest.Separator">
+            <summary>
+            Separator - The token that appears between substrings
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SplitRequest.Count">
+            <summary>
+            Count - The number of substrings to extract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.SplitResponse">
+            <summary>
+            SplitResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.SplitResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.SplitRequest)">
+            <summary>
+            FromRequest - Performs the Split function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SplitResponse.Strings">
+            <summary>
+            Strings - Output array of strings
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Split">
+            <summary>
+            Split - Operation to split a string into an array based on a separator
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithRequest">
+            <summary>
+            StartsWithRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithRequest.String">
+            <summary>
+            String - The string to search
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithRequest.Query">
+            <summary>
+            Query - The string to look for
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithResponse">
+            <summary>
+            StartsWithResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.StartsWithRequest)">
+            <summary>
+            FromRequest - Performs the Starts With function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.StartsWithResponse.StartsWith">
+            <summary>
+            StartsWith - Query string was found if true
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.StartsWith">
+            <summary>
+            StartsWith - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.SubStringRequest">
+            <summary>
+            SubStringRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SubStringRequest.String">
+            <summary>
+            String - The string to extract from
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SubStringRequest.StartIndex">
+            <summary>
+            StartIndex - Starting position in the string (zero based)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SubStringRequest.Length">
+            <summary>
+            Length - The length of the substring to extract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.SubStringResponse">
+            <summary>
+            SubStringResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.SubStringResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.SubStringRequest)">
+            <summary>
+            FromRequest - Perform the substring function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.SubStringResponse.SubString">
+            <summary>
+            SubString - The output substring
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.SubString">
+            <summary>
+            SubString - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToLowerRequest">
+            <summary>
+            ToLowerRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ToLowerRequest.String">
+            <summary>
+            String - The string to lowercase
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToLowerResponse">
+            <summary>
+            ToLowerResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.ToLowerResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.ToLowerRequest)">
+            <summary>
+            FromRequest - Perform the Lowercase function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ToLowerResponse.Lower">
+            <summary>
+            Lower - The output (lowercase) string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToLower">
+            <summary>
+            ToLower - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToUpperRequest">
+            <summary>
+            ToUpperRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ToUpperRequest.String">
+            <summary>
+            String - The string to uppercase
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToUpperResponse">
+            <summary>
+            ToUpperResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.ToUpperResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.ToUpperRequest)">
+            <summary>
+            FromRequest - Perform the Uppercase function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.ToUpperResponse.Upper">
+            <summary>
+            Upper - The output (uppercase) string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.ToUpper">
+            <summary>
+            ToUpper - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.TrimRequest">
+            <summary>
+            TrimRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.TrimRequest.String">
+            <summary>
+            String - The string to process
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.TrimRequest.PreserveLeftSpace">
+            <summary>
+            PreserveLeftSpace - Remove leading spaces if true
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.TrimRequest.PreserveRightSpace">
+            <summary>
+            PreserveRightSpace - Remove trailing spaces if true
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.TrimResponse">
+            <summary>
+            TrimResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.StringHelper.TrimResponse.FromRequest(Microsoft.Robotics.Services.Sample.StringHelper.TrimRequest)">
+            <summary>
+            FromRequest - Perform the Trim function
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.StringHelper.TrimResponse.Trimmed">
+            <summary>
+            Trimmed - The output (trimmed) string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.StringHelper.Trim">
+            <summary>
+            Trim - Operation to remove whitespace from a string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TimerService">
+            <summary>
+            TimerService - Time delay operations
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.SubscribeHandler(Microsoft.Robotics.Services.Sample.Timer.Subscribe)">
+            <summary>
+            SubscribeHandler - Process subscription requests
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.SetTimerHandler(Microsoft.Robotics.Services.Sample.Timer.SetTimer)">
+            <summary>
+            SetTimerHandler - Set a timer
+            </summary>
+            <param name="setTimer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.TickHandler(Microsoft.Robotics.Services.Sample.Timer.Tick)">
+            <summary>
+            TickHandler - Send notification on tick count
+            </summary>
+            <param name="tick"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.FireTimerHandler(Microsoft.Robotics.Services.Sample.Timer.FireTimer)">
+            <summary>
+            FireTimerHandler - Send notifiation when a timer expires
+            </summary>
+            <param name="fireTimer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.WaitHandler(Microsoft.Robotics.Services.Sample.Timer.Wait)">
+            <summary>
+            WaitHandler - Wait for specified time before responding
+            </summary>
+            <param name="wait"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerService.TimeHandler(Microsoft.Robotics.Services.Sample.Timer.Time)">
+            <summary>
+            TimeHandler - Return the current date and time
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Contract">
+            <summary>
+            Timer Service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Timer.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier for the Timer service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TimerState">
+            <summary>
+            Timer State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.TimerState.Timeout">
+            <summary>
+            Timeout - Interval in milliseconds
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.TimerState.Expires">
+            <summary>
+            DateTime - Time when interval expires
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.TimerState.Ticks">
+            <summary>
+            Ticks - Tick counter
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.SetTimerRequest">
+            <summary>
+            SetTimerRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.SetTimerRequest.Interval">
+            <summary>
+            Interval - Time interval in milliseconds
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.FireTimerRequest">
+            <summary>
+            FireTimerRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.FireTimerRequest.Fired">
+            <summary>
+            Fired - Timestamp when the timer fired
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TickRequest">
+            <summary>
+            TickRequest
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TimeRequest">
+            <summary>
+            TimeRequest - Ask for Date/Time
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TimeResponse">
+            <summary>
+            TimeResponse
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimeResponse.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimeResponse.#ctor(System.DateTime)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Timer.TimeResponse.Time">
+            <summary>
+            Time - Current Date/Time
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.TimerOperations">
+            <summary>
+            Timer Service Operations PortSet
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerOperations.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerOperations.op_Implicit(Microsoft.Robotics.Services.Sample.Timer.TimerOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Sample.Timer.FireTimer}">
+            <summary>
+            Implicit Operator to extract port
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerOperations.Post(Microsoft.Robotics.Services.Sample.Timer.FireTimer)">
+            <summary>
+            Explicit Post for FireTimer messages
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerOperations.op_Implicit(Microsoft.Robotics.Services.Sample.Timer.TimerOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Sample.Timer.Tick}">
+            <summary>
+            Implicit Operator to extract port
+            </summary>
+            <param name="portSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.TimerOperations.Post(Microsoft.Robotics.Services.Sample.Timer.Tick)">
+            <summary>
+            Explicit Post for Tick messages
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Get">
+            <summary>
+            Get - Gets the state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Subscribe">
+            <summary>
+            Subscribe - Adds subscriptions
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.SetTimer">
+            <summary>
+            SetTimer - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Tick">
+            <summary>
+            Tick - Notification (once a second)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.Tick.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.Tick.#ctor(Microsoft.Robotics.Services.Sample.Timer.TickRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.FireTimer">
+            <summary>
+            TimerComplete - Notification that timer has expired
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.FireTimer.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Timer.FireTimer.#ctor(Microsoft.Robotics.Services.Sample.Timer.FireTimerRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Wait">
+            <summary>
+            Wait - Wait for specified time interval
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Timer.Time">
+            <summary>
+            Time - Gets Date/Time
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.UrlLauncher.UrlLauncherService">
+            <summary>
+            UrlLauncherService - Launches a web browser with specified URL
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.UrlLauncher.UrlLauncherService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.UrlLauncher.UrlLauncherService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.UrlLauncher.UrlLauncherService.LaunchUrlHandler(Microsoft.Robotics.Services.Sample.UrlLauncher.LaunchUrl)">
+            <summary>
+            LaunchUrlHandler - Processes requests to display a URL in browser
+            </summary>
+            <param name="launchUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.UrlLauncher.Contract">
+            <summary>
+            Timer Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.UrlLauncher.Contract.Identifier">
+            The Unique Contract Identifier for the Timer service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.UrlLauncher.UrlLauncherOperations">
+            <summary>
+            Url Launcher Sevice Operations PortSet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.UrlLauncher.LaunchUrl">
+            <summary>
+            LaunchUrl - Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.UrlLauncher.LaunchUrlRequest">
+            <summary>
+            LaunchUrlRequest
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.UrlLauncher.LaunchUrlRequest.Url">
+            <summary>
+            Url - The URL to open in the browser
+            </summary>
+        </member>
+    </members>
+</doc>

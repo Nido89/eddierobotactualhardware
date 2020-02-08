@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedDifferentialDrive.2006.M06</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService">
+            <summary>
+            Provides access to a simulated differential drive service.\n(Uses the Generic Differential Drive contract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimulatedDifferentialDriveService constructor that takes a PortSet to
+            notify when the service is created
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.Start">
+            <summary>
+            Start initializes service state and listens for drop messages
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.GetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Get handler retrieves service state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.GetHandler(Microsoft.Robotics.Services.Drive.Proxy.Get)">
+            <summary>
+            Get handler retrieves service state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.SubscribeHandler(Microsoft.Robotics.Services.Drive.Proxy.Subscribe)">
+            <summary>
+            Subscribe to Differential Drive service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.ReliableSubscribeHandler(Microsoft.Robotics.Services.Drive.Proxy.ReliableSubscribe)">
+            <summary>
+            Subscribe to Differential Drive service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.DriveDistanceHandler(Microsoft.Robotics.Services.Drive.Proxy.DriveDistance)">
+            <summary>
+            Handler for drive request
+            </summary>
+            <param name="driveDistance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.RotateHandler(Microsoft.Robotics.Services.Drive.Proxy.RotateDegrees)">
+            <summary>
+            Handler for rotate request
+            </summary>
+            <param name="rotate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.SetPowerHandler(Microsoft.Robotics.Services.Drive.Proxy.SetDrivePower)">
+            <summary>
+            Handler for setting the drive power
+            </summary>
+            <param name="setPower"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.SetSpeedHandler(Microsoft.Robotics.Services.Drive.Proxy.SetDriveSpeed)">
+            <summary>
+            Handler for setting the drive speed
+            </summary>
+            <param name="setSpeed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.EnableHandler(Microsoft.Robotics.Services.Drive.Proxy.EnableDrive)">
+            <summary>
+            Handler for enabling or disabling the drive
+            </summary>
+            <param name="enable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.AllStopHandler(Microsoft.Robotics.Services.Drive.Proxy.AllStop)">
+            <summary>
+            Handler when the drive receives an all stop message
+            </summary>
+            <param name="estop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Drive.SimulatedDifferentialDriveService.EncoderResetHandler(Microsoft.Robotics.Services.Drive.Proxy.ResetEncoders)">
+            <summary>
+            Resets the encoder tick count to zero on both wheels
+            Not implemented in this service.
+            </summary>
+            <param name="reset">Request message</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Drive.Contract">
+            <summary>
+            SimulatedDifferentialDrive Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Drive.Contract.Identifier">
+            <summary>
+            Unique SimulatedDifferentialDrive contract identifier
+            </summary>
+        </member>
+    </members>
+</doc>

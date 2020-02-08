@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebCamService.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService">
+            <summary>
+            Webcam service implementation class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Normal constructor used in service creation
+            </summary>
+            <param name="creationPort">service creation port</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.Start">
+            <summary>
+            Complete second phase startup for this service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop handler.
+            </summary>
+            <remarks>
+            Disconnects the service from the selected camera if necessary,
+            before continuing with the default drop process.
+            </remarks>
+            <param name="drop"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.GetHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.Get)">
+            <summary>
+            Get the service state
+            </summary>
+            <remarks>This gets the service state for the main port</remarks>
+            <param name="get">DSSP Get request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.GenericGetHandler(Microsoft.Robotics.Services.WebCam.Get)">
+            <summary>
+            Get the generic service state
+            </summary>
+            <remarks>This gets the generic webcam view of the service state</remarks>
+            <param name="get">DSSP Get request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.ReplaceHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.Replace)">
+            <summary>
+            Replace the service state.
+            </summary>
+            <remarks>
+            This message is sent internally within the webcam service
+            as part of the startup process
+            </remarks>
+            <param name="replace">DSSP Replace request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.QueryFrameHandler(Microsoft.Robotics.Services.WebCam.QueryFrame)">
+            <summary>
+            Ask the webcam for the current frame.
+            </summary>
+            <param name="query">DSSP Query request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.UpdateFrameHandler(Microsoft.Robotics.Services.WebCam.UpdateFrame)">
+            <summary>
+            Handle UpdateFrame processing.
+            </summary>
+            <remarks>
+            <para>The UpdateFrame message is used internally by the webcam service
+            to indicate that a new frame is available to subscribers.</para>
+            <para>This message is only used when the state member FramesOnDemand is false</para>
+            </remarks>
+            <param name="update">DSSP Update message</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.UpdateDeviceHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateDevice)">
+            <summary>
+            Ask the webcam to change which device it is using.
+            </summary>
+            <param name="update">DSSP Update message</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.UpdateFormatHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateFormat)">
+            <summary>
+            Ask the webcam to change the format of the captured image
+            </summary>
+            <remarks>
+            This is used to change the size or capture rate of the current capture device.
+            </remarks>
+            <param name="update">DSSP Update message</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Handles HTTP POST events
+            </summary>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Handles HTTP QUERY events
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Handles HTTP GET requests
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamService.SubscribeHandler(Microsoft.Robotics.Services.WebCam.Subscribe)">
+            <summary>
+            Handles incoming subscribe requests
+            </summary>
+            <param name="subscribe">DSSP Subscribe request</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamReplay.Contract">
+            <summary>
+            Contract class for WebCam Replay service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCamReplay.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamReplay.Replay">
+            <summary>
+            Webcam Replay service.
+            Replays images previously captured by the WebCam service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.Start">
+            <summary>
+            Service startup
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.GetHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.Get)">
+            <summary>
+            Handle get requests
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.GenericGetHandler(Microsoft.Robotics.Services.WebCam.Get)">
+            <summary>
+            Handle get requests for the generic contract
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Handle HTTP GET requests
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Handle HTTP QUERY requests
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.ReplaceHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.Replace)">
+            <summary>
+            Handle Replace requests
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Handle HTTP POST requests
+            </summary>
+            <param name="httpPost"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.UpdateFormatHandler(Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateFormat)">
+            <summary>
+            Handle UpdateFormat messages
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.UpdateFrameHandler(Microsoft.Robotics.Services.WebCam.UpdateFrame)">
+            <summary>
+            Handle UpdateFrame messages
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.QueryFrameHandler(Microsoft.Robotics.Services.WebCam.QueryFrame)">
+            <summary>
+            Handle QueryFrame requests
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamReplay.Replay.SubscribeHandler(Microsoft.Robotics.Services.WebCam.Subscribe)">
+            <summary>
+            Handle Subscribe requests
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamState">
+            <summary>
+            WebCam service state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamState.Cameras">
+            <summary>
+            List of available cameras on the system.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamState.Selected">
+            <summary>
+            The currently selected camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamState.CaptureFile">
+            <summary>
+            The file, if any, to capture a stream of image to.
+            If this is non-null then every image that the camera captures
+            will be stored to this file.
+            </summary>
+            <remarks>Not supported on .Net CF</remarks>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamState.FramesOnDemand">
+            <summary>
+            When this is true, webcam only captures frames when requested.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance">
+            <summary>
+            Represents a camera on the system.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.Equals(Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance)">
+            <summary>
+            Tests whether this CameraInstance is equivalent to the supplied Camera object
+            </summary>
+            <param name="camera">Camera object to test against</param>
+            <returns>true if the FriendlyName or DevicePath match.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.FriendlyName">
+            <summary>
+            Human readable name for the camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.DevicePath">
+            <summary>
+            System internal device name for the camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.SupportedFormats">
+            <summary>
+            List of image formats supported by this camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.Format">
+            <summary>
+            The currently selected format used for capture.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.CameraInstance.InUse">
+            <summary>
+            Specifies if this camera instance is currently being used for capture
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateDeviceRequest">
+            <summary>
+            Message body used by the UpdateDevice message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateDeviceRequest.Selected">
+            <summary>
+            The camera to set as the currently selected capture device.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.Contract">
+            <summary>
+            Webcam service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MultiDeviceWebCam.Contract.Identifier">
+            <summary>
+            Webcam service contract identifier.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations">
+            <summary>
+            Webcam service operations port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.Post(System.Object)">
+            <summary>
+            Post a message
+            </summary>
+            <param name="item">message to post to the port</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Default accessor for DsspDefaultLookup message port
+            </summary>
+            <param name="portSet">webcam service operations port</param>
+            <returns>DesspDefaultLookup message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Default accessor for DsspDefaultDrop message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>DsspDefaultDrop message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.QueryFrame}">
+            <summary>
+            Default accessor for webcam.QueryFrame message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>webcam.QueryFrame message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateFormat}">
+            <summary>
+            Default accessor for UpdateFormat message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>UpdateFormat message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.UpdateFrame}">
+            <summary>
+            Default accessor for webcam.UpdateFrame message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>webcam.UpdateFrame message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.Subscribe}">
+            <summary>
+            Default accessor for webcam.Subscribe message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>webcam.Subscribe message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.MultiDeviceWebCam.Get}">
+            <summary>
+            Default accessor for Get message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>Get message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.MultiDeviceWebCam.Replace}">
+            <summary>
+            Default accessor for Replace message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>Replace message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateDevice}">
+            <summary>
+            Default accessor for UpdateDevice message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>UpdateDevice message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpGet}">
+            <summary>
+            Default accessor for HttpGet message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>HttpGet message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpPost}">
+            <summary>
+            Default accessor for HttpPost message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>HttpPost message port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations.op_Implicit(Microsoft.Robotics.Services.MultiDeviceWebCam.WebCamServiceOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpQuery}">
+            <summary>
+            Default accessor for HttpQuery message port
+            </summary>
+            <param name="portSet">WebCam Service Operations port</param>
+            <returns>HttpQuery message port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.Format">
+            <summary>
+            Format description
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.Width">
+            <summary>
+            Image width
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.Height">
+            <summary>
+            Image height
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.MinFramesPerSecond">
+            <summary>
+            Minimum FPS
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.MaxFramesPerSecond">
+            <summary>
+            Max FPS
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.Format.Compression">
+            <summary>
+            Compression to use (FourCC 4 byte code)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.PipeServerOutput">
+            <summary>
+            type used for serializing the pipe server output log
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.MultiDeviceWebCam.PipeServerOutput.Output">
+            <summary>
+            the output
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.Get">
+            <summary>
+            Get message
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.Replace">
+            <summary>
+            Replace message
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateDevice">
+            <summary>
+            UpdateDevice message
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MultiDeviceWebCam.UpdateFormat">
+            <summary>
+            Frame format update operation
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedWebcam.Y2006.M09</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService">
+            <summary>
+            Provides access to a simulated Webcam. : implements frame retrieval from simulation CameraEntity
+            </summary>
+            <summary>
+            The WebCamSensor alternate contract implementation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.StrideFactor">
+            <summary>
+            The Stride factor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.SensorPortName">
+            <summary>
+            The Sensor Port Name
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop handler for web cam
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            
+            <summary>
+            HttpGet Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Query handler for web cam
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.GetHandler(Microsoft.Robotics.Services.WebCam.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.UpdateFrameHandler(Microsoft.Robotics.Services.WebCam.UpdateFrame)">
+            <summary>
+            Handler that updates the copy of the web cam's bitmap image 
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.QueryFrameHandler(Microsoft.Robotics.Services.WebCam.QueryFrame)">
+            <summary>
+            Queries a frame from the real time camera entity.
+            Needs to be exclusive because it locks the _state.Image object.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.ReplaceHandler(Microsoft.Robotics.Services.WebCam.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.SubscribeHandler(Microsoft.Robotics.Services.WebCam.Subscribe)">
+            <summary>
+            Handler that processes subscribe messages for the web cam service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.sensorOps">
+            <summary>
+            The WebCamSensor operations
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.sensorState">
+            <summary>
+            The sensorState
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.AltHttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            The HTTP Get handler.
+            </summary>
+            <param name="get">The get request</param>
+            <returns>Standard Ccr iterator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.AltHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            The HTTP query handler.
+            </summary>
+            <param name="query">The query request.</param>
+            <returns>Standard ccr iterator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.GetHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Get)">
+            <summary>
+            Gets the handler.
+            </summary>
+            <param name="get">The get request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.ReplaceHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Replace)">
+            <summary>
+            Replaces the handler.
+            </summary>
+            <param name="replace">The replace request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.SubscribeHandler(Microsoft.Robotics.Services.WebCamSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribes the handler.
+            </summary>
+            <param name="subscribe">The subscribe request.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.DoWebCamSensorReplace(System.Int32[])">
+            <summary>
+            Does the web cam sensor replace.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.SimulatedWebcamService.ConvertRawDataToImageData(System.Int32[])">
+            <summary>
+            Converts the raw data to image data.
+            </summary>
+            <param name="rawData">The raw data.</param>
+            <returns>The image data</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.Contract">
+            <summary>
+            SimulatedWebcam Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.SimulatedWebcam.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedWebcam service
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XInputGamepad.Y2006.M09.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState">
+            <summary>
+                       Specifies the state of the XInput controller.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current XInputGamepadState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Clone">
+             <summary>
+            Clones XInputGamepadState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current XInputGamepadState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes XInputGamepadState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized XInputGamepadState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.TimeStamp">
+            <summary>
+                       Indicates time of the controller's state update.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Controller">
+            <summary>
+                       Indicates controller state.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.DPad">
+            <summary>
+                       Indicates the state of the directional pad.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Buttons">
+            <summary>
+                       Identifies the state of the buttons.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Triggers">
+            <summary>
+                       Identifies the state of the triggers.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Thumbsticks">
+            <summary>
+                       Identifies the state of the thumbsticks.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadState.Vibration">
+            <summary>
+                       Identifies the state of the vibration motors.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller">
+            <summary>
+                       This class represents a controller.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Controller to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.Clone">
+             <summary>
+            Clones Controller
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Controller to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Controller
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Controller</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.TimeStamp">
+            <summary>
+                       Indicates the time of the controller change.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.PlayerIndex">
+            <summary>
+                       Identifies the player index.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Controller.IsConnected">
+            <summary>
+                       Indicates whether a controller is connected.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad">
+            <summary>
+                       Identifies the state of the directional pad.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DPad to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Clone">
+             <summary>
+            Clones DPad
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DPad to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DPad
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DPad</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.TimeStamp">
+            <summary>
+                       Identifies the time of the directional pad input.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Left">
+            <summary>
+                       Indicates if the directional pad is pressed left.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Down">
+            <summary>
+                       Indicates if the directional pad is pressed down.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Right">
+            <summary>
+                       Indicates if the directional pad is pressed right.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPad.Up">
+            <summary>
+                       Indicates if the directional pad is pressed up.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons">
+            <summary>
+                       Identifies the state of the controller buttons.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Buttons to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Clone">
+             <summary>
+            Clones Buttons
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Buttons to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Buttons
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Buttons</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.TimeStamp">
+            <summary>
+                       Identifies the time of the button input.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.A">
+            <summary>
+                       Identifies whether the A button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.B">
+            <summary>
+                       Identifies whether the B button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.X">
+            <summary>
+                       Identifies whether the X button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Y">
+            <summary>
+                       Identifies whether the Y button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Back">
+            <summary>
+                       Identifies whether the Back button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.Start">
+            <summary>
+                       Identifies whether the Start button was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.LeftStick">
+            <summary>
+                       Identifies whether the left thumbstick was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.RightStick">
+            <summary>
+                       Identifies whether the right thumbstick was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.LeftShoulder">
+            <summary>
+                       Identifies whether the left shoulder (bumper) was pressed.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Buttons.RightShoulder">
+            <summary>
+                       Identifies whether the right shoulder (bumper) was pressed.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers">
+            <summary>
+                       Identifies the state of the controller's triggers.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Triggers to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.Clone">
+             <summary>
+            Clones Triggers
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Triggers to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Triggers
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Triggers</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.TimeStamp">
+            <summary>
+                       Identifies the time of the trigger input.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.Left">
+            <summary>
+                       Identifies the left trigger value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Triggers.Right">
+            <summary>
+                       Identifies the right trigger value.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks">
+            <summary>
+                       Identifies the thumbsticks state.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Thumbsticks to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.Clone">
+             <summary>
+            Clones Thumbsticks
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Thumbsticks to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Thumbsticks
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Thumbsticks</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.TimeStamp">
+            <summary>
+                       Identifies the time of the thumbstick input.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.LeftX">
+            <summary>
+                       Identifies the X value of left thumbstick.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.LeftY">
+            <summary>
+                       Identifies the Y value of left thumbstick.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.RightX">
+            <summary>
+                       Identifies the X value of right thumbstick.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Thumbsticks.RightY">
+            <summary>
+                       Identifies the Y value of right thumbstick.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration">
+            <summary>
+                       Identifies the vibration motors' state.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Vibration to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.Clone">
+             <summary>
+            Clones Vibration
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Vibration to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Vibration
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Vibration</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.TimeStamp">
+            <summary>
+                       Identifies the time of the vibration motors change.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.Left">
+            <summary>
+                       Identifies the value of the left vibration motor.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Vibration.Right">
+            <summary>
+                       Identifies the value of the right vibration motor.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PollRequest">
+            <summary>
+                       A request to cause the service to update the state of the controllers.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PollRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PollRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PollRequest.Clone">
+             <summary>
+            Clones PollRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PollRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PollRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PollRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PollRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PollRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersRequest">
+            <summary>
+                       A request to return information about the current controllers.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current QueryControllersRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersRequest.Clone">
+             <summary>
+            Clones QueryControllersRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current QueryControllersRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes QueryControllersRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized QueryControllersRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse">
+            <summary>
+                       The response that contains information about the current controllers.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current QueryControllersResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse.Clone">
+             <summary>
+            Clones QueryControllersResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current QueryControllersResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes QueryControllersResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized QueryControllersResponse</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllersResponse.Controllers">
+            <summary>
+                       A list of capabilities for each controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps">
+            <summary>
+                       Represents the capabilities of a controller.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ControllerCaps to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps.Clone">
+             <summary>
+            Clones ControllerCaps
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ControllerCaps to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ControllerCaps
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ControllerCaps</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerCaps.ControllerType">
+            <summary>
+                       Type type of the controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Subscribe">
+            <summary>
+                       A subscribe operation requests the service to send notifications to another service.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Get">
+            <summary>
+                       Gets the current state of the controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Replace">
+            <summary>
+                       Sets the current state of the game controller.
+                       This raises an event when a subscription is initially established.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Poll">
+            <summary>
+                       Polls the controller to update the current state.\n If the state has changed, then appropriate notifications are sent.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.DPadChanged">
+            <summary>
+                       Indicates when the directional pad position changes.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ButtonsChanged">
+            <summary>
+                       Indicates when one or more buttons are pressed or released on the controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.TriggersChanged">
+            <summary>
+                       Indicates when a trigger's value when it is pressed.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ThumbsticksChanged">
+            <summary>
+                       Indicates when a thumbstick position changes.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerChanged">
+            <summary>
+                       Send this message to change which controller this service instance is using.
+                       This event is raised when the controller is changed or when the controller is connected or disconnected
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.SetVibration">
+            <summary>
+                       Sets the amount of vibration in the left and right rumble motors.
+                       The left motor is the low-frequency rumble motor.
+                       The right motor is the high-frequency rumble motor.
+                       This notification is raised when the vibration settings are changed.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.QueryControllers">
+            <summary>
+                       Gets the list of attached controllers.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.XInputGamepadOperations">
+            <summary>
+                       The operations supported by this service.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex">
+            <summary>
+                       Identifies the player index.
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex.One">
+            <summary>
+                       Player index (1)
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex.Two">
+            <summary>
+                       Player index (2)
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex.Three">
+            <summary>
+                       Player index (3)
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex.Four">
+            <summary>
+                       Player index (4)
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.PlayerIndex.Any">
+            <summary>
+                       Player index (not specified)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType">
+            <summary>
+                       Identifies the controller type.
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.NotSelected">
+            <summary>
+                       Controller type is not specified
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.GamePad">
+            <summary>
+                       Controller is a gamepad
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.Wheel">
+            <summary>
+                       Controller is a steering wheel
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.ArcadeStick">
+            <summary>
+                       Controller is a joystick
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.FlightStick">
+            <summary>
+                       Controller is a flight control stick
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.ControllerType.DancePad">
+            <summary>
+                       Controller is a dance pad
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Contract">
+            <summary>
+                       Provides access to an Xbox 360 controller such as a gamepad.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.XInputGamepad.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

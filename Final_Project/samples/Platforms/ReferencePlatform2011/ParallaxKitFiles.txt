@@ -1,0 +1,19 @@
+# Parallax Kit Files for RDS 4 Beta 2
+# The ReadMe should not be included here. It is added in the DssDeploy command-line.
+# Build file list - Also available after installation in the Packages folder
+/d:"ParallaxKitFiles.txt"
+# Simple script to migrate and compile the code
+/d:"ParallaxSetup.cmd"
+# Source Code
+/d:"Parallax2011ReferencePlatformIoController\*.*"
+/d:"Parallax2011ReferencePlatformIoController\Properties\*.*"
+# Manifests, configs and scripts
+/d:"..\..\Config\Eddie*.*"
+/d:"..\..\Config\Parallax*.*"
+/d:"..\..\..\bin\Eddie*.cmd"
+/d:"..\..\..\bin\KinectUI.cmd"
+/d:"..\..\..\bin\RefPlatformSim.cmd"
+# Firmware
+/d:"EddieFirmware-2012-09-07\*.*"
+# Binaries - For convenience only because the code can always be recompiled
+/d:"..\..\..\bin\Parallax2011ReferencePlatformIoController*.*"

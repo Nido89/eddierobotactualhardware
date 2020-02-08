@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.WaitForDriveCompletion.Y2008.M09.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WaitForDriveCompletion.Y2008.M09.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WaitForDriveCompletion.Y2008.M09.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WaitForDriveCompletion.Y2008.M09.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\WaitForDriveCompletion\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\WaitForDriveCompletion\obj\Debug\User.WaitForDriveCompletion.Y2008.M09.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\WaitForDriveCompletion\obj\Debug\User.WaitForDriveCompletion.Y2008.M09.pdb

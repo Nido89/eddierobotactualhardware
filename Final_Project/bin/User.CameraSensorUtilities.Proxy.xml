@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.CameraSensorUtilities.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Get">
+            <summary>
+                       Get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Replace">
+            <summary>
+                       Replace operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Subscribe">
+            <summary>
+                       Subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Proxy.DepthCamSensorOperationsPort">
+            <summary>
+                       Depth camera operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Contract">
+            <summary>
+                       Image Feature Extractor Contract
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DepthCamSensor.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Proxy.Get">
+            <summary>
+                       Get message for the webcam generic contract 
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Proxy.Replace">
+            <summary>
+                       Replace message for the webcam generic contract
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Proxy.Subscribe">
+            <summary>
+                       Subscribe message for the webcam generic contract
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Proxy.WebCamSensorOperations">
+            <summary>
+                       The ServicePort for the webcam generic contract
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCamSensor.Proxy.Contract">
+            <summary>
+                       Standard optimized webcam contract 
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCamSensor.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,77 @@
+﻿<Window x:Class="Microsoft.Dss.Services.Samples.KinectUI.KinectUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="486" Width="710"
+    Title="Kinect Service Viewer"
+        Name="self"
+>
+    <Grid Height="450" Width="672">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="192" />
+            <ColumnDefinition Width="480*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="323" />
+            <RowDefinition Height="151*" />
+        </Grid.RowDefinitions>
+        <GroupBox Header="Query Kinect for:" HorizontalAlignment="Left" Margin="14,12,0,220" Name="groupBox2" Width="164"></GroupBox>
+        <Image Name="RgbImage" Height="320" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Top" Width="480" Margin="0,3,0,0" Grid.Column="1" />
+        <Image Name="DepthImage" Height="320" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Top" Width="480" Margin="0,3,0,0" Grid.Column="1" />
+        <CheckBox Name="DepthCB" Content="Depth" Height="18" HorizontalAlignment="Left" Margin="20,56,0,0" VerticalAlignment="Top" Width="123" Checked="DepthCB_Checked" Unchecked="DepthCB_Checked" />
+        <CheckBox Name="SkeletalCB" Content="Skeletal" Height="18" HorizontalAlignment="Left" Margin="20,76,0,0" VerticalAlignment="Top" Width="123" Checked="SkeletalCB_Checked" Unchecked="SkeletalCB_Checked" />
+        <CheckBox Name="VideoCB" Content="Video" Height="18" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top" Width="123" Checked="VideoCB_Checked" Unchecked="VideoCB_Checked"/>
+        <Grid Grid.Column="1" Grid.Row="1" Height="121" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Width="480">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="126" />
+                <ColumnDefinition Width="162" />
+                <ColumnDefinition Width="121" />
+                <ColumnDefinition Width="71*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29" />
+                <RowDefinition Height="29" />
+                <RowDefinition Height="29" />
+                <RowDefinition Height="29" />
+                <RowDefinition Height="29" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="0,7,0,28" Text="Tilt (degrees):" Width="95" Grid.RowSpan="2" />
+            <TextBox Name="TiltDegrees" Height="23" HorizontalAlignment="Left" Margin="123,4,0,0" VerticalAlignment="Top" Width="36" Grid.ColumnSpan="2" />
+            <Button Content="Update" Click="OnUpdateTilt" Height="25" HorizontalAlignment="Right" Margin="0,3,28,0" VerticalAlignment="Top" Width="56" Grid.Column="1" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,5,0,0" Text="Device ID:" VerticalAlignment="Top" Width="121" Grid.Row="3" />
+            <TextBlock Name="DeviceID" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Grid.Column="1" Grid.Row="3" Margin="0,3,0,0" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,6,0,0" Text="Polling Frame rate:" VerticalAlignment="Top" Width="121" Grid.Column="2" />
+            <TextBlock Name="FrameRate" Height="23" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="71" Grid.Column="3" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,5,0,0" Text="Video image Type:" VerticalAlignment="Top" Width="121" Grid.Row="1" />
+            <TextBlock Name="VideImageType" HorizontalAlignment="Left" Margin="0,6,0,0" Width="156" Grid.Column="1" Grid.Row="1" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,4,0,0" Text="Depth image Type:" VerticalAlignment="Top" Width="121" Grid.Row="2" />
+            <TextBlock Name="DepthImageType" HorizontalAlignment="Left" Margin="0,5,0,1" Width="156" Grid.Column="1" Grid.Row="2" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,5,0,0" Text="Depth Cam Alternate ?" VerticalAlignment="Top" Width="121" Grid.Column="2" Grid.Row="1" />
+            <TextBlock Name="DepthCamAlternate" HorizontalAlignment="Left" Margin="0,4,0,2" Width="71" Grid.Column="3" Grid.Row="1" />
+            <TextBlock Height="21" HorizontalAlignment="Left" Margin="0,4,0,0" Text="Web Cam Alternate ?" VerticalAlignment="Top" Width="121" Grid.Column="2" Grid.Row="2" />
+            <TextBlock Name="WebCamAlternate" HorizontalAlignment="Left" Margin="2,3,0,3" Width="69" Grid.Column="3" Grid.Row="2" />
+        </Grid>
+        <Canvas Name="SkeletonCanvas" Height="320" HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="480" Grid.Column="1" />
+        <GroupBox Header="Skeletal Smoothing" Height="189" HorizontalAlignment="Left" Margin="14,113,0,0" Name="groupBox1" VerticalAlignment="Top" Width="164">
+            <Grid Height="174">
+                <CheckBox Name="TransformSmooth" Content="Transform Smooth" Height="18" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Width="123" Checked="TransformSmoothChecked" Unchecked="TransformSmoothChecked" />
+                <TextBox Name="Smoothing" Height="23" HorizontalAlignment="Left" Margin="100,30,0,0" VerticalAlignment="Top" Width="46" LostFocus="FieldUpdated" />
+                <TextBox Name="Correction" Height="23" HorizontalAlignment="Left" Margin="100,59,0,0" VerticalAlignment="Top" Width="46" LostFocus="FieldUpdated"/>
+                <TextBox Name="Prediction" Height="23" HorizontalAlignment="Left" Margin="100,88,0,0" VerticalAlignment="Top" Width="46" LostFocus="FieldUpdated"/>
+                <TextBox Name="JitterRadius" Height="23" HorizontalAlignment="Left" Margin="100,114,0,0" VerticalAlignment="Top" Width="46" LostFocus="FieldUpdated"/>
+                <TextBox Name="MaxDeviationRadius" Height="23" HorizontalAlignment="Left" Margin="100,143,0,0" VerticalAlignment="Top" Width="46" LostFocus="FieldUpdated"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,33,0,124" Text="Smoothing:" Width="85" />
+                <TextBlock HorizontalAlignment="Left" Margin="0,59,0,98" Text="Correction:" Width="85" />
+                <TextBlock HorizontalAlignment="Left" Margin="0,88,0,69" Text="Prediction:" Width="85" />
+                <TextBlock HorizontalAlignment="Left" Margin="0,114,0,43" Text="Jitter Radius:" Width="85" />
+                <TextBlock HorizontalAlignment="Left" Margin="0,143,0,14" Text="Max Deviation:" Width="85" />
+            </Grid>
+        </GroupBox>
+        <TextBlock Name="FPS" Height="23" HorizontalAlignment="Left" Margin="7,91,0,0" Text="Effective FPS: 0" VerticalAlignment="Top" FontSize="18" Width="165" Grid.Row="1" />
+        <GroupBox Header="Additional Skeleton Info" Height="61" HorizontalAlignment="Left" Margin="13,317,0,0" Name="groupBox4" VerticalAlignment="Top" Width="165" Grid.RowSpan="2">
+            <Grid>
+                <TextBlock Name="SkeletonQualityText" HorizontalAlignment="Left" Margin="4,3,0,3" Text="" Width="146" TextWrapping="Wrap" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

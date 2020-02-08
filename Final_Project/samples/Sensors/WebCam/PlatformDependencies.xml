@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlatformDependencies
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.microsoft.com/dss/authoring/2008/05/platformdependencies.html"
+  >
+
+  <PlatformComponent>SYSGEN_USB</PlatformComponent>
+  <PlatformComponent>SYSGEN_DSHOW_CAPTURE</PlatformComponent>
+  <PlatformComponent>SYSGEN_DSHOW_DMO</PlatformComponent>
+  <PlatformComponent>SYSGEN_DCOM_STG</PlatformComponent>
+  <PlatformComponent>SYSGEN_IMAGING</PlatformComponent>
+  <PlatformComponent>SYSGEN_IMAGING_BMP_DECODE</PlatformComponent>
+  <PlatformComponent>SYSGEN_IMAGING_BMP_ENCODE</PlatformComponent>
+  <PlatformComponent>SYSGEN_IMAGING_JPG_DECODE</PlatformComponent>
+  <PlatformComponent>SYSGEN_IMAGING_JPG_ENCODE</PlatformComponent>
+  <PlatformComponent>SYSGEN_DSHOW</PlatformComponent>
+  <PlatformComponent>SYSGEN_DSHOW_DISPLAY</PlatformComponent>
+  <PlatformComponent>SYSGEN_DSHOW_VIDREND</PlatformComponent>
+
+  <NativeModule>cf.NativeCameraInterop.dll</NativeModule>
+  
+</PlatformDependencies>

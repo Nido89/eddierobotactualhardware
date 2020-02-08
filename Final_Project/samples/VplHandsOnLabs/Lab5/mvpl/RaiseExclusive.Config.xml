@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FlexDialogState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/08/flexdialog.html">
+	<Title>Exclusive</Title>
+	<Visible>true</Visible>
+	<Controls>
+		<FlexControl>
+			<Id>label1</Id>
+			<ControlType>Label</ControlType>
+			<Text>Raise an Exclusive event</Text>
+			<Value />
+		</FlexControl>
+	</Controls>
+	<Buttons>
+		<FlexButton>
+			<Id>btnRaise</Id>
+			<ControlType>Button</ControlType>
+			<Text>Raise</Text>
+			<Value />
+		</FlexButton>
+	</Buttons>
+</FlexDialogState>

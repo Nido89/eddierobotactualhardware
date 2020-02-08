@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HiTechnic.Y2007.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig">
+            <summary>
+                       HiTechnic Accelerometer Sensor Configuration.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current AccelerometerConfig to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.Clone">
+             <summary>
+            Clones AccelerometerConfig
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current AccelerometerConfig to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes AccelerometerConfig
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized AccelerometerConfig</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.Name">
+            <summary>
+                       The name of this Accelerometer Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerConfig.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState">
+            <summary>
+                       HiTechnic Accelerometer State
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current AccelerometerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Clone">
+             <summary>
+            Clones AccelerometerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current AccelerometerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes AccelerometerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized AccelerometerState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Connected">
+            <summary>
+                       Is the Sensor connected to a LEGO Brick?
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Name">
+            <summary>
+                       The name of this Accelerometer Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.ZeroOffset">
+            <summary>
+                       Setting ZeroOffset with the initial Tilt values of the robot
+                       will calibrate the acceleration sensor to an initial pose of X=0, Y=0, Z=0.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerState.Tilt">
+            <summary>
+                       The current tilt readings received from the Accelerometer Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CReadHiTechnicAccelerationSensor">
+            <summary>
+                       HiTechnic Read Accelerometer Sensor Data
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CReadHiTechnicAccelerationSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CReadHiTechnicAccelerationSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CReadHiTechnicAccelerationSensor.Clone">
+             <summary>
+            Clones I2CReadHiTechnicAccelerationSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CReadHiTechnicAccelerationSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CReadHiTechnicAccelerationSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CReadHiTechnicAccelerationSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CReadHiTechnicAccelerationSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CReadHiTechnicAccelerationSensor</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor">
+            <summary>
+                       LegoResponse: I2C Sensor Type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CResponseHiTechnicAccelerationSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.Clone">
+             <summary>
+            Clones I2CResponseHiTechnicAccelerationSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CResponseHiTechnicAccelerationSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CResponseHiTechnicAccelerationSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CResponseHiTechnicAccelerationSensor</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.X">
+            <summary>
+                       X Axis 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.Y">
+            <summary>
+                       Y Axis 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.I2CResponseHiTechnicAccelerationSensor.Z">
+            <summary>
+                       Z Axis 
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.ConnectToBrick">
+            <summary>
+                       Configure Device Connection
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.Get">
+            <summary>
+                       Get the HiTechnic Accelerometer Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerUpdate">
+            <summary>
+                       Get the HiTechnic Accelerometer Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.ReliableSubscribe">
+            <summary>
+                       Subscribe to the HiTechnic Acceleration Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.Subscribe">
+            <summary>
+                       Subscribe to the HiTechnic Acceleration Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerOperations">
+            <summary>
+                       HiTechnic Accelerometer Sensor Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerMode">
+            <summary>
+                       HiTechnic Accelerometer Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerMode.Sensor">
+            <summary>
+                       The Accelerometer is in Sensor Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerMode.CalibrationFailed">
+            <summary>
+                       The Accelerometer failed Calibration
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerMode.Calibration">
+            <summary>
+                       The Accelerometer is in Calibration Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.AccelerometerMode.Unknown">
+            <summary>
+                       The Accelerometer is in an Unknown Mode
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.Contract">
+            <summary>
+                       HiTechnic Accelerometer sensor Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig">
+            <summary>
+                       HiTechnic Compass Sensor Configuration.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassConfig to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.Clone">
+             <summary>
+            Clones CompassConfig
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassConfig to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassConfig
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassConfig</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.Name">
+            <summary>
+                       The name of this Compass Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassConfig.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState">
+            <summary>
+                       HiTechnic Compass State
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassSensorState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Clone">
+             <summary>
+            Clones CompassSensorState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassSensorState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassSensorState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassSensorState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Connected">
+            <summary>
+                       Is the Sensor connected to a LEGO Brick?
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Name">
+            <summary>
+                       The name of this Compass Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorState.Heading">
+            <summary>
+                       The current compass heading received from the Compass Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading">
+            <summary>
+                       The current compass heading received from the Compass Sensor
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassReading to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.Clone">
+             <summary>
+            Clones CompassReading
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassReading to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassReading
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassReading</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.Degrees">
+            <summary>
+                       The current compass heading (degrees) received from the Compass Sensor.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassReading.TimeStamp">
+            <summary>
+                       The time of the last sensor update
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CReadHiTechnicCompassSensor">
+            <summary>
+                       HiTechnic Read Compass Sensor Data
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CReadHiTechnicCompassSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CReadHiTechnicCompassSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CReadHiTechnicCompassSensor.Clone">
+             <summary>
+            Clones I2CReadHiTechnicCompassSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CReadHiTechnicCompassSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CReadHiTechnicCompassSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CReadHiTechnicCompassSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CReadHiTechnicCompassSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CReadHiTechnicCompassSensor</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor">
+            <summary>
+                       LegoResponse: I2C Sensor Type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CResponseHiTechnicCompassSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.Clone">
+             <summary>
+            Clones I2CResponseHiTechnicCompassSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CResponseHiTechnicCompassSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CResponseHiTechnicCompassSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CResponseHiTechnicCompassSensor</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.ModeControl">
+            <summary>
+                       HiTechnic Compass Mode
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.I2CResponseHiTechnicCompassSensor.Heading">
+            <summary>
+                       Compass Heading
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.ConnectToBrick">
+            <summary>
+                       Configure Device Connection
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.Get">
+            <summary>
+                       Get the HiTechnic Compass Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorUpdate">
+            <summary>
+                       Get the HiTechnic Compass Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassSensorOperations">
+            <summary>
+                       HiTechnic Compass Sensor Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassMode">
+            <summary>
+                       HiTechnic Compass Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassMode.Sensor">
+            <summary>
+                       The Compass is in Sensor Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassMode.CalibrationFailed">
+            <summary>
+                       The Compass failed Calibration
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassMode.Calibration">
+            <summary>
+                       The Compass is in Calibration Mode
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.CompassMode.Unknown">
+            <summary>
+                       The Compass is in an Unknown Mode
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.Contract">
+            <summary>
+                       HiTechnic Compass sensor Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FlexDialogState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/08/flexdialog.html">
+	<Title>CodeBreaker</Title>
+	<Visible>true</Visible>
+	<Controls>
+		<FlexControl>
+			<Id>label1</Id>
+			<ControlType>Label</ControlType>
+			<Text>Would you like to play a game?</Text>
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>sep</Id>
+			<ControlType>Seperator</ControlType>
+			<Text />
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>label2</Id>
+			<ControlType>Label</ControlType>
+			<Text>To play. choose a sequence of any three colors from:</Text>
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>label3</Id>
+			<ControlType>Label</ControlType>
+			<Text>Red, Orange, Yellow, Green, Blue and Purple.</Text>
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>label4</Id>
+			<ControlType>Label</ControlType>
+			<Text>I will try to guess the exact sequence.</Text>
+			<Value />
+		</FlexControl>
+	</Controls>
+	<Buttons>
+		<FlexButton>
+			<Id>Yes</Id>
+			<ControlType>Button</ControlType>
+			<Text>Yes</Text>
+			<Value />
+		</FlexButton>
+		<FlexButton>
+			<Id>No</Id>
+			<ControlType>Label</ControlType>
+			<Text>No</Text>
+			<Value />
+		</FlexButton>
+	</Buttons>
+</FlexDialogState>

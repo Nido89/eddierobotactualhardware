@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.Kinect.Y2011.M01.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current KinectState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState.Clone">
+             <summary>
+            Clones KinectState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current KinectState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.KinectState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes KinectState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized KinectState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.QueryRawFrameRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current QueryRawFrameRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.QueryRawFrameRequest.Clone">
+             <summary>
+            Clones QueryRawFrameRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.QueryRawFrameRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current QueryRawFrameRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.QueryRawFrameRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes QueryRawFrameRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized QueryRawFrameRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetRawFrameResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetRawFrameResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetRawFrameResponse.Clone">
+             <summary>
+            Clones GetRawFrameResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetRawFrameResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetRawFrameResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetRawFrameResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetRawFrameResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetRawFrameResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SetFrameRateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SetFrameRateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SetFrameRateRequest.Clone">
+             <summary>
+            Clones SetFrameRateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SetFrameRateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SetFrameRateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SetFrameRateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SetFrameRateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SetFrameRateRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateTiltRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current UpdateTiltRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateTiltRequest.Clone">
+             <summary>
+            Clones UpdateTiltRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateTiltRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current UpdateTiltRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateTiltRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes UpdateTiltRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized UpdateTiltRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DepthToColorRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorRequest.Clone">
+             <summary>
+            Clones DepthToColorRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DepthToColorRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DepthToColorRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DepthToColorRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DepthToColorResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorResponse.Clone">
+             <summary>
+            Clones DepthToColorResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DepthToColorResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthToColorResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DepthToColorResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DepthToColorResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SkeletonToDepthImageRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageRequest.Clone">
+             <summary>
+            Clones SkeletonToDepthImageRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SkeletonToDepthImageRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SkeletonToDepthImageRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SkeletonToDepthImageRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SkeletonToDepthImageResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageResponse.Clone">
+             <summary>
+            Clones SkeletonToDepthImageResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SkeletonToDepthImageResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToDepthImageResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SkeletonToDepthImageResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SkeletonToDepthImageResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SkeletonToColorImageRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageRequest.Clone">
+             <summary>
+            Clones SkeletonToColorImageRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SkeletonToColorImageRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SkeletonToColorImageRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SkeletonToColorImageRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SkeletonToColorImageResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageResponse.Clone">
+             <summary>
+            Clones SkeletonToColorImageResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SkeletonToColorImageResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.SkeletonToColorImageResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SkeletonToColorImageResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SkeletonToColorImageResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DepthImageToSkeletonRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonRequest.Clone">
+             <summary>
+            Clones DepthImageToSkeletonRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DepthImageToSkeletonRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DepthImageToSkeletonRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DepthImageToSkeletonRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DepthImageToSkeletonResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonResponse.Clone">
+             <summary>
+            Clones DepthImageToSkeletonResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DepthImageToSkeletonResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.DepthImageToSkeletonResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DepthImageToSkeletonResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DepthImageToSkeletonResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateSkeletalSmoothingRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current UpdateSkeletalSmoothingRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateSkeletalSmoothingRequest.Clone">
+             <summary>
+            Clones UpdateSkeletalSmoothingRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateSkeletalSmoothingRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current UpdateSkeletalSmoothingRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.UpdateSkeletalSmoothingRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes UpdateSkeletalSmoothingRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized UpdateSkeletalSmoothingRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetDepthPropertiesResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetDepthPropertiesResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetDepthPropertiesResponse.Clone">
+             <summary>
+            Clones GetDepthPropertiesResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetDepthPropertiesResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetDepthPropertiesResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.GetDepthPropertiesResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetDepthPropertiesResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetDepthPropertiesResponse</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial9.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:ServiceTutorial9.Multi.Proxy.AddressState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current AddressState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial9.Multi.Proxy.AddressState.Clone">
+             <summary>
+            Clones AddressState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Multi.Proxy.AddressState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current AddressState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial9.Multi.Proxy.AddressState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes AddressState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized AddressState</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Multi.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Multi.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Implementation.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Implementation.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.ExtensionState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ExtensionState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.ExtensionState.Clone">
+             <summary>
+            Clones ExtensionState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.ExtensionState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ExtensionState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.ExtensionState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ExtensionState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ExtensionState</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.UpdateAgeRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current UpdateAgeRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.UpdateAgeRequest.Clone">
+             <summary>
+            Clones UpdateAgeRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.UpdateAgeRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current UpdateAgeRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.UpdateAgeRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes UpdateAgeRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized UpdateAgeRequest</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial9.Extension.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

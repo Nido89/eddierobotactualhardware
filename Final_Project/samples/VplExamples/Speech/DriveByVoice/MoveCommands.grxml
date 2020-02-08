@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         xml:lang="en-US"
+         version="1.0"
+         mode="voice"
+         tag-format="semantics-ms/1.0"
+         root="MoveCommand">
+
+  <rule id="MoveCommand" scope="public">
+    <example>drive forward</example>
+    <example>turn left</example>
+
+    <one-of>
+      <item>
+        <ruleref uri="#TypesOfStop"/>
+        <tag>$.TypeOfMoving = $TypesOfStop</tag>
+      </item>
+      <item>
+        <ruleref uri="#TypesOfMoving"/>
+        <tag>$.TypeOfMoving = $TypesOfMoving</tag>
+        <ruleref uri="#MovingDirection"/>
+        <tag>$.MovingDirection = $MovingDirection</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="TypesOfStop" scope="public">
+    <one-of>
+      <item>
+        stop<tag>$ = "Stop"</tag>
+      </item>
+      <item>
+        cancel<tag>$ = "Stop"</tag>
+      </item>
+      <item>
+        abort<tag>$ = "Stop"</tag>
+      </item>
+      <item>
+        halt<tag>$ = "Stop"</tag>
+      </item>
+    </one-of>    
+  </rule>
+  
+  <rule id="TypesOfMoving" scope="public">
+    <one-of>
+      <item>
+        go<tag>$ = "Move"</tag>
+      </item>
+      <item>
+        drive<tag>$ = "Move"</tag>
+      </item>
+      <item>
+        move<tag>$ = "Move"</tag>
+      </item>
+      <item>
+        turn<tag>$ = "Move"</tag>
+      </item>
+      <item>
+        walk<tag>$ = "Move"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="MovingDirection" scope="public">
+    <item repeat="0-1">
+      <item>to</item>
+      <item repeat="0-1">the</item>
+    </item>
+    <one-of>
+      <item>
+        forward<tag>$ = "Forward"</tag>
+      </item>
+      <item>
+        forwards<tag>$ = "Forward"</tag>
+      </item>
+      <item>
+        straight<tag>$ = "Forward"</tag>
+      </item>
+      <item>
+        ahead<tag>$ = "Forward"</tag>
+      </item>
+      <item>
+        backward<tag>$ = "Backward"</tag>
+      </item>
+      <item>
+        backwards<tag>$ = "Backward"</tag>
+      </item>
+      <item>
+        back<tag>$ = "Backward"</tag>
+      </item>
+      <item>
+        left<tag>$ = "Left"</tag>
+      </item>
+      <item>
+        right<tag>$ = "Right"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+</grammar>

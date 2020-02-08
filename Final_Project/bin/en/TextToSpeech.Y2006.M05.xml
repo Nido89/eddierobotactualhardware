@@ -1,0 +1,430 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextToSpeech.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech">
+            <summary>
+            Main text to speech implementation class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech._state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech._mainPort">
+            <summary>
+            Main port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech._sayTextSynchPort">
+            <summary>
+            Synchronous speech synthesis port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech._subMgrPort">
+            <summary>
+            Subscription manager port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech._utilities">
+            <summary>
+            Needed for HTTP post processing
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.Start">
+            <summary>
+            The startup method for the text to speech service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.InitTextToSpeech">
+            <summary>
+            Initializes the text to speech service
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.ReplaceHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.Replace)">
+            <summary>
+            Handles the DSSP Replace message.
+            </summary>
+            <param name="replace">The new settings for the service</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SayTextHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayText)">
+            <summary>
+            Say the text
+            </summary>
+            <param name="sayText">The SayText message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SayTextSynchHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextSynch)">
+            <summary>
+            Say the text synchronously
+            </summary>
+            <param name="sayText">The SayTextSynch message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetRateHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRate)">
+            <summary>
+            Handles the <see cref="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetRate(System.Int32)"/> message.
+            Sets the speech rate.
+            </summary>
+            <param name="setRate">The speech rate to set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVolumeHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolume)">
+            <summary>
+            Handles the <see cref="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVolume(System.Int32)"/> message.
+            Sets the speech volume.
+            </summary>
+            <param name="setVolume">The volume to set</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVoiceHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice)">
+            <summary>
+            Handles the <see cref="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVoice(System.String)"/> message.
+            Sets the voice to use for speech.
+            </summary>
+            <param name="setVoice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Handles the <see cref="T:Microsoft.Dss.Core.DsspHttp.HttpPost"/> message.
+            </summary>
+            <param name="httpPost"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SubscribeHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.Subscribe)">
+            <summary>
+            Subscription handler
+            </summary>
+            <param name="subscribe">Subscription message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.VisemeNotifyHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotify)">
+            <summary>
+            Viseme notify operation (not supported, just used for notifications to
+            subscribers)
+            </summary>
+            <param name="notify"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.InternalSayTextSynchHandler(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextSynch)">
+            <summary>
+            Synchronous speak handler
+            </summary>
+            <param name="sayText"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.VisemeReachedHandler(System.Object,System.Speech.Synthesis.VisemeReachedEventArgs)">
+            <summary>
+            VisemeReached handler, called by speech synthesizer
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SpeakCompletedHandler(System.Object,System.Speech.Synthesis.SpeakCompletedEventArgs)">
+            <summary>
+            SeakCompleted handler, called by speech synthesizer
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.PostActionNotSupported(Microsoft.Dss.ServiceModel.Dssp.DsspOperation)">
+            <summary>
+            Posts an ActionNotSupported DSSP fault code to the response port of the passed in
+            DSSP operation
+            </summary>
+            <param name="operation"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetRate(System.Int32)">
+            <summary>
+            Sets the rate if it is in a valid range. Throws exception otherwise.
+            </summary>
+            <param name="rate">The rate to set</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVolume(System.Int32)">
+            <summary>
+            Sets the volume if it is in a valid range. Throws exception otherwise.
+            </summary>
+            <param name="volume">The volume to set</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.SetVoice(System.String)">
+            <summary>
+            Sets the voice if it is installed and enabled. Throws exception otherwise.
+            </summary>
+            <param name="voice">The voice to set</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeech.DisableAudioOutput(System.Boolean)">
+            <summary>
+            Enables or disables audio output
+            </summary>
+            <param name="disable">Whether to disable audio output or not</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState">
+            <summary>
+            Text To Speech Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.DefaultVolume">
+            <summary>
+            The default value for the volume 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.Synthesizer">
+            <summary>
+            Speech synthesizer object
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.Voices">
+            <summary>
+            List of available voices
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.Voice">
+            <summary>
+            Voice which will say text
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.Volume">
+            <summary>
+            Volume of voice (range: 0 to 100)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.Rate">
+            <summary>
+            Rate of speech (range: -10 to 10)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.SpeechText">
+            <summary>
+            Text to be spoken
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.TextToSpeechState.DisableAudioOutput">
+            <summary>
+            Output audio
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextRequest">
+            <summary>
+            Text to be spoken asynchronously
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextRequest.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextRequest.#ctor(System.String)">
+            <summary>
+            Constructor to initialize members
+            </summary>
+            <param name="speechText">Text to be spoken</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextRequest.SpeechText">
+            <summary>
+            Text to be spoken
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextSynchRequest">
+            <summary>
+            Text to be spoken synchronously
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextSynchRequest.SpeechText">
+            <summary>
+            Text to be spoken
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRateRequest">
+            <summary>
+            Request body for the SetRate message
+            </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRate"/>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRateRequest.Rate">
+            <summary>
+            The new speech rate.
+            This must be between -10 and 10.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolumeRequest">
+            <summary>
+            Request body for the SetVolume message
+            </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolume"/>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolumeRequest.Volume">
+            <summary>
+            The new speech volume.
+            This must be between 0 and 100.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoiceRequest">
+            <summary>
+            Request body for the SetVoice message
+            </summary>
+            <see cref="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice"/>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoiceRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoiceRequest.#ctor(System.String)">
+            <summary>
+            Constructor to initialize member.
+            </summary>
+            <param name="voice">The name of the voice to use</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoiceRequest.Voice">
+            <summary>
+            The new voice to use.
+            This must be in the list in the state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification">
+            <summary>
+            Viseme notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.Viseme">
+            <summary>
+            Current viseme
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.NextViseme">
+            <summary>
+            Next viseme
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.AudioPosition">
+            <summary>
+            Audio position
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.AudioPositionInTicks">
+            <summary>
+            Audio position in ticks. Workaround using ticks because
+            System.TimeSpan itself cannot be XML serialized
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.Duration">
+            <summary>
+            Duration
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.DurationInTicks">
+            <summary>
+            Duration in ticks. Workaround using ticks because
+            System.TimeSpan itself cannot be XML serialized
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotification.Emphasis">
+            <summary>
+            Emphasis
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Contract">
+            <summary>
+            The text to speech contract definition
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Contract.Identifier">
+            <summary>
+            the text to speech contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SpeechTextOperations">
+            <summary>
+            the text to speech operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Get">
+            <summary>
+            returns the text to speech state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Replace">
+            <summary>
+            Changes all writable text to speech settings
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayText">
+            <summary>
+            Will say the text asynchronously
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayText.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayText.#ctor(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextRequest)">
+            <summary>
+            Constructor to initialize request
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SayTextSynch">
+            <summary>
+            Will say the text (blocking)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetRate">
+            <summary>
+            Set the speech rate
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVolume">
+            <summary>
+            Set the speech volume
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice">
+            <summary>
+            Set the speech voice
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoice.#ctor(Microsoft.Robotics.Technologies.Speech.TextToSpeech.SetVoiceRequest)">
+            <summary>
+            Constructor to initialize request
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.Subscribe">
+            <summary>
+            Subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.VisemeNotify">
+            <summary>
+            Viseme notificaiton
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.TextToSpeech.FaultNotify">
+            <summary>
+            Fault notificaiton
+            </summary>
+        </member>
+    </members>
+</doc>

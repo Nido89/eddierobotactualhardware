@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedGPSSensor.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor">
+            <summary>
+            SimPhotoCell Service
+            Simulates a photocell brightness sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.CheckForStateChange(System.DateTime)">
+            <summary>
+            Check the hardware value 5 times per second and send a notification if it has changed.
+            </summary>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.InsertEntityNotificationHandlerFirstTime(Microsoft.Robotics.Simulation.Engine.InsertSimulationEntity)">
+            <summary>
+            Called the first time the simulation engine tells us about our entity.  Activate
+            the other handlers and insert ourselves into the service directory.
+            </summary>
+            <param name="ins"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.GetHandler(Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.ReplaceHandler(Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.SimulatedGPSSensor.SubscribeHandler(Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Contract">
+            <summary>
+            SimulatedGPSSensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedPhotoCell service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorState">
+            <summary>
+            GPSSensor state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorState.X">
+            <summary>
+            X component
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorState.Y">
+            <summary>
+            Y component
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorState.Z">
+            <summary>
+            Z component
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.GPSSensorOperations">
+            <summary>
+            GPSSensor main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Get">
+            <summary>
+            GPSSensor get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Replace">
+            <summary>
+            GPSSensor replace operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.Subscribe">
+            <summary>
+            GPSSensor subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.GPSSensor.ReliableSubscribe">
+            <summary>
+            GPSSensor reliable subscribe operation
+            </summary>
+        </member>
+    </members>
+</doc>

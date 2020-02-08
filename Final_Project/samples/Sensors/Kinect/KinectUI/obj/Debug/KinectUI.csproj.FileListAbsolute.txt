@@ -1,0 +1,14 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\KinectUI.baml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\KinectUI.g.cs
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\User.KinectUI.Y2008.M08_MarkupCompile.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\User.KinectUI.Y2008.M08.g.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\Microsoft.Dss.Services.Samples.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.KinectUI.Y2008.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.KinectUI.Y2008.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.KinectUI.Y2008.M08.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.KinectUI.Y2008.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\User.KinectUI.Y2008.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\Kinect\KinectUI\obj\Debug\User.KinectUI.Y2008.M08.pdb

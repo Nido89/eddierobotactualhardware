@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IpCamera.Y2007.M02.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState">
+            <summary>
+                       State class for Ip Camera service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current IpCameraState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState.Clone">
+             <summary>
+            Clones IpCameraState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current IpCameraState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes IpCameraState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized IpCameraState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraState.CameraImageLocation">
+            <summary>
+                       Specifies the location of the camera image.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.Get">
+            <summary>
+                       Get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.Replace">
+            <summary>
+                       Replace operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.IpCameraOperations">
+            <summary>
+                       Ip Camera Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.Contract">
+            <summary>
+                       Ip camera service implementation
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

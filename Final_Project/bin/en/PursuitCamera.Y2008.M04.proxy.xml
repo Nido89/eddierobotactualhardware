@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PursuitCamera.Y2008.M04.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState">
+            <summary>
+                       Stores the state for the PursuitCamera
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings">
+            <summary>
+                       Various settings used by the PursuitCamera
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Settings to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.Clone">
+             <summary>
+            Clones Settings
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Settings to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Settings
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Settings</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.MinDistance">
+            <summary>
+                       Minimum distance to keep the camera from the entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.MaxDistance">
+            <summary>
+                       Maximum distance to keep the camera from the entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.Altitude">
+            <summary>
+                       Height above the ground plane to keep the camera
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.OcclusionThreshold">
+            <summary>
+                       Distance from target point for occlusion to be considered
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.PreventOcclusion">
+            <summary>
+                       If true, try to prevent the view from the camera to the target from being occluded by obstacles
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.Settings.FieldOfView">
+            <summary>
+                       Camera vertical resolution in degrees
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PursuitCameraState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState.Clone">
+             <summary>
+            Clones PursuitCameraState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PursuitCameraState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PursuitCameraState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PursuitCameraState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraState.CameraName">
+            <summary>
+                       Name of the camera to move
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.Get">
+            <summary>
+                       Get message for PursuitCamera service
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.ChangeSettings">
+            <summary>
+                       ChangeSettings message is used to update the settings in the PursuitCamera service
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.PursuitCameraOperations">
+            <summary>
+                       PursuitCamera service operations 
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PursuitCamera.Proxy.Contract">
+            <summary>
+                       Implements a Pursuit Camera for Simulation
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.PursuitCamera.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity">
+            <summary>
+                       PursuitCameraEntity is a camera entity that follows a target entity around
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PursuitCameraEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.Clone">
+             <summary>
+            Clones PursuitCameraEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PursuitCameraEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PursuitCameraEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PursuitCameraEntity</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.TargetName">
+            <summary>
+                       Name of the entity to track
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.MinDistance">
+            <summary>
+                       Minimum distance to keep the camera from the entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.MaxDistance">
+            <summary>
+                       Maximum distance to keep the camera from the entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.Altitude">
+            <summary>
+                       Height above the ground plane to keep the camera
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.PreventOcclusion">
+            <summary>
+                       If true, try to prevent the view from the camera to the target from being occluded by obstacles
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Entities.PursuitCamera.Proxy.PursuitCameraEntity.OcclusionThreshold">
+            <summary>
+                       Threshold distance from the target position that is considered to be occlusion
+                       </summary>
+        </member>
+    </members>
+</doc>

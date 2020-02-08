@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DirectionDialog.Y2006.M08</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction">
+            <summary>
+            Direction Form - Contains five buttons
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.#ctor(Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogOperations)">
+            <summary>
+            Constructor for Direction Form
+            </summary>
+            <param name="mainPort">Port to post messages back to</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            ProcessDialogKey - Override the normal key processing
+            </summary>
+            <param name="keyData">Keystroke to check</param>
+            <returns></returns>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Direction.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService">
+            <summary>
+            Direction Dialog service - Provides four direction arrows (plus Stop) for controlling a robot
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.ReplaceHandler(Microsoft.Robotics.Services.Sample.DirectionDialog.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.ButtonPressHandler(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPress)">
+            <summary>
+            ButtonPressHandler - Reacts to button presses
+            </summary>
+            <param name="buttonPress">Button press info sent from the Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.ButtonReleaseHandler(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonRelease)">
+            <summary>
+            ButtonReleaseHandler - Reacts to button releases
+            </summary>
+            <param name="buttonRelease">Button release info sent from the Form</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogService.SubscribeHandler(Microsoft.Robotics.Services.Sample.DirectionDialog.Subscribe)">
+            <summary>
+            SubscribeHandler - Accepts subscription requests
+            </summary>
+            <param name="subscribe">Subscribe message</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Contract">
+            <summary>
+            DirectionDialog Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.Contract.Identifier">
+            The Unique Contract Identifier for the DirectionDialog service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogState">
+            <summary>
+            DirectionDialogState
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogState.Buttons">
+            <summary>
+            Buttons - List of buttons on the Form
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection">
+            <summary>
+            Button Directions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection.Stop">
+            <summary>
+            Stop
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection.Forwards">
+            <summary>
+            Forwards
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection.Backwards">
+            <summary>
+            Backwards
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Button">
+            <summary>
+            Button info for messages
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The button name</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.#ctor(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection)">
+            <summary>
+            The button direction
+            </summary>
+            <param name="direction">Direction that the button represents</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.Name">
+            <summary>
+            The Button Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.Direction">
+            <summary>
+            The Button Direction
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.Button.Pressed">
+            <summary>
+            Pressed - Set to true if the button is pressed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest">
+            <summary>
+            Notification message type for Button Press
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The button name</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest.#ctor(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonDirection)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="direction">The button direction</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest.Name">
+            <summary>
+            The Button Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest.Direction">
+            <summary>
+            The Button Direction
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest">
+            <summary>
+            Notification message type for Button Release
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">The button name</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest.Name">
+            <summary>
+            The Button Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest.Direction">
+            <summary>
+            The Button Direction
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.DirectionDialogOperations">
+            <summary>
+            Main Operations Port for the service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Get">
+            <summary>
+            Get - Gets the state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Replace">
+            <summary>
+            Replace - Replaces the state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPress">
+            <summary>
+            ButtonPress - Message sent when a button is pressed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPress.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPress.#ctor(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonPressRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body">Button press request message</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonRelease">
+            <summary>
+            ButtonRleases - Message sent when a button is released
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonRelease.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonRelease.#ctor(Microsoft.Robotics.Services.Sample.DirectionDialog.ButtonReleaseRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="body">Button release request message</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.DirectionDialog.Subscribe">
+            <summary>
+            Subscribe - Request message for subscriptions
+            </summary>
+        </member>
+    </members>
+</doc>

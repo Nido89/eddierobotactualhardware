@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial10.Y2007.M12</name>
+    </assembly>
+    <members>
+        <member name="T:ServiceTutorial10.ServiceTutorial10Service">
+            <summary>
+            Implementation class for ServiceTutorial10
+            </summary>
+            <remarks>
+            This tutorial shows how to document a service using several features.
+            </remarks>
+        </member>
+        <member name="F:ServiceTutorial10.ServiceTutorial10Service._state">
+            <summary>
+            Service State
+            </summary>
+        </member>
+        <member name="M:ServiceTutorial10.ServiceTutorial10Service.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            The default Service Constructor is called by the Constructor service 
+            when creating a new instance of the service.
+            </summary>
+        </member>
+        <member name="M:ServiceTutorial10.ServiceTutorial10Service.Start">
+            <summary>
+            The Service Start method is used to perform service initialization
+            </summary>
+        </member>
+        <member name="T:ServiceTutorial10.Contract">
+            <summary>
+            ServiceTutorial10 Contract class
+            </summary>
+        </member>
+        <member name="F:ServiceTutorial10.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:ServiceTutorial10.ServiceTutorial10State">
+            <summary>
+            The ServiceTutorial10 State
+            </summary>
+        </member>
+        <member name="P:ServiceTutorial10.ServiceTutorial10State.FirstName">
+            <summary>
+            This property specifies the first name of a person. 
+            </summary>
+        </member>
+        <member name="P:ServiceTutorial10.ServiceTutorial10State.Initials">
+            <summary>
+            This property specifies any middle initials of a person. 
+            </summary>
+        </member>
+        <member name="P:ServiceTutorial10.ServiceTutorial10State.LastName">
+            <summary>
+            This property specifies the last name of a person. 
+            </summary>
+        </member>
+        <member name="P:ServiceTutorial10.ServiceTutorial10State.LastModified">
+            <summary>
+            This property specifies the last time this state was modified. 
+            </summary>
+        </member>
+        <member name="T:ServiceTutorial10.ServiceTutorial10Operations">
+            <summary>
+            The ServiceTutorial10 Main Operations Port defines public operarations supported by this service
+            </summary>
+        </member>
+        <member name="T:ServiceTutorial10.Get">
+            <summary>
+            The ServiceTutorial10 Get Operation returns the current state of the service
+            </summary>
+        </member>
+        <member name="T:ServiceTutorial10.TutorialCategories">
+            <summary>
+            Categories present a mechanism for grouping together related services.
+            </summary>
+        </member>
+        <member name="F:ServiceTutorial10.TutorialCategories.ServiceTutorial">
+            <summary>
+            Indicates that the service is a DSS service tutorial.
+            </summary>
+        </member>
+        <member name="F:ServiceTutorial10.TutorialCategories.RoboticsTutorial">
+            <summary>
+            Indicates that the service is a robotics tutorial.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,8 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ColorSegment.Y2007.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ColorSegment.Y2007.M07.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\Microsoft.Robotics.Services.Sample.ColorSegment.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\User.ColorSegment.Y2007.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\ColorSegment\obj\Debug\User.ColorSegment.Y2007.M07.pdb

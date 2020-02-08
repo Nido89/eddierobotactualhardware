@@ -1,0 +1,4282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RoboticsCommon</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.ADCPinState">
+            <summary>
+            Pin State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ADCPinArray.ADCPinState.TimeStamp">
+            <summary>
+            Gets or sets timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ADCPinArray.ADCPinState.Number">
+            <summary>
+            Gets or sets pin location identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ADCPinArray.ADCPinState.Name">
+            <summary>
+            Gets or sets pin name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ADCPinArray.ADCPinState.PinValue">
+            <summary>
+            Gets or sets an arbitrary pin value (millivolts, PWM, TTL, etc)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.ADCPinArrayState">
+            <summary>
+            List of GPIO pins
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ADCPinArray.ADCPinArrayState.Pins">
+            <summary>
+            Gets or sets the list of pins
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.Contract">
+            <summary>
+            Analog Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.ADCPinArray.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.ADCPinArrayOperations">
+            <summary>
+            ADC Pin Array Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ADCPinArray.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.AnalogSensorArrayState">
+            <summary>
+            List of analog sensors
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensorArray.AnalogSensorArrayState.Sensors">
+            <summary>
+            Gets or sets the list of sensors
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.Contract">
+            <summary>
+            Analog Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.AnalogSensorArray.Contract.Identifier">
+            The Unique Contract Identifier
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.AnalogSensorOperations">
+            <summary>
+            Analog Sensor Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensorArray.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmState">
+            <summary>
+            Articulated Arm State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmState.Joints">
+            <summary>
+            Joints
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmState.EndEffectorPose">
+            <summary>
+            End Effector Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.BatteryNotification">
+            <summary>
+            Battery Notification
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Battery.BatteryNotification.#ctor">
+            <summary>
+            Battery Notification Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Battery.BatteryNotification.#ctor(System.Int32,System.Double)">
+            <summary>
+            Battery Notification Initialization Constructor
+            </summary>
+            <param name="max"></param>
+            <param name="percent"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryNotification.MaxBatteryPower">
+            <summary>
+            Max Battery Power
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryNotification.PercentBatteryPower">
+            <summary>
+            Percent Battery Power
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryNotification.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.BatteryState">
+            <summary>
+            Battery State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryState.MaxBatteryPower">
+            <summary>
+            Full battery power
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryState.PercentBatteryPower">
+            <summary>
+            Percentage of remaining battery power
+            between 0 and 1
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.BatteryState.PercentCriticalBattery">
+            <summary>
+            Percent Critical Battery
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.UpdateCriticalBattery">
+            <summary>
+            Update Critical Battery
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Battery.UpdateCriticalBattery.PercentCriticalBattery">
+            <summary>
+            Percent Critical Battery
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.Contract">
+            <summary>
+            Battery Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Battery.Contract.Identifier">
+            The Unique Contract Identifier for the Battery service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.BatteryOperations">
+            <summary>
+            Battery Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.SetCriticalLevel">
+            <summary>
+            SetCriticalLevel Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Battery.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.ContactSensor">
+            <summary>
+            Definition of a Binary Switch Sensor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensor.Name">
+            <summary>
+            Descriptive identifier string for this sensor (or bank of sensors)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensor.HardwareIdentifier">
+            <summary>
+            Descriptive identifier number for this sensor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensor.TimeStamp">
+            <summary>
+            Last time sensor was updated
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensor.Pressed">
+            <summary>
+            The state of the binary sensor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensor.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.ContactSensorArrayState">
+            <summary>
+            A list of binary sensors
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ContactSensor.ContactSensorArrayState.Sensors">
+            <summary>
+            The list of sensors
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.Contract">
+            <summary>
+            The Dss Contract Definition
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.ContactSensor.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.ContactSensorArrayOperations">
+            <summary>
+            ContactSensorArray Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.Get">
+            <summary>
+            Operation Get: Gets the state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.Replace">
+            <summary>
+            Operation Replace: Configures bumper collection
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.Update">
+            <summary>
+            Operation Update: Notification of a sensor change
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.Subscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ContactSensor.ReliableSubscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Coordination.Contract">
+            <summary>
+            Coordination Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Coordination.Contract.Identifier">
+            Contract Identifier
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Coordination.ActuatorCoordination">
+            <summary>
+            Used for advanced services which
+            need to coordinate motor commands
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.#ctor">
+            <summary>
+            ActuatorCoordination Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.#ctor(System.Int32)">
+            <summary>
+            ActuatorCoordination Initialization Constructor
+            </summary>
+            <param name="requestCount"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.Count">
+            <summary>
+            The number of motors being coordinated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.RequestId">
+            <summary>
+            A guid which uniquely identifies
+            a set of coordinated motor requests
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.Clone">
+            <summary>
+            Clone ActuatorCoordination
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            CopyTo
+            </summary>
+            <param name="target"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Coordination.ActuatorCoordination.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.Contract">
+            <summary>
+            The Dss Contract Definition
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.ArticulatedArm.Contract.Identifier">
+            <summary>
+            Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations">
+            <summary>
+            ArticulatedArm Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.Get}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.Replace}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPose}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocity}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.SetEndEffectorPose}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.GetEndEffectorPose}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.Subscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations.op_Implicit(Microsoft.Robotics.Services.ArticulatedArm.ArticulatedArmOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.ArticulatedArm.ReliableSubscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.Get">
+            <summary>
+            Operation Get: Gets the state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.Replace">
+            <summary>
+            Operation Replace: Configures arm
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPoseRequest">
+            <summary>
+            Set Joint Target Pose Request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPoseRequest.JointName">
+            <summary>
+            Joint Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPoseRequest.TargetPosition">
+            <summary>
+            Target Position
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPoseRequest.TargetOrientation">
+            <summary>
+            Target Orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocityRequest">
+            <summary>
+            Set Joint Target Velocity Request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocityRequest.JointName">
+            <summary>
+            Joint Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocityRequest.TargetVelocity">
+            <summary>
+            Target Velocity
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetPose">
+            <summary>
+            Operation SetJointTargetPosition: Set target position and/or orientation for joint
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetJointTargetVelocity">
+            <summary>
+            Operation SetJointTargetVelocity: Sets target linear or angular velocity depending on joint type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.GetEndEffectorPose">
+            <summary>
+            Queries end effector Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetEndEffectorPose">
+            <summary>
+            Sets the end effector Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.GetEndEffectorPoseRequest">
+            <summary>
+            Requests end effector Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.GetEndEffectorPoseResponse">
+            <summary>
+            End Effector Pose
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.GetEndEffectorPoseResponse.EndEffectorPose">
+            <summary>
+            Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.SetEndEffectorPoseRequest">
+            <summary>
+            Sets the end effector joint state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.ArticulatedArm.SetEndEffectorPoseRequest.EndEffectorPose">
+            <summary>
+            Pose
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.Subscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.ArticulatedArm.ReliableSubscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState">
+            <summary>
+            Analog Sensor State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.HardwareIdentifier">
+            <summary>
+            Hardware port identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.RawMeasurement">
+            <summary>
+            The analog raw measurement.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.NormalizedMeasurement">
+            <summary>
+            Normalized measurement relative to the RawMeasurementRange property. This value is in the range from 0 to 1.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.RawMeasurementRange">
+            <summary>
+            This is the upper bound for the raw measurement values
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorState.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.Contract">
+            <summary>
+            Analog Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.AnalogSensor.Contract.Identifier">
+            The Unique Contract Identifier
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorOperations">
+            <summary>
+            Analog Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.AnalogSensor.AnalogSensorOperations.#ctor">
+            <summary>
+            Analog Sensor Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.AnalogSensor.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel">
+            <summary>
+            Drive Differential Two Wheel Service Implementation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.DefaultLeftMotorName">
+            <summary>
+            Default Left Motor Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.DefaultRightMotorName">
+            <summary>
+            Default Right Motor Name
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            DriveDifferentialTwoWheel Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.Start">
+            <summary>
+            Service Startup Handler
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.GetHandler(Microsoft.Robotics.Services.Drive.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.UpdateHandler(Microsoft.Robotics.Services.Drive.Update)">
+            <summary>
+            Update Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.SubscribeHandler(Microsoft.Robotics.Services.Drive.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.ReliableSubscribeHandler(Microsoft.Robotics.Services.Drive.ReliableSubscribe)">
+            <summary>
+            Reliable Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.EnableDriveHandler(Microsoft.Robotics.Services.Drive.EnableDrive)">
+            <summary>
+            Enable Drive Handler
+            </summary>
+            <param name="enableDrive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.SetDrivePowerHandler(Microsoft.Robotics.Services.Drive.SetDrivePower)">
+            <summary>
+            Set Drive Power Handler
+            </summary>
+            <param name="setDrivePower"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.SetDriveSpeedHandler(Microsoft.Robotics.Services.Drive.SetDriveSpeed)">
+            <summary>
+            Set Drive Speed Handler
+            </summary>
+            <param name="setDriveSpeed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.RotateDegreesHandler(Microsoft.Robotics.Services.Drive.RotateDegrees)">
+            <summary>
+            Rotate Degrees Handler (positive degrees turn counterclockwise)
+            </summary>
+            <param name="rotateDegrees"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.RotateUntilDegrees(System.Double,System.Double)">
+            <summary>
+            Rotate the the drive (positive degrees turn counterclockwise)
+            </summary>
+            <param name="degrees">(positive degrees turn counterclockwise)</param>
+            <param name="power">(-1.0 to 1.0)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.DriveDistanceHandler(Microsoft.Robotics.Services.Drive.DriveDistance)">
+            <summary>
+            Drive Distance Handler
+            </summary>
+            <param name="driveDistance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.DriveUntilDistance(System.Double,System.Double)">
+            <summary>
+            drives a specified number of meters
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.AllStopHandler(Microsoft.Robotics.Services.Drive.AllStop)">
+            <summary>
+            All Stop Handler
+            </summary>
+            <param name="allStop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.ResetEncodersHandler(Microsoft.Robotics.Services.Drive.ResetEncoders)">
+            <summary>
+            ResetEncoders handler
+            </summary>
+            <param name="resetEncoders">ResetEncoders message</param>
+            <returns>A CCR task enumerator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Http Get Handler.  Needed for XSLT transform
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Http Post Handler.  Handles http form inputs
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.HttpPostSuccess(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Send Http Post Success Response
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.HttpPostFailure(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Send Http Post Failure Response
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.ValidateDriveConfiguration(System.Boolean)">
+            <summary>
+            Validate that the motors are configured and the drive is enabled.
+            <remarks>Throws an exception (converted to fault)
+            when the service is not properly configured.</remarks>
+            </summary>
+            <param name="requireEncoders">validate encoder configuration</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.InternalDriveDistanceHandler(Microsoft.Robotics.Services.Drive.DriveDistance)">
+            <summary>
+            Internal drive distance operation handler
+            </summary>
+            <param name="driveDistance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheel.InternalRotateDegreesHandler(Microsoft.Robotics.Services.Drive.RotateDegrees)">
+            <summary>
+            Internal rotate degrees handler
+            </summary>
+            <param name="rotateDegrees"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState">
+            <summary>
+            Differential Drive State Definition
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.DriveState">
+            <summary>
+            Indicates the current state of the Drive.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.#ctor(System.Double,Microsoft.Robotics.Services.Motor.WheeledMotorState,Microsoft.Robotics.Services.Motor.WheeledMotorState)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="distanceBetweenWheels"></param>
+            <param name="leftWheel"></param>
+            <param name="rightWheel"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.InternalPendingDriveOperation">
+            <summary>
+             The last drive request operation
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.TimeStamp">
+            <summary>
+            The timestamp of the last state change.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.LeftWheel">
+            <summary>
+            The left wheel's state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.RightWheel">
+            <summary>
+            The right wheel's state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.DistanceBetweenWheels">
+            <summary>
+            The distance between the drive wheels (meters).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.IsEnabled">
+            <summary>
+            Indicates whether the drive has been enabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.DriveDistanceStage">
+            <summary>
+            The current stage of a driveDistance operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState.RotateDegreesStage">
+            <summary>
+            The current stage of a rotateDegrees operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveState">
+            <summary>
+            The current Drive State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.NotSpecified">
+            <summary>
+            Not Specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.Stopped">
+            <summary>
+            Stopped
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.DriveDistance">
+            <summary>
+            Drive Distance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.DrivePower">
+            <summary>
+            Drive Power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.RotateDegrees">
+            <summary>
+            Rotate Degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveState.DriveSpeed">
+            <summary>
+            DriveSpeed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveStage">
+            <summary>
+            The status of the current drive operation (driveDistance or rotateDegrees)
+            Only one operation can be pending (else it is canceled).
+            
+             Stage transitions:
+                InitialRequest -> Started -> Completed
+                   Or:
+                InitialRequest -> Started -> Canceled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveStage.InitialRequest">
+            <summary>
+            A request to initiate a drive distance or rotate degrees operation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveStage.Started">
+            <summary>
+            A drive operation (drive distance or rotate degrees) has started
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveStage.Canceled">
+            <summary>
+            The pending drive operation was canceled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveStage.Completed">
+            <summary>
+            Successful completion of a drive distance or rotate degrees operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveRequestOperation">
+            <summary>
+            The request operation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.NotSpecified">
+            <summary>
+            Not Specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.AllStop">
+            <summary>
+            All Stop
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.DriveDistance">
+            <summary>
+            Drive Distance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.SetDrivePower">
+            <summary>
+            Drive Power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.RotateDegrees">
+            <summary>
+            Rotate Degrees
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.DriveSpeed">
+            <summary>
+            Drive Speed
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.DriveRequestOperation.EnableDrive">
+            <summary>
+            Enable Drive
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.SetDrivePowerRequest">
+            <summary>
+            Update the target power of each motor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDrivePowerRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDrivePowerRequest.#ctor(System.Double,System.Double)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="leftWheelPower">Range is -1.0 to 1.0 (positive value is forward)</param>
+            <param name="rightWheelPower">Range is -1.0 to 1.0(positive value is forward)</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetDrivePowerRequest.LeftWheelPower">
+            <summary>
+            Set Power for Left Wheel. Range is -1.0 to 1.0
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetDrivePowerRequest.RightWheelPower">
+            <summary>
+            Set Power for Right Wheel. Range is -1.0 to 1.0
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.SetDriveSpeedRequest">
+            <summary>
+            Update the target speed of a motor.
+            <remarks>set speed for each wheel in meters per second</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDriveSpeedRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDriveSpeedRequest.#ctor(System.Double,System.Double)">
+            <summary>
+            Initialization Constructor
+            </summary>
+            <param name="leftWheelSpeed"></param>
+            <param name="rightWheelSpeed"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetDriveSpeedRequest.LeftWheelSpeed">
+            <summary>
+            Set Speed for Left Wheel (m/s)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetDriveSpeedRequest.RightWheelSpeed">
+            <summary>
+            Set Speed for Right Wheel (m/s)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveDistanceRequest">
+            <summary>
+            Drive straight for specified distance
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDistanceRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDistanceRequest.#ctor(System.Double,System.Double)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="distance"></param>
+            <param name="pow"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDistanceRequest.Distance">
+            <summary>
+            Distance in meters
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDistanceRequest.Power">
+            <summary>
+            The drive's power setting (-1.0 to 1.0 -- Forward: positive value, Reverse: negative value.)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.DriveDistanceRequest.DriveDistanceStage">
+            <summary>
+            Distance stage
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.RotateDegreesRequest">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.RotateDegreesRequest.#ctor">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.RotateDegreesRequest.#ctor(System.Double,System.Double)">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+            <param name="degrees"></param>
+            <param name="power"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.RotateDegreesRequest.Degrees">
+            <summary>
+            Degrees of rotation (positive values turn counterclockwise).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.RotateDegreesRequest.Power">
+            <summary>
+            The drive's power setting (-1.0 to 1.0 -- Forward: positive value, Reverse: negative value.)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.RotateDegreesRequest.RotateDegreesStage">
+            <summary>
+            RotateDegrees stage
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.EnableDriveRequest">
+            <summary>
+            Enables or disables the drive
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.EnableDriveRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.EnableDriveRequest.#ctor(System.Boolean)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="enable"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.EnableDriveRequest.Enable">
+            <summary>
+            Enable drive
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.AllStopRequest">
+            <summary>
+            Emergency stop
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.SetMotorUriRequest">
+            <summary>
+            Set Motor Uri Request
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetMotorUriRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetMotorUriRequest.#ctor(System.Uri,System.Uri)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="leftMotor"></param>
+            <param name="rightMotor"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetMotorUriRequest.LeftMotorUri">
+            <summary>
+            Left Motor Uri
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Drive.SetMotorUriRequest.RightMotorUri">
+            <summary>
+            Right Motor Uri
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.ResetEncodersRequest">
+            <summary>
+            Reset encoders request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.CancelPendingDriveOperationRequest">
+            <summary>
+            Cancel Pending Drive Operation Request Request
+            (cancels a pending driveDistance or RotateDegrees request)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.Contract">
+            <summary>
+            Dss Drive Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.Contract.Identifier">
+            <summary>
+            Drive contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.Partners">
+            <summary>
+            Partners
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.Partners.LeftEncoder">
+            <summary>
+            Left Encoder
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.Partners.RightEncoder">
+            <summary>
+            Right Encoder
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.Partners.LeftMotor">
+            <summary>
+            Left Motor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Drive.Partners.RightMotor">
+            <summary>
+            Right Motor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveOperations">
+            <summary>
+            Drive Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.Post(System.Object)">
+            <summary>
+            Untyped post
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpGet}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpPost}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.Subscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.Get}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.Update}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.ReliableSubscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.EnableDrive}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.SetDrivePower}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.SetDriveSpeed}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.RotateDegrees}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.DriveDistance}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.AllStop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveOperations.op_Implicit(Microsoft.Robotics.Services.Drive.DriveOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Drive.ResetEncoders}">
+            <summary>
+            Implicit conversion
+            </summary>
+            <param name="portSet">Port set for operations</param>
+            <returns>The ResetEncoders port from the port set</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.Get">
+            <summary>
+            Operation Retrieve Drive State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.Update">
+            <summary>
+            Operation Update Drive State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.Update.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.Update.#ctor(Microsoft.Robotics.Services.Drive.DriveDifferentialTwoWheelState)">
+            <summary>
+            Initialization Constructor
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.EnableDrive">
+            <summary>
+            Operation Enable Drive
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.EnableDrive.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.SetDrivePower">
+            <summary>
+            Operation Update Motor Power
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDrivePower.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.SetDrivePower.#ctor(Microsoft.Robotics.Services.Drive.SetDrivePowerRequest)">
+            <summary>
+            SetDrivePower Initialization Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.SetDriveSpeed">
+            <summary>
+            Operation Update Motor Speed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.RotateDegrees">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.RotateDegrees.#ctor">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.RotateDegrees.#ctor(Microsoft.Robotics.Services.Drive.RotateDegreesRequest)">
+            <summary>
+            Request the drive to rotate or turn in position (positive values turn counterclockwise).
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.DriveDistance">
+            <summary>
+            Operation drive a specified distance, then stop
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDistance.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.DriveDistance.#ctor(Microsoft.Robotics.Services.Drive.DriveDistanceRequest)">
+            <summary>
+            DriveDistance Initialization Constructor
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.AllStop">
+            <summary>
+            Emergency Stop
+            <remarks>overrides long running commands</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.AllStop.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.ResetEncoders">
+            <summary>
+            Resets encoders
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.ResetEncoders.#ctor">
+            <summary>
+            Initializes a new instance of the ResetEncoders class
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.Subscribe">
+            <summary>
+            Operation to subscribe to drive notifications
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.ReliableSubscribe">
+            <summary>
+            Operation to reliable subscribe to drive notifications
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Drive.CancelPendingDriveOperation">
+            <summary>
+            Cancel Pending Drive Operation (used internally)
+            <remarks>Used to cancel drive operations that are monitoring the internal drive cancellation port.</remarks>
+            <remarks>This type is internal to a service that implements the generic differential drive contract.</remarks>
+            <remarks>cancels long running commands (drive distance or rotate degrees)</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Drive.CancelPendingDriveOperation.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.UpdateTickCountRequest">
+            <summary>
+            Update TickCount Request
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.UpdateTickCountRequest.TimeStamp">
+            <summary>
+            Time Stamp
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.UpdateTickCountRequest.Count">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.EncoderState">
+            <summary>
+            Definition of a wheel encoder
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.TicksSinceReset">
+            <summary>
+            Number of increments since last reset
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.CurrentAngle">
+            <summary>
+            Current reading in terms of angle, in radians.
+            </summary>
+            <remarks>Valid if TicksPerRevolution set</remarks>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.CurrentReading">
+            <summary>
+            Current reading, in ticks
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.TicksPerRevolution">
+            <summary>
+            Number of ticks per axle revolution
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Encoder.EncoderState.HardwareIdentifier">
+            <summary>
+            Hardware port identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.ResetCounter">
+            <summary>
+            Reset the TicksSinceReset counter
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.Contract">
+            <summary>
+            Encoder Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Encoder.Contract.Identifier">
+            <summary>
+            Encoder contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.EncoderOperations">
+            <summary>
+            Encoder Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.Post(System.Object)">
+            <summary>
+            Untyped post
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.ReliableSubscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.Subscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.Get}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.Reset}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.UpdateTickCount}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Encoder.Replace}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.EncoderOperations.op_Implicit(Microsoft.Robotics.Services.Encoder.EncoderOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpGet}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.Get">
+            <summary>
+            Operation Retrieve Encoder State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.Reset">
+            <summary>
+            Operation Reset TicksSinceReset Counter
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Encoder.Reset.#ctor">
+            <summary>
+            public constructor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.Replace">
+            <summary>
+            Operation Replace: Configures the encoder
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.UpdateTickCount">
+            <summary>
+            Operation UpdateTickcount: Configures the encoder
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.Subscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Encoder.ReliableSubscribe">
+            <summary>
+            Operation Subscribe to bumper
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.GpioPinState">
+            <summary>
+            Pin State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.TimeStamp">
+            <summary>
+            Gets or sets timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.Number">
+            <summary>
+            Gets or sets pin location identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.Name">
+            <summary>
+            Gets or sets pin name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.PinState">
+            <summary>
+            Gets or sets pin signal
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.PinDirection">
+            <summary>
+            Gets or sets pin direction
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinDirection">
+            <summary>
+            The I/O direction of a pin
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinDirection.In">
+            <summary>
+            Input pin
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinDirection.Out">
+            <summary>
+            Output pin
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinSignal">
+            <summary>
+            The signal state of a pin
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinSignal.High">
+            <summary>
+            Voltage driven high
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.GpioPinState.GpioPinSignal.Low">
+            <summary>
+            Pulled to ground
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.GpioPinArrayState">
+            <summary>
+            List of GPIO pins
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GpioPinArray.GpioPinArrayState.Pins">
+            <summary>
+            Gets or sets the list of pins
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.Contract">
+            <summary>
+            Analog Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.GpioPinArrayOperations">
+            <summary>
+            GPIO Pin Array Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.SetPin">
+            <summary>
+            SetPin Operation, used for modifying the state of a single pin
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GpioPinArray.SetPinRequestType">
+            <summary>
+            Change a specific pin state using it's name and/or number
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GpioPinArray.SetPinRequestType.PinState">
+            <summary>
+            The individual pin state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.InfraredSensorArrayState">
+            <summary>
+            List of sensors
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.InfraredSensorArray.InfraredSensorArrayState.Sensors">
+            <summary>
+            Gets or sets the list of sensors
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.Contract">
+            <summary>
+            Infrared Sensor Array Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.InfraredSensorArray.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.InfraredSensorOperations">
+            <summary>
+            Infrared Sensor Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.InfraredSensorArray.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.InfraredState">
+            <summary>
+            Infrared State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.HardwareIdentifier">
+            <summary>
+            Hardware port identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.ManufacturerIdentifier">
+            <summary>
+            Hardware type identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.MinDistance">
+            <summary>
+            Min distance sensor can read in meters
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.MaxDistance">
+            <summary>
+            Max distance sensor can read
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.DistanceMeasurement">
+            <summary>
+            The distance reading in meters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Infrared.InfraredState.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.Contract">
+            <summary>
+            Infrared Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Infrared.Contract.Identifier">
+            The Unique Contract Identifier for the IR service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.InfraredOperations">
+            <summary>
+            Infrared Service Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.Get">
+            <summary>
+            Infrared Service Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.Replace">
+            <summary>
+            Infrared Service Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.Subscribe">
+            <summary>
+            Infrared Service Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Infrared.ReliableSubscribe">
+            <summary>
+            Infrared Service ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.Contract">
+            <summary>
+            Pan/Tilt Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.PanTilt.Contract.Identifier">
+            The Unique Contract Identifier for the Sonar service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.PanTiltOperationsPort">
+            <summary>
+            Pan/Tilt operations port.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.PanTiltState">
+            <summary>
+            Pan/Tilt state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.PanTiltState.PanState">
+            <summary>
+            State of the pan joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.PanTiltState.TiltState">
+            <summary>
+            State of the tilt joint.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.Get">
+            <summary>
+            Get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.Replace">
+            <summary>
+            Replace operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.Subscribe">
+            <summary>
+            Subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.RotateMessage">
+            <summary>
+             Rotate message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.RotateMessage.RotatePanRequest">
+            <summary>
+            Gets or sets RotateSingleAxisRequest for pan joint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.RotateMessage.RotateTiltRequest">
+            <summary>
+            Gets or sets RotateSingleAxisRequest for tilt joint
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.Rotate">
+            <summary>
+            Rotate operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.UpdateMotionBlockedMessage">
+            <summary>
+            UpdateMotionBlocked message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.UpdateMotionBlockedMessage.PanMotionBlockedRequest">
+            <summary>
+            Gets or sets UpdateMotionBlockRequest for pan joint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.UpdateMotionBlockedMessage.TiltMotionBlockedRequest">
+            <summary>
+            Gets or sets UpdateMotionBlockRequest for pan joint
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.UpdateMotionBlocked">
+            <summary>
+            UpdateMotionBlocked operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.FindJointIndexPositionMessage">
+            <summary>
+            FindJointIndexPosition message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.FindJointIndexPositionMessage.FindPanIndexPosition">
+            <summary>
+            Gets or sets a value indicating whether to find the index position of the pan joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.FindJointIndexPositionMessage.FindTiltIndexPosition">
+            <summary>
+            Gets or sets a value indicating whether to find the index position of the tilt joint.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.FindJointIndexPosition">
+            <summary>
+            FindJointIndexPosition operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.SetHoldingTorqueMessage">
+            <summary>
+            SetHoldingTorque message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.SetHoldingTorqueMessage.SetPanHolidngTorque">
+            <summary>
+            Gets or sets a value indicating whether to set the pan joint holding torque.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.SetHoldingTorqueMessage.SetTiltHoldingTorque">
+            <summary>
+            Gets or sets a value indicating whether to set the tilt joint holding torque.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.SetHoldingTorque">
+            <summary>
+            SetHoldingTorque operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.StartTrajectoryMessage">
+            <summary>
+            StartTrajectory message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.StartTrajectoryMessage.PanTrajectory">
+            <summary>
+            Gets or sets pan trajectory.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.StartTrajectoryMessage.TiltTrajectory">
+            <summary>
+            Gets or sets tilt trajectory.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.StartTrajectory">
+            <summary>
+            StartTrajectory operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.SetPDGainsMessage">
+            <summary>
+            SetPDGains message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.SetPDGainsMessage.PanPDGains">
+            <summary>
+            Gets or sets the PD gains for the pan joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.PanTilt.SetPDGainsMessage.TiltPDGains">
+            <summary>
+            Gets or sets the PD gains for the pan joint.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.PanTilt.SetPDGains">
+            <summary>
+            SetPDGains operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.JointStates">
+            <summary>
+            Possible states of the joints.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.JointStates.Busy">
+            <summary>
+            Joint is busy.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.JointStates.HoldingTorqueApplied">
+            <summary>
+            Joint is actively applying holding torque
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.JointStates.FindingIndex">
+            <summary>
+            Joint is in the process of finding it's index position.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.JointStates.FoundIndex">
+            <summary>
+            Last joint find index command was succesful.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand">
+            <summary>
+            Contains commanded elements of a joint.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.Clone">
+            <summary>
+            Create a clone of this JointCommand instance.
+            </summary>
+            <returns>A clone of this JointCommand instance.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.TargetAngleInRadians">
+            <summary>
+            Gets or sets the target angle of the most recent command.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.TargetAccelerationInRadiansPerSecondSecond">
+            <summary>
+            Gets or sets target acceleration of most recent command.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.IsWaitingForCompletion">
+            <summary>
+            Gets or sets a value indicating whether WaitForCompletion was set in most recently issued command.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.IsPositionHoldingEnabled">
+            <summary>
+            Gets or sets a value indicating whether the joint has been commanded resist positional disturbances.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointCommand.MaximumSpeedInRadiansPerSecond">
+            <summary>
+            Gets or sets a value indicating the desired maximum speed of the most recent command.
+            of the joint.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback">
+            <summary>
+            Contains feedback elements of a joint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.IsTrajectoryActive">
+            <summary>
+            Gets or sets a value indicating whether the joint
+            is being driven by an active trajectory.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.NextTrajectoryKeyFrame">
+            <summary>
+            Gets or sets the number
+            of the keyframe that the joint is being driven towards.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.RotationAngleInRadians">
+            <summary>
+            Gets or sets current rotation around axis, in radians
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.AngularVelocityInRadianPerSecond">
+            <summary>
+            Gets or sets the current speed of the joint in (radians/second)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.IsConverged">
+            <summary>
+            Gets or sets a value indicating whether the joint has achieved it's reference position (within the precision of the physical joint)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.StateFlags">
+            <summary>
+            Gets or sets flags indicating the state of the joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointFeedback.TimeStamp">
+            <summary>
+            Gets or sets time that the state of the joint was last updated.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.JointInformation">
+            <summary>
+            Contains informational elements of a joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointInformation.JointIndex">
+            <summary>
+            System-wide index for this joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointInformation.BaseAttachPose">
+            <summary>
+            Gets or sets global coordinate and orientation of where joint attachs to the base. This should be considered constant and
+            is not affected by joint rotation around its axis.
+            Axis of rotation is the x-axis
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointInformation.MaximumRotationAngleInRadians">
+            <summary>
+            Gets or sets maximum allowed rotation angle
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.JointInformation.MinimumRotationAngleInRadians">
+            <summary>
+            Gets or sets minimum allowed rotation angle
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.SingleAxisJointState">
+            <summary>
+            SingleAxisJoint state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SingleAxisJointState.JointCommand">
+            <summary>
+            Gets or sets joint commands
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SingleAxisJointState.JointFeedback">
+            <summary>
+            Gets or sets joint feedback
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SingleAxisJointState.JointInformation">
+            <summary>
+            Gets or sets joint information
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SingleAxisJointState.IsJointMotionBlocked">
+            <summary>
+            Gets or sets a value indicating whether motion is disabled due to hardware state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.KeyFrame">
+            <summary>
+            Represents a key-frame time and position for a single joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.KeyFrame.TimeInMs">
+            <summary>
+            Gets or sets time of the key-frame in seconds.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.KeyFrame.Pose">
+            <summary>
+            Gets or sets pose of the joint at the key-frame.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.Pose2D">
+            <summary>
+            Represents the pose of 2 dimensional (max) actuators as either
+            a distance and rotation around a single axis or a rotation around
+            two axes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.Pose2D.Distance">
+            <summary>
+            Specifies the distance from the reference pose in millimeters.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SingleAxisJoint.Pose2D.Rotation">
+            <summary>
+            Specifies orientation relative to reference pose.  For single axis joints, rotation
+            is around Y.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.StartSingleJointTrajectoryRequest">
+            <summary>
+            Request for initiating a trajectory on a single joint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.StartSingleJointTrajectoryRequest.AppendToInProgressTrajectory">
+            <summary>
+            Gets or sets a value indicating whether the trajectory should be appended
+            to the current trajectory.
+            If true, this trajectory will be appended to the trajectory currently
+            in progress (if any).   If false, this trajectory will immediately interrupt
+            any trajectory currently in progress for this joint and start executing the
+            new trajectory.  Has no effect if no trajectory is currently being executed
+            for this joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.StartSingleJointTrajectoryRequest.KeyFrames">
+            <summary>
+            Gets or sets a list of key-frames that comprise the trajectory.  Times must be monotonically
+            increasing and positions must be withing limits for the current joint.
+            Positions for head tilt and pan are absolute values in milliradians, and 
+            positions for the two drive wheels are realtive values in millimeters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.StartSingleJointTrajectoryRequest.TimeStamp">
+            <summary>
+            Gets or sets the time stamp.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.MultiJointTrajectoryElement">
+            <summary>
+            Contains index and trajectory information for a single joint's trajectory.
+            Used to form trajectories containing multiple joints.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.MultiJointTrajectoryElement.JointIndex">
+            <summary>
+            The system wide index for the joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.MultiJointTrajectoryElement.Trajectory">
+            <summary>
+            The trajectory for the joint to follow.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.StartMultiJointTrajectoryRequest">
+            <summary>
+            Request for starting simultaneous trajectories on multiple joints.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.StartMultiJointTrajectoryRequest.TrajectoryList">
+            <summary>
+            Gets or sets a list of single joint trajectories to start simultaneously.
+            No two trajectories may be for the same joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.StartMultiJointTrajectoryRequest.TimeStamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.SetPDGainsRequest">
+            <summary>
+            Request type for setting PD gains of a joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetPDGainsRequest.ProportionalGain">
+            <summary>
+            Gets or sets the proportional gain.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetPDGainsRequest.DerivativeGain">
+            <summary>
+            Gets or sets the derivative gain.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetPDGainsRequest.Frequency">
+            <summary>
+            Gets or sets the frequency of the control loop.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetPDGainsRequest.TimeStamp">
+            <summary>
+            Gets or sets the time stamp.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest">
+            <summary>
+            Request for rotating a single axis.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.#ctor">
+            <summary>
+            Initializes a new instance of the RotateSingleAxisRequest class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.IsRelative">
+            <summary>
+            Gets or sets a value indicating whether rotation is relative to current position, otherwise its absolute angle in radians
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.TargetRotationAngleInRadians">
+            <summary>
+            Gets or sets the amount to rotate (in radians)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.MaxSpeedInRadiansPerSecond">
+            <summary>
+            Gets or sets the desired maximum rotation speed for movement.  This is the target steady state speed
+            for the duration of the movement command and should always be positive (direction of movement is determined
+            by the position portion of the command.  If 0, then default speed is used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.IsMotionCompletionRequiredForResponse">
+            <summary>
+            Gets or sets a value indicating whether a response will be posted to the messages response port when the movement has converged on
+            its target or it has been prempted by another movement command.  If false, a response is posted as soon
+            as the message is succesfully sent.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.TargetAccelerationInRadiansPerSecondSecond">
+            <summary>
+            Gets or sets desired acceleration.  0 results in default acceleration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateSingleAxisRequest.TimeStamp">
+            <summary>
+            Gets or sets time stamp for request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisElement">
+            <summary>
+            Contains index and trajectory information for a single joint's rotation.
+            Used to form trajectories containing multiple joints.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisElement.JointIndex">
+            <summary>
+            The system wide index for the joint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisElement.Trajectory">
+            <summary>
+            The trajectory for the joint to follow.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisRequest">
+            <summary>
+            Request for rotating multiple axes simultaneously.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisRequest.#ctor">
+            <summary>
+            Initializes a new instance of the RotateMultipleAxisRequest class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisRequest.#ctor(System.Collections.Generic.List{Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisElement})">
+            <summary>
+            Initializes a new instance of the RotateMultipleAxisRequest class.
+            </summary>
+            <param name="rotateRequestList">A list of single axis rotation requests</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisRequest.RotateRequestList">
+            <summary>
+            Gets or sets list of RotateSingleAxisRequests
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.RotateMultipleAxisRequest.TimeStamp">
+            <summary>
+            Gets or sets time stamp for request for entire RotateMultipleAxisRequest.
+            Time stamps in requests in RotateRequestList are ignored.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.UpdateJointMotionBlockRequest">
+            <summary>
+            Message body for <c>UpdateJointMotionBlockRequest</c> request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.UpdateJointMotionBlockRequest.#ctor">
+            <summary>
+            Initializes a new instance of the UpdateJointMotionBlockRequest class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.SingleAxisJoint.UpdateJointMotionBlockRequest.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the UpdateJointMotionBlockRequest class.
+            </summary>
+            <param name="isMotionBlocked">Indicates whether a hardware stop is active. </param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.UpdateJointMotionBlockRequest.IsMotionBlocked">
+            <summary>
+            Gets or sets a value indicating whether a hardware stop is active.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SingleAxisJoint.SetHoldingTorqueRequest">
+            <summary>
+            Message body for <c>SetHoldingTorque</c> request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetHoldingTorqueRequest.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether the holding torque of the joint is enabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SingleAxisJoint.SetHoldingTorqueRequest.TimeStamp">
+            <summary>
+            Gets or sets time stamp for request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.MotorState">
+            <summary>
+            State Definition for the Motor Service
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.Name">
+            <summary>
+            Descriptive Identifier for this motor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.HardwareIdentifier">
+            <summary>
+            Hardware port identifier, if applicable
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.CurrentPower">
+            <summary>
+            The current motor power. Range is -1.0 to 1.0
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.PowerScalingFactor">
+            <summary>
+            Power scaling factor, multipled by CurrentPower
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.ReversePolarity">
+            <summary>
+            Reverses the direction of the motor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.MotorState.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.WheeledMotorState">
+            <summary>
+            Wheeled Motor Definition
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.WheeledMotorState.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.WheeledMotorState.#ctor(System.String,System.Double)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="name"></param>
+            <param name="radius"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.WheelSpeed">
+            <summary>
+            Speed of the wheel in m/sec.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.Name">
+            <summary>
+            Descriptive Identifier for this wheel.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.MotorState">
+            <summary>
+            Motor State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.Radius">
+            <summary>
+            The wheel radius, in meters
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.GearRatio">
+            <summary>
+            The gear ratio (motor / wheel)
+            <remarks>A number less than 1 indicates speed reduction.
+            Example: 1/5 the wheel rotates 5 times slower than the motor.</remarks>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.WheeledMotorState.EncoderState">
+            <summary>
+            Encoder State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.SetMotorPowerRequest">
+            <summary>
+            Update the target power of a motor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetMotorPowerRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetMotorPowerRequest.#ctor(System.Double)">
+            <summary>
+            initialization constructor
+            </summary>
+            <param name="targetPower"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.SetMotorPowerRequest.TargetPower">
+            <summary>
+            The target motor power. Range is -1.0 to 1.0
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.SetWheelSpeedRequest">
+            <summary>
+            Update the target wheelspeed of a wheel
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetWheelSpeedRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetWheelSpeedRequest.#ctor(System.Double)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="targetWheelSpeed">Target wheel speed in meters/sec</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Motor.SetWheelSpeedRequest.TargetWheelSpeed">
+            <summary>
+            Target wheel speed in m/sec.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.Contract">
+            <summary>
+            Dss Motor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Motor.Contract.Identifier">
+            <summary>
+            Motor contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.MotorOperations">
+            <summary>
+            Motor Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.Get">
+            <summary>
+            Operation Retrieve Motor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.Replace">
+            <summary>
+            Operation Replace: Configures the motor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Motor.SetMotorPower">
+            <summary>
+            Sets (or indicates a change to) the motor's power setting.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetMotorPower.#ctor">
+            <summary>
+            Sets (or indicates a change to) the motor's power setting.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Motor.SetMotorPower.#ctor(System.Double)">
+            <summary>
+            Sets (or indicates a change to) the motor's power setting.
+            </summary>
+            <param name="targetPower"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Contract">
+            <summary>
+            MSCategories Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Contract.Identifier">
+            The Unique Contract Identifier for the MSCategories Contract
+        </member>
+        <member name="T:Microsoft.Robotics.Services.MicrosoftCategories">
+            <summary>
+            Microsoft Robotics published categories.
+            These categories are available for use by any Dss Service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.DistanceMeasurement">
+            <summary>
+            Indicates that your service is a type of Distance Measuring Device.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.Robotics">
+            <summary>
+            Indicates that your service is a robotics service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.Sensor">
+            <summary>
+            Indicates that your service is a type of sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.Actuator">
+            <summary>
+            Indicates that your service is a type of actuator.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.Simulation">
+            <summary>
+            Indicates that your service provides simulation of another Dss service.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.DssInfrastructure">
+            <summary>
+            Indicates this is a core Dss service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.MicrosoftCategories.Internal">
+            <summary>
+            Indicates that the service is an internal service which should not be started directly.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Contract">
+            <summary>
+            Physical Model Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Contract.Identifier">
+            Contract Identifier
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.ColorValue">
+            <summary>
+            Stores the red, green, blue, and alpha channel values that together define a specific color.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.#ctor(System.Single,System.Single,System.Single)">
+            <summary>Initializes a new instance of the ColorValue structure.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>Initializes a new instance of the ColorValue structure.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>Initializes a new instance of the ColorValue structure.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>Initializes a new instance of the ColorValue structure.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.op_Explicit(Microsoft.Robotics.PhysicalModel.ColorValue)~Microsoft.Robotics.PhysicalModel.Vector4">
+            <summary>Explicity convert a color to a four component vector as Red, Green, Blue, Alpha.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.op_Explicit(Microsoft.Robotics.PhysicalModel.Vector4)~Microsoft.Robotics.PhysicalModel.ColorValue">
+            <summary>Explicity convert a four component vector to a ColorValue as X, Y, Z, W.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.op_Explicit(Microsoft.Robotics.PhysicalModel.ColorValue)~System.Drawing.Color">
+            <summary>Explicity convert a ColorValue to a four System.Drawing.Color. Be careful of saturation.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.op_Explicit(System.Drawing.Color)~Microsoft.Robotics.PhysicalModel.ColorValue">
+            <summary>Explicity convert a System.Drawing.Color to a ColorValue.</summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.ColorValue.ToString">
+            <summary>Get color properties in string form.</summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.ColorValue.Red">
+            <summary>Retrieves or sets the red value of the current color.</summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.ColorValue.Green">
+            <summary>Retrieves or sets the green value of the current color.</summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.ColorValue.Blue">
+            <summary>Retrieves or sets the blue value of the current color.</summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.ColorValue.Alpha">
+            <summary>Retrieves or sets the alpha channel value of the current color.</summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Vector3">
+            <summary>
+            Vector3
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Vector3 Constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.op_UnaryNegation(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Returns a vector pointing in the opposite direction.
+            </summary>
+            <param name="value">Source vector.</param>
+            <returns>Vector pointing in the opposite direction.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.op_Addition(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Vector3 operator +
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.op_Subtraction(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Vector3 operator -
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.Length(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Get the magnitude of the vector
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.Normalize(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Normalize a vector to a unit vector
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.Scale(Microsoft.Robotics.PhysicalModel.Vector3,System.Single)">
+            <summary>
+            Scale
+            </summary>
+            <param name="v"></param>
+            <param name="factor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.Dot(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Dot
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.Cross(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Vector3 Cross
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3.ToString">
+            <summary>
+            Retrieves a string representation of the Vector3.
+            </summary>
+            <returns>String that represents the Vector3.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.Z">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.XAxis">
+            <summary>
+            Returns a vector that represents the +X axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.NegativeXAxis">
+            <summary>
+            Returns a vector that represents the -X axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.YAxis">
+            <summary>
+            Returns a vector that represents the +Y axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.NegativeYAxis">
+            <summary>
+            Returns a vector that represents the -Y axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.ZAxis">
+            <summary>
+            Returns a vector that represents the +Z axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector3.NegativeZAxis">
+            <summary>
+            Returns a vector that represents the -Z axis.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Vector4">
+            <summary>
+            Vector4
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector4.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Vector4 Constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector4.op_Addition(Microsoft.Robotics.PhysicalModel.Vector4,Microsoft.Robotics.PhysicalModel.Vector4)">
+            <summary>
+            Vector4 + Operator
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector4.ToString">
+            <summary>
+            Retrieves a string representation of the Vector4.
+            </summary>
+            <returns>String that represents the Vector4.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector4.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector4.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector4.Z">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector4.W">
+            <summary>
+            W
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Vector2">
+            <summary>
+            Vector2
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector2.#ctor(System.Single,System.Single)">
+            <summary>
+            Vector2 Constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector2.ToString">
+            <summary>
+            Retrieves a string representation of the Vector2.
+            </summary>
+            <returns>String that represents the Vector2.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector2.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Vector2.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Ray">
+            <summary>
+            Ray
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Ray.Position">
+            <summary>
+            Starting point of the ray.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Ray.Direction">
+            <summary>
+            Unit vector specifying the direction the Ray is pointing.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Ray.#ctor(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Creates a new instance of a Ray
+            </summary>
+            <param name="position">Specifies the starting point of the Ray.</param>
+            <param name="direction">Unit vector describing the direction of the Ray.</param>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Quaternion">
+            <summary>
+            Quaternion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Quaternion Constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="w"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.op_Multiply(Microsoft.Robotics.PhysicalModel.Quaternion,Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Multiplies two quaternions.
+            </summary>
+            <param name="lhs">Left hand side.</param>
+            <param name="rhs">Right hand side.</param>
+            <returns>The result of the multiplication.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.op_Subtraction(Microsoft.Robotics.PhysicalModel.Quaternion,Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Subtracts a quaternion from another quaternion.
+            </summary>
+            <param name="lhs">Left hand side.</param>
+            <param name="rhs">Right hand side.</param>
+            <returns>Result of the subtraction.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.Length(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Get the magnitude of the quaternion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.Normalize(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Normalize a quaternion to a unit quaternion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.FromAxisAngle(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Create a quaternion given axis and angle
+            </summary>
+            <param name="x">X component of axis</param>
+            <param name="y">Y component of axis</param>
+            <param name="z">Z component of axis</param>
+            <param name="angle">Angle in radians</param>
+            <returns>Quaternion representing given axis angle rotation</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.FromAxisAngle(Microsoft.Robotics.PhysicalModel.AxisAngle)">
+            <summary>
+            Convert an AxisAngle to a quaternion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.ToAxisAngle(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Convert a quaternion to an AxisAngle
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.Multiply(Microsoft.Robotics.PhysicalModel.Quaternion,Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Multiply q1 by q2. The order of the multiplication is important.
+            Use Quaternion.Normalize to get unit quaternions
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.Inverse(Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Returns the inverse of a Quaternion
+            </summary>
+            <param name="q">Source Quaternion</param>
+            <returns>The inverse of the Quaternion</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.Rotate(Microsoft.Robotics.PhysicalModel.Quaternion,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Rotates a vector by a quaternion
+            </summary>
+            <param name="q">Quaternion representing a rotation</param>
+            <param name="v">Vector to rotate</param>
+            <returns>q^-1*v*q</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Quaternion.ToString">
+            <summary>
+            Retrieves a string representation of the Quaternion.
+            </summary>
+            <returns>String that represents the Quaternion.</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Quaternion.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Quaternion.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Quaternion.Z">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Quaternion.W">
+            <summary>
+            W
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Pose">
+            <summary>
+            Pose
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Pose.Position">
+            <summary>
+            Position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Pose.Orientation">
+            <summary>
+            Orientation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Pose.#ctor(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Pose Initialization Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Pose.#ctor(Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Quaternion)">
+            <summary>
+            Pose Initialization Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Pose.ToString">
+            <summary>
+            Retrieves a string representation of the Pose.
+            </summary>
+            <returns>String that represents the Pose.</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Pose.Equals(System.Object)">
+            <summary>
+            Checks for equality of two Poses.
+            </summary>
+            <param name="obj">Pose to be compared</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Pose.GetHashCode">
+            <summary>
+            Returns HashCode of object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.AxisAngle">
+            <summary>
+            Defines a basis for a transformation. It can be converted to a matrix or Quaternion
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.AxisAngle.Axis">
+            <summary>
+            Vertical (upright) axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.AxisAngle.Angle">
+            <summary>
+            Rotation in radians
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.AxisAngle.#ctor(Microsoft.Robotics.PhysicalModel.Vector3,System.Single)">
+            <summary>
+            Axis Angle
+            </summary>
+            <param name="axis"></param>
+            <param name="angle"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Matrix">
+            <summary>
+            Defines a 4x4 matrix
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M11">
+            <summary>
+            M11
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M12">
+            <summary>
+            M12
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M13">
+            <summary>
+            M13
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M14">
+            <summary>
+            M14
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M21">
+            <summary>
+            M21
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M22">
+            <summary>
+            M22
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M23">
+            <summary>
+            M23
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M24">
+            <summary>
+            M24
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M31">
+            <summary>
+            M31
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M32">
+            <summary>
+            M32
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M33">
+            <summary>
+            M33
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M34">
+            <summary>
+            M34
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M41">
+            <summary>
+            M41
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M42">
+            <summary>
+            M42
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M43">
+            <summary>
+            M43
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.Matrix.M44">
+            <summary>
+            M44
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Matrix.RotationX(System.Single)">
+            <summary>
+            Builds a matrix that rotates around the x-axis
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Matrix.RotationZ(System.Single)">
+            <summary>
+            Builds a matrix that rotates around the z-axis
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Matrix.Translation(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Builds a translation matrix using specified offsets
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Matrix.Transpose(Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Matrix Transpose
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Matrix.Multiply(Microsoft.Robotics.PhysicalModel.Matrix,Microsoft.Robotics.PhysicalModel.Matrix)">
+            <summary>
+            Multiply Matrix
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.SpringProperties">
+            <summary>
+            Spring coefficients
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.SpringProperties.SpringCoefficient">
+            <summary>
+            Spting stiffness
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.SpringProperties.DamperCoefficient">
+            <summary>
+            Damping coefficient
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.SpringProperties.EquilibriumPosition">
+            <summary>
+            Position, on the vertical axis, of the spring rest point. If the spring, at rest
+            and there is no deformation, this should be set to zero
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.SpringProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.SpringProperties.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="springCoefficient"></param>
+            <param name="damperCoefficient"></param>
+            <param name="equilibriumPosition"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.SpringProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription">
+            <summary>
+            Tire Force Function Description
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.ExtremumSlip">
+            <summary>
+            ExtremumSlip
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.ExtremumValue">
+            <summary>
+            ExtremumValue
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.AsymptoteSlip">
+            <summary>
+            AsymptoteSlip
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.AsymptoteValue">
+            <summary>
+            AsymptoteValue
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.StiffnessFactor">
+            <summary>
+            StiffnessFactor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.TireForceFunctionDescription.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.Joint">
+            <summary>
+            Joint instance class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Joint.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Joint.InternalHandle">
+            <summary>
+            for internal use only
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.Joint.State">
+            <summary>
+            Joint state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointFlags">
+            <summary>
+            Joint Flags
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointFlags.CollisionEnabled">
+            <summary>
+            Collision Enabled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointFlags.EnableVisualization">
+            <summary>
+            Enable Visualization
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.EntityJointConnector">
+            <summary>
+            Entity Joint Connector
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.EntityJointConnector.ConnectedEntity">
+            <summary>
+            Runtime entity instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.EntityJointConnector.JointNormal">
+            <summary>
+            Joint normal in entity (local) coordinate space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.EntityJointConnector.JointAxis">
+            <summary>
+            Joint axis in entity (local) coordinate space
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.EntityJointConnector.JointConnectPoint">
+            <summary>
+            Joint connection point in entity (local) coordinate space
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.EntityJointConnector.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.EntityJointConnector.#ctor(System.Object,Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3,Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="entity"></param>
+            <param name="normal"></param>
+            <param name="axis"></param>
+            <param name="connectPoint"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.EntityJointConnector.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.EntityJointConnector.Entity">
+            <summary>
+            Runtime entity instance
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.PhysicalModel.EntityJointConnector.EntityName">
+            <summary>
+            The name of the entity referenced by this connector.
+            This field is used only for serialization.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointProperties">
+            <summary>
+            Joint properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.Name">
+            <summary>
+            Joint name. Must be unique for all joints between an entity pair
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.Connectors">
+            <summary>
+            Pair of entities joined through this joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.MaximumForce">
+            <summary>
+            Maximum force supported by the joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.MaximumTorque">
+            <summary>
+            Maximum torque supported by the joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.EnableCollisions">
+            <summary>
+            Enables collision modelling between entities coupled by the joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.Projection">
+            <summary>
+            Underlying physics mechanism to compensate joint simulation errors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.Linear">
+            <summary>
+            If set, defines a joint with translation/linear position drives
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProperties.Angular">
+            <summary>
+            If set, defines a joint with angular drives.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointProperties.#ctor(Microsoft.Robotics.PhysicalModel.JointAngularProperties,Microsoft.Robotics.PhysicalModel.EntityJointConnector[])">
+            <summary>
+            Initializes joint in angular drive mode
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointProperties.#ctor(Microsoft.Robotics.PhysicalModel.JointLinearProperties,Microsoft.Robotics.PhysicalModel.EntityJointConnector[])">
+            <summary>
+            Initializes joint in linear/translation drive mode
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointDOFMode">
+            <summary>
+            Specifies degree of freedom modes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDOFMode.Locked">
+            <summary>
+            DOF does not allow relative motion
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDOFMode.Limited">
+            <summary>
+            DOF only allows motion with a limited range
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDOFMode.Free">
+            <summary>
+            DOF has full range of motions
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointDriveMode">
+            <summary>
+            Joint drive mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDriveMode.Position">
+            <summary>
+            Drive uses target position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDriveMode.Velocity">
+            <summary>
+            Drive uses target velocity
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointDriveProperties">
+            <summary>
+            Drive properties for a motor/servo powered joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDriveProperties.Mode">
+            <summary>
+            Type of drive control the drive understands
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDriveProperties.Spring">
+            <summary>
+            Spring properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointDriveProperties.ForceLimit">
+            <summary>
+            Force or torque limit on the drive
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointDriveProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointDriveProperties.#ctor(Microsoft.Robotics.PhysicalModel.JointDriveMode,Microsoft.Robotics.PhysicalModel.SpringProperties,System.Single)">
+            <summary>
+            Initialization constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointDriveProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointProjectionMode">
+            <summary>
+            Joint projection is used by the underlying physics engine to compensate for joint errors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionMode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionMode.PointMinimumDistance">
+            <summary>
+            Point Minimum Distance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionMode.LinearMinimumDistance">
+            <summary>
+            Linear Minimum Distance
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointLimitProperties">
+            <summary>
+            Describes the joint behavior when it reaches a limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLimitProperties.LimitThreshold">
+            <summary>
+            The position/angle threshold beyond which the limit applies
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLimitProperties.Restitution">
+            <summary>
+            Controls amount of bounce when joint hits the limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLimitProperties.Spring">
+            <summary>
+            If set describes the behavior of a spring attached to joint
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointLimitProperties.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointLimitProperties.#ctor(System.Single,System.Single,Microsoft.Robotics.PhysicalModel.SpringProperties)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="threshold"></param>
+            <param name="restitution"></param>
+            <param name="spring"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointLimitProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointProjectionProperties">
+            <summary>
+            Joint projection is used to compensate for joint simulation errors
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionProperties.ProjectionMode">
+            <summary>
+            Projection mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionProperties.ProjectionDistanceThreshold">
+            <summary>
+            Distance above which to project joint
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointProjectionProperties.ProjectionAngleThreshold">
+            <summary>
+            Angle above which to project joint
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointProjectionProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointLinearProperties">
+            <summary>
+            Translation, linear position joint properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.XMotionMode">
+            <summary>
+            X axis translation mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.YMotionMode">
+            <summary>
+            Y axis translation mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.ZMotionMode">
+            <summary>
+            Z axis translation mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.XDrive">
+            <summary>
+            X axis drive properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.YDrive">
+            <summary>
+            Y axis drive properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.ZDrive">
+            <summary>
+            Z axis drive properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.MotionLimit">
+            <summary>
+            Defines drive motion limits,
+            if one of the drives has limits enabled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.DriveTargetPosition">
+            <summary>
+            Drive target position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointLinearProperties.DriveTargetVelocity">
+            <summary>
+            Drive target velocity
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointLinearProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointAngularProperties">
+            <summary>
+            Joint angular properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.Swing1Mode">
+            <summary>
+            Swing mode for first degree of freedom.
+            Swing is rotation of x axis in respect to y and z
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.Swing2Mode">
+            <summary>
+            Swing model for second degree of freedom
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.TwistMode">
+            <summary>
+            Twist mode. Twist is rotation about the x axis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.Swing1Limit">
+            <summary>
+            Swing limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.Swing2Limit">
+            <summary>
+            Swing limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.UpperTwistLimit">
+            <summary>
+            Upper Twist limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.LowerTwistLimit">
+            <summary>
+            Lower Twist limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.SwingDrive">
+            <summary>
+            Swing drive properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.TwistDrive">
+            <summary>
+            Twist drive properties
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.SlerpDrive">
+            <summary>
+            If set, it drives the joint across the shortest spherical arc
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.DriveTargetOrientation">
+            <summary>
+            Target orientation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.DriveTargetVelocity">
+            <summary>
+            Target velocity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.PhysicalModel.JointAngularProperties.GearRatio">
+            <summary>
+            Ratio which to drive angular velocity of second entity
+            in relation to first entities angular velocity.
+            </summary>
+            <remarks>Set to 0 for disabling geared drive</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointAngularProperties.ToString">
+            <summary>
+            Returns short name for property editor
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector3Converter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Returns the Vector3 properties in the order X, Y, Z
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.Vector4Converter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Returns the Vector4 properties in the order X, Y, Z, W
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointFieldAsPropertyDescriptor">
+            <summary>
+            Uses reflected field information to allow a field to be edited in a property grid.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.JointTypeConverter">
+            <summary>
+            Special type converter for joints so that the joint state is represented in the property grid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.PhysicalModel.JointTypeConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Gets joint fields and returns them as properties.
+            Returns them in a manner suitable for editing in a property grid.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.PhysicalModel.PropInitializationEditor">
+            <summary>
+            Adds a ... button that either initializes a property with a default constructor, or sets it to null.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.SonarSensorArrayState">
+            <summary>
+            List of sensors
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.SonarSensorArray.SonarSensorArrayState.Sensors">
+            <summary>
+            Gets or sets the list of sensors
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.Contract">
+            <summary>
+            Sonar Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.SonarSensorArray.Contract.Identifier">
+            <summary>
+            The Unique Contract Identifier
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.SonarSensorOperations">
+            <summary>
+            Sonar Sensor Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.Get">
+            <summary>
+            Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.Replace">
+            <summary>
+            Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.Subscribe">
+            <summary>
+            Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.SonarSensorArray.ReliableSubscribe">
+            <summary>
+            ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.Contract">
+            <summary>
+            SimulatedWebcam Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedWebcam service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.WebCamState">
+            <summary>
+            Generic WebCam State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.CameraDeviceName">
+            <summary>
+            Camera device name represented by this service
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.Pose">
+            <summary>
+            Position and orientation of the camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.ImageSize">
+            <summary>
+            Image size in the X dimension
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.ViewAngle">
+            <summary>
+            Field of View (FOV) angle for the camera
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.Quality">
+            <summary>
+            Compression quality level
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.LastFrameUpdate">
+            <summary>
+            Timestamp of last frame capture
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.WebCam.WebCamState.Image">
+            <summary>
+            Raw image data of last frame captured
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.QueryFrameRequest">
+            <summary>
+            Request for latest frame
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameRequest.Format">
+            <summary>
+            format identifier
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameRequest.Size">
+            <summary>
+            Image size
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.QueryFrameResponse">
+            <summary>
+            Raw data of last frame captured
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameResponse.Format">
+            <summary>
+            Format identifier
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameResponse.Size">
+            <summary>
+            Image size
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameResponse.Frame">
+            <summary>
+            Raw bytes of captured frame
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.QueryFrameResponse.TimeStamp">
+            <summary>
+            Timestamp of frame data
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.UpdateFrameRequest">
+            <summary>
+            Frame update
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.WebCam.UpdateFrameRequest.TimeStamp">
+            <summary>
+            Time when frame was captured
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.UpdateFrameRequest.#ctor">
+            <summary>
+            Frame update
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.UpdateFrameRequest.#ctor(System.DateTime)">
+            <summary>
+            Frame update
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.Get">
+            <summary>
+            Get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.Replace">
+            <summary>
+            Replace operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.UpdateFrame">
+            <summary>
+            Frame update operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.UpdateFrame.#ctor">
+            <summary>
+            Frame update operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.UpdateFrame.#ctor(Microsoft.Robotics.Services.WebCam.UpdateFrameRequest)">
+            <summary>
+            Frame update operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.UpdateFrame.#ctor(Microsoft.Robotics.Services.WebCam.UpdateFrameRequest,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.DefaultUpdateResponseType,W3C.Soap.Fault})">
+            <summary>
+            Frame update operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.Subscribe">
+            <summary>
+            Subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.QueryFrame">
+            <summary>
+            Request for latest frame
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.WebCam.WebCamOperations">
+            <summary>
+            WebCam operations port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.Post(System.Object)">
+            <summary>
+            Untyped post
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.Get}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.Replace}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.UpdateFrame}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.Subscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.WebCam.QueryFrame}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpGet}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.WebCam.WebCamOperations.op_Implicit(Microsoft.Robotics.Services.WebCam.WebCamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.Core.DsspHttp.HttpQuery}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.SonarState">
+            <summary>
+            Sonar State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.HardwareIdentifier">
+            <summary>
+            Hardware port identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.MaxDistance">
+            <summary>
+            Max distance sensor can read in meters
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.DistanceMeasurement">
+            <summary>
+            The distance reading in meters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.AngularRange">
+            <summary>
+            Angular range of the measurement.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.AngularResolution">
+            <summary>
+            Resolution of the raycasting
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.Pose">
+            <summary>
+            Position and orientation
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sonar.SonarState.DistanceMeasurements">
+            <summary>
+            Array of distance readings.
+            <remarks>NOTE: This is just a discretization of the sensor's cone for raycasting</remarks>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.Contract">
+            <summary>
+            Sonar Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sonar.Contract.Identifier">
+            The Unique Contract Identifier for the Sonar service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.SonarOperations">
+            <summary>
+            Sonar Service Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.Get">
+            <summary>
+            Sonar Service Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.Replace">
+            <summary>
+            Sonar Service Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.Subscribe">
+            <summary>
+            Sonar Service Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sonar.ReliableSubscribe">
+            <summary>
+            Sonar Service ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.StreamData">
+            <summary>
+            Stream Data Packet
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamData.Data">
+            <summary>
+            Stream Data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamData.Timestamp">
+            <summary>
+            The origination time of the data packet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.StreamText">
+            <summary>
+            Stream Text Packet
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamText.Text">
+            <summary>
+            Stream Text
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamText.Timestamp">
+            <summary>
+            The origination time of the text packet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.StreamState">
+            <summary>
+            Stream State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamState.Identifier">
+            <summary>
+            Stream configuration identifier
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamState.Initialized">
+            <summary>
+            Is this stream initialized?
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamState.Description">
+            <summary>
+            Name or Description of the stream
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.StreamState.Configurations">
+            <summary>
+            Name/Value configuration pairs
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.StreamOperations">
+            <summary>
+            Stream Service Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.#ctor">
+            <summary>
+            Stream Service Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultLookup}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.Subscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.GetStreamState}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.ReplaceStreamState}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.WriteData}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.WriteText}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.ReadData}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.ReadText}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.ClearStreamBuffers}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.ReliableSubscribe}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.SetStreamProperty}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.StreamOperations.op_Implicit(Microsoft.Robotics.Services.DssStream.StreamOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.DssStream.QueryStreamProperty}">
+            <summary>
+            Implicit conversion
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.NameValuePair">
+            <summary>
+            A Name and Value pair
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.NameValuePair.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.NameValuePair.#ctor(System.String,System.String)">
+            <summary>
+            Initialization Constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.NameValuePair.Name">
+            <summary>
+            The Name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.DssStream.NameValuePair.Value">
+            <summary>
+            The Value
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.GetStreamState">
+            <summary>
+            Stream Service Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.WriteData">
+            <summary>
+            Send a series of bytes to the Stream
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.WriteText">
+            <summary>
+            Send a text string to the Stream
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ReadData">
+            <summary>
+            Receive Data Bytes from the Stream
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ReadText">
+            <summary>
+            Send/Receive a string to the Stream
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.QueryStreamProperty">
+            <summary>
+            Query a stream property
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.SetStreamProperty">
+            <summary>
+            Set a stream property
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ReplaceStreamState">
+            <summary>
+            Stream Service Replace Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ReplaceStreamResponse">
+            <summary>
+            Custom Stream Replace Response
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DssStream.ReplaceStreamResponse.Connected">
+            <summary>
+            Identifies whether or not the stream is connected after a configuration.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ClearBuffers">
+            <summary>
+            Clear Stream Buffers
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.ClearBuffers.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.ClearBuffers.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initialization Constructor
+            </summary>
+            <param name="clearReadBuffer"></param>
+            <param name="clearWriteBuffer"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DssStream.ClearBuffers.ClearReadBuffer">
+            <summary>
+            Clear the pending read buffer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DssStream.ClearBuffers.ClearWriteBuffer">
+            <summary>
+            Clear the pending write buffer
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.Subscribe">
+            <summary>
+            Stream Service Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ReliableSubscribe">
+            <summary>
+            Stream Service ReliableSubscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.ClearStreamBuffers">
+            <summary>
+            Clear Stream Buffers
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.ClearStreamBuffers.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.DssStream.ClearStreamBuffers.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initialization Constructor
+            </summary>
+            <param name="clearReadBuffer"></param>
+            <param name="clearWriteBuffer"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.DssStream.Contract">
+            <summary>
+            A Generic Contract which allows a text or binary stream
+            to be communicated between services.
+            <remarks>The underlying stream is converted into a series of
+            text or binary packets.</remarks>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.DssStream.Contract.Identifier">
+            The Unique Contract Identifier for the Stream service
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,8 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.EntityUI.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.EntityUI.Y2009.M03.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\Robotics.EntityUI.EntityUIForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\User.EntityUI.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Advanced\EntityUI\obj\Debug\User.EntityUI.Y2009.M03.pdb

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerialCOMServiceState xmlns:d="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns="http://www.microsoft.com/2011/07/serialcomservice.html">
+	<PortNumber>6</PortNumber>
+	<BaudRate>115200</BaudRate>
+	<Parity>None</Parity>
+	<DataBits>8</DataBits>
+	<StopBits>One</StopBits>
+	<ReadTimeout>200</ReadTimeout>
+	<WriteTimeout>200</WriteTimeout>
+	<Handshake>None</Handshake>
+	<RtsEnable>false</RtsEnable>
+	<DtrEnable>false</DtrEnable>
+	<DiscardNull>false</DiscardNull>
+	<Asynchronous>true</Asynchronous>
+	<AutoConnect>true</AutoConnect>
+	<IsConnected>false</IsConnected>
+</SerialCOMServiceState>

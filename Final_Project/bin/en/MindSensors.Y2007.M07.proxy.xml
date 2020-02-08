@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindSensors.Y2007.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig">
+            <summary>
+                       MindSensors Accelerometer Sensor Configuration.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current AccelerometerConfig to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.Clone">
+             <summary>
+            Clones AccelerometerConfig
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current AccelerometerConfig to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes AccelerometerConfig
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized AccelerometerConfig</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.Name">
+            <summary>
+                       The name of this Accelerometer Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerConfig.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState">
+            <summary>
+                       MindSensors Accelerometer State
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current AccelerometerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Clone">
+             <summary>
+            Clones AccelerometerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current AccelerometerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes AccelerometerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized AccelerometerState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Connected">
+            <summary>
+                       Is the Sensor connected to a LEGO Brick?
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Name">
+            <summary>
+                       The name of this Accelerometer Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.ZeroOffset">
+            <summary>
+                       Setting ZeroOffset with the initial Tilt values of the robot
+                       will calibrate the acceleration sensor to an initial pose of X=0, Y=0, Z=0.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerState.Tilt">
+            <summary>
+                       The current tilt readings received from the Accelerometer Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CReadMindSensorsAccelerationSensor">
+            <summary>
+                       MindSensors Read Accelerometer Sensor Data
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CReadMindSensorsAccelerationSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CReadMindSensorsAccelerationSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CReadMindSensorsAccelerationSensor.Clone">
+             <summary>
+            Clones I2CReadMindSensorsAccelerationSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CReadMindSensorsAccelerationSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CReadMindSensorsAccelerationSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CReadMindSensorsAccelerationSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CReadMindSensorsAccelerationSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CReadMindSensorsAccelerationSensor</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor">
+            <summary>
+                       LegoResponse: I2C Sensor Type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CResponseMindSensorsAccelerationSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.Clone">
+             <summary>
+            Clones I2CResponseMindSensorsAccelerationSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CResponseMindSensorsAccelerationSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CResponseMindSensorsAccelerationSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CResponseMindSensorsAccelerationSensor</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.X">
+            <summary>
+                       X Axis 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.Y">
+            <summary>
+                       Y Axis 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.I2CResponseMindSensorsAccelerationSensor.Z">
+            <summary>
+                       Z Axis 
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.ConnectToBrick">
+            <summary>
+                       Configure Device Connection
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.Get">
+            <summary>
+                       Get the MindSensors Accelerometer Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerUpdate">
+            <summary>
+                       Get the MindSensors Accelerometer Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.ReliableSubscribe">
+            <summary>
+                       Subscribe to the MindSensors Acceleration Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.Subscribe">
+            <summary>
+                       Subscribe to the MindSensors Acceleration Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.AccelerometerOperations">
+            <summary>
+                       MindSensors Accelerometer Sensor Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.Contract">
+            <summary>
+                       MindSensors Accelerometer sensor Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig">
+            <summary>
+                       MindSensors Compass Sensor Configuration.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassConfig to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.Clone">
+             <summary>
+            Clones CompassConfig
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassConfig to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassConfig
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassConfig</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.Name">
+            <summary>
+                       The name of this Compass Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassConfig.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState">
+            <summary>
+                       MindSensors Compass State
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassSensorState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Clone">
+             <summary>
+            Clones CompassSensorState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassSensorState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassSensorState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassSensorState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Connected">
+            <summary>
+                       Is the Sensor connected to a LEGO Brick?
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Name">
+            <summary>
+                       The name of this Compass Sensor instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.SensorPort">
+            <summary>
+                       LEGO NXT Sensor Port
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.PollingFrequencyMs">
+            <summary>
+                       Polling Freqency (ms)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorState.Heading">
+            <summary>
+                       The current compass heading received from the Compass Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading">
+            <summary>
+                       The current compass heading received from the Compass Sensor
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CompassReading to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.Clone">
+             <summary>
+            Clones CompassReading
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CompassReading to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CompassReading
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CompassReading</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.Degrees">
+            <summary>
+                       The current compass heading (degrees) received from the Compass Sensor.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassReading.TimeStamp">
+            <summary>
+                       The time of the last sensor update
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CReadMindSensorsCompassSensor">
+            <summary>
+                       MindSensors Read Compass Sensor Data
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CReadMindSensorsCompassSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CReadMindSensorsCompassSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CReadMindSensorsCompassSensor.Clone">
+             <summary>
+            Clones I2CReadMindSensorsCompassSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CReadMindSensorsCompassSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CReadMindSensorsCompassSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CReadMindSensorsCompassSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CReadMindSensorsCompassSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CReadMindSensorsCompassSensor</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CInitializeMindSensorsCompass">
+            <summary>
+                       MindSensors Read Compass Sensor Data
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CInitializeMindSensorsCompass.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CInitializeMindSensorsCompass to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CInitializeMindSensorsCompass.Clone">
+             <summary>
+            Clones I2CInitializeMindSensorsCompass
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CInitializeMindSensorsCompass.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CInitializeMindSensorsCompass to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CInitializeMindSensorsCompass.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CInitializeMindSensorsCompass
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CInitializeMindSensorsCompass</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor">
+            <summary>
+                       LegoResponse: I2C Sensor Type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current I2CResponseMindSensorsCompassSensor to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor.Clone">
+             <summary>
+            Clones I2CResponseMindSensorsCompassSensor
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current I2CResponseMindSensorsCompassSensor to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes I2CResponseMindSensorsCompassSensor
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized I2CResponseMindSensorsCompassSensor</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.I2CResponseMindSensorsCompassSensor.Heading">
+            <summary>
+                       Compass Heading
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.ConnectToBrick">
+            <summary>
+                       Configure Device Connection
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.Get">
+            <summary>
+                       Get the MindSensors Compass Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorUpdate">
+            <summary>
+                       Get the MindSensors Compass Sensor State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.CompassSensorOperations">
+            <summary>
+                       MindSensors Compass Sensor Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.Contract">
+            <summary>
+                       MindSensors Compass sensor Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

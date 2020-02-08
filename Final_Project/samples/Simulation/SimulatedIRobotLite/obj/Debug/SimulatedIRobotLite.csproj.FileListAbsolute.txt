@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SimulatedIRobotLite.Y2007.M02.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedIRobotLite.Y2007.M02.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedIRobotLite.Y2007.M02.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedIRobotLite.Y2007.M02.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\SimulatedIRobotLite\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\SimulatedIRobotLite\obj\Debug\User.SimulatedIRobotLite.Y2007.M02.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\SimulatedIRobotLite\obj\Debug\User.SimulatedIRobotLite.Y2007.M02.pdb

@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iRobotServices.Y2007.M01.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers">
+            <summary>
+                       iRobot Sensors
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.LeftBumper">
+            <summary>
+                       Left Bumper Contact Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.RightBumper">
+            <summary>
+                       Right Bumper Contact Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.Wall">
+            <summary>
+                       Wall Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.VirtualWall">
+            <summary>
+                       Virtual Wall Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.CliffLeft">
+            <summary>
+                       Left Cliff Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.CliffFrontLeft">
+            <summary>
+                       Front Left Cliff Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.CliffFrontRight">
+            <summary>
+                       Right Front Cliff Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.CliffRight">
+            <summary>
+                       Right Cliff Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.WheelDropLeft">
+            <summary>
+                       Left Wheel Drop Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.WheelDropRight">
+            <summary>
+                       Right Wheel Drop Sensor
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.RoombaBumpers.WheelDropRear">
+            <summary>
+                       Rear Wheel Drop Sensor
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.Contract">
+            <summary>
+                       Bumper Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Bumper.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState">
+            <summary>
+                       The IRobotCreateScript State
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current IRobotScriptingEngineState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.Clone">
+             <summary>
+            Clones IRobotScriptingEngineState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current IRobotScriptingEngineState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes IRobotScriptingEngineState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized IRobotScriptingEngineState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.CurrentScript">
+            <summary>
+                       The Current Script
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineState.SavedScripts">
+            <summary>
+                       Saved Scripts
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition">
+            <summary>
+                       Clear the entire command list
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ScriptDefinition to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.Clone">
+             <summary>
+            Clones ScriptDefinition
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ScriptDefinition to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ScriptDefinition
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ScriptDefinition</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.Name">
+            <summary>
+                       The script name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.PacketData">
+            <summary>
+                       Packet Data ready
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.Commands">
+            <summary>
+                       The commands which compose this script
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ScriptDefinition.ExpectedScriptResponseBytes">
+            <summary>
+                       Expected Script Response Bytes
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearScript">
+            <summary>
+                       Clear the current script.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearScript.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ClearScript to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearScript.Clone">
+             <summary>
+            Clones ClearScript
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearScript.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ClearScript to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearScript.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ClearScript
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ClearScript</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script">
+            <summary>
+                       Clear the entire command list
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Script to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script.Clone">
+             <summary>
+            Clones Script
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Script to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Script
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Script</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Script.Name">
+            <summary>
+                       The script name
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Get">
+            <summary>
+                       IRobotCreateScript Get Operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.ClearCurrentScript">
+            <summary>
+                       Clear the Current Script
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.SaveCurrentScript">
+            <summary>
+                       Save the Current Script
+                       <remarks>If no name is specified, the current script name will be maintained.</remarks></summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.LoadCurrentScript">
+            <summary>
+                       Load the Named Script and make it the Current Script
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.DeleteNamedScript">
+            <summary>
+                       Delete the Named Script
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddStart">
+            <summary>
+                       Add the Start Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddControl">
+            <summary>
+                       Add the Control Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddSafe">
+            <summary>
+                       Add the Safe Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddFull">
+            <summary>
+                       Add the Full Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddDrive">
+            <summary>
+                       Add the Drive Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddDriveDirect">
+            <summary>
+                       Add the DriveDirect Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddPlayScript">
+            <summary>
+                       Add the PlayScript Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddWaitAngle">
+            <summary>
+                       Add the WaitAngle Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddWaitDistance">
+            <summary>
+                       Add the WaitDistance Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddWaitEvent">
+            <summary>
+                       Add the WaitEvent Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddWaitTime">
+            <summary>
+                       Add the WaitTime Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddSensors">
+            <summary>
+                       Add the Sensors Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddDemo">
+            <summary>
+                       Add the Demo Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddLeds">
+            <summary>
+                       Add the Leds Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddPlaySong">
+            <summary>
+                       Add the PlaySong Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddQueryList">
+            <summary>
+                       Add the QueryList Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddCover">
+            <summary>
+                       Add the "Cover entire Room" Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddDefineSong">
+            <summary>
+                       Add the DefineSong Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddDigitalOutputs">
+            <summary>
+                       Add the DigitalOutputs Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddForceSeekingDock">
+            <summary>
+                       Add the ForceSeekingDock Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddPower">
+            <summary>
+                       Add the Power Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddPWMLowSideDrivers">
+            <summary>
+                       Add the PWMLowSideDrivers Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddSendIR">
+            <summary>
+                       Add the SendIR Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddShowScript">
+            <summary>
+                       Add the ShowScript Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddSpot">
+            <summary>
+                       Add the Spot Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddStream">
+            <summary>
+                       Add the Stream Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.AddStreamPauseResume">
+            <summary>
+                       Add the StreamPauseResume Command to the scripting engine.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.IRobotScriptingEngineOperations">
+            <summary>
+                       IRobotCreateScript Main Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Contract">
+            <summary>
+                       Implementation class for the IRobotScriptingEngine Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Create.ScriptingEngine.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.IRobot.Roomba.Drive.Proxy.Contract">
+            <summary>
+                       Roomba Drive Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.IRobot.Roomba.Drive.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

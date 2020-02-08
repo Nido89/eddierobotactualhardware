@@ -1,0 +1,14 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.Utility.Y2006.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.Utility.Y2006.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.Utility.Y2006.M08.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.Utility.Y2006.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\Microsoft.Robotics.Services.Sample.Dialog.ConfirmForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\Microsoft.Robotics.Services.Sample.Dialog.AlertForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\Microsoft.Robotics.Services.Sample.Dialog.PromptForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\Microsoft.Robotics.Services.Sample.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\Microsoft.Robotics.Services.Sample.FlexDialog.FlexDialogForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\User.Utility.Y2006.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Utility\obj\Debug\User.Utility.Y2006.M08.pdb

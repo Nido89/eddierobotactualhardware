@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\Microsoft.Robotics.Services.ObstacleAvoidanceDrive.ObstacleAvoidanceForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.ObstacleAvoidanceDrive.Y2011.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ObstacleAvoidanceDrive.Y2011.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ObstacleAvoidanceDrive.Y2011.M08.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.ObstacleAvoidanceDrive.Y2011.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\User.ObstacleAvoidanceDrive.Y2011.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\ObstacleAvoidance\obj\Debug\User.ObstacleAvoidanceDrive.Y2011.M08.pdb

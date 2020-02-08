@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedColorSensor.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor">
+            <summary>
+            SimPhotoCell Service
+            Simulates a photocell brightness sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.CheckForStateChange(System.DateTime)">
+            <summary>
+            Check the hardware value 5 times per second and send a notification if it has changed.
+            </summary>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.InsertEntityNotificationHandlerFirstTime(Microsoft.Robotics.Simulation.Engine.InsertSimulationEntity)">
+            <summary>
+            Called the first time the simulation engine tells us about our entity.  Activate
+            the other handlers and insert ourselves into the service directory.
+            </summary>
+            <param name="ins"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.GetHandler(Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.ReplaceHandler(Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.SimulatedColorSensor.SubscribeHandler(Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Contract">
+            <summary>
+            SimulatedColorSensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Contract.Identifier">
+            The Unique Contract Identifier for the SimulatedPhotoCell service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorState">
+            <summary>
+            ColorSensor state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorState.NormalizedAverageRed">
+            <summary>
+            Average red value of the color sensor on a [0,1] scale
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorState.NormalizedAverageGreen">
+            <summary>
+            Average green value of the color sensor on a [0,1] scale
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorState.NormalizedAverageBlue">
+            <summary>
+            Average blue value of the color sensor on a [0,1] scale
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorState.TimeStamp">
+            <summary>
+            Timestamp of this sample
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ColorSensorOperations">
+            <summary>
+            ColorSensor main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Get">
+            <summary>
+            ColorSensor get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Replace">
+            <summary>
+            ColorSensor replace operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.Subscribe">
+            <summary>
+            ColorSensor subscribe operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.ColorSensor.ReliableSubscribe">
+            <summary>
+            ColorSensor reliable subscribe operation
+            </summary>
+        </member>
+    </members>
+</doc>

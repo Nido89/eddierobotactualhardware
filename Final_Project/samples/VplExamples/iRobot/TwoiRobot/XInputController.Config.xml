@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XInputGamepadState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2006/09/xinputgamepad.html">
+  <TimeStamp>2007-02-07T10:54:55.3909991-08:00</TimeStamp>
+  <Controller>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <PlayerIndex>One</PlayerIndex>
+  <IsConnected>false</IsConnected>
+  </Controller>
+  <DPad>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <Left>false</Left>
+  <Down>false</Down>
+  <Right>false</Right>
+  <Up>false</Up>
+  </DPad>
+  <Buttons>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <A>false</A>
+  <B>false</B>
+  <X>false</X>
+  <Y>false</Y>
+  <Back>false</Back>
+  <Start>false</Start>
+  <LeftStick>false</LeftStick>
+  <RightStick>false</RightStick>
+  <LeftShoulder>false</LeftShoulder>
+  <RightShoulder>false</RightShoulder>
+  </Buttons>
+  <Triggers>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <Left>0</Left>
+  <Right>0</Right>
+  </Triggers>
+  <Thumbsticks>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <LeftX>0</LeftX>
+  <LeftY>0</LeftY>
+  <RightX>0</RightX>
+  <RightY>0</RightY>
+  </Thumbsticks>
+  <Vibration>
+  <TimeStamp>2007-02-07T10:54:55.3919757-08:00</TimeStamp>
+  <Left>0</Left>
+  <Right>0</Right>
+  </Vibration>
+</XInputGamepadState>

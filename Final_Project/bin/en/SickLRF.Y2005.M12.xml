@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SickLRF.Y2005.M12</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.Units">
+            <summary>
+            Units of measure
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.SickLRF.Units.Centimeters">
+            <summary>
+            Centimeters
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.SickLRF.Units.Millimeters">
+            <summary>
+            Millimeters
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.SickLRF.CommLink.SetDataRate(System.Int32)">
+            <summary>
+            Sets the Baud rate used to communicate with the LRF.
+            Acceptable values are 38400, 19200 and 9600
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.CommLink.BaudRate">
+            <summary>
+            Gets the Baud rate used to communicate with the LRF.
+            Acceptable values are 38400, 19200 and 9600
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFService">
+            <summary>
+            Sick Laser Range Finder service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="creationPort">Passed to the base class for construction.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFService.Start">
+            <summary>
+            Send phase of construction.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFService.StartLRF(System.Int32,System.Int32)">
+            <summary>
+            Start conversation with the SickLRF device.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFService.MeasurementHandler(Microsoft.Robotics.Services.Sensors.SickLRF.LinkMeasurement)">
+            <summary>
+            Handle new measurement data from the LRF.
+            </summary>
+            <param name="measurement">Measurement Data</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.State">
+            <summary>
+            Used to hold state data for the SickLRF service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.Description">
+            <summary>
+            Description of the SickLRF device returned at Power On.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.DistanceMeasurements">
+            <summary>
+            Array of distance readings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.AngularRange">
+            <summary>
+            Angular range of the measurement.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.AngularResolution">
+            <summary>
+            Angular resolution of a given reading.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.Units">
+            <summary>
+            The units of the data in "DistanceMeasurements"
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.TimeStamp">
+            <summary>
+            Time at which the SickLRF unit sent these measurements over the serial link.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.LinkState">
+            <summary>
+            Status of the communications link to the SickLRF unit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.SickLRF.State.ComPort">
+            <summary>
+            Serial port to use for connection to the range finder.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.Contract">
+            <summary>
+            Contract type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.SickLRF.Contract.Identifier">
+            <summary>
+            SickLRF service namespace
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.SickLRFOperations">
+            <summary>
+            Main service port type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.Get">
+            <summary>
+            Get message.
+            Send this message to the SickLRF service port to get the state of the service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.Replace">
+            <summary>
+            Replace message.
+            Send this message to the SickLRF service port to replace the state of the service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.Subscribe">
+            <summary>
+            Subscribe message.
+            Send this message to the SickLRF service port to subscribe to the SickLRF service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.SickLRF.ResetType">
+            <summary>
+            ResetType
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,254 @@
+﻿
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C984AA93-017D-4D8F-99B8-6CD39D99861C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>User.Utility.Y2006.M08</AssemblyName>
+    <RootNamespace>Microsoft.Robotics.Services.Sample</RootNamespace>
+    <AssemblyOriginatorKeyFile>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\mrisamples.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>False</DelaySign>
+    <SignAssembly>True</SignAssembly>
+    <OutputType>Library</OutputType>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;INSTRUMENTED</DefineConstants>
+    <DocumentationFile>$(OutputPath)\en\$(AssemblyName).xml</DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;INSTRUMENTED</DefineConstants>
+    <DocumentationFile>$(OutputPath)\en\$(AssemblyName).xml</DocumentationFile>
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ccr.Adapters.WinForms, Version=4.0.261.0">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Runtime, Version=4.0.261.0">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Ccr.Core, Version=4.0.261.0">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dss.Base, Version=4.0.261.0">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ByteArray\ByteArray.cs" />
+    <Compile Include="ByteArray\ByteArrayTypes.cs" />
+    <Compile Include="DateTime\Vpldatetime.cs" />
+    <Compile Include="DateTime\VpldatetimeTypes.cs" />
+    <Compile Include="Dialog\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\ConfirmForm.Designer.cs">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\Dialog.cs" />
+    <Compile Include="Dialog\DialogTypes.cs" />
+    <Compile Include="Dialog\PromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\PromptForm.Designer.cs">
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlexDialog\FlexDialog.cs" />
+    <Compile Include="FlexDialog\FlexDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlexDialog\FlexDialogForm.Designer.cs">
+      <DependentUpon>FlexDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlexDialog\FlexDialogTypes.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogTypes.cs" />
+    <Compile Include="Math\Math.cs" />
+    <Compile Include="Math\MathTypes.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sound\Sound.cs" />
+    <Compile Include="Sound\SoundTypes.cs" />
+    <Compile Include="StringHelper\String.cs" />
+    <Compile Include="StringHelper\StringTypes.cs" />
+    <Compile Include="Timer\Timer.cs" />
+    <Compile Include="Timer\TimerTypes.cs" />
+    <Compile Include="UrlLauncher\UrlLauncher.cs" />
+    <Compile Include="UrlLauncher\UrlLauncherTypes.cs" />
+    <AppDesigner Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\ConfirmForm.resx">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\DialogService.Image.png" />
+    <EmbeddedResource Include="Dialog\DialogService.Thumbnail.png" />
+    <None Include="Dialog\info.png" />
+    <None Include="Dialog\question.png" />
+    <EmbeddedResource Include="Log\LogService.Image.png" />
+    <EmbeddedResource Include="Log\LogService.Thumbnail.png" />
+    <EmbeddedResource Include="Math\MathService.Image.png" />
+    <EmbeddedResource Include="Math\MathService.Thumbnail.png" />
+    <EmbeddedResource Include="Sound\SoundService.Image.png" />
+    <EmbeddedResource Include="Sound\SoundService.Thumbnail.png" />
+    <EmbeddedResource Include="Dialog\AlertForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\PromptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer\TimerService.Image.png" />
+    <EmbeddedResource Include="Timer\TimerService.Thumbnail.png" />
+    <EmbeddedResource Include="DateTime\DateTimeHelperService.Image.png" />
+    <EmbeddedResource Include="DateTime\DateTimeHelperService.Thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StringHelper\StringService.Image.png" />
+    <EmbeddedResource Include="StringHelper\StringService.Thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UrlLauncher\UrlLauncherService.Image.png" />
+    <EmbeddedResource Include="UrlLauncher\UrlLauncherService.Thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ByteArray\ByteArrayService.Image.png" />
+    <EmbeddedResource Include="ByteArray\ByteArrayService.Thumbnail.png" />
+    <EmbeddedResource Include="FlexDialog\FlexDialogForm.resx">
+      <DependentUpon>FlexDialogForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlexDialog\FlexDialog.user.xslt" />
+    <EmbeddedResource Include="FlexDialog\FlexDialogService.Image.png" />
+    <EmbeddedResource Include="FlexDialog\FlexDialogService.Thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup Condition="'$(DelaySign)'!=''">
+    <ProxyDelaySign>/delaysign+</ProxyDelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>"C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\DssProxy.exe" /dll:"$(TargetPath)" /proxyprojectpath:"$(ProjectDir)Proxy" /keyfile:"$(AssemblyOriginatorKeyFile)" $(ProxyDelaySign) $(CompactFrameworkProxyGen) /binpath:"."  /referencepath:"C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\ "</PostBuildEvent>
+  </PropertyGroup>
+</Project>

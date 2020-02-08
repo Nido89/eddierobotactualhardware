@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SimulatedCompass.Y2008.M11.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedCompass.Y2008.M11.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedCompass.Y2008.M11.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimulatedCompass.Y2008.M11.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedCompass\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedCompass\obj\Debug\User.SimulatedCompass.Y2008.M11.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\Sensors\SimulatedCompass\obj\Debug\User.SimulatedCompass.Y2008.M11.pdb

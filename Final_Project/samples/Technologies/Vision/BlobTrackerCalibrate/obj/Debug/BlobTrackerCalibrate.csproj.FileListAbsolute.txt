@@ -1,0 +1,10 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.BlobTrackerCalibrate.Y2007.M04.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.BlobTrackerCalibrate.Y2007.M04.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.BlobTrackerCalibrate.Y2007.M04.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.BlobTrackerCalibrate.Y2007.M04.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\User.BlobTrackerCalibrate.Y2007.M04.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Technologies\Vision\BlobTrackerCalibrate\obj\Debug\User.BlobTrackerCalibrate.Y2007.M04.pdb

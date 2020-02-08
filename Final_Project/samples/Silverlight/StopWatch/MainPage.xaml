@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="StopWatch.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <Grid x:Name="LayoutRoot" Background="White" Loaded="MainPage_Loaded">
+        <StackPanel Orientation="Vertical">
+            <sdk:Label Name="lblDate" FontSize="36" HorizontalAlignment="Center" Margin="10,10,0,0"  VerticalAlignment="Top"/>
+            <sdk:Label Name="lblTime"  FontSize="36" HorizontalAlignment="Center" Margin="10,10,0,0"  VerticalAlignment="Top"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Start" Height="23" Name="btnStart" Width="75" HorizontalAlignment="Center" Margin="20" Click="StartClick" />
+                <Button Content="Reset" Height="23" Name="btnReset" Width="75" HorizontalAlignment="Center" Margin="20" Click="ResetClick" />
+            </StackPanel>
+            <sdk:Label Name="lblTimer" FontSize="36" HorizontalAlignment="Center" Margin="10,10,0,0"  VerticalAlignment="Top" />
+        </StackPanel>
+    </Grid>
+</UserControl>

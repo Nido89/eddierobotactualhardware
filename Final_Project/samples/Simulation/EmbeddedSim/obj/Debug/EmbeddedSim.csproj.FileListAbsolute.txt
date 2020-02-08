@@ -1,0 +1,9 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.EmbeddedSim.Y2008.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.EmbeddedSim.Y2008.M05.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\Microsoft.Simulation.Embedded.EmbeddedSimUI.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\Microsoft.Simulation.Embedded.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\User.EmbeddedSim.Y2008.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Simulation\EmbeddedSim\obj\Debug\User.EmbeddedSim.Y2008.M05.pdb

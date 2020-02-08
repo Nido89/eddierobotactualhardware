@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DeployInfo xmlns="http://schemas.microsoft.com/xw/2008/9/deployinfo.html">
+  <Properties>None</Properties>
+  <Dependencies>
+    <Dependency>
+      <Path>WebCamPipeServer.exe</Path>
+      <Type>Additional</Type>
+      <Optional>false</Optional>
+    </Dependency>
+  </Dependencies>
+</DeployInfo>

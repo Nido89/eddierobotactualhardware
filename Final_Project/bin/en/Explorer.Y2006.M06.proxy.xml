@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Explorer.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.State.Clone">
+             <summary>
+            Clones State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized State</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.WatchDogUpdateRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WatchDogUpdateRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.WatchDogUpdateRequest.Clone">
+             <summary>
+            Clones WatchDogUpdateRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.WatchDogUpdateRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WatchDogUpdateRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.WatchDogUpdateRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WatchDogUpdateRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WatchDogUpdateRequest</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Explorer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

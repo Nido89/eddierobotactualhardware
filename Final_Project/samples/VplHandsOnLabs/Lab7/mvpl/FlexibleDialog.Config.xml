@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FlexDialogState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/08/flexdialog.html">
+	<Title>Verbal Learning</Title>
+	<Visible>true</Visible>
+	<Controls>
+		<FlexControl>
+			<Id>Label1</Id>
+			<ControlType>Label</ControlType>
+			<Text>Last Command Heard:</Text>
+			<Value>Last Command Heard:</Value>
+		</FlexControl>
+		<FlexControl>
+			<Id>LastCommand</Id>
+			<ControlType>TextBox</ControlType>
+			<Text />
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>Label2</Id>
+			<ControlType>Label</ControlType>
+			<Text>Replayed Command:</Text>
+			<Value>Replayed Command:</Value>
+		</FlexControl>
+		<FlexControl>
+			<Id>ReplayedCommand</Id>
+			<ControlType>TextBox</ControlType>
+			<Text />
+			<Value />
+		</FlexControl>
+	</Controls>
+	<Buttons />
+</FlexDialogState>

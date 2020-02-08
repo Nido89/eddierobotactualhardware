@@ -1,0 +1,5 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimpleSimulatedRobot.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SimpleSimulatedRobot.Y2009.M03.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Beginner\Simple Robot With Drive\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Beginner\Simple Robot With Drive\obj\Debug\User.SimpleSimulatedRobot.Y2009.M03.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\SimulationTutorials\Beginner\Simple Robot With Drive\obj\Debug\User.SimpleSimulatedRobot.Y2009.M03.pdb

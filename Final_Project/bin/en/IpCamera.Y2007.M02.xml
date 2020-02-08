@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IpCamera.Y2007.M02</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService">
+            <summary>
+            Ip camera service implementation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.Start">
+            <summary>
+            Service start method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.GetHandler(Microsoft.Robotics.Services.Sample.IpCamera.Get)">
+            <summary>
+            Get handler for ip camera state
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.WebCamGetHandler(Microsoft.Robotics.Services.WebCam.Proxy.Get)">
+            <summary>
+            Get handler for generic webcam state
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.ReplaceHandler(Microsoft.Robotics.Services.Sample.IpCamera.Replace)">
+            <summary>
+            Replace handler for Ip camera state
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.WebCamReplaceHandler(Microsoft.Robotics.Services.WebCam.Proxy.Replace)">
+            <summary>
+            Replace handler for webcam generic state
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.SubscribeHandler(Microsoft.Robotics.Services.WebCam.Proxy.Subscribe)">
+            <summary>
+            Subscribe handler
+            </summary>
+            <param name="subscribe"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.UpdateFrameHandler(Microsoft.Robotics.Services.WebCam.Proxy.UpdateFrame)">
+            <summary>
+            Update handler for generic webcam
+            </summary>
+            <param name="updateFrame"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.QueryFrameHandler(Microsoft.Robotics.Services.WebCam.Proxy.QueryFrame)">
+            <summary>
+            QueryFrame handler for generic webcam
+            </summary>
+            <param name="queryFrame"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            HttpQuery handler for generic webcam 
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet handler for generic webcam 
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraService.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            HttpPost handler for generic webcam 
+            </summary>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Contract">
+            <summary>
+            Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.IpCamera.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraState">
+            <summary>
+            State class for Ip Camera service
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraState.CameraImageLocation">
+            <summary>
+            Specifies the location of the camera image.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraState.Frame">
+            <summary>
+            Last frame captured from the camera
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.IpCameraOperations">
+            <summary>
+            Ip Camera Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Get">
+            <summary>
+            Get operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.IpCamera.Replace">
+            <summary>
+            Replace operation
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlobTracker.Y2007.M03</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService">
+            <summary>
+            Implementation class for BlobTracker
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.GetHandler(Microsoft.Robotics.Services.Sample.BlobTracker.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.ImageProcessedHandler(Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed)">
+            <summary>
+            ImageProcessed Handler
+            </summary>
+            <param name="imageProcessed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.SubscribeHandler(Microsoft.Robotics.Services.Sample.BlobTracker.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.InsertBinHandler(Microsoft.Robotics.Services.Sample.BlobTracker.InsertBin)">
+            <summary>
+            Insert Bin Handler
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.DeleteBinHandler(Microsoft.Robotics.Services.Sample.BlobTracker.DeleteBin)">
+            <summary>
+            DeleteBin Handler
+            </summary>
+            <param name="delete"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerService.UpdateBinHandler(Microsoft.Robotics.Services.Sample.BlobTracker.UpdateBin)">
+            <summary>
+            UpdateBin Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.Contract">
+            <summary>
+            BlobTracker Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTracker.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerState">
+            <summary>
+            The BlobTracker State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerState.UpdateFrame">
+            <summary>
+            Indicates whether an update frame is available.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerState.ColorBins">
+            <summary>
+            The set of color bins
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerState.TimeStamp">
+            <summary>
+            TimeStamp of the last update
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerState.Results">
+            <summary>
+            The list of matching blobs found
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin">
+            <summary>
+            Specifies a color bin (set)
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.Test(System.Drawing.Color)">
+            <summary>
+            Checks if the specified color matches the current color bin.
+            </summary>
+            <param name="color">Color object</param>
+            <returns>True if the color matches, false otherwise</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.Name">
+            <summary>
+            Indicates the name of the color bin (set).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.RedMin">
+            <summary>
+            Indicates minimum red value of the color bin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.RedMax">
+            <summary>
+            Indicates maximum red value of the color bin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.GreenMin">
+            <summary>
+            Indicates minimum green value of the color bin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.GreenMax">
+            <summary>
+            Indicates maximum green value of the color bin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.BlueMin">
+            <summary>
+            Indicates minimum blue value of the color bin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ColorBin.BlueMax">
+            <summary>
+            Indicates maximum blue value of the color bin.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob">
+            <summary>
+            Specifies information about the detected blob.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.XProjection">
+            <summary>
+            Indicates the X projection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.YProjection">
+            <summary>
+            Indicates the Y projection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.Name">
+            <summary>
+            Indicates the name of the blob.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.MeanX">
+            <summary>
+            Indicates the X mean value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.MeanY">
+            <summary>
+            Indicates the Y mean value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.StdDevX">
+            <summary>
+            Indicates the X standard deviation value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.StdDevY">
+            <summary>
+            Indicates the Y standard deviation value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.SkewX">
+            <summary>
+            Indicates the X skew value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.SkewY">
+            <summary>
+            Indicates the Y skew value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.FoundBlob.Area">
+            <summary>
+            Indicates area. This is the number of pixels that contribute to the blob.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessedRequest">
+            <summary>
+            Indicates the ImageProcessed request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessedRequest.TimeStamp">
+            <summary>
+            Indicates the time the image was processed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessedRequest.Results">
+            <summary>
+            Indicates the list of blobs found.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations">
+            <summary>
+            BlobTracker Main Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations.#ctor">
+            <summary>
+            BlobTracker Operations PortSet
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations.op_Implicit(Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations)~Microsoft.Ccr.Core.Port{Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed}">
+            <summary>
+            Implicit cast from BlobTrackerOperations to Port&lt;ImageProcessed&gt;
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations.Post(Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed)">
+            <summary>
+            Post helper method
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations.op_Implicit(Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations)~Microsoft.Ccr.Core.Port{Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop}">
+            <summary>
+            Implicit cast from BlobTrackerOperations to Port&lt;DsspDefaultDrop&gt;
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.BlobTrackerOperations.Post(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Post helper method
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.Get">
+            <summary>
+            BlobTracker Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.Subscribe">
+            <summary>
+            BlobTracker Subscribe Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed">
+            <summary>
+            BlobTracker Update Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessed.#ctor(Microsoft.Robotics.Services.Sample.BlobTracker.ImageProcessedRequest)">
+            <summary>
+            Creates a new ImageProcessed message with the specified request body
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.InsertBin">
+            <summary>
+            BlobTracker InsertBin Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.DeleteBin">
+            <summary>
+            BlobTracker DeleteBin Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTracker.UpdateBin">
+            <summary>
+            BlobTracker UpdateBin Operation
+            </summary>
+        </member>
+    </members>
+</doc>

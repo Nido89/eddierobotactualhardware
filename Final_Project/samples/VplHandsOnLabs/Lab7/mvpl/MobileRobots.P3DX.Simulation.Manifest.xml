@@ -1,0 +1,76 @@
+<Manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</Contract>
+          <Service>MobileRobots.P3DX.SimulationEngineState.xml</Service>
+          <AliasList />
+          <PartnerList />
+          <Name>StateService</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q1="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q1:simulationengine</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/P3DXMotorBase</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q2="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q2:Entity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q3="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q3:simulateddifferentialdrive</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulatedbumper.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/P3DXBumpers</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q4="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q4:Entity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q5="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q5:simulatedbumper</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulatedlrf.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/P3DXLaserRangeFinder</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q6="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q6:Entity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q7="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q7:simulatedlrf</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/2006/09/simulatedwebcam.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/robocam</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q8="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q8:Entity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q9="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q9:SimulatedWebcam</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/2006/01/simpledashboard.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <Name xmlns:q10="urn:uuid:62aed17e-365e-4dd5-9f77-1fe76b001c40">q10:SimpleDashboard</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

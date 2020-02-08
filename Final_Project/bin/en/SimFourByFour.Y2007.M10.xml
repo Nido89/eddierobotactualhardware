@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimFourByFour.Y2007.M10</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity">
+            <summary>
+            Base 4x4 entity class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.Mass">
+            <summary>
+            Chassis mass in kilograms
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.ChassisDimensions">
+            <summary>
+            Chassis dimensions
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.LeftFrontWheelPosition">
+            <summary>
+            Left front wheel position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RightFrontWheelPosition">
+            <summary>
+            Right front wheel position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.LeftRearWheelPosition">
+            <summary>
+            Left rear wheel position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RightRearWheelPosition">
+            <summary>
+            Right rear wheel position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.ChassisClearance">
+            <summary>
+            Distance from ground of chassis
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.FrontWheelMass">
+            <summary>
+            Mass of front wheels
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.FrontWheelRadius">
+            <summary>
+            Radius of front wheels
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.FrontWheelWidth">
+            <summary>
+            Front wheels width
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RearWheelMass">
+            <summary>
+            Mass of front wheels
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RearWheelRadius">
+            <summary>
+            Radius of front wheels
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RearWheelWidth">
+            <summary>
+            Front wheels width
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.FrontAxleDepthOffset">
+            <summary>
+            distance of the axle from the center of robot
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RearAxleDepthOffset">
+            <summary>
+            distance of the axle from the center of robot
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.Initialize(Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Robotics.Simulation.Physics.PhysicsEngine)">
+            <summary>
+            Initialization
+            </summary>
+            <param name="device"></param>
+            <param name="physicsEngine"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.ProgrammaticallyBuildModel(Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Robotics.Simulation.Physics.PhysicsEngine)">
+            <summary>
+            Builds the simulated robotic entity using local fields for position size, orientation
+            </summary>
+            <param name="device"></param>
+            <param name="physicsEngine"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.Dispose">
+            <summary>
+            Special dispose to handle embedded entities 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.Update(Microsoft.Robotics.Simulation.Engine.FrameUpdate)">
+            <summary>
+            Updates pose for our entity. We override default implementation
+            since we control our own rendering when no file mesh is supplied, which means
+            we dont need world transform updates
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.Render(Microsoft.Robotics.Simulation.Engine.VisualEntity.RenderMode,Microsoft.Robotics.Simulation.Engine.MatrixTransforms,Microsoft.Robotics.Simulation.Engine.CameraEntity)">
+            <summary>
+            Renders 4x4 body and all of its four wheels
+            </summary>
+            <param name="renderMode"></param>
+            <param name="transforms"></param>
+            <param name="currentCamera"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetMotorTorque(System.Single,System.Single)">
+            <summary>
+            Specifies the motor torque for the wheels of the 4x4
+            </summary>
+            <param name="leftWheel">Motor torque for both left wheels</param>
+            <param name="rightWheel">Motor torque for both right wheels</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetMotorTorque(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Specifies the motor torque for the wheels of the 4x4
+            </summary>
+            <param name="frontLeftWheel">Motor torque for front left wheel</param>
+            <param name="frontRightWheel">Motor torque for front right wheel</param>
+            <param name="rearLeftWheel">Motor torque for rear left wheel</param>
+            <param name="rearRightWheel">Motor torque for rear right wheel</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetVelocity(System.Single)">
+            <summary>
+            Specifies the wheel velocity for all wheels in the 4x4
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetVelocity(System.Single,System.Single)">
+            <summary>
+            Specifies the wheel velocity for the wheels in the 4x4
+            </summary>
+            <param name="left">Velocity for both left wheels</param>
+            <param name="right">Velocity for both right wheels</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetVelocity(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Specifies the wheel velocity for the wheels in the 4x4
+            </summary>
+            <param name="leftFront">Velocity for the front left wheel</param>
+            <param name="rightFront">Velocity for the front right wheel</param>
+            <param name="leftRear">Velocity for the rear left wheel</param>
+            <param name="rightRear">Velocity for the rear right wheel</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SetWheelAngles(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Manually sets angles of the four wheels
+            </summary>
+            <param name="leftFront"></param>
+            <param name="rightFront"></param>
+            <param name="leftRear"></param>
+            <param name="rightRear"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.MaxSteerAngle">
+            <summary>
+            Specifies the maximum angle (in radians) a wheel can turn
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.FrontWheelMesh">
+            <summary>
+            Mesh file to use for front wheels
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RearWheelMesh">
+            <summary>
+            Mesh file to use for rear wheels
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.IsEnabled">
+            <summary>
+            True if the drive mechanism is enabled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.MotorTorqueScaling">
+            <summary>
+            Scaling factor to apply to motor torgue requests.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RightFrontWheel">
+            <summary>
+            Right front wheel child entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.LeftFrontWheel">
+            <summary>
+            Left front wheel child entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.RightRearWheel">
+            <summary>
+            Right rear wheel child entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.LeftRearWheel">
+            <summary>
+            Left rear wheel child entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.ChassisShape">
+            <summary>
+            Chassis physics shapes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.DistanceBetweenWheels">
+            <summary>
+            Distance between wheels on the same axle
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.WheelBase">
+            <summary>
+            Distance between the front and rear axles
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.SuspensionTravel">
+            <summary>
+            Maximum suspension travel in the -Y axis direction
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.FourWheelDriveEntity.CurrentHeading">
+            <summary>
+            The rotation in radians about the Y axis the 4x4 is oriented
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimpleFourByFour">
+            <summary>
+            SimpleFourByFour is a simple 4x4 entity derived from FourWheelDriveEntity
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimpleFourByFour.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimpleFourByFour.#ctor(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="initialPos"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Sample4x4Vehicle">
+            <summary>
+            Sample4x4Vehicle is the entity used in this sample
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Sample4x4Vehicle.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Sample4x4Vehicle.#ctor(Microsoft.Robotics.PhysicalModel.Vector3)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="initialPos"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourDriveService">
+            <summary>
+            A simulated four wheel drive service for simulating off-road vehicles
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourDriveService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimulatedFourByFourDriveService constructor
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourDriveService.Start">
+            <summary>
+            SimulatedFourByFourDriveService start gets called when service initializes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourDriveService.OnGet(Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Get)">
+            <summary>
+            Gets SimulatedFourByFourDriveService service state
+            </summary>
+            <param name="get"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourDriveService.OnDrive(Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Drive)">
+            <summary>
+            SimulatedFourByFourDriveService handler that processes a drive message
+            </summary>
+            <param name="drive"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Contract">
+            <summary>
+            SimulatedFourByFourDrive service contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourState">
+            <summary>
+            SimulatedFourByFourDrive state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourState.DistanceBetweenWheels">
+            <summary>
+            The lateral distance between the wheels
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourState.WheelBase">
+            <summary>
+            The longitudinal distance between the front and rear axles
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimulatedFourByFourState.DriveRequest">
+            <summary>
+            The parameters of the last processed drive request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.DriveRequest">
+            <summary>
+            Used for issuing a drive request to the 4x4 service
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.DriveRequest.Power">
+            <summary>
+            The power with which to drive, from -1 (full reverse) to +1 (full forwards)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.DriveRequest.SteeringAngle">
+            <summary>
+            The steering angle, in degrees, to turn. This is the angle of a tangent through the front axle center line.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.SimToy5Operations">
+            <summary>
+            Service operations for the SimulatedFourByFourDrive service
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Get">
+            <summary>
+            Message for getting SimulatedFourByFourDrive service state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Samples.SimulatedFourByFourDrive.Drive">
+            <summary>
+            Message for driving SimulatedFourByFourDrive service 
+            </summary>
+        </member>
+    </members>
+</doc>

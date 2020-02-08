@@ -1,0 +1,12 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.RobotDashboard.Y2011.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.RobotDashboard.Y2011.M07.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\Microsoft.Robotics.Services.RobotDashboard.AboutBox.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\Microsoft.Robotics.Services.RobotDashboard.DashboardForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\Microsoft.Robotics.Services.RobotDashboard.DepthCamForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\Microsoft.Robotics.Services.RobotDashboard.OptionsForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\Microsoft.Robotics.Services.RobotDashboard.WebCamForm.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\GenerateResource.read.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\GenerateResource.write.4.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\User.RobotDashboard.Y2011.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\ReferencePlatform2011\RobotDashboard\obj\Debug\User.RobotDashboard.Y2011.M07.pdb

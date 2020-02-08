@@ -1,0 +1,3485 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NxtCommon.Y2007.M07</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.Contract">
+            <summary>
+            NxtBrick Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand">
+            <summary>
+            The base type for all LEGO Commands
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.NxtDirectCommand">
+            <summary>
+            Indicates a LEGO NXT Direct Command
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.NxtSystemCommand">
+            <summary>
+            Indicates a LEGO NXT System Command
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.internalExpectedResponseSize">
+            <summary>
+            The Expected size of a required LegoResponse
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.internalCommandData">
+            <summary>
+            The command buffer 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.ExtendCommandData(System.Int32)">
+            <summary>
+            Extend the size of the CommandData.
+            <remarks>Requires the 2 header bytes to be declared in the constructor.</remarks>
+            </summary>
+            <param name="newSize"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.TimeStamp">
+            <summary>
+            The time a command was sent or response was received
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.#ctor">
+            <summary>
+            The base type for all LEGO Commands
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.#ctor(System.Int32,System.Byte[])">
+            <summary>
+            The base type for all LEGO Commands
+            </summary>
+            <param name="expectedResponseSize"></param>
+            <param name="commandData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.GetResponse(System.Byte[])">
+            <summary>
+            Construct a LEGO NXT Response packet for the specified request
+            </summary>
+            <param name="responseData"></param>
+            <returns>A Generic Lego Response</returns>
+            <remarks>Override this method to return a custom response</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Lego Command
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.Clone">
+            <summary>
+            Clone Lego Command
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Serialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Deserialize
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.ExpectedResponseSize">
+            <summary>
+            The expected response buffer size
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.CommandData">
+            <summary>
+            The LEGO Command data buffer
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.RequireResponse">
+            <summary>
+            Determines whether a response will be sent from the LEGO NXT Brick.
+            When no respone is required, the TryCount will always be 1.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.TryCount">
+            <summary>
+            Specifies how many times the command will be attempted (1-20).
+            When TryCount is more than 1, a response will always be required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.LegoCommandCode">
+            <summary>
+            The LEGO Command Code
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand.CommandType">
+            <summary>
+            The type of LEGO Command (System, Direct, Response)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse">
+            <summary>
+            The base type for all LEGO Responses
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.NxtResponse">
+            <summary>
+            The Lego Command Type for a reply
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.ExpectedCommandCode">
+            <summary>
+            The Expected Lego Response Code
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.#ctor">
+            <summary>
+            A LEGO Command response
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.#ctor(System.Int32,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode)">
+            <summary>
+            Constructor used by inheriting members to initialize the LegoResponse.
+            </summary>
+            <param name="expectedResponseSize"></param>
+            <param name="commandCode"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.#ctor(System.Byte[])">
+            <summary>
+            Constructor used by inheriting members to initialize the LegoResponse with Data
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.#ctor(System.Int32,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode,System.Byte[])">
+            <summary>
+            Constructor used by inheriting members to initialize the LegoResponse with Data
+            </summary>
+            <param name="expectedResponseSize"></param>
+            <param name="commandCode"></param>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.#ctor(System.Int32,System.Byte[])">
+            <summary>
+            LEGO Response Constructor which matches LEGOCommand initialization parameters
+            </summary>
+            <param name="expectedResponseSize"></param>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Lego Response
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.Clone">
+            <summary>
+            Clone Lego Response
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Serialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Deserialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.Upcast``1(Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse)">
+            <summary>
+            Upcast a LegoResponse to it's proper type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ok"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.ErrorCode">
+            <summary>
+            Indicates the error code returned
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.RequireResponse">
+            <summary>
+            This is the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.CommandData">
+            <summary>
+            The LEGO Response data buffer
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.ExpectedResponseSize">
+            <summary>
+            The Expected Response Size
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.HasResponse">
+            <summary>
+            Has Response
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse.Success">
+            <summary>
+            The standard acknowledgement from a LEGO Command
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence">
+            <summary>
+            A sequence of LEGO Commands
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.Commands">
+            <summary>
+            The Commands which make up this sequence.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.ContinueOnError">
+            <summary>
+            Continue processing commands after an error 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.AveragePollingFrequencyMs">
+            <summary>
+            Average Polling Freqency Milliseconds (read-only)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.OriginalPollingFrequencyMs">
+            <summary>
+            The original value of the PollingFrequencyMs prior to any adjustment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.#ctor">
+            <summary>
+            A sequence of LEGO Commands
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand[])">
+            <summary>
+            Generate a Sequence of Initialization Commands
+            </summary>
+            <param name="cmds"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.#ctor(System.Int32,Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand[])">
+            <summary>
+            Generate a Sequence of Polling Commands
+            </summary>
+            <param name="pollingFrequencyMs"></param>
+            <param name="cmds"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Nxt Command Sequence
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.Clone">
+            <summary>
+            Clone Nxt Command Sequence
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Serialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.NxtCommandSequence.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Deserialize
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite">
+            <summary>
+            LegoLSWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.ValidateCommandData">
+            <summary>
+            Make sure CommandData is valid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.#ctor">
+            <summary>
+            LegoLSWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoCommand)">
+            <summary>
+            LegoLSWrite
+            </summary>
+            <param name="cmd"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.#ctor(System.Byte[])">
+            <summary>
+            LegoLSWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort,System.Byte[],System.Byte)">
+            <summary>
+            LegoLSWrite
+            </summary>
+            <param name="port"></param>
+            <param name="txData"></param>
+            <param name="rxDataLength"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.GetResponse(System.Byte[])">
+            <summary>
+            The Low Speed Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.Port">
+            <summary>
+            The Sensor Port
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.TXDataLength">
+            <summary>
+            The transmitted data length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.ExpectedI2CResponseSize">
+            <summary>
+            Expected Response Size
+            Replaces RXDataLength from the LEGO Documentation
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.TXData">
+            <summary>
+            The transmitted data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSWrite.CommandData">
+            <summary>
+            Command Data
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead">
+            <summary>
+            LEGO Command: LSRead.  I2C Low Speed Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.#ctor">
+            <summary>
+            LEGO NXT Low Speed (I2C) Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            LEGO NXT Low Speed (I2C) Read
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Low Speed (I2C) Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.ExpectedResponseSize">
+            <summary>
+            LSRead has a fixed response size which can not be changed.
+            Excess receive bytes are padded with zeroes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.Port">
+            <summary>
+            0,1,2,3
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSRead.CommandData">
+            <summary>
+            Command Data
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead">
+            <summary>
+            LEGO Response: LSRead.  I2C Low Speed Read.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead.#ctor">
+            <summary>
+            LEGO NXT Response: Low Speed (I2C) Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Low Speed (I2C) Read
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead.BytesRead">
+            <summary>
+            The number of bytes read
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSRead.RXData">
+            <summary>
+            The received data
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode">
+            <summary>
+            LEGO Command: SetInputMode.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode._inputPort">
+            <summary>
+            Range 0-3
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode.#ctor">
+            <summary>
+            LEGO NXT Command: Set Input Mode
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode)">
+            <summary>
+            LEGO NXT Command: Set Input Mode
+            </summary>
+            <param name="sensorPort"></param>
+            <param name="sensorType"></param>
+            <param name="sensorMode"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode.InputPort">
+            <summary>
+            The LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode.SensorType">
+            <summary>
+            Sensor Type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetInputMode.SensorMode">
+            <summary>
+            Sensor Type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetBatteryLevel">
+            <summary>
+            LEGO NXT Command: Get Battery Level
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetBatteryLevel.#ctor">
+            <summary>
+            LEGO NXT Command: Get Battery Level
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetBatteryLevel.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel">
+            <summary>
+            LEGO NXT Response: Get Battery Level
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel.#ctor">
+            <summary>
+            LEGO NXT Response: Get Battery Level
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Get Battery Level
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel.Voltage">
+            <summary>
+            Voltage in Volts
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetBatteryLevel.Millivolts">
+            <summary>
+            Millivolts
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetDeviceInfo">
+            <summary>
+            LEGO NXT Command: Get Device Info
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetDeviceInfo.#ctor">
+            <summary>
+            LEGO NXT Command: Get Device Info
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetDeviceInfo.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo">
+            <summary>
+            LEGO NXT Response: Get Device Info
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.#ctor">
+            <summary>
+            LEGO NXT Response: Get Device Info
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Get Device Info
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.BrickName">
+            <summary>
+            The descriptive name of the NXT brick
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.BluetoothAddress">
+            <summary>
+            The Bluetooth address
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.BluetoothSignalStrength">
+            <summary>
+            The Bluetooth signal strength
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetDeviceInfo.FreeMemory">
+            <summary>
+            The amount of memory available
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetFirmwareVersion">
+            <summary>
+            LEGO NXT Command: Get Firmware Version
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetFirmwareVersion.#ctor">
+            <summary>
+            LEGO NXT Command: Get Firmware Version
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetFirmwareVersion.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion">
+            <summary>
+            LEGO NXT Response: Get Firmware Version
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.#ctor">
+            <summary>
+            LEGO NXT Response: Get Firmware Version
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Get Firmware Version
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.MinorProtocolVersion">
+            <summary>
+            The minor protocol version number
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.MajorProtocolVersion">
+            <summary>
+            The major protocol version number
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.MinorFirmwareVersion">
+            <summary>
+            The minor firmware version number
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetFirmwareVersion.MajorFirmwareVersion">
+            <summary>
+            The major firmware version number
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState">
+            <summary>
+            LEGO NXT Command: Set Output State
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.#ctor">
+            <summary>
+            LEGO NXT Command: Set Output State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort,System.Int32,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoRegulationMode,System.Int32,Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState,System.Int64)">
+            <summary>
+            LEGO NXT Command: Set Output State
+            </summary>
+            <param name="motorPort"></param>
+            <param name="powerSetPoint"></param>
+            <param name="mode"></param>
+            <param name="regulationMode"></param>
+            <param name="turnRatio"></param>
+            <param name="runState"></param>
+            <param name="rotationLimit"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.ToString">
+            <summary>
+            String representation of SetOutputState with parameters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.MotorPort">
+            <summary>
+            The Motor Port
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.PowerSetPoint">
+            <summary>
+            Power Setpoint (range -100 to +100)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.EncoderLimit">
+            <summary>
+            A limit on the number of motor rotations (360 per rotation).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.Mode">
+            <summary>
+            Mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.RunState">
+            <summary>
+            RunState
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.RegulationMode">
+            <summary>
+            Lego Regulation Mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetOutputState.TurnRatio">
+            <summary>
+            The Motor Turn Ratio
+            <remarks>(-100 - 100)</remarks>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetButtonState">
+            <summary>
+            LEGO NXT Command: Get Button State
+            NOTE: 0x01, 0x94, 0x01, 0x00, 0x04, 0x00, 0x20, 0x00, 0x04, 0x00
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetButtonState.#ctor">
+            <summary>
+            LEGO NXT Command: Get Button State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetButtonState.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO NXT Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetButtonState.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState">
+            <summary>
+            LEGO NXT Response: Get Button State
+            NOTE: Because this return package does not return the index of the button queried,
+            something special will have to be done.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.#ctor">
+            <summary>
+            LEGO NXT Response: Get Button State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Get Button State
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.IsValidButtonStateResponse(Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponse)">
+            <summary>
+            Determine if the LEGO response packet was a request for Button state.
+            </summary>
+            <param name="legoResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            LEGO NXT Response: Get Button State
+            </summary>
+            <param name="right"></param>
+            <param name="left"></param>
+            <param name="enter"></param>
+            <param name="cancel"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.Success">
+            <summary>
+            Determine if the LEGO response packet was a request for Button state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.BytesRead">
+            <summary>
+            The number of bytes read from IO Mapped data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.MappedData">
+            <summary>
+            The IO Mapped Data which is returned
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.PressedRight">
+            <summary>
+            Right Button is pressed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.PressedLeft">
+            <summary>
+            Left button is pressed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.PressedEnter">
+            <summary>
+            Enter button is pressed
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetButtonState.PressedCancel">
+            <summary>
+            Cancel Button is pressed
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues">
+            <summary>
+            LEGO NXT Command: GetInputValues
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues._inputPort">
+            <summary>
+            Range 0-3
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues.#ctor">
+            <summary>
+            LEGO NXT Command: GetInputValues
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            LEGO NXT Command: GetInputValues
+            </summary>
+            <param name="inputPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues.GetResponse(System.Byte[])">
+            <summary>
+            LEGO NXT Command: GetInputValues
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetInputValues.InputPort">
+            <summary>
+            0,1,2,3
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues">
+            <summary>
+            LEGO NXT Command Response: GetInputValues
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.#ctor">
+            <summary>
+            LEGO NXT Command Response: GetInputValues
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Command Response: GetInputValues
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.InputPort">
+            <summary>
+            The input port on the NXT brick.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.Success">
+            <summary>
+            Success
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.Calibrated">
+            <summary>
+            Is the specified sensor Calibrated?
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.SensorType">
+            <summary>
+            The LEGO NXT Sensor Type as defined by LEGO
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.SensorMode">
+            <summary>
+            The Sensor Mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.RawValue">
+            <summary>
+            The raw reading from the sensor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.NormalizedValue">
+            <summary>
+            The normalized reading from the sensor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.ScaledValue">
+            <summary>
+            The scaled reading from the sensor
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetInputValues.CalibratedValue">
+            <summary>
+            The calibrated reading from the sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState">
+            <summary>
+            LEGO NXT Command: GetOutputState
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState.#ctor">
+            <summary>
+            LEGO NXT Command: GetOutputState
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort)">
+            <summary>
+            LEGO NXT Command: GetOutputState
+            </summary>
+            <param name="outputPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetOutputState.OutputPort">
+            <summary>
+            0, 1, 2
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState">
+            <summary>
+            LEGO NXT Response: Get Output State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.#ctor">
+            <summary>
+            LEGO NXT Response: Get Output State
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Get Output State
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.ToString">
+            <summary>
+            String representation of GetOutputState with parameters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.MotorPort">
+            <summary>
+            The NXT Motor port
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.PowerSetPoint">
+            <summary>
+            The motor power setting (range -100 to +100)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.Mode">
+            <summary>
+            The NXT output mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.RegulationMode">
+            <summary>
+            The NXT regulation mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.TurnRatio">
+            <summary>
+            The Motor Turn Ratio
+            <remarks>(-100 - 100)</remarks>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.RunState">
+            <summary>
+            The Motor running state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.EncoderLimit">
+            <summary>
+            A limit on the number of motor rotations (360 per rotation).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.EncoderCount">
+            <summary>
+            The Motor Encoder Count (360 per rotation).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.BlockTachoCount">
+            <summary>
+            The Motor Block Tachometer Count (360 per rotation).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetOutputState.ResettableCount">
+            <summary>
+            The Resettable Encoder Count (360 per rotation).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlayTone">
+            <summary>
+            Play a tone on the NXT
+            </summary>
+            <remarks>Standard return package.</remarks>    
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlayTone.#ctor">
+            <summary>
+            Play a tone on the NXT
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlayTone.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Play a tone on the NXT
+            </summary>
+            <param name="frequency"></param>
+            <param name="duration"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlayTone.Frequency">
+            <summary>
+            200 - 14000 Hz
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlayTone.Duration">
+            <summary>
+            Duration to play tome in ms
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus">
+            <summary>
+            LEGO NXT Command: Low Speed (I2C) Get Status
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus.#ctor">
+            <summary>
+            LEGO NXT Command: Low Speed (I2C) Get Status
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            LEGO NXT Command: Low Speed (I2C) Get Status
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus.GetResponse(System.Byte[])">
+            <summary>
+            The Matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoLSGetStatus.Port">
+            <summary>
+            The Sensor Port to Query Status
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSGetStatus">
+            <summary>
+            LEGO NXT Response: Low Speed (I2C) Get Status
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSGetStatus.#ctor">
+            <summary>
+            LEGO NXT Response: Low Speed (I2C) Get Status
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSGetStatus.#ctor(System.Byte[])">
+            <summary>
+            LEGO NXT Response: Low Speed (I2C) Get Status
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSGetStatus.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseLSGetStatus.BytesReady">
+            <summary>
+            The number of bytes ready to read
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSensorType">
+            <summary>
+            LEGO Read Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSensorType.#ctor">
+            <summary>
+            LEGO Read Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSensorType.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            LEGO Read Sensor Type
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSensorType.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType.Manufacturer">
+            <summary>
+            The Sensor Manufacturer
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSensorType.SensorType">
+            <summary>
+            The Sensor Type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand">
+            <summary>
+            Read LEGO Sonar Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand.#ctor">
+            <summary>
+            Send an I2C command to the specified address
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort,System.Int32)">
+            <summary>
+            Send an I2C command to the specified address
+            </summary>
+            <param name="port"></param>
+            <param name="address"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort,System.Int32,System.Int32)">
+            <summary>
+            Send an I2C command to the specified address
+            </summary>
+            <param name="port"></param>
+            <param name="address"></param>
+            <param name="i2CBusAddress"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand.Address">
+            <summary>
+            Command Address
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CSendCommand.I2CBusAddress">
+            <summary>
+            The I2C Bus Address which identifies the sensor on the I2C Bus
+            <remarks>This is usually 0x02 (NxtCommon.DefaultI2CBusAddress) for most devices</remarks>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket">
+            <summary>
+            UltraSonic Variables
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket.FactoryZero">
+            <summary>
+            Factory Zero
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket.ContinuousMeasurementInterval">
+            <summary>
+            ContinuousMeasurementInterval
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket.CommandState">
+            <summary>
+            CommandState
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket.ReadMeasurement1">
+            <summary>
+            ReadMeasurement0
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSonarSensor">
+            <summary>
+            Read LEGO Sonar Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSonarSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket)">
+            <summary>
+            HiTechnic Read Compass Sensor Data
+            </summary>
+            <param name="ultraSonicVariable"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSonarSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort,Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.UltraSonicPacket)">
+            <summary>
+            HiTechnic Read Compass Sensor Data
+            </summary>
+            <param name="port"></param>
+            <param name="ultraSonicVariable"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CReadSonarSensor.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSonarSensor">
+            <summary>
+            LegoResponse: I2C UltraSonic Sensor 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSonarSensor.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSonarSensor.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C UltraSonic Sensor 
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.I2CResponseSonarSensor.UltraSonicVariable">
+            <summary>
+            UltraSonic Sensor Variable
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetMotorPosition">
+            <summary>
+            Reset Motor Position
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetMotorPosition.#ctor">
+            <summary>
+            Reset Motor Position
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetMotorPosition.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort,System.Boolean)">
+            <summary>
+            Reset Motor Position
+            </summary>
+            <param name="outputPort"></param>
+            <param name="relative"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetMotorPosition.OutputPort">
+            <summary>
+            Output Port 0-2
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetMotorPosition.Relative">
+            <summary>
+            Position relative to last movement or absolute?
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoBootCommand">
+            <summary>
+            LEGO Command: USB Command to Reset the LEGO Brick.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoBootCommand.#ctor">
+            <summary>
+            USB Command to Reset the LEGO Brick.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseBootCommand">
+            <summary>
+            LEGO Response: BootCommand
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseBootCommand.#ctor">
+            <summary>
+            LEGO Response: BootCommand
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseBootCommand.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: BootCommand
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseBootCommand.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseBootCommand.Message">
+            <summary>
+            LEGO NXT Boot Acknowledgement.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoClose">
+            <summary>
+            LEGO Command: Close a file handle.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoClose.#ctor">
+            <summary>
+            Close a file handle.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoClose.#ctor(System.Int32)">
+            <summary>
+            Close a file handle.
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoClose.Handle">
+            <summary>
+            The handle to the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseClose">
+            <summary>
+            LEGO Response: Close
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseClose.#ctor">
+            <summary>
+            LEGO Response: Close.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseClose.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Close.
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseClose.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseClose.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoDelete">
+            <summary>
+            LEGO Command: Delete
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoDelete.#ctor">
+            <summary>
+            LEGO Command: Delete
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoDelete.#ctor(System.String)">
+            <summary>
+            LEGO Command: Delete
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoDelete.FileName">
+            <summary>
+            The name of the file to be deleted.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseDelete">
+            <summary>
+            LEGO Response: Delete
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseDelete.#ctor">
+            <summary>
+            LEGO Response: Delete
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseDelete.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Delete
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseDelete.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseDelete.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStartProgram">
+            <summary>
+            LEGO Command: Starts a program on the NXT.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStartProgram.#ctor">
+            <summary>
+            Starts a program on the NXT.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStartProgram.#ctor(System.String)">
+            <summary>
+            Starts a program on the NXT.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStartProgram.FileName">
+            <summary>
+            The name of the file to be started.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlaySoundFile">
+            <summary>
+            LEGO Command: Play a sound file
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlaySoundFile.#ctor">
+            <summary>
+            Play a sound file
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlaySoundFile.#ctor(System.String,System.Boolean)">
+            <summary>
+            Play a sound file
+            </summary>
+            <param name="fileName"></param>
+            <param name="loop"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlaySoundFile.FileName">
+            <summary>
+            The name of the sound file to be played.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoPlaySoundFile.Loop">
+            <summary>
+            Repeat the sound file
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStopSoundPlayback">
+            <summary>
+            Stop sound playback on the NXT.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStopSoundPlayback.#ctor">
+            <summary>
+            Stop sound playback on the NXT.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStopProgram">
+            <summary>
+            LEGO Command: Stop a program on the NXT.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoStopProgram.#ctor">
+            <summary>
+            LEGO Command: Stop a program on the NXT.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindFirst">
+            <summary>
+            LEGO Command: FindFirst
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindFirst.#ctor">
+            <summary>
+            LEGO Command: FindFirst
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindFirst.#ctor(System.String)">
+            <summary>
+            LEGO Command: FindFirst
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindFirst.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindFirst.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst">
+            <summary>
+            LEGO Response: Find First.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.#ctor">
+            <summary>
+            LEGO Response: Find First.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Find First.
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindFirst.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindNext">
+            <summary>
+            LEGO Command: FindNext
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindNext.#ctor">
+            <summary>
+            LEGO Command: FindNext
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindNext.#ctor(System.Int32)">
+            <summary>
+            LEGO Command: FindNext
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindNext.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoFindNext.Handle">
+            <summary>
+            The handle from LegoResponseFirst or LegoResponseNxt.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext">
+            <summary>
+            LEGO Response: Find Next.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.#ctor">
+            <summary>
+            LEGO Response: Find Next.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Find Next.
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseFindNext.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetCurrentProgramName">
+            <summary>
+            LEGO Command: GetCurrentProgramName
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetCurrentProgramName.#ctor">
+            <summary>
+            LEGO Command: GetCurrentProgramName
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoGetCurrentProgramName.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetCurrentProgramName">
+            <summary>
+            LEGO Response: GetCurrentProgramName
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetCurrentProgramName.#ctor">
+            <summary>
+            LEGO Response: GetCurrentProgramName
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetCurrentProgramName.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: GetCurrentProgramName
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetCurrentProgramName.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseGetCurrentProgramName.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite.#ctor">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite.#ctor(System.String,System.Int32)">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+            <param name="file"></param>
+            <param name="size"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite.FileName">
+            <summary>
+            The name of the file to be opened for writing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWrite.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWrite">
+            <summary>
+            LEGO Response: OpenWrite.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWrite.#ctor">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWrite.#ctor(System.Byte[])">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWrite.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWrite.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear">
+            <summary>
+            LEGO Command: OpenWriteLinear.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear.#ctor">
+            <summary>
+            LEGO Command: OpenWriteLinear
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear.#ctor(System.String,System.Int32)">
+            <summary>
+            LEGO Command: OpenWriteLinear
+            </summary>
+            <param name="file"></param>
+            <param name="size"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear.FileName">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteLinear.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteLinear">
+            <summary>
+            LEGO Response: OpenWriteLinear.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteLinear.#ctor">
+            <summary>
+            LEGO Response: OpenWriteLinear
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteLinear.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: OpenWriteLinear
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteLinear.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteLinear.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData">
+            <summary>
+            LEGO Command: OpenWriteData.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData.#ctor">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData.#ctor(System.String,System.Int32)">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+            <param name="file"></param>
+            <param name="size"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData.FileName">
+            <summary>
+            The name of the file to be opened for writing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenWriteData.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteData">
+            <summary>
+            LEGO Response: OpenWriteData.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteData.#ctor">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteData.#ctor(System.Byte[])">
+            <summary>
+            LEGO Command: OpenWrite
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteData.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenWriteData.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoWrite">
+            <summary>
+            LEGO Command: Write.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoWrite.#ctor">
+            <summary>
+            LEGO Command: Write
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoWrite.#ctor(System.Int32,System.Byte[])">
+            <summary>
+            LEGO Command: Write
+            </summary>
+            <param name="handle"></param>
+            <param name="writeData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoWrite.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoWrite.WriteData">
+            <summary>
+            The data to be written.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite">
+            <summary>
+            LEGO Response: Write.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite.#ctor">
+            <summary>
+            LEGO Response: Write.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Write.
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseWrite.BytesWritten">
+            <summary>
+            The number of bytes written.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenRead">
+            <summary>
+            LEGO Command: OpenRead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenRead.#ctor">
+            <summary>
+            LEGO Command: OpenRead
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenRead.#ctor(System.String)">
+            <summary>
+            LEGO Command: OpenRead
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoOpenRead.FileName">
+            <summary>
+            The name of the file opened for reading.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead">
+            <summary>
+            LEGO Response: OpenRead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead.#ctor">
+            <summary>
+            LEGO Response: OpenRead
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: OpenRead
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseOpenRead.FileSize">
+            <summary>
+            The size of the file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead">
+            <summary>
+            LEGO Command: Read.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead.#ctor">
+            <summary>
+            LEGO Command: Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead.#ctor(System.Int32,System.Int32)">
+            <summary>
+            LEGO Command: Read
+            </summary>
+            <param name="handle"></param>
+            <param name="bytesToRead"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoRead.BytesToRead">
+            <summary>
+            The number of bytes to read.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead">
+            <summary>
+            LEGO Response: Read.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.#ctor">
+            <summary>
+            LEGO Response: Read
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: Read
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.Handle">
+            <summary>
+            The handle to the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.BytesRead">
+            <summary>
+            The number of bytes read.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseRead.ReadData">
+            <summary>
+            The data read.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead">
+            <summary>
+            LEGO Command: MessageRead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.#ctor">
+            <summary>
+            LEGO Command: MessageRead
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.#ctor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            LEGO Command: MessageRead
+            </summary>
+            <param name="remoteInbox"></param>
+            <param name="localInbox"></param>
+            <param name="remove"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.RemoteInbox">
+            <summary>
+            Remove Inbox 0-9
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.LocalInbox">
+            <summary>
+            Local Inbox 0-9
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageRead.Remove">
+            <summary>
+            Clear message from remote inbox
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead">
+            <summary>
+            LEGO Response: MessageRead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.#ctor">
+            <summary>
+            LEGO Response: MessageRead
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: MessageRead
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.LocalInbox">
+            <summary>
+            The local communication port.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.MessageSize">
+            <summary>
+            The size of the message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.MessageReadData">
+            <summary>
+            The message data read.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseMessageRead.Message">
+            <summary>
+            The Text version of the Message
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite">
+            <summary>
+            LEGO Command: MessageWrite.  Send a message to the NXT that the NXT can read with a message block.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.#ctor">
+            <summary>
+            Send a message to the NXT that the NXT can read with a message block.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.#ctor(System.Int32,System.Byte[])">
+            <summary>
+            Send a message to the NXT that the NXT can read with a message block.
+            </summary>
+            <param name="inbox"></param>
+            <param name="messageData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.#ctor(System.Int32,System.String)">
+            <summary>
+            Send a message to the NXT that the NXT can read with a message block.
+            </summary>
+            <param name="inbox"></param>
+            <param name="message"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.Inbox">
+            <summary>
+            LEGO NXT Inbox where message should be delivered
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.MessageSize">
+            <summary>
+            The size of the message to be written (0-60).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.MessageData">
+            <summary>
+            The Message Data
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoMessageWrite.MessageDataString">
+            <summary>
+            Expose the message data as a string.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoKeepAlive">
+            <summary>
+            LEGO Command: KeepAlive.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoKeepAlive.#ctor">
+            <summary>
+            LEGO Command: KeepAlive.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseKeepAlive">
+            <summary>
+            LEGO Response: KeepAlive.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseKeepAlive.#ctor">
+            <summary>
+            LEGO Response: KeepAlive.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseKeepAlive.#ctor(System.Byte[])">
+            <summary>
+            LEGO Response: KeepAlive.
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseKeepAlive.RequireResponse">
+            <summary>
+            Hide RequireResponse from proxy and always set it to true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResponseKeepAlive.SleepTimeMilliseconds">
+            <summary>
+            The number of milliseconds between KeepAlive messages
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetBrickName">
+            <summary>
+            LEGO Command: SetBrickName.
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetBrickName.#ctor">
+            <summary>
+            LEGO Command: SetBrickName.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetBrickName.#ctor(System.String)">
+            <summary>
+            LEGO Command: SetBrickName.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoSetBrickName.Name">
+            <summary>
+            The descriptive identifier for the NXT brick.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetInputScaledValue">
+            <summary>
+            Reset Motor Position
+            <remarks>Standard return package.</remarks>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetInputScaledValue.#ctor">
+            <summary>
+            LEGO Command: ResetInputScaledValue.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetInputScaledValue.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            LEGO Command: ResetInputScaledValue.
+            </summary>
+            <param name="inputPort"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Commands.LegoResetInputScaledValue.InputPort">
+            <summary>
+            Input Port 0-3
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon">
+            <summary>
+            LEGO Helper Class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.DefaultI2CBusAddress">
+            <summary>
+            The default I2C Bus Address of the Ultrasonic or other I2C Sensor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetNxtSensorPort(System.Byte)">
+            <summary>
+            Translate an 8-bit integer (0-3) to NxtSensorPort
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetNxtMotorPort(System.Byte)">
+            <summary>
+            Translate an 8-bit integer (0-2) to NxtMotorPort
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetNxtSensorPortFromHardwareIdentifier(System.Int32)">
+            <summary>
+            Translate a HardwareIdentifier integer (1-4) to NxtSensorPort
+            </summary>
+            <param name="hardwareIdentifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetNxtMotorPortFromHardwareIdentifier(System.Int32)">
+            <summary>
+            Translate a HardwareIdentifier integer (1-3) to NxtMotorPort.
+            </summary>
+            <param name="hardwareIdentifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.PortNumber(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Get the integer representation of a NxtSensorPort (zero based).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.PortNumber(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort)">
+            <summary>
+            Get the integer representation of a NxtMotorPort (0-2).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.PortNumber(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort)">
+            <summary>
+            Get the integer representation of a LegoNxtPort (zero based).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.HardwareIdentifier(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Get the HardwareIdentifier representation of a NxtSensorPort (1-4).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.HardwareIdentifier(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort)">
+            <summary>
+            Get the HardwareIdentifier representation of a NxtMotorPort (1-3).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.HardwareIdentifier(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort)">
+            <summary>
+            Get the HardwareIdentifier representation of a LegoNxtPort (1-4).
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.StringToData(System.String,System.Int32)">
+            <summary>
+            Convert string to lego data packet.
+            If string is longer than maxlength, 
+            the leftmost portion of the string 
+            will be retained.
+            </summary>
+            <param name="value"></param>
+            <param name="bufferLength">Maximum length including null terminator</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.ByteArrayIsEqual(System.Byte[],System.Byte[])">
+            <summary>
+            Compare two byte arrays.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetStringToData(System.Byte[],System.Int32,System.String)">
+            <summary>
+            Set String to Byte Array
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetStringToData(System.Byte[],System.Int32,System.String,System.Int32)">
+            <summary>
+            Set String to Byte Array
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.DataToString(System.Byte[],System.Int32)">
+            <summary>
+            Convert Byte Array to String
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.DataToString(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Convert Byte Array to String
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="maximumLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.DataToInt(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Retrieve a 32-bit integer from a Byte Array
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetSByte(System.Byte[],System.Int32)">
+            <summary>
+            Retrieve a signed byte  from a Byte Array
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetSByte(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Set a Signed byte to an offset within a byte array
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetUShort(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Set a 16 bit unsigned integer in little-endian format
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetUShort(System.Byte[],System.Int32)">
+            <summary>
+            Get a 16 bit unsigned little-endian integer from data and startPosition.
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetShort(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Set a signed 2-byte short integer
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.SetUInt32(System.Byte[],System.Int32,System.Int64)">
+            <summary>
+            Set unsigned 32 bit integeger in little-endian format
+            </summary>
+            <param name="data"></param>
+            <param name="startPosition"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.AppendData(System.Byte[],System.Int32,System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="originalData"></param>
+            <param name="startPosition">can be > origdata.Length</param>
+            <param name="dataToAppend"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtCommon.GetErrorMessage(System.Int32)">
+            <summary>
+            Get an error message from a LEGO status code
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading">
+            <summary>
+            The current X, Y, Z accelerometer readings
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Accelerometer Reading
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.Clone">
+            <summary>
+            Clone Accelerometer Reading
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Serialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Deserialize
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.X">
+            <summary>
+            The current accelerometer X Axis
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.Y">
+            <summary>
+            The current accelerometer Y Axis
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.Z">
+            <summary>
+            The current accelerometer Z Axis
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.AccelerometerReading.TimeStamp">
+            <summary>
+            The time of the last sensor update
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection">
+            <summary>
+            A connection to the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.#ctor">
+            <summary>
+            A connection to the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort)">
+            <summary>
+            A connection to the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+            <summary>
+            Copy To Lego NXT Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.Clone">
+            <summary>
+            Clone Lego NXT Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Serialize Serialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserialize Deserialize
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.ToString">
+            <summary>
+            The Display name of the LEGO NXT Connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.Port">
+            <summary>
+            LEGO NXT Port
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtConnection.PortOverride">
+            <summary>
+            The optional Port Override.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoConnectionType">
+            <summary>
+            The LEGO Connection Type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoConnectionType.Bluetooth">
+            <summary>
+            Bluetooth
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandType">
+            <summary>
+            Identifies the type of LEGO Command (System, Direct, Response)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandType.System">
+            <summary>
+            LEGO System Command
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandType.Direct">
+            <summary>
+            LEGO Direct Command
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandType.Response">
+            <summary>
+            LEGO Command Response
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType">
+            <summary>
+            The type of Device
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.Unknown">
+            <summary>
+            Unknown or not specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.Internal">
+            <summary>
+            An internal or built-in device
+            <example>internal battery</example>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.Actuator">
+            <summary>
+            An Actuator
+            <example>Motor</example>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.AnalogSensor">
+            <summary>
+            An analog sensor
+            <example>Touch Sensor</example>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.DigitalSensor">
+            <summary>
+            An I2C sensor
+            <example>Sonar Sensor</example>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoDeviceType.Aggregation">
+            <summary>
+            An Aggregation service which works with multiple NXT devices.
+            <example>internal battery</example>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort">
+            <summary>
+            LEGO NXT Motor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort.NotConnected">
+            <summary>
+            Not Connected
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort.MotorA">
+            <summary>
+            Motor A
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort.MotorB">
+            <summary>
+            Motor B
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort.MotorC">
+            <summary>
+            Motor C
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtMotorPort.AnyMotorPort">
+            <summary>
+            Any Motor Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.NotConnected">
+            <summary>
+            Not Connected
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.Sensor1">
+            <summary>
+            Sensor 1
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.Sensor2">
+            <summary>
+            Sensor 2
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.Sensor3">
+            <summary>
+            Sensor 3
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.Sensor4">
+            <summary>
+            Sensor 4
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort.AnySensorPort">
+            <summary>
+            Any Sensor Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.MotorStopState">
+            <summary>
+            Motor Stop State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.MotorStopState.Brake">
+            <summary>
+            Brake
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.MotorStopState.Coast">
+            <summary>
+            Coast
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.MotorStopState.Default">
+            <summary>
+            Default Stop State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort">
+            <summary>
+            The LEGO Nxt Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.NotConnected">
+            <summary>
+            Not Connected
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.MotorA">
+            <summary>
+            Motor A
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.EncoderA">
+            <summary>
+            Encoder A
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.A">
+            <summary>
+            Motor and Encoder A
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.MotorB">
+            <summary>
+            Motor B
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.EncoderB">
+            <summary>
+            Encoder B
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.B">
+            <summary>
+            Motor and Encoder B
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.MotorC">
+            <summary>
+            Motor C
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.EncoderC">
+            <summary>
+            Encoder C
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.C">
+            <summary>
+            Motor and Encoder C
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.AnyMotorPort">
+            <summary>
+            Any Motor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Sensor1">
+            <summary>
+            Sensor 1
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Sensor2">
+            <summary>
+            Sensor 2
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Sensor3">
+            <summary>
+            Sensor 3
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Sensor4">
+            <summary>
+            Sensor 4
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.AnySensorPort">
+            <summary>
+            Any Sensor 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Display">
+            <summary>
+            LEGO NXT Brick Display
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Speaker">
+            <summary>
+            Internal Brick Speaker
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Buttons">
+            <summary>
+            Brick Buttons
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Battery">
+            <summary>
+            Brick Battery
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.Aggregation">
+            <summary>
+            A LEGO NXT Aggregation Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoNxtPort.PortOverride">
+            <summary>
+            Port Override 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode">
+            <summary>
+            LEGO NXT Commands
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.StartProgram">
+            <summary>
+            Start Program
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.StopProgram">
+            <summary>
+            Stop Program
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.PlaySoundFile">
+            <summary>
+            Play a Sound file
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.PlayTone">
+            <summary>
+            Play a Tone
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.SetOutputState">
+            <summary>
+            Set Output State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.SetInputMode">
+            <summary>
+            Set Input Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetOutputState">
+            <summary>
+            Get Output State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetInputValues">
+            <summary>
+            Get Input Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.ResetInputScaledValue">
+            <summary>
+            Reset Input Scaled Value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.MessageWrite">
+            <summary>
+            Message Write
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.ResetMotorPosition">
+            <summary>
+            Reset Motor Position
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetBatteryLevel">
+            <summary>
+            Get Battery Level
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.StopSoundPlayback">
+            <summary>
+            Stop Sound Playback
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.KeepAlive">
+            <summary>
+            Keep Alive
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.LSGetStatus">
+            <summary>
+            Low Speed (I2C) Get Status
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.LSWrite">
+            <summary>
+            Low Speed (I2C) Write
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.LSRead">
+            <summary>
+            Low Speed (I2C) Read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetCurrentProgramName">
+            <summary>
+            Get Current Program Name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.MessageRead">
+            <summary>
+            Message Read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenRead">
+            <summary>
+            Open Read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenWrite">
+            <summary>
+            Open Write
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.Read">
+            <summary>
+            Read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.Write">
+            <summary>
+            Write
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.Close">
+            <summary>
+            Close
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.FindFirst">
+            <summary>
+            Find First
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.FindNext">
+            <summary>
+            Find Next
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetFirmwareVersion">
+            <summary>
+            Get Firmware Version
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenWriteLinear">
+            <summary>
+            OpenWriteLinear
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenReadLinear">
+            <summary>
+            OpenReadLinear
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenWriteData">
+            <summary>
+            OpenWriteData
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.OpenAppendData">
+            <summary>
+            OpenAppendData 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.RequestFirstModule">
+            <summary>
+            RequestFirstModule 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.RequestNextModule">
+            <summary>
+            RequestNextModule 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.CloseModuleHandle">
+            <summary>
+            CloseModuleHandle 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.ReadIOMap">
+            <summary>
+            ReadIOMap 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.WriteIOMap">
+            <summary>
+            WriteIOMap 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.BootCommand">
+            <summary>
+            BootCommand 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.SetBrickName">
+            <summary>
+            SetBrickName
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.GetDeviceInfo">
+            <summary>
+            GetDeviceInfo
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.DeleteUserFlash">
+            <summary>
+            DeleteUserFlash
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.PollCommandLength">
+            <summary>
+            PollCommandLength
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.PollCommand">
+            <summary>
+            PollCommand
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.BluetoothFactoryReset">
+            <summary>
+            BluetoothFactoryReset
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoCommandCode.Undefined">
+            <summary>
+            Undefined
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode">
+            <summary>
+            Error codes returned by the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.Success">
+            <summary>
+            Success
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.UnknownStatus">
+            <summary>
+            UnknownStatus
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.Exception">
+            <summary>
+            Exception
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.PendingCommunicationTransactionInProgress">
+            <summary>
+            PendingCommunicationTransactionInProgress
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.SpecifiedMailboxQueueIsEmpty">
+            <summary>
+            SpecifiedMailboxQueueIsEmpty
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoMoreHandles">
+            <summary>
+            NoMoreHandles
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoSpace">
+            <summary>
+            NoSpace
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoMoreFiles">
+            <summary>
+            NoMoreFiles
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.EndOfFileExpected">
+            <summary>
+            EndOfFileExpected
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.EndOfFile">
+            <summary>
+            EndOfFile
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NotALinearFile">
+            <summary>
+            NotALinearFile
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.FileNotFound">
+            <summary>
+            FileNotFound
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.HandleAllreadyClosed">
+            <summary>
+            HandleAllreadyClosed
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoLinearSpace">
+            <summary>
+            NoLinearSpace
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.UndefinedError">
+            <summary>
+            UndefinedError
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.FileIsBusy">
+            <summary>
+            FileIsBusy
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoWriteBuffers">
+            <summary>
+            NoWriteBuffers
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.AppendNotPossible">
+            <summary>
+            AppendNotPossible
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.FileIsFull">
+            <summary>
+            FileIsFull
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.FileExists">
+            <summary>
+            FileExists
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.ModuleNotFound">
+            <summary>
+            ModuleNotFound
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.OutOfBoundary">
+            <summary>
+            OutOfBoundary
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.IllegalFileName">
+            <summary>
+            IllegalFileName
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.IllegalHandle">
+            <summary>
+            IllegalHandle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.RequestFailed_FileNotFound">
+            <summary>
+            RequestFailed_FileNotFound
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.UnknownCommandOpcode">
+            <summary>
+            UnknownCommandOpcode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.InsanePacket">
+            <summary>
+            InsanePacket
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.DataContains_OutOfRange_Values">
+            <summary>
+            Data Contains Out-Of-Range Values
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.CommunicationBusError">
+            <summary>
+            CommunicationBusError
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoFreeMemoryInCommunicationBuffer">
+            <summary>
+            NoFreeMemoryInCommunicationBuffer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.SpecifiedChannelOrConnectionIsNotValid">
+            <summary>
+            SpecifiedChannelOrConnectionIsNotValid
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.SpecifiedChannelOrConnectionIsNotConfiguredOrBusy">
+            <summary>
+            SpecifiedChannelOrConnectionIsNotConfiguredOrBusy
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.NoActiveProgram">
+            <summary>
+            NoActiveProgram
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.IllegalSizeSpecified">
+            <summary>
+            IllegalSizeSpecified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.IllegalMailboxQueueIdSpecified">
+            <summary>
+            IllegalMailboxQueueIdSpecified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.AttemptedToAccessInvalidFieldOfAStructure">
+            <summary>
+            AttemptedToAccessInvalidFieldOfAStructure
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.BadInputOrOutputSpecified">
+            <summary>
+            BadInputOrOutputSpecified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.InsufficientMemoryAvailable">
+            <summary>
+            InsufficientMemoryAvailable
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoErrorCode.BadArguments">
+            <summary>
+            BadArguments
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode">
+            <summary>
+            The NXT output mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.NotSpecified">
+            <summary>
+            No Output Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.MotorOn">
+            <summary>
+            Turn on the specified motor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.Brake">
+            <summary>
+            Use run/brake instead of run/float in PWM
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.Regulated">
+            <summary>
+            Turns on the regulation
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.PowerRegulated">
+            <summary>
+            Regulated Power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoOutputMode.PowerBrake">
+            <summary>
+            Active Braking
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoRegulationMode">
+            <summary>
+            Motor regulation mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoRegulationMode.Idle">
+            <summary>
+            No regulation will be enabled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoRegulationMode.Individual">
+            <summary>
+            Motors will be powered individually.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoRegulationMode.Synchronized">
+            <summary>
+            Synchronization will be enabled (Needs enabled on two outputs)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState">
+            <summary>
+            The motor running state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState.Idle">
+            <summary>
+            Idle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState.RampUp">
+            <summary>
+            Ramp Up to the specified Power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState.Constant">
+            <summary>
+            Run at a Constant Power
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.RunState.RampDown">
+            <summary>
+            Ramp Down from the specified Power
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType">
+            <summary>
+            The Sensor Type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.NoSensor">
+            <summary>
+            No sensor attached
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.Switch">
+            <summary>
+            NXT or RCX touch sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.Temperature">
+            <summary>
+            RCX temperature sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.Reflection">
+            <summary>
+            RCX light sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.Angle">
+            <summary>
+            RCX encoder
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.LightActive">
+            <summary>
+            NXT light sensor (with spotlight)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.LightInactive">
+            <summary>
+            NXT light sensor (without spotlight)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.SoundDb">
+            <summary>
+            NXT sound sensor (dB scaling)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.SoundDba">
+            <summary>
+            NXT sound sensor (dBA scaling)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.Custom">
+            <summary>
+            Custom
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.I2C">
+            <summary>
+            I2C Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.I2C_9V">
+            <summary>
+            I2C 9Volt
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.HighSpeed">
+            <summary>
+            I2C High speed?  Unused
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.ColorFull">
+            <summary>
+            NXT Color sensor in Color mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.ColorRed">
+            <summary>
+            NXT Color sensor in light sensor mode with red light
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.ColorGreen">
+            <summary>
+            NXT Color sensor in light sensor mode with green light
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.ColorBlue">
+            <summary>
+            NXT Color sensor in light sensor mode with blue light
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.ColorNone">
+            <summary>
+            NXT Color sensor in light sensor mode with no light
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorType.NumberOfSensorTypes">
+            <summary>
+            Total number of types
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode">
+            <summary>
+            The translation mode of the LEGO NXT sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.RawMode">
+            <summary>
+            RawMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.BooleanMode">
+            <summary>
+            BooleanMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.TransitionCountMode">
+            <summary>
+            TransitionCountMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.PeriodCounterMode">
+            <summary>
+            PeriodCounterMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.PercentFullScaleMode">
+            <summary>
+            PercentFullScaleMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.CelsiusMode">
+            <summary>
+            CelsiusMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.FahrenheitMode">
+            <summary>
+            FahrenheitMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.AngleStepsMode">
+            <summary>
+            AngleStepsMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.SlopeMask">
+            <summary>
+            SlopeMask
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.LegoSensorMode.ModeMask">
+            <summary>
+            ModeMask
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.Contract">
+            <summary>
+            NxtCommon Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.WebCamService.Y2006.M05.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WebCamService.Y2006.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WebCamService.Y2006.M05.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WebCamService.Y2006.M05.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\WebCam\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\WebCam\obj\Debug\User.WebCamService.Y2006.M05.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\WebCam\obj\Debug\User.WebCamService.Y2006.M05.pdb

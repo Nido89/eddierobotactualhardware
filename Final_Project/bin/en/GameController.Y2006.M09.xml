@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameController.Y2006.M09</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.GameController.GameControllerService">
+            <summary>
+            Provides access to a DirectInput game controller such as a joystick or gamepad.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.ReplaceHandler(Microsoft.Robotics.Services.GameController.Replace)">
+            <summary>
+            Handles the replace message by replacing the state of the service
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.PollHandler(Microsoft.Robotics.Services.GameController.Poll)">
+            <summary>
+            Handles the Poll message by updating the state of the contollers and sending
+            appropriate notifications.
+            </summary>
+            <param name="poll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.SubscribeHandler(Microsoft.Robotics.Services.GameController.Subscribe)">
+            <summary>
+            Handles a subscribe request.
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.ChangeControllerHandler(Microsoft.Robotics.Services.GameController.ChangeController)">
+            <summary>
+            Handles a request to change the current controller.
+            </summary>
+            <param name="changeController"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.UpdateAxesHandler(Microsoft.Robotics.Services.GameController.UpdateAxes)">
+            <summary>
+            Handles a request to update the controller axes state.
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.UpdateButtonsHandler(Microsoft.Robotics.Services.GameController.UpdateButtons)">
+            <summary>
+            Handles a request to update the controller button state.
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.UpdatePovHatsHandler(Microsoft.Robotics.Services.GameController.UpdatePovHats)">
+            <summary>
+            Handles a request to update the Point Of View Hats state.
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.UpdateSlidersHandler(Microsoft.Robotics.Services.GameController.UpdateSliders)">
+            <summary>
+            Handles a request to update the sliders state.
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerService.GetControllersHandler(Microsoft.Robotics.Services.GameController.GetControllers)">
+            <summary>
+            Handles a request to return the current controllers.
+            </summary>
+            <param name="getControllers"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Contract">
+            <summary>
+            Joystick Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Contract.Identifier">
+            The Unique Contract Identifier for the Joystick service
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.GameControllerState">
+            <summary>
+            The state of the game controller.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerState.Update(System.DateTime,Microsoft.Robotics.Input.JoystickState)">
+            <summary>
+            Updates the state of the specified controller.
+            </summary>
+            <param name="timestamp"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.GameControllerState.Update(System.DateTime)">
+            <summary>
+            Updates the state of the current controller.
+            </summary>
+            <param name="timeStamp"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.TimeStamp">
+            <summary>
+            Indicates the time (in ms) of the last input reading of the Game Controller service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.Controller">
+            <summary>
+            Specifies the current controller used by this instance of the Game Controller service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.Axes">
+            <summary>
+            Identifies the axes of the controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.Buttons">
+            <summary>
+            Identifies the buttons of the controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.Sliders">
+            <summary>
+            Identifies the sliders of the controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GameControllerState.PovHats">
+            <summary>
+            Identifies the directional or Point-Of-View (POV) hats controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Substate">
+            <summary>
+            Identifies groups of controller state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.None">
+            <summary>
+            No controller state group specified
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.Controller">
+            <summary>
+            Controller state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.Axes">
+            <summary>
+            Thumbstick state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.Buttons">
+            <summary>
+            Button state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.Sliders">
+            <summary>
+            Slider state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Substate.PovHats">
+            <summary>
+            The directional or Point-Of-View (POV) hats state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Controller">
+            <summary>
+            This class represents a game controller.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Controller.Update(System.DateTime,Microsoft.Robotics.Input.Device)">
+            <summary>
+            Returns the state of the controller.
+            </summary>
+            <param name="timestamp"></param>
+            <param name="device"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Controller.GetState">
+            <summary>
+            Returns the joystick state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Controller.FindInstance">
+            <summary>
+            Finds an instance of this controller on the device.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Controller.Dispose">
+            <summary>
+            Disposes resources associated with the controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.TimeStamp">
+            <summary>
+            Identifies the time (in ms) of the input reading for this instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.Instance">
+            <summary>
+            Specifies the unique identifier (GUID) for this instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.Product">
+            <summary>
+            Specifies the unique product identifier for this instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.InstanceName">
+            <summary>
+            Specifies a user friendly name for this instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.ProductName">
+            <summary>
+            Specifies a user friendly product name for this instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.Current">
+            <summary>
+            Specifies if this is the current controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Controller.Attached">
+            <summary>
+            Enumerates all attached controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Axes">
+            <summary>
+            Identifies the controller axes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Axes.Update(System.DateTime,Microsoft.Robotics.Input.JoystickState)">
+            <summary>
+            Returns the state of the axes.
+            </summary>
+            <param name="timestamp"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.TimeStamp">
+            <summary>
+            Identifies the time (in ms) of the reading.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.X">
+            <summary>
+            Identifies the horizontal (X) axis value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.Y">
+            <summary>
+            Identifies the vertical (Y) axis value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.Z">
+            <summary>
+            Identifies the Z-axis value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.Rx">
+            <summary>
+            Identifies horizontal (X) axis rotation value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.Ry">
+            <summary>
+            Identifies vertical (Y) axis rotation value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Axes.Rz">
+            <summary>
+            Identifies z-axis rotation value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Buttons">
+            <summary>
+            Identifies the controller buttons.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Buttons.Update(System.DateTime,System.Boolean[])">
+            <summary>
+            Returns the state of the buttons.
+            </summary>
+            <param name="timestamp"></param>
+            <param name="buttons"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Buttons.TimeStamp">
+            <summary>
+            Identifies the time (in ms) of the reading.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Buttons.Pressed">
+            <summary>
+            Identifies the pressed state of the set of buttons.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Sliders">
+            <summary>
+            Identifies the controller sliders.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Sliders.Update(System.DateTime,System.Int32[])">
+            <summary>
+            Returns the state of the sliders.
+            </summary>
+            <param name="timestamp"></param>
+            <param name="sliders"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Sliders.TimeStamp">
+            <summary>
+            Identifies the time (in ms) of the current reading.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Sliders.Position">
+            <summary>
+            Identifies the set of position values of the sliders.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.PovHats">
+            <summary>
+            Identifies the current value of the directional or Point-Of-View (POV) hat controls.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.PovHats.Update(System.DateTime,System.Int32[])">
+            <summary>
+            Returns the state of the PovHats
+            </summary>
+            <param name="timestamp"></param>
+            <param name="povHats"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.PovHats.TimeStamp">
+            <summary>
+            Identifies the time (in ms) of the reading.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.PovHats.Direction">
+            <summary>
+            Identifies the set of directional values of the control.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.PollRequest">
+            <summary>
+            Requests the service to update the controller state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.GetControllersRequest">
+            <summary>
+            Requests the service to return information about all controllers
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.GetControllersResponse">
+            <summary>
+            Contains information about the controllers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.GetControllersResponse.Controllers">
+            <summary>
+            Identifies the set of controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.GameControllerOperations">
+            <summary>
+            The operations supported by this service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Get">
+            <summary>
+            Gets the current state of the controller.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Replace">
+            <summary>
+            Changes (or indicates a change to) the entire state of the controller.\nThis is sent initially to every connection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Replace.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Replace.#ctor(Microsoft.Robotics.Services.GameController.GameControllerState)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Poll">
+            <summary>
+            Polls the controller and updates the state since the controller was last polled.\nThe controller is automatically polled 20 times a second.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Poll.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Poll.#ctor(Microsoft.Robotics.Services.GameController.PollRequest)">
+            <summary>
+            Data constructor.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.ChangeController">
+            <summary>
+            Changes which game controller is in use.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.UpdateAxes">
+            <summary>
+            Indicates when one of the axes is moved.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.UpdateButtons">
+            <summary>
+            Indicates when one or more buttons is pressed or released.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.UpdateSliders">
+            <summary>
+            Indicates when the position of a slider is changed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.UpdatePovHats">
+            <summary>
+            Indicates when the position of a Point-Of-View (POV) hat switch is changed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Subscribe">
+            <summary>
+            Subscribe message that adds another service to the subscriber list so that notifications
+            can be sent to that service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.GetControllers">
+            <summary>
+            Returns a list of attached controllers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Resources.ControllerNotFound">
+            <summary>
+              Looks up a localized string similar to Unable to find the specified controller..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Resources.NotModifiable">
+            <summary>
+              Looks up a localized string similar to The selected portion of the state is not externally modifiable..
+            </summary>
+        </member>
+    </members>
+</doc>

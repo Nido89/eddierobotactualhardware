@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameController.Y2006.M09.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState">
+            <summary>
+                       The state of the game controller.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GameControllerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Clone">
+             <summary>
+            Clones GameControllerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GameControllerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GameControllerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GameControllerState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.TimeStamp">
+            <summary>
+                       Indicates the time (in ms) of the last input reading of the Game Controller service.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Controller">
+            <summary>
+                       Specifies the current controller used by this instance of the Game Controller service.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Axes">
+            <summary>
+                       Identifies the axes of the controller.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Buttons">
+            <summary>
+                       Identifies the buttons of the controller.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.Sliders">
+            <summary>
+                       Identifies the sliders of the controller.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GameControllerState.PovHats">
+            <summary>
+                       Identifies the directional or Point-Of-View (POV) hats controllers.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Controller">
+            <summary>
+                       This class represents a game controller.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Controller.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Controller to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Controller.Clone">
+             <summary>
+            Clones Controller
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Controller.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Controller to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Controller.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Controller
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Controller</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.TimeStamp">
+            <summary>
+                       Identifies the time (in ms) of the input reading for this instance.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.Instance">
+            <summary>
+                       Specifies the unique identifier (GUID) for this instance.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.Product">
+            <summary>
+                       Specifies the unique product identifier for this instance.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.InstanceName">
+            <summary>
+                       Specifies a user friendly name for this instance.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.ProductName">
+            <summary>
+                       Specifies a user friendly product name for this instance.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Controller.Current">
+            <summary>
+                       Specifies if this is the current controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Axes">
+            <summary>
+                       Identifies the controller axes.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Axes.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Axes to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Axes.Clone">
+             <summary>
+            Clones Axes
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Axes.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Axes to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Axes.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Axes
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Axes</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.TimeStamp">
+            <summary>
+                       Identifies the time (in ms) of the reading.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.X">
+            <summary>
+                       Identifies the horizontal (X) axis value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.Y">
+            <summary>
+                       Identifies the vertical (Y) axis value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.Z">
+            <summary>
+                       Identifies the Z-axis value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.Rx">
+            <summary>
+                       Identifies horizontal (X) axis rotation value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.Ry">
+            <summary>
+                       Identifies vertical (Y) axis rotation value.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Axes.Rz">
+            <summary>
+                       Identifies z-axis rotation value.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Buttons">
+            <summary>
+                       Identifies the controller buttons.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Buttons.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Buttons to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Buttons.Clone">
+             <summary>
+            Clones Buttons
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Buttons.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Buttons to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Buttons.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Buttons
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Buttons</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Buttons.TimeStamp">
+            <summary>
+                       Identifies the time (in ms) of the reading.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Buttons.Pressed">
+            <summary>
+                       Identifies the pressed state of the set of buttons.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Sliders">
+            <summary>
+                       Identifies the controller sliders.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Sliders.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Sliders to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Sliders.Clone">
+             <summary>
+            Clones Sliders
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Sliders.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Sliders to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Sliders.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Sliders
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Sliders</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Sliders.TimeStamp">
+            <summary>
+                       Identifies the time (in ms) of the current reading.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.Sliders.Position">
+            <summary>
+                       Identifies the set of position values of the sliders.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.PovHats">
+            <summary>
+                       Identifies the current value of the directional or Point-Of-View (POV) hat controls.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PovHats.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PovHats to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PovHats.Clone">
+             <summary>
+            Clones PovHats
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PovHats.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PovHats to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PovHats.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PovHats
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PovHats</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.PovHats.TimeStamp">
+            <summary>
+                       Identifies the time (in ms) of the reading.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.PovHats.Direction">
+            <summary>
+                       Identifies the set of directional values of the control.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.PollRequest">
+            <summary>
+                       Requests the service to update the controller state.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PollRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PollRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PollRequest.Clone">
+             <summary>
+            Clones PollRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PollRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PollRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.PollRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PollRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PollRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.GetControllersRequest">
+            <summary>
+                       Requests the service to return information about all controllers
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetControllersRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersRequest.Clone">
+             <summary>
+            Clones GetControllersRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetControllersRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetControllersRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetControllersRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse">
+            <summary>
+                       Contains information about the controllers.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GetControllersResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse.Clone">
+             <summary>
+            Clones GetControllersResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GetControllersResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GetControllersResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GetControllersResponse</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.GameController.Proxy.GetControllersResponse.Controllers">
+            <summary>
+                       Identifies the set of controllers.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Get">
+            <summary>
+                       Gets the current state of the controller.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Replace">
+            <summary>
+                       Changes (or indicates a change to) the entire state of the controller.\nThis is sent initially to every connection.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Poll">
+            <summary>
+                       Polls the controller and updates the state since the controller was last polled.\nThe controller is automatically polled 20 times a second.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.ChangeController">
+            <summary>
+                       Changes which game controller is in use.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.UpdateAxes">
+            <summary>
+                       Indicates when one of the axes is moved.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.UpdateButtons">
+            <summary>
+                       Indicates when one or more buttons is pressed or released.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.UpdatePovHats">
+            <summary>
+                       Indicates when the position of a Point-Of-View (POV) hat switch is changed.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.UpdateSliders">
+            <summary>
+                       Indicates when the position of a slider is changed.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Subscribe">
+            <summary>
+                       Subscribe message that adds another service to the subscriber list so that notifications
+                       can be sent to that service.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.GetControllers">
+            <summary>
+                       Returns a list of attached controllers.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.GameControllerOperations">
+            <summary>
+                       The operations supported by this service.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Substate">
+            <summary>
+                       Identifies groups of controller state.
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.None">
+            <summary>
+                       No controller state group specified
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.Controller">
+            <summary>
+                       Controller state
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.Axes">
+            <summary>
+                       Thumbstick state
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.Buttons">
+            <summary>
+                       Button state
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.Sliders">
+            <summary>
+                       Slider state
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.GameController.Proxy.Substate.PovHats">
+            <summary>
+                       The directional or Point-Of-View (POV) hats state
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.GameController.Proxy.Contract">
+            <summary>
+                       Provides access to a DirectInput game controller such as a joystick or gamepad.
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.GameController.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

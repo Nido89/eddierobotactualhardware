@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpeechRecognizerGui.Y2008.M03.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState">
+            <summary>
+                       The SpeechRecognizerGui state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechRecognizerGuiState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.Clone">
+             <summary>
+            Clones SpeechRecognizerGuiState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechRecognizerGuiState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechRecognizerGuiState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechRecognizerGuiState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.SpeechRecognizerState">
+            <summary>
+                       The speech recognizer's state
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiState.SpeechEvents">
+            <summary>
+                       Past speech events received from speech recognizer
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry">
+            <summary>
+                       EventListEntry - A list of events that have occurred
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EventListEntry to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.Clone">
+             <summary>
+            Clones EventListEntry
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EventListEntry to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EventListEntry
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EventListEntry</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.Timestamp">
+            <summary>
+                       Timestamp when the event occurred
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.SpeechDetected">
+            <summary>
+                       Speech Detected Notification
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.SpeechRecognized">
+            <summary>
+                       Speech Recognized Notification
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.RecognitionRejected">
+            <summary>
+                       Speech Rejected Notification
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventListEntry.SpeechInformation">
+            <summary>
+                       Speech Information
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType">
+            <summary>
+                       Events query request type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EventsQueryRequestType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType.Clone">
+             <summary>
+            Clones EventsQueryRequestType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EventsQueryRequestType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EventsQueryRequestType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EventsQueryRequestType</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryRequestType.NewerThanTimestamp">
+            <summary>
+                       Newer Than Timestamp
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse">
+            <summary>
+                       Events query response
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EventsQueryResponse to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse.Clone">
+             <summary>
+            Clones EventsQueryResponse
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EventsQueryResponse to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EventsQueryResponse
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EventsQueryResponse</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQueryResponse.Events">
+            <summary>
+                       List of events
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQueryRequestType">
+            <summary>
+                       SpeechRecognizer state query request type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQueryRequestType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SpeechRecognizerStateQueryRequestType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQueryRequestType.Clone">
+             <summary>
+            Clones SpeechRecognizerStateQueryRequestType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQueryRequestType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SpeechRecognizerStateQueryRequestType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQueryRequestType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SpeechRecognizerStateQueryRequestType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SpeechRecognizerStateQueryRequestType</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.HttpPostSuccess">
+            <summary>
+                       HTTP POST success type
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.HttpPostSuccess.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HttpPostSuccess to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.HttpPostSuccess.Clone">
+             <summary>
+            Clones HttpPostSuccess
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.HttpPostSuccess.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HttpPostSuccess to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.HttpPostSuccess.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HttpPostSuccess
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HttpPostSuccess</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.Get">
+            <summary>
+                       SpeechRecognizerGui Get Operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.EventsQuery">
+            <summary>
+                       Events query operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerStateQuery">
+            <summary>
+                       Speech recognizer state query operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.SpeechRecognizerGuiOperations">
+            <summary>
+                       SpeechRecognizerGui Main Operations Port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.Contract">
+            <summary>
+                       SpeechRecognizerGui - Interface for configuring the Speech Recognizer
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Technologies.Speech.SpeechRecognizerGui.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

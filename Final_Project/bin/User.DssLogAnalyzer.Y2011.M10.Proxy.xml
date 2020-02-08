@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.DssLogAnalyzer.Y2011.M10.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState">
+            <summary>
+                       DssLogAnalyzer state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current DssLogAnalyzerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.Clone">
+             <summary>
+            Clones DssLogAnalyzerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current DssLogAnalyzerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes DssLogAnalyzerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized DssLogAnalyzerState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.Envelopes">
+            <summary>
+                       Gets or sets a value indicating whether envelope list
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.LogFilesFolder">
+            <summary>
+                       Gets or sets a value indicating whether root log files folder
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.LogFileEnvelopes">
+            <summary>
+                       Gets or sets a value indicating whether the list of log files per directory
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.Headless">
+            <summary>
+                       Gets or sets a value indicating whether the UI should be displayed
+                       </summary>
+            <value><c>true</c> if headless; otherwise, <c>false</c>.
+                       </value>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerState.CurrentSelectedEnvelopes">
+            <summary>
+                       Gets or sets currently selected envelope
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList">
+            <summary>
+                       A list of envelopes that all originate from the same file
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EnvelopeList to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList.Clone">
+             <summary>
+            Clones EnvelopeList
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EnvelopeList to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EnvelopeList
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EnvelopeList</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeList.Envelopes">
+            <summary>
+                       Gets or sets envelope list
+                       </summary>
+            <value>
+                       The envelopes.
+                       </value>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope">
+            <summary>
+                       Data Envelope
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Envelope to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Clone">
+             <summary>
+            Clones Envelope
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Envelope to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Envelope
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Envelope</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Offset">
+            <summary>
+                       Gets or sets the frame offset
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Filename">
+            <summary>
+                       Gets or sets envelope filename
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Envelope.Header">
+            <summary>
+                       Gets or sets envelope header
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader">
+            <summary>
+                       Data envelope header
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EnvelopeHeader to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.Clone">
+             <summary>
+            Clones EnvelopeHeader
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EnvelopeHeader to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EnvelopeHeader
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EnvelopeHeader</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.Action">
+            <summary>
+                       Gets or sets which action this header is
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.From">
+            <summary>
+                       Gets or sets from URL
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.MessageId">
+            <summary>
+                       Gets or sets Message ID
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.To">
+            <summary>
+                       Gets or sets To URL
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopeHeader.TimeStamp">
+            <summary>
+                       Gets or sets the timestamp
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoadedRequest">
+            <summary>
+                       Log files loaded request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoadedRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current LogFilesLoadedRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoadedRequest.Clone">
+             <summary>
+            Clones LogFilesLoadedRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoadedRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current LogFilesLoadedRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoadedRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes LogFilesLoadedRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized LogFilesLoadedRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelectedRequest">
+            <summary>
+                       Envelope selected request
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelectedRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EnvelopesSelectedRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelectedRequest.Clone">
+             <summary>
+            Clones EnvelopesSelectedRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelectedRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EnvelopesSelectedRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelectedRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EnvelopesSelectedRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EnvelopesSelectedRequest</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Get">
+            <summary>
+                       DssLogAnalyzer get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Subscribe">
+            <summary>
+                       DssLogAnalyzer subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.LogFilesLoaded">
+            <summary>
+                       Log files loaded update request
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.EnvelopesSelected">
+            <summary>
+                       Envelope selected update request
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.DssLogAnalyzerOperations">
+            <summary>
+                       DssLogAnalyzer main operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Contract">
+            <summary>
+                       DssLogAnalyzer service class
+                       </summary>
+            <summary>
+                       Main service class
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerState">
+            <summary>
+                       RawViewer state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RawViewerState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerState.Clone">
+             <summary>
+            Clones RawViewerState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RawViewerState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RawViewerState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RawViewerState</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.Get">
+            <summary>
+                       RawViewer get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.Subscribe">
+            <summary>
+                       RawViewer subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.RawViewerOperations">
+            <summary>
+                       RawViewer main operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.Contract">
+            <summary>
+                       Raw Viewer Plug in Service
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

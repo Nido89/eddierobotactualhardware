@@ -1,0 +1,50 @@
+<Manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</Contract>
+          <Service>testwallsensorsim (TestWallSensorSim.Manifest).xml</Service>
+          <AliasList />
+          <PartnerList />
+          <Name>StateService</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q1="urn:uuid:ab2a31ad-21a1-4a60-a852-2ac94de80910">q1:simulationengine</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/2007/02/simulatedirobotlite.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/Create1</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q2="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q2:Entity</Name>
+        </Partner>
+        <Partner>
+          <Service>http://localhost/true</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q3="http://schemas.microsoft.com/robotics/2007/02/simulatedirobotlite.html">q3:IREntity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q4="urn:uuid:ab2a31ad-21a1-4a60-a852-2ac94de80910">q4:iRobotCreateLiteSimulation</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <Contract xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html</Contract>
+      <AliasList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html" />
+      <PartnerList xmlns="http://schemas.microsoft.com/xw/2004/10/dssp.html">
+        <Partner>
+          <Service>http://localhost/Create1</Service>
+          <AliasList />
+          <PartnerList />
+          <Name xmlns:q5="http://schemas.microsoft.com/robotics/2006/04/simulation.html">q5:Entity</Name>
+        </Partner>
+      </PartnerList>
+      <Name xmlns:q6="urn:uuid:ab2a31ad-21a1-4a60-a852-2ac94de80910">q6:SimulatedGenericDifferentialDrive</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

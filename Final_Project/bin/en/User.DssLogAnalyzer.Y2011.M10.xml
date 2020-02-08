@@ -1,0 +1,1245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.DssLogAnalyzer.Y2011.M10</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.About">
+            <summary>
+            Interaction logic for About.xaml
+            </summary>
+            <summary>
+            About
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.About.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.About"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.About.Button_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Event handler for key down
+            </summary>
+            <param name="sender">Button object</param>
+            <param name="e">Key event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.About.Button_PreviewMouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Event handler for mouse button down
+            </summary>
+            <param name="sender">Mouse button object</param>
+            <param name="e">Mouse button event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.About.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService">
+            <summary>
+            DssLogAnalyzer service class
+            </summary>
+            <summary>
+            Main service class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.DefaultProcessTimeout">
+            <summary>
+            The default process timeout
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.DefaultInitialEnvelopeCapacity">
+            <summary>
+            The initial envelope list capacity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.serviceState">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.mainPort">
+            <summary>
+            Main service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.submgrPort">
+            <summary>
+            Subscription manager port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.wpfServicePort">
+            <summary>
+            WPF service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.userInterface">
+            <summary>
+            Main user interface object
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService"/> class.
+            </summary>
+            <param name="creationPort">Creation port</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.SubscribeHandler(Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe)">
+            <summary>
+            Handles Subscribe messages
+            </summary>
+            <param name="subscribe">The subscribe request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFilesLoadedHandler(Microsoft.Robotics.Tools.DssLogAnalyzer.LogFilesLoaded)">
+            <summary>
+            Handles files loaded messages
+            </summary>
+            <param name="logFilesLoaded">Which files loaded</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.EnvelopesSelectedHandler(Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopesSelected)">
+            <summary>
+            Handles enevelope selected messages
+            </summary>
+            <param name="envelopesSelected">Which envelope selected</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Handler for drop messages
+            </summary>
+            <param name="drop">Drop message</param>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.Load(System.String)">
+            <summary>
+            Load files
+            </summary>
+            <param name="logFilesFolder">Root file directory</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.RefreshUserInterface">
+            <summary>
+            Refresh the user interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ShutdownLogAnalyzer">
+            <summary>
+            Shutdown the log analyzer
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.UpdateSelectedEnvelopes(Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeList)">
+            <summary>
+            Update selected envelopes
+            </summary>
+            <param name="currentSelectedEnvelopes">Current selected envelope</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.Initialize">
+            <summary>
+            Initialize service
+            </summary>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.Load">
+            <summary>
+            Load files
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.WpfInvoke(System.Action)">
+            <summary>
+            Invoke a wpf thread action method
+            </summary>
+            <param name="a">Which action to invoke</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.DisplayError(System.String)">
+            <summary>
+            Display error
+            </summary>
+            <param name="errorMessage">Error message to display</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.DisplayInfo(System.String)">
+            <summary>
+            Display an informational message
+            </summary>
+            <param name="infoMessage">Message to display</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ShutdownSuccessfullyOrKillProcess">
+            <summary>
+            Shutdown or kill process
+            </summary>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.guidByteLength">
+            <summary>
+            Get guid byte length
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ReadToNextBodyNode(System.Xml.XmlReader)">
+            <summary>
+            Read bytes until the next body node
+            </summary>
+            <param name="reader">The xml reader object</param>
+            <returns>True for successful read</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ReadToNextEnvelopeNode(System.Xml.XmlReader)">
+            <summary>
+            Read bytes until the next envelope node
+            </summary>
+            <param name="reader">The xml reader object</param>
+            <returns>True for successful read</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LoadLogs(System.String)">
+            <summary>
+            Load the dss log files
+            </summary>
+            <param name="rootFolder">Name of the root directory</param>
+            <returns>Load result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.AreBinaryFiles(System.String[])">
+            <summary>
+            Check if files are binary and not xml
+            </summary>
+            <param name="logFiles">Array of log files</param>
+            <returns>True if files are binary</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ConvertXmlLogsToBinary(System.String,System.String,System.Action{System.Double})">
+            <summary>
+            Convert xml logs to binary
+            </summary>
+            <param name="logFilesFolder">Root directory of files to be converted</param>
+            <param name="newLogFilesFolder">Directory to place converted files</param>
+            <param name="progressUpdate">Progress update action</param>
+            <returns>DSS result port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ConvertXmlFilesToBinary(System.String,System.String,Microsoft.Ccr.Core.Port{Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult},System.String[],System.Action{System.Double})">
+            <summary>
+            Convert xml log files to binary
+            </summary>
+            <param name="logFilesFolder">Root directory of files to be converted</param>
+            <param name="newLogFilesFolder">Location of converted files</param>
+            <param name="resultPort">Result dss port</param>
+            <param name="logFiles">Array of log files</param>
+            <param name="progressUpdate">Progress update action</param>
+            <returns>DSS result port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ConvertXmlLogToBinary(System.String,System.String,Microsoft.Ccr.Core.Port{Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult})">
+            <summary>
+            Convert xml files to binary
+            </summary>
+            <param name="logFile">File to be converted</param>
+            <param name="newLogFile">New file name</param>
+            <param name="resultPort">DSS result port</param>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.SerializeToBinary(Microsoft.Dss.Services.Serializer.DeserializeResult,Microsoft.Dss.Services.Serializer.DeserializeResult,System.IO.BinaryWriter)">
+            <summary>
+            Serailizer to binary format
+            </summary>
+            <param name="headerDeserResult">Result of deserialization of header</param>
+            <param name="bodyDeserResult">Result of deserialization of body</param>
+            <param name="bw">Binary writer</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LoadBinaryLogs(System.String)">
+            <summary>
+            Load binary log envelopes
+            </summary>
+            <param name="logFile">Log file name</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.ReadHeader(System.IO.BinaryReader)">
+            <summary>
+            Read envelope header
+            </summary>
+            <param name="reader">Binary reader</param>
+            <returns>Envelope header</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult">
+            <summary>
+            Enum for results of log processing
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult.Success">
+            <summary>
+            Successful read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult.Failure">
+            <summary>
+            Failed to read file
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.LogFileResult.XmlLogsDetected">
+            <summary>
+            Xml log format file detected
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser">
+            <summary>
+            Header parsing class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.ParseTo(System.Object[])">
+            <summary>
+            Parse the to field
+            </summary>
+            <param name="headers">Header array</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.ParseFrom(System.Object[])">
+            <summary>
+            Parse the from field
+            </summary>
+            <param name="headers">Header array</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.ParseTimeStamp(System.Object[])">
+            <summary>
+            Parse the timestamp
+            </summary>
+            <param name="headers">Header array</param>
+            <returns>Datetime result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.ParseMessageId(System.Object[])">
+            <summary>
+            Parse message id
+            </summary>
+            <param name="headers">Header array</param>
+            <returns>Guid result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.ParseAction(System.Object[])">
+            <summary>
+            Parse action
+            </summary>
+            <param name="headers">Header array</param>
+            <returns>String result</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService.HeaderParser.FindElement``1(System.Object[],System.String,System.Func{System.String,``0},``0)">
+            <summary>
+            Find the specified element
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <param name="headers">Header array</param>
+            <param name="elementName">Element name</param>
+            <param name="textConverter">Text converter method</param>
+            <param name="defaultValue">Default value</param>
+            <returns>Return found type</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.IDssLogAnalyzerPluginUi">
+            <summary>
+            Plugin interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.IDssLogAnalyzerPluginUi.UpdateUiFromEnvelopes(System.Collections.Generic.List{Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope})">
+            <summary>
+            Interface to Update the UI from data
+            </summary>
+            <param name="envelopes">List of data envelopes</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.IDssLogAnalyzerPluginService">
+            <summary>
+            Plugin service interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.IDssLogAnalyzerPluginService.LogFilesLoaded(Microsoft.Robotics.Tools.DssLogAnalyzer.LogFilesLoaded)">
+            <summary>
+            ITask enumerator interface for processing loaded log files
+            </summary>
+            <param name="loaded">Which log files have been loaded</param>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.IDssLogAnalyzerPluginService.EnvelopesSelected(Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopesSelected)">
+            <summary>
+            ITask enumerator interface for processing selected envelopes
+            </summary>
+            <param name="selected">Envelopes selected</param>
+            <returns>ITask enumerator</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader">
+            <summary>
+            Data envelope header
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader.Action">
+            <summary>
+            Gets or sets which action this header is
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader.From">
+            <summary>
+            Gets or sets from URL
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader.MessageId">
+            <summary>
+            Gets or sets Message ID
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader.To">
+            <summary>
+            Gets or sets To URL
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeHeader.TimeStamp">
+            <summary>
+            Gets or sets the timestamp
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope">
+            <summary>
+            Data Envelope
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope.Offset">
+            <summary>
+            Gets or sets the frame offset
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope.Filename">
+            <summary>
+            Gets or sets envelope filename
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope.Header">
+            <summary>
+            Gets or sets envelope header
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Contract">
+            <summary>
+            DssLogAnalyzer contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.Contract.Identifier">
+            <summary>
+            DSS contract identifer for DssLogAnalyzer
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeList">
+            <summary>
+            A list of envelopes that all originate from the same file
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeList.Envelopes">
+            <summary>
+            Gets or sets envelope list
+            </summary>
+            <value>
+            The envelopes.
+            </value>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState">
+            <summary>
+            DssLogAnalyzer state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState.CurrentSelectedEnvelopes">
+            <summary>
+            Gets or sets currently selected envelope
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState.Envelopes">
+            <summary>
+            Gets or sets a value indicating whether envelope list
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState.LogFilesFolder">
+            <summary>
+            Gets or sets a value indicating whether root log files folder
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState.LogFileEnvelopes">
+            <summary>
+            Gets or sets a value indicating whether the list of log files per directory
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState.Headless">
+            <summary>
+            Gets or sets a value indicating whether the UI should be displayed
+            </summary>
+            <value>
+              <c>true</c> if headless; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerOperations">
+            <summary>
+            DssLogAnalyzer main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Get">
+            <summary>
+            DssLogAnalyzer get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Get.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Get"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Get"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerState,W3C.Soap.Fault})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Get"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+            <param name="responsePort">The response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe">
+            <summary>
+            DssLogAnalyzer subscribe operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.SubscribeResponseType,W3C.Soap.Fault})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Subscribe"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+            <param name="responsePort">The response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.LogFilesLoadedRequest">
+            <summary>
+            Log files loaded request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.LogFilesLoaded">
+            <summary>
+            Log files loaded update request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopesSelectedRequest">
+            <summary>
+            Envelope selected request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopesSelected">
+            <summary>
+            Envelope selected update request
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerHelper">
+            <summary>
+            Stateless helper class for deserializing envelopes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerHelper.DeserializeEnvelope(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Deserialize the a envelope record
+            </summary>
+            <param name="envelope">Envelope to be deserialized</param>
+            <returns>Deserialized envelope</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService">
+            <summary>
+            Raw Viewer Plug in Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.mainPort">
+            <summary>
+            Main service port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.submgrPort">
+            <summary>
+            Sub Mgr Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.logAnalyzer">
+            <summary>
+            DssLogAnalyzerService partner
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.wpfServicePort">
+            <summary>
+            WPF Service Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.userInterface">
+            <summary>
+            User Interface
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService"/> class.
+            </summary>
+            <param name="creationPort">The creation port.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.UpdateUiFromListsOfEnvelopes(System.Collections.Generic.List{Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeList})">
+            <summary>
+            Updates the UI from lists of envelopes.
+            </summary>
+            <param name="listOfEnvelopes">The list of envelopes.</param>
+            <returns>Yield Break on WPF Service Port Invoke</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.SubscribeHandler(Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe)">
+            <summary>
+            Handles Subscribe messages
+            </summary>
+            <param name="subscribe">The subscribe request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.EnvelopesSelected(Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopesSelected)">
+            <summary>
+            ITask enumerator interface for processing selected envelopes
+            </summary>
+            <param name="envelopesSelected">Envelopes selected</param>
+            <returns>
+            ITask enumerator
+            </returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.LogFilesLoaded(Microsoft.Robotics.Tools.DssLogAnalyzer.LogFilesLoaded)">
+            <summary>
+            ITask enumerator interface for processing loaded log files
+            </summary>
+            <param name="logFilesLoaded">Which log files have been loaded</param>
+            <returns>
+            ITask enumerator
+            </returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.DeserializeEnvelopeBody(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope,System.Action{System.String})">
+            <summary>
+            Deserializes the envelope body.
+            </summary>
+            <param name="envelope">The envelope.</param>
+            <param name="callback">The callback.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.DeserializeEnvelopeBody(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Deserializes the envelope body.
+            </summary>
+            <param name="envelope">The envelope.</param>
+            <returns>Returns the Result Port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+            <returns>Yield Returns on the Choice</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.SortByTimestamp">
+            <summary>
+            Sort by Time Stamp
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService.SortByTimestamp.Compare(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope,Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <param name="x">The first object to compare.</param>
+            <param name="y">The second object to compare.</param>
+            <returns>
+            Value
+            Condition
+            Less than zero
+            <paramref name="x"/> is less than <paramref name="y"/>.
+            Zero
+            <paramref name="x"/> equals <paramref name="y"/>.
+            Greater than zero
+            <paramref name="x"/> is greater than <paramref name="y"/>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi">
+            <summary>
+            Interaction logic for RawViewerPluginUi.xaml
+            </summary>
+            <summary>
+            RawViewerPluginUi
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.plugInService">
+            <summary>
+            Raw Viewer Plug in Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.envelopes">
+            <summary>
+            Envelope for Log Analyzer
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.#ctor(Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi"/> class.
+            </summary>
+            <param name="plugInService">The service.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.UpdateUiFromEnvelopes(System.Collections.Generic.List{Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope})">
+            <summary>
+            Interface to Update the UI from data
+            </summary>
+            <param name="envelopes">List of data envelopes</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi._selectFrameSlider_ValueChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Double})">
+            <summary>
+            Handles the ValueChanged event of the _selectFrameSlider control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.DisplayEnvelope(System.String)">
+            <summary>
+            Displays the envelope.
+            </summary>
+            <param name="xml">The XML.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi._displayLongContent_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Checked event of the _displayLongContent control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerPluginUi.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Contract">
+            <summary>
+            RawViewer contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Contract.Identifier">
+            <summary>
+            DSS contract identifer for RawViewer
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerState">
+            <summary>
+            RawViewer state
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerOperations">
+            <summary>
+            RawViewer main operations port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get">
+            <summary>
+            RawViewer get operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.RawViewerState,W3C.Soap.Fault})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Get"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+            <param name="responsePort">The response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe">
+            <summary>
+            RawViewer subscribe operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe.#ctor(Microsoft.Dss.ServiceModel.Dssp.SubscribeRequestType,Microsoft.Ccr.Core.PortSet{Microsoft.Dss.ServiceModel.Dssp.SubscribeResponseType,W3C.Soap.Fault})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzerPlugins.RawViewer.Subscribe"/> class.
+            </summary>
+            <param name="body">The request message body</param>
+            <param name="responsePort">The response port for the request</param>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.DssOperationLog">
+            <summary>
+              Looks up a localized string similar to DssOperationLog.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.FolderContainsNoLogFiles">
+            <summary>
+              Looks up a localized string similar to Folder contains no log files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.FolderNotFound">
+            <summary>
+              Looks up a localized string similar to Folder not found.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.LogFilesLoaded">
+            <summary>
+              Looks up a localized string similar to Log files loaded.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.PersonTrackerServiceName">
+            <summary>
+              Looks up a localized string similar to persontracker.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.SelectFolderForConvertedBinaryFiles">
+            <summary>
+              Looks up a localized string similar to Select a folder to save the converted XML logs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.SelectFolderPrompt">
+            <summary>
+              Looks up a localized string similar to Select a folder.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.UserCanceledLoad">
+            <summary>
+              Looks up a localized string similar to Loading canceled.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.WebCamServiceName">
+            <summary>
+              Looks up a localized string similar to webcam.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.XmlToBinaryConversionWarning">
+            <summary>
+              Looks up a localized string similar to You are attempting to load XML logs. DSS Log Analyzer will need to convert these logs to binary logs, which may take a long time. Do you wish to continue?.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.Properties.Resources.XmlToBinaryConversionWarningCaption">
+            <summary>
+              Looks up a localized string similar to XML logs detected.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface">
+            <summary>
+            Interaction logic for UserInterface.xaml
+            </summary>
+            <summary>
+            UserInterface
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MaxComboBoxLength">
+            <summary>
+            Maximum combination box length
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MinZoomLevel">
+            <summary>
+            The minimum zoom level
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MaxZoomLevel">
+            <summary>
+            The maximum zoom level
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.analyzerService">
+            <summary>
+            The dssloganalyzer service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.zoomLevel">
+            <summary>
+            The current zoom level
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.selectionRectangleStart">
+            <summary>
+            The selection rectangle start value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.selectionRectangle">
+            <summary>
+            The selection rectangle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.timelineYOffsets">
+            <summary>
+            The timeline y axis offsets
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.selectedRectanglesAndEnvelopes">
+            <summary>
+            List of selected rectangles and envelopes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.zoomOutScalar">
+            <summary>
+            The zoom out scalar value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.zoomInScalar">
+            <summary>
+            The zoom in sacalar value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.timelineXOffset">
+            <summary>
+            The timeline x axis offset
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.envelopesAndRectangles">
+            <summary>
+            The array of envelope and rectangle pairs
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.#ctor(Microsoft.Robotics.Tools.DssLogAnalyzer.DssLogAnalyzerService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface"/> class.
+            </summary>
+            <param name="service">The dssloganalyzer service</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ShowProgressBar">
+            <summary>
+            Show progress bar
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.HideProgressBar">
+            <summary>
+            Hide progress bar
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.UpdateProgress(System.Double)">
+            <summary>
+            Update progress bar
+            </summary>
+            <param name="newProgress">The value to update to</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.DisplayError(System.String)">
+            <summary>
+            Display error string
+            </summary>
+            <param name="errorMessage">The error message to display</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.DisplayInfo(System.String)">
+            <summary>
+            Display info string
+            </summary>
+            <param name="infoMessage">The info message to display</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.RefreshUI(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{Microsoft.Robotics.Tools.DssLogAnalyzer.EnvelopeList}},System.String)">
+            <summary>
+            Refresh the window UI
+            </summary>
+            <param name="logFileEnvelopes">List of data envelopes</param>
+            <param name="commonPath">The common log file path</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.PromptForNewLogFolder(Microsoft.Ccr.Core.PortSet{System.String,W3C.Soap.Fault})">
+            <summary>
+            Prompt for New log folder
+            </summary>
+            <param name="resultPort">The result port to post result</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.IndexOfSelectedEnvelope(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Returns -1 if envelope was not previously selected
+            </summary>
+            <param name="selectedEnvelope">The envelope which has been selected</param>
+            <returns>Selected envelope index</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.CommandBindingOpen_Executed(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            Open dialog event handler
+            </summary>
+            <param name="sender">The sender object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.PresentLoadFileDialog(System.String)">
+            <summary>
+            Show the file folder selection dialog
+            </summary>
+            <param name="dialogTitle">Dialog title string</param>
+            <returns>Log file folder path</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.CommandBindingClose_Executed(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            Shutdown analyzer event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.CommandBinding_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Can execute event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Menu item click handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.Window_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Mouse up event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Mouse button event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SelectEnvelopesFromGeometry(System.Windows.Media.Geometry)">
+            <summary>
+            Select envelopes from geometry
+            </summary>
+            <param name="geometry">The geometry to select from</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.AddToSelectedRectangleEnvelopePairs(System.Windows.Shapes.Rectangle,Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Add to the selected rectangle envelope pair list
+            </summary>
+            <param name="r">The rectangle to add</param>
+            <param name="e">The envelope to add</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ResetSelectedRectangles">
+            <summary>
+            Reset the selected rectangle envelope pair list brushes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SelectSingleEnvelope(System.Windows.Shapes.Rectangle,Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Select single envelope
+            </summary>
+            <param name="selectedRectangle">Selected rectangle</param>
+            <param name="selectedEnvelope">Selected envelope</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.Window_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+            Window size changed event
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._mainCanvas_MouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Mouse wheel event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SetZoomLevel(System.Double)">
+            <summary>
+            Set zoom level
+            </summary>
+            <param name="newZoomLevel">New zoom level</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ScrollBar_ValueChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Double})">
+            <summary>
+            Scrollbar value changed event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.Window_MouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Mouse move event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.Window_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Mouse down event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ScrollViewer_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Preview mouse wheel event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ComboBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Comination box selection changed event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ComboBox_SelectionChanged(System.String)">
+            <summary>
+            Selection changed processing
+            </summary>
+            <param name="selectedText">Selected text</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.ConstrainZoomComboBoxLength">
+            <summary>
+            Contrain zoom combination box length
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._zoomComboBox_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Zoom combination box key down event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Key event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._zoomComboBox_KeyUp(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Zoom combination box key up event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Key event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._timelineSlider_ValueChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Double})">
+            <summary>
+            Timeline slider value changed event handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._rightArrowTimelineBtn_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Right arrow timeline button click handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface._leftArrowTimelineBtn_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Left arrow timeline button click handler
+            </summary>
+            <param name="sender">Sending object</param>
+            <param name="e">Routed event arguments</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.DefaultMargin">
+            <summary>
+            Gets the default margin
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.TextHeight">
+            <summary>
+            Gets the text height
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.EnvelopeHeight">
+            <summary>
+            Gets the envelope height
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.DefaultEnvelopeBrush">
+            <summary>
+            Gets the default envelope brush
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SelectedEnvelopeBrush">
+            <summary>
+            Gets the selected envelope brush
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MaxEnvelopeWidth">
+            <summary>
+            Gets the maximum envelope width
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.MinEnvelopeWidth">
+            <summary>
+            Gets the minimum envelope width
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.OpenFolderDialog">
+            <summary>
+            An internal class to manage log file folder selection
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.OpenFolderDialog.folderBrowser">
+            <summary>
+            The folder browser dialog
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.OpenFolderDialog.ShowDialog(System.String)">
+            <summary>
+            Show the file folder selection dialog
+            </summary>
+            <param name="description">Folder description</param>
+            <returns>Dialog result</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.OpenFolderDialog.FolderPath">
+            <summary>
+            Gets the folder path string
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.RectangleEnvelopePair">
+            <summary>
+            Class to hold rectangle and enevelope pairs
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.RectangleEnvelopePair.Rectangle">
+            <summary>
+            Gets or sets the rectangle for this pair
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.RectangleEnvelopePair.Envelope">
+            <summary>
+            Gets or sets the envelope for this pair
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SortByTimestamp">
+            <summary>
+            Time stamp sorter helper class
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface.SortByTimestamp.Compare(Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope,Microsoft.Robotics.Tools.DssLogAnalyzer.Envelope)">
+            <summary>
+            Compare function
+            </summary>
+            <param name="x">Left side</param>
+            <param name="y">Right side</param>
+            <returns>Compare result</returns>
+        </member>
+    </members>
+</doc>

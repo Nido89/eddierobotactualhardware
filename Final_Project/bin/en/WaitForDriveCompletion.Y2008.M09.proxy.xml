@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WaitForDriveCompletion.Y2008.M09.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState">
+            <summary>
+                       WaitForDriveCompletion state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WaitForDriveCompletionState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState.Clone">
+             <summary>
+            Clones WaitForDriveCompletionState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WaitForDriveCompletionState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WaitForDriveCompletionState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WaitForDriveCompletionState</returns>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionState.LastStatus">
+            <summary>
+                       LastStatus - Status of the last operation (NOT IMPLEMENTED)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitRequestType">
+            <summary>
+                       WaitRequestType
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitRequestType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WaitRequestType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitRequestType.Clone">
+             <summary>
+            Clones WaitRequestType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitRequestType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WaitRequestType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitRequestType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WaitRequestType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WaitRequestType</returns>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType">
+            <summary>
+                       WaitResponseType
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WaitResponseType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType.Clone">
+             <summary>
+            Clones WaitResponseType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WaitResponseType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WaitResponseType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WaitResponseType</returns>
+        </member>
+        <member name="P:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitResponseType.DriveStatus">
+            <summary>
+                       DriveStatus - Returns the DriveStage from the Differential Drive
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Get">
+            <summary>
+                       WaitForDriveCompletion Get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Replace">
+            <summary>
+                       WaitForDriveCompletion Replace operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Subscribe">
+            <summary>
+                       WaitForDriveCompletion subscribe operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Wait">
+            <summary>
+                       WaitForDriveCompletion get operation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.WaitForDriveCompletionOperations">
+            <summary>
+                       WaitForDriveCompletion main operations port
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Contract">
+            <summary>
+                       WaitForDriveCompletion Service - Waits for a Canceled or Completed notification from a Differential Drive
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Dss.Services.Samples.WaitForDriveCompletion.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

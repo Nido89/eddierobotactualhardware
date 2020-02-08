@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlobTrackerCalibrate.Y2007.M04</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService">
+            <summary>
+            Implementation class for BlobTrackerCalibrate
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService._mainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService.GetHandler(Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.Get)">
+            <summary>
+            Get Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateService.OnUpdateProcessing(Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessing)">
+            <summary>
+            OnUpdateProcessing Handler
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.Contract">
+            <summary>
+            BlobTrackerCalibrate Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateState">
+            <summary>
+            The BlobTrackerCalibrate State
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateState.Processing">
+            <summary>
+            Indicates if the service is in the processing state.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateState.Shutdown">
+            <summary>
+            Indicates if the service is shut down.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessingRequest">
+            <summary>
+            Request type for updating the Processing state
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessingRequest.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessingRequest.#ctor(System.Boolean)">
+            <summary>
+            Creates a new UpdateProcessingRequest object.
+            </summary>
+            <param name="processing"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessingRequest.Processing">
+            <summary>
+            Is processing?
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.BlobTrackerCalibrateOperations">
+            <summary>
+            BlobTrackerCalibrate Main Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.Get">
+            <summary>
+            BlobTrackerCalibrate Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessing">
+            <summary>
+            BlobTrackerCalibrate UpdateProcessing Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessing.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.UpdateProcessing.#ctor(System.Boolean)">
+            <summary>
+            Creates a new UpdateProcessing message with the specified body.
+            </summary>
+            <param name="processing"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm">
+            <summary>
+            BlobTracker Visualization Form
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.#ctor(Microsoft.Ccr.Core.Port{Microsoft.Ccr.Core.Shutdown},Microsoft.Robotics.Services.Sample.BlobTracker.Proxy.BlobTrackerOperations)">
+            <summary>
+            Creates a new VisualizationForm with the specified Shutdown port.
+            </summary>
+            <param name="shutdownPort">Shutdown port</param>
+            <param name="blobTrackerPort">BlobTrackerOperations portset</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.OnClosed(System.EventArgs)">
+            <summary>
+            OnClosed event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.BlobTrackerCalibrate.VisualizationForm.CameraImage">
+            <summary>
+            Specifies a image frame captured by the camera.
+            </summary>
+        </member>
+    </members>
+</doc>

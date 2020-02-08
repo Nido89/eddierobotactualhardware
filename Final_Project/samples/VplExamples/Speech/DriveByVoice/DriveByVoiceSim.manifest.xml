@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--This file was created with the Microsoft Visual Programming Language.-->
+<Manifest xmlns:speechrecognizer="http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html" xmlns:dssp="http://schemas.microsoft.com/xw/2004/10/dssp.html" xmlns:this="urn:uuid:e0198c5c-b75f-4a79-af12-e6c3e620ebcb" xmlns:texttospeech="http://schemas.microsoft.com/2006/05/texttospeech.html" xmlns:simulateddifferentialdrive="http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html" xmlns:simulation="http://schemas.microsoft.com/robotics/2006/04/simulation.html" xmlns:diagram="http://schemas.microsoft.com/2008/04/drivebyvoice/diagram.html" xmlns:speechrecognizergui="http://schemas.microsoft.com/robotics/2008/03/speechrecognizergui.html" xmlns:simulationengine="http://schemas.microsoft.com/robotics/2006/04/simulationengine.html" xmlns="http://schemas.microsoft.com/xw/2004/10/manifest.html">
+  <CreateServiceList>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2008/04/drivebyvoice/diagram.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:SpeechRecognizer</dssp:Name>
+          <dssp:ServiceName>this:SpeechRecognizer</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:TexttoSpeechTTS</dssp:Name>
+          <dssp:ServiceName>this:TexttoSpeechTTS</dssp:ServiceName>
+        </dssp:Partner>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/05/drive.html</dssp:Contract>
+          <dssp:PartnerList />
+          <dssp:Name>diagram:GenericDifferentialDrive</dssp:Name>
+          <dssp:ServiceName>this:simulateddifferentialdrive</dssp:ServiceName>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:Diagram</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2008/02/speechrecognizer.html</dssp:Contract>
+      <dssp:PartnerList />
+      <Name>this:SpeechRecognizer</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/2006/05/texttospeech.html</dssp:Contract>
+          <dssp:Service>texttospeechtts.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:TexttoSpeechTTS</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2008/03/speechrecognizergui.html</dssp:Contract>
+      <dssp:PartnerList />
+      <Name>this:SpeechRecognizerGui</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Contract>http://schemas.microsoft.com/robotics/2006/04/simulationengine.html</dssp:Contract>
+          <dssp:Service>simulationengine.config.xml</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>dssp:StateService</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:simulationengine</Name>
+    </ServiceRecordType>
+    <ServiceRecordType>
+      <dssp:Contract>http://schemas.microsoft.com/robotics/simulation/services/2006/05/simulateddifferentialdrive.html</dssp:Contract>
+      <dssp:PartnerList>
+        <dssp:Partner>
+          <dssp:Service>http://localhost/IRobotCreateMotorBase</dssp:Service>
+          <dssp:PartnerList />
+          <dssp:Name>simulation:Entity</dssp:Name>
+        </dssp:Partner>
+      </dssp:PartnerList>
+      <Name>this:simulateddifferentialdrive</Name>
+    </ServiceRecordType>
+  </CreateServiceList>
+</Manifest>

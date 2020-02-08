@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Parallax2011ReferencePlatformIoControllerState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/2011/07/parallax2011referenceplatformiocontroller.html">
+    <LastStartTime>2011-10-20T09:34:05.2391144-07:00</LastStartTime>
+    <FWVersion>0</FWVersion>
+    <AccelerationRate>5</AccelerationRate>
+    <DefaultResponsePause>50</DefaultResponsePause>
+    <SensorPollingInterval>100</SensorPollingInterval>
+    <DriveState>
+        <LeftWheel xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">
+            <Radius xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0.0762</Radius>
+            <EncoderState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+                <TicksPerRevolution xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">36</TicksPerRevolution>
+            </EncoderState>
+        </LeftWheel>
+        <RightWheel xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">
+            <Radius xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">0.0762</Radius>
+            <EncoderState xmlns="http://schemas.microsoft.com/robotics/2006/05/motor.html">
+                <TicksPerRevolution xmlns="http://schemas.microsoft.com/robotics/2006/05/encoder.html">36</TicksPerRevolution>
+            </EncoderState>
+        </RightWheel>
+        <DistanceBetweenWheels xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">0.390525</DistanceBetweenWheels>
+        <IsEnabled xmlns="http://schemas.microsoft.com/robotics/2006/05/drive.html">false</IsEnabled>
+    </DriveState>
+</Parallax2011ReferencePlatformIoControllerState>

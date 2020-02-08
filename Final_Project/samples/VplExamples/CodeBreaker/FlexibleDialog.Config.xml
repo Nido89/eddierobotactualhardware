@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FlexDialogState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/08/flexdialog.html">
+	<Title>CodeBreaker</Title>
+	<Visible>false</Visible>
+	<Controls>
+		<FlexControl>
+			<Id>Guess</Id>
+			<ControlType>Label</ControlType>
+			<Text>I haven't guessed yet!</Text>
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>sep</Id>
+			<ControlType>Seperator</ControlType>
+			<Text />
+			<Value />
+		</FlexControl>
+		<FlexControl>
+			<Id>Label</Id>
+			<ControlType>Label</ControlType>
+			<Text>How many did I get right?</Text>
+			<Value />
+		</FlexControl>
+	</Controls>
+	<Buttons>
+		<FlexButton>
+			<Id>None</Id>
+			<ControlType>Button</ControlType>
+			<Text>None</Text>
+			<Value />
+		</FlexButton>
+		<FlexButton>
+			<Id>One</Id>
+			<ControlType>Button</ControlType>
+			<Text>One</Text>
+			<Value />
+		</FlexButton>
+		<FlexButton>
+			<Id>Two</Id>
+			<ControlType>Button</ControlType>
+			<Text>Two</Text>
+			<Value />
+		</FlexButton>
+		<FlexButton>
+			<Id>Three</Id>
+			<ControlType>Button</ControlType>
+			<Text>Three</Text>
+			<Value />
+		</FlexButton>
+	</Buttons>
+</FlexDialogState>

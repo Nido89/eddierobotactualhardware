@@ -1,0 +1,28 @@
+newmtl Color_D05
+illum 4
+Kd 0.31 0.22 0.21
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.33 0.33 0.33
+Ns 0.06
+newmtl ExposedMetal
+illum 4
+Kd 0.56 0.56 0.56
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.33 0.33 0.33
+Ns 0.06
+newmtl RoofColor
+illum 4
+Kd 0.93 0.93 0.93
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.33 0.33 0.33
+Ns 0.06
+newmtl TiresAndUnderCarriage
+Kd 0.23 0.23 0.23
+Ka 0.00 0.00 0.00
+Ks 0.33 0.33 0.33

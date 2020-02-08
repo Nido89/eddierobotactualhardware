@@ -1,0 +1,86 @@
+﻿<Window x:Class="Microsoft.Robotics.Tools.DssLogAnalyzer.UserInterface"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Width="Auto" Title="DSS Log Analyzer" >
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open"
+                        Executed="CommandBindingOpen_Executed"
+                        CanExecute="CommandBinding_CanExecute"/>
+        <CommandBinding Command="ApplicationCommands.Close"
+                        Executed="CommandBindingClose_Executed"
+                        CanExecute="CommandBinding_CanExecute"/>
+    </Window.CommandBindings>
+    <Grid Width="Auto" Height="Auto" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Name="_mainMenu" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Command="ApplicationCommands.Open"></MenuItem>
+                <MenuItem Header="E_xit" Command="ApplicationCommands.Close"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <StackPanel Name="mainProgressBarStackPanel" Orientation="Horizontal" Visibility="Hidden" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Name="mainProgressBarLabel" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" >Conversion progress...</Label>
+                <ProgressBar Name="mainProgressBar" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+            </StackPanel>
+            <ScrollViewer 
+                VerticalScrollBarVisibility="Auto" 
+                HorizontalScrollBarVisibility="Auto" 
+                PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+                
+                <Canvas Name="mainCanvas" Width="Auto" Height="Auto" Background="Transparent" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove"
+                SizeChanged="Window_SizeChanged" MouseWheel="_mainCanvas_MouseWheel" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
+                
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel VerticalAlignment="Bottom">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>   
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Name="leftArrowTimelineBtn" Width="{x:Static SystemParameters.MenuButtonWidth}" Click="_leftArrowTimelineBtn_Click">
+                        <Image Source="/DssLogAnalyzer.Y2009.M11;component/Resources/LeftArrow.png" ToolTip="Select previous envelope" />
+                    </Button>
+                    <Slider Grid.Column="1" Name="timelineSlider" Width="Auto" Height="Auto" Orientation="Horizontal" ValueChanged="_timelineSlider_ValueChanged" Maximum="10" ToolTip="Global timeline slider"></Slider>
+                    <Button Grid.Column="2" Name="rightArrowTimelineBtn" Width="{x:Static SystemParameters.MenuButtonWidth}" Click="_rightArrowTimelineBtn_Click">
+                        <Image Source="/DssLogAnalyzer.Y2009.M11;component/Resources/RightArrow.png" ToolTip="Select next envelope" />
+                    </Button>
+                </Grid>
+                <ScrollBar Name="timelineScrollBar" Width="Auto" Height="Auto" Orientation="Horizontal" ValueChanged="ScrollBar_ValueChanged" ViewportSize="1" Maximum="0" />
+                <StatusBar Name="statusBar">
+                    <StatusBarItem>
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Stretch" Name="statusTextBlock"/>
+                    </StatusBarItem>
+                    <StatusBarItem HorizontalAlignment="Right" ToolTip="Change zoom level">
+                        <StackPanel Orientation="Horizontal">
+                            <Image></Image>
+                            <ComboBox Name="zoomComboBox" Width="Auto" Text="100%" SelectedIndex="6" 
+                                      SelectionChanged="ComboBox_SelectionChanged" ToolTip="Change zoom level" IsEditable="True" KeyDown="_zoomComboBox_KeyDown" KeyUp="_zoomComboBox_KeyUp">
+                                <ComboBoxItem>2000%</ComboBoxItem>
+                                <ComboBoxItem>1000%</ComboBoxItem>
+                                <ComboBoxItem>400%</ComboBoxItem>
+                                <ComboBoxItem>200%</ComboBoxItem>
+                                <ComboBoxItem>150%</ComboBoxItem>
+                                <ComboBoxItem>125%</ComboBoxItem>
+                                <ComboBoxItem>100%</ComboBoxItem>
+                                <ComboBoxItem>75%</ComboBoxItem>
+                                <ComboBoxItem>50%</ComboBoxItem>
+                                <ComboBoxItem>25%</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>                        
+                    </StatusBarItem>
+                </StatusBar>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

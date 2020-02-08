@@ -1,0 +1,2105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulationCommon.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties">
+            <summary>
+                       Describes the material covering a physical shape. 
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MaterialProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Clone">
+             <summary>
+            Clones MaterialProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MaterialProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MaterialProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MaterialProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Name">
+            <summary>
+                       Name for material. Named materials can be cached and re-used
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Restitution">
+            <summary>
+                       Restitution coefficient. Smaller values, less bounce.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.DynamicFriction">
+            <summary>
+                       Dynamic friction coefficient. Must be less than 1.0 and static friction;
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.StaticFriction">
+            <summary>
+                       Static friction coefficient. Must be larger than dynamic friction. It can be larger than 1.0
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.MaterialIndex">
+            <summary>
+                       Identifier for material. If supplied on creation, physics engine will look up material and re-use instance
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialProperties.Advanced">
+            <summary>
+                       Advanced optional properties
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties">
+            <summary>
+                       Advanced physical properties for material
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MaterialAdvancedProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.Clone">
+             <summary>
+            Clones MaterialAdvancedProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MaterialAdvancedProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MaterialAdvancedProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MaterialAdvancedProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.AnisotropicStaticFriction">
+            <summary>
+                       Static friction coefficient along a particular axis of motion
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.AnisotropicDynamicFriction">
+            <summary>
+                       Dynamic friction coefficient along a particular axis of motion
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.AnisotropyDirection">
+            <summary>
+                       Body axis where anisotropic friction applies. 
+                       <remarks>If the body has a motion component along this axis, the anisotropic coefficients will be used</remarks></summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.Spring">
+            <summary>
+                       Material spring properties. 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.RestitutionCombineMode">
+            <summary>
+                       When two shapes collide this mode instructs the physics engine on how to combine the
+                       restitution coefficients
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.FrictionCombineMode">
+            <summary>
+                       When two shapes collide this mode instructs the physics engine on how to combine the
+                       friction coefficients
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialAdvancedProperties.Optical">
+            <summary>
+                       Array of values that specify material properties related to optical or other forms of radiation        
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties">
+            <summary>
+                       Optical and radiation related material properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MaterialOpticalProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.Clone">
+             <summary>
+            Clones MaterialOpticalProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MaterialOpticalProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MaterialOpticalProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MaterialOpticalProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.WaveLength">
+            <summary>
+                       Wavelength that these properties apply to
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.DiffuseReflectance">
+            <summary>
+                       Reflectance ratio independent of the observer's angle of view.The ratio is between that of reflected power vs incident power
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.SpecularReflectance">
+            <summary>
+                       Reflectance ratio dependent of the observer's angle of view.The ratio is between that of reflected power vs incident power
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MaterialOpticalProperties.Transmittance">
+            <summary>
+                       Fraction of incident light that passes through material
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity">
+            <summary>
+                       Mass and density for entities and shapes. 
+                       </summary>
+            <remarks>
+                       If mass and density are both zero, the entity will be considered static. 
+                       It cannot be moved and it will have infinite mass
+                       </remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MassDensity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.Clone">
+             <summary>
+            Clones MassDensity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MassDensity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MassDensity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MassDensity</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.Mass">
+            <summary>
+                       Mass in SI units for the shape. If density is specified, dont set Mass, it will be calculated
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.InertiaTensor">
+            <summary>
+                       Diagonal mass space inertia tensor in bodies mass frame. Physics will compute if all zeroes
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.CenterOfMass">
+            <summary>
+                       Optional override for the center of mass. It specifies offset and orientation (from the default),
+                       in the local coordinate frame of the entity. If not set, physics will 
+                       calculate the center of mass from the shape descriptions
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.Density">
+            <summary>
+                       Optional density (SI units) of the shape. Density should not be specified
+                       if mass is specified
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.LinearDamping">
+            <summary>
+                       Linear damping applied to body
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.AngularDamping">
+            <summary>
+                       Anglular damping applied to body
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MassDensity.MassLocalPose">
+            <summary>
+                       MassLocalPose is simply a transformation applied to the diagonal inertia to move 
+                       it away from its default pose (centered on the origin with no rotation).
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties">
+            <summary>
+                       Common shape properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Clone">
+             <summary>
+            Clones ShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ShapeProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Name">
+            <summary>
+                       Entity scope name. Must be unique within an entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.ShapeId">
+            <summary>
+                       Shape identifier.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Dimensions">
+            <summary>
+                       Bounding box dimensions. Box orientation:
+                       Width is parallel to the X axis 
+                       height parallel to Y axis
+                       Depth towards positive Z
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Radius">
+            <summary>
+                       Optional radius of bounding sphere. If dimensions are set, radius can be 0
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Material">
+            <summary>
+                       Material description for the shape
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.MassDensity">
+            <summary>
+                       Mass/weight properties
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.Advanced">
+            <summary>
+                       Advanced properties
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.LocalPose">
+            <summary>
+                       Local position and orientation within the entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.TextureFileName">
+            <summary>
+                       Texture file name, to be used when creating meash from physics
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.DiffuseColor">
+            <summary>
+                       Diffuse color value, to be used when creating mesh from physics
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.EnableContactNotifications">
+            <summary>
+                       Enables contact notifications for this shape
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeProperties.ContactFilter">
+            <summary>
+                       Detailed filtering on contact notifications
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties">
+            <summary>
+                       Advanced physical properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ShapeAdvancedProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.Clone">
+             <summary>
+            Clones ShapeAdvancedProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ShapeAdvancedProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ShapeAdvancedProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ShapeAdvancedProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.MassSpaceIntertiaTensor">
+            <summary>
+                       Inertia tensor for calculating angular momentum
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.LinearDamping">
+            <summary>
+                       Linear damping applied to this entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.AngularDamping">
+            <summary>
+                       Angular damping applied to this entity
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.PhysicsCalculationPasses">
+            <summary>
+                       Number of calculation passes to perform, per frame. Higher is more time consuming but
+                       with more accurate results
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.IsTrigger">
+            <summary>
+                       If true this shape will generate trigger notifications when other shapes enter its volume
+                       </summary>
+            <remarks>A triger shape can be hollow allowing notifications when object enter an area or volume, with this shape defining that volume</remarks>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeAdvancedProperties.SkinWidth">
+            <summary>
+                       Specifies the amount to inflate the convex mesh by when the new convex hull generator is used.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter">
+            <summary>
+                       Contact notification filter, applied on every contact to reduce notification load
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ContactNotificationFilter to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.Clone">
+             <summary>
+            Clones ContactNotificationFilter
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ContactNotificationFilter to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ContactNotificationFilter
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ContactNotificationFilter</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.Stages">
+            <summary>
+                       Contact stages allowed
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.NormalForceThreshold">
+            <summary>
+                       Perpendicular force threshold
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationFilter.FrictionForceThreshold">
+            <summary>
+                       Tangenial force threshold for notification
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample">
+            <summary>
+                       Height field sample structure
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HeightFieldSample to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.Clone">
+             <summary>
+            Clones HeightFieldSample
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HeightFieldSample to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HeightFieldSample
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HeightFieldSample</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.Height">
+            <summary>
+                       Height value, scaled by height field vertical scale value
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.MaterialIndex0Low">
+            <summary>
+                       Low order bits for material index 0
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldSample.MaterialIndex1Low">
+            <summary>
+                       Low order bits for material index 1
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties">
+            <summary>
+                       Height field shape properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HeightFieldShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.Clone">
+             <summary>
+            Clones HeightFieldShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HeightFieldShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HeightFieldShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HeightFieldShapeProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.HeightScale">
+            <summary>
+                       Multiplier for height field sample height values for conversion to world Y coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.RowScale">
+            <summary>
+                       Multiplier for height field rows for conversion to world X coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.ColumnScale">
+            <summary>
+                       Multiplier for height field rows for conversion to world Z coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.MaterialIndexHigh">
+            <summary>
+                       High order bits for fully qualifying material index in each sample
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.HoleMaterialIndex">
+            <summary>
+                       Material index that designates holes;
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.ColumnCount">
+            <summary>
+                       Columns in the heightfield sample array
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.RowCount">
+            <summary>
+                       Rows in the heightfield sample array
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.VerticalExtent">
+            <summary>
+                       Extent on the Y axis where the physics engine will consider collisions.
+                       A large extent allows objects to exist below the height field but still generate
+                       collisions
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.ConvexEdgeThreshold">
+            <summary>
+                       Used by collision detection to increase/decrease contact points for edges 
+                       in between angled faces. Larger values will decrease edge contacts
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.TextureUScale">
+            <summary>
+                       Specifies the scale for U texture coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.TextureVScale">
+            <summary>
+                       Specifies the scale for V texture coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShapeProperties.HeightSamples">
+            <summary>
+                       Height samples
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShapeProperties">
+            <summary>
+                        Box shape properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current BoxShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShapeProperties.Clone">
+             <summary>
+            Clones BoxShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current BoxShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes BoxShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized BoxShapeProperties</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShapeProperties">
+            <summary>
+                       A sphere shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SphereShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShapeProperties.Clone">
+             <summary>
+            Clones SphereShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SphereShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SphereShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SphereShapeProperties</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShapeProperties">
+            <summary>
+                       Capsule shape properties (cylinder with hemispherical ends).
+                       <remarks>Capsule dimensions should use 
+                       Shape.Dimensions.Y for height of the cylinder portion of the capsule and Shape.Radius for the width
+                       </remarks></summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CapsuleShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShapeProperties.Clone">
+             <summary>
+            Clones CapsuleShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CapsuleShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CapsuleShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CapsuleShapeProperties</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties">
+            <summary>
+                       Shape based on arbitrary geometry (list of vertices)
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current MeshShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.Clone">
+             <summary>
+            Clones MeshShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current MeshShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes MeshShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized MeshShapeProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.ProcessedMeshResource">
+            <summary>
+                       Local file name to preprocessed binary file generated from mesh data.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.FaceCount">
+            <summary>
+                       Number of triangle faces
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.MeshShapeProperties.VertexCount">
+            <summary>
+                       Number of vertices
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties">
+            <summary>
+                       An arbitrary triangle mesh 
+                       </summary>
+            <remarks>Vertices should be ordered as triangle lists</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TriangleMeshShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.Clone">
+             <summary>
+            Clones TriangleMeshShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TriangleMeshShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TriangleMeshShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TriangleMeshShapeProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.IsHeightField">
+            <summary>
+                       True if this represents a height field
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.VerticalExtent">
+            <summary>
+                       Used for heightfields only, determines depth under heightfield that collision detection is active
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShapeProperties.VerticalAxis">
+            <summary>
+                       Used for height fields only. Specifies orientation of heightfield 
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShapeProperties">
+            <summary>
+                       Given an arbitrary triangle mesh, a convex shape will be used to describe it
+                       <remarks>Vertices should be ordered as triangle lists</remarks></summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ConvexMeshShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShapeProperties.Clone">
+             <summary>
+            Clones ConvexMeshShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ConvexMeshShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ConvexMeshShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ConvexMeshShapeProperties</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties">
+            <summary>
+                       Advanced shape that models a wheel with tires mounted on an axle with suspension
+                       <remarks>Use Shape.Radius to define wheel radius</remarks></summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WheelShapeProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.Clone">
+             <summary>
+            Clones WheelShapeProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WheelShapeProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WheelShapeProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WheelShapeProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.InnerRadius">
+            <summary>
+                       Inner radius that combined with Radius defines tire width
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.Suspension">
+            <summary>
+                       Suspension Properties. Optional
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.SuspensionTravel">
+            <summary>
+                       Maximum travel on -Y axis
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.Flags">
+            <summary>
+                       Wheel behavior modifiers
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.AxleSpeed">
+            <summary>
+                       Axle speed in radians/sec
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.TireLateralForceFunction">
+            <summary>
+                       Lateral tire force properties
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.TireLongitudalForceFunction">
+            <summary>
+                       Longitudal tire force properties (direction of travel)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeProperties.BrakeTorque">
+            <summary>
+                       Brake torque to apply to wheel
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.Shape">
+            <summary>
+                       Shape instance. Models behavior of the shape, while <see cref="T:Microsoft.Robotics.Simulation.Physics.ShapeProperties" /> models the state of the shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.Shape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Shape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.Shape.Clone">
+             <summary>
+            Clones Shape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.Shape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Shape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.Shape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Shape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Shape</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape">
+            <summary>
+                       Wheel shape 
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current WheelShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape.Clone">
+             <summary>
+            Clones WheelShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current WheelShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes WheelShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized WheelShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShape.WheelState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape">
+            <summary>
+                       Box shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current BoxShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape.Clone">
+             <summary>
+            Clones BoxShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current BoxShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes BoxShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized BoxShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.BoxShape.BoxState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape">
+            <summary>
+                       Capsule shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current CapsuleShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape.Clone">
+             <summary>
+            Clones CapsuleShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current CapsuleShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes CapsuleShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized CapsuleShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.CapsuleShape.CapsuleState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape">
+            <summary>
+                       Sphere shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SphereShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape.Clone">
+             <summary>
+            Clones SphereShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SphereShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SphereShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SphereShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.SphereShape.SphereState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape">
+            <summary>
+                       Triangle mesh shape
+                       </summary>
+            <remarks>This shape can be used to model a complicated, triangle based mesh, using the exact geometry for physics collisions.
+                       Shapes of this type will not be moveable (they are fixed in space)</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TriangleMeshShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape.Clone">
+             <summary>
+            Clones TriangleMeshShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TriangleMeshShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TriangleMeshShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TriangleMeshShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.TriangleMeshShape.TriangleMeshState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape">
+            <summary>
+                       Convex mesh shape
+                       </summary>
+            <remarks>This shape should be used to generated simplified convex meshes for collision, out of more complicated geometric meshes, commonly loaded from files</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ConvexMeshShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape.Clone">
+             <summary>
+            Clones ConvexMeshShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ConvexMeshShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ConvexMeshShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ConvexMeshShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ConvexMeshShape.ConvexMeshState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape">
+            <summary>
+                       Height field shape
+                       </summary>
+            <remarks>Use this shape to model terrain</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HeightFieldShape to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape.Clone">
+             <summary>
+            Clones HeightFieldShape
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HeightFieldShape to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HeightFieldShape
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HeightFieldShape</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.HeightFieldShape.HeightFieldState">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification">
+            <summary>
+                       Contact notification, generated when one or more physics shapes from two entities touch
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EntityContactNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.Clone">
+             <summary>
+            Clones EntityContactNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EntityContactNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EntityContactNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EntityContactNotification</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.Stage">
+            <summary>
+                       Contact stage
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.TotalNormalForce">
+            <summary>
+                       Total perpendicular force applied to keep penetration from occuring
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.TotalFrictionForce">
+            <summary>
+                       Total tangenial force between entities
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityContactNotification.ShapeContacts">
+            <summary>
+                       Local shape within the entity involved in the collision
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact">
+            <summary>
+                       Contact information for a shape
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ShapeContact to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.Clone">
+             <summary>
+            Clones ShapeContact
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ShapeContact to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ShapeContact
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ShapeContact</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.LocalShape">
+            <summary>
+                       Shape within the entity that was involved in this contact
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContact.Points">
+            <summary>
+                       List of world coordinate points where the collision within the shape occured
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint">
+            <summary>
+                       Contact information for a point on a shape surface
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ShapeContactPoint to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.Clone">
+             <summary>
+            Clones ShapeContactPoint
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ShapeContactPoint to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ShapeContactPoint
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ShapeContactPoint</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.Position">
+            <summary>
+                       Position vector in world space
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.Normal">
+            <summary>
+                       Normal vector for shape surface
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.NormalForce">
+            <summary>
+                       Normal force (perpendicular to surface)
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.ShapeContactPoint.FrictionForce">
+            <summary>
+                       Friction force (tangential to surface)
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification">
+            <summary>
+                       Joint break notification, generated when a joint breaks in the simulator
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EntityJointBreakNotification to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.Clone">
+             <summary>
+            Clones EntityJointBreakNotification
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EntityJointBreakNotification to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EntityJointBreakNotification
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EntityJointBreakNotification</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.BreakingImpulse">
+            <summary>
+                       Impulse which caused the joint to break
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.BrokenJoint">
+            <summary>
+                       Joint that was broken
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.EntityJointBreakNotification.AttachedEntities">
+            <summary>
+                       Entities attached to the joint
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint">
+            <summary>
+                       Raycast impact point
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RaycastImpactPoint to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.Clone">
+             <summary>
+            Clones RaycastImpactPoint
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RaycastImpactPoint to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RaycastImpactPoint
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RaycastImpactPoint</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.Position">
+            <summary>
+                       World Space Coordinates of an impact point. 
+                       Last coordinate is distance of impact from raycast origin
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.ReadingIndex">
+            <summary>
+                       Assuming an array of size abs(startAngle-EndAngle)/AngleIncrement the index
+                       indicate where in that array the impact occured. This is the order the impact 
+                       was found during the raycasting sweep.
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastImpactPoint.Material">
+            <summary>
+                       Material properties of the shape the impact point belongs to
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult">
+            <summary>
+                       Raycast operation results
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RaycastResult to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.Clone">
+             <summary>
+            Clones RaycastResult
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RaycastResult to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RaycastResult
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RaycastResult</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.ImpactPoints">
+            <summary>
+                       List of impacts. If no shape was within range, the list will be empty
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastResult.SampleCount">
+            <summary>
+                       Total number of raycasts performed
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties">
+            <summary>
+                       Raycast operation properties
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RaycastProperties to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.Clone">
+             <summary>
+            Clones RaycastProperties
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RaycastProperties to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RaycastProperties
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RaycastProperties</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.OriginPose">
+            <summary>
+                       Position and orientation of the origin point for the ray cast
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.StartAngle">
+            <summary>
+                       Start angle in degrees
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.EndAngle">
+            <summary>
+                       End angle in degrees
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.AngleIncrement">
+            <summary>
+                       Angle increment in degrees that determines number of discrete rays to generate
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.Range">
+            <summary>
+                       Distance, in world standard units, for ray casting range
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Physics.Proxy.RaycastProperties.ScanInterval">
+            <summary>
+                       Not used
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode">
+            <summary>
+                       When two materials come in contact the physics engine needs a way to combine the
+                       two sets of coefficients. Other than trial and error, there is no sure way to choose
+                       this combination mode, for each pair of shapes/materials
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode.Unspecified">
+            <summary>
+                       Default, physics engine will use defau;t
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode.Min">
+            <summary>
+                       Use smallest set of values
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode.Multiply">
+            <summary>
+                       Combine by multiplying together
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode.Average">
+            <summary>
+                       Combine by averaging
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.CoefficientsCombineMode.Max">
+            <summary>
+                       Use largest set of values
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers">
+            <summary>
+                       Entity simulation behaviors
+                       </summary>
+            <remarks>Use these modifiers override physics simulation of an entity</remarks>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.Dynamic">
+            <summary>
+                       Default behavior, physics fully models the entity and the entity interacts with the environment
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.Kinematic">
+            <summary>
+                       Entity is modelled as an object of infinite mass, not subject to simulated effects, that can not be affected by other objects. It must be moved explicitly.
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.IgnoreGravity">
+            <summary>
+                       Entity is impervious to gravity
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.DisableRotationX">
+            <summary>
+                       Entity can not rotate around its X axis
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.DisableRotationY">
+            <summary>
+                       Entity can not rotate around its Y axis
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.DisableRotationZ">
+            <summary>
+                       Entity can not rotate around its Z axis
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.DisableCollisions">
+            <summary>
+                       Entity does not collide with other entities
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.EntitySimulationModifiers.LockCenterOfMass">
+            <summary>
+                       Disable altering center of mass when computing inertia tensor.
+                       Locks center of mass to what it was initially specified to be.
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes">
+            <summary>
+                       Shape identifiers
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.Box">
+            <summary>
+                       Box
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.Sphere">
+            <summary>
+                       Sphere
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.Capsule">
+            <summary>
+                       Capsule
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.Wheel">
+            <summary>
+                       Vehicle wheel with embedded drive, suspension and tire friction models
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.TriangleMesh">
+            <summary>
+                       Triangle mesh shape generated from supplied vertex and index buffers
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.ConvexMesh">
+            <summary>
+                       Convex shape generated from supplied vertex and index buffers of a triangle mesh that is convex
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.Shapes.HeightField">
+            <summary>
+                       Height field shape generated from array of height samples
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationStage">
+            <summary>
+                       Stage of contact between two shapes
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationStage.Started">
+            <summary>
+                       Notification of initial contact
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.ContactNotificationStage.Finished">
+            <summary>
+                       Notification that contact has stopped
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeBehavior">
+            <summary>
+                       Defines wheel physics behavior
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeBehavior.UseLateralSlipVelocity">
+            <summary>
+                       Lateral slip model is used
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeBehavior.UseLongitudalSlipVelocity">
+            <summary>
+                       Longitudal slip model is used
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Physics.Proxy.WheelShapeBehavior.OverrideAxleSpeed">
+            <summary>
+                       If set, wheel uses speed control, not motor torque control
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.Entity">
+            <summary>
+                       Entity definition
+                       </summary>
+            <remarks>This class is the base type for all user defined simulation entities</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Entity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Entity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Entity.Clone">
+             <summary>
+            Clones Entity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Entity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Entity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Entity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Entity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Entity</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.Entity.State">
+            <summary>
+                       State
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.EntityState">
+            <summary>
+                       Entity state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.EntityState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current EntityState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.EntityState.Clone">
+             <summary>
+            Clones EntityState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.EntityState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current EntityState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.EntityState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes EntityState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized EntityState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.Name">
+            <summary>
+                       Entity name. The simulation engine will only accept a single instance for the same name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.Assets">
+            <summary>
+                       asset location
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.Pose">
+            <summary>
+                       Current pose, in world space
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.Velocity">
+            <summary>
+                       Current linear velocity, in world space
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.AngularVelocity">
+            <summary>
+                       Current angular velocity, in world space
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.MassDensity">
+            <summary>
+                       entity mass or density values
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.EntityState.Flags">
+            <summary>
+                       Modifies modeling of entire entity
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.RenderingAssets">
+            <summary>
+                       Rendering assets for entity instance
+                       </summary>
+            <remarks>All file paths should be relative to the store\media directory, or as simple filenames with no path</remarks>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RenderingAssets to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.Clone">
+             <summary>
+            Clones RenderingAssets
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RenderingAssets to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RenderingAssets
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RenderingAssets</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.Mesh">
+            <summary>
+                       Mesh file 
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.DefaultTexture">
+            <summary>
+                       Texture (applied to all shapes within entity) file
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.RenderingAssets.Effect">
+            <summary>
+                       DirectX pixel and vertex shader effect file
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.Partners">
+            <summary>
+                       Standard entity relationships for simulated services
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.Partners.Entity">
+            <summary>
+                       Entity partner. Value is entity instance name
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.Partners.ColladaScene">
+            <summary>
+                       ColladaScene partner. Value is Collada file name
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Partners.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current Partners to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Partners.Clone">
+             <summary>
+            Clones Partners
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Partners.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current Partners to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.Partners.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes Partners
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized Partners</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.PublishedCategories">
+            <summary>
+                       Optional: A service may choose to publish categories.  These categories are
+                       available for use in the [Category] attribute for any service.
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.SimulationService">
+            <summary>
+                       Category for all services that interact in the simulation environment
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.EnvironmentConstructor">
+            <summary>
+                       Indicates a simulation environment constructor. Constructors load world entities
+                       that can be static, dynamic, height fields, and large scale structures
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PublishedCategories to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.Clone">
+             <summary>
+            Clones PublishedCategories
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PublishedCategories to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.PublishedCategories.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PublishedCategories
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PublishedCategories</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.SimulationState">
+            <summary>
+                       Simulation engine state
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.SimulationState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimulationState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.SimulationState.Clone">
+             <summary>
+            Clones SimulationState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.SimulationState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimulationState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.SimulationState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimulationState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimulationState</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.Gravity">
+            <summary>
+                       Gravity vector
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.RenderMode">
+            <summary>
+                       Current rendering mode
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.FramesPerSecond">
+            <summary>
+                       Current rendering rate for the selected camera view
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.Pause">
+            <summary>
+                       Stops frame updates of all entities and all physics simulation
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.CameraPosition">
+            <summary>
+                       The position of the default camera in world coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.CameraLookAt">
+            <summary>
+                       The position the default camera is looking at in world coordinates
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.CameraFieldOfView">
+            <summary>
+                       The horizontal half-angle of the viewport in radians
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.CameraNearPlane">
+            <summary>
+                       The distance from the camera to the near clipping plane
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.CameraFarPlane">
+            <summary>
+                       The distance from the camera to the far clipping plane
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.Lights">
+            <summary>
+                       Deprecated: Around for backwards compatibility
+                       World lights
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.SimulationState.SerializedEntities">
+            <summary>
+                       Entities in XML DOM form that can be serialized
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.LightEntity">
+            <summary>
+                       Base class for light entities
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.LightEntity.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current LightEntity to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.LightEntity.Clone">
+             <summary>
+            Clones LightEntity
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.LightEntity.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current LightEntity to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.LightEntity.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes LightEntity
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized LightEntity</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.LightEntity.Name">
+            <summary>
+                       Name
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.LightEntity.Type">
+            <summary>
+                       Light type
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.LightEntity.Color">
+            <summary>
+                       HDR color plus alpha. Normal range is 0.0f to 1.0f
+                       </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.LightEntity.Pose">
+            <summary>
+                       Position and orientation
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.ObjectList">
+            <summary>
+                       Simulation internal use. List of serialized entities
+                       </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.ObjectList.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ObjectList to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.ObjectList.Clone">
+             <summary>
+            Clones ObjectList
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.ObjectList.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ObjectList to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Simulation.Proxy.ObjectList.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ObjectList
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ObjectList</returns>
+        </member>
+        <member name="P:Microsoft.Robotics.Simulation.Proxy.ObjectList.XmlNodes">
+            <summary>
+                       List of serialized (into XML DOM) entities
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.RenderMode">
+            <summary>
+                       Enumeration of rendering modes
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.Full">
+            <summary>
+                       Full shading and lighting, solid object rendering
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.Wireframe">
+            <summary>
+                       Wireframe only
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.Physics">
+            <summary>
+                       Physics primitive view
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.Combined">
+            <summary>
+                       Combined physics and fully rendered
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.None">
+            <summary>
+                       No rendering
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.RenderMode.Floorplan">
+            <summary>
+                       Top-down orthographic view
+                       </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Simulation.Proxy.LightEntityType">
+            <summary>
+                       Types of light sources
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.LightEntityType.None">
+            <summary>
+                       No light
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.LightEntityType.Directional">
+            <summary>
+                       Directional
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.LightEntityType.Omni">
+            <summary>
+                       Omni-directional (no directional bias, like a light orb)
+                       </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Simulation.Proxy.LightEntityType.Spot">
+            <summary>
+                       Spot light
+                       </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.MicArraySpeechRecognizerGui.Y2011.M06</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui">
+            <summary>
+            SpeechRecognizerGui - Interface for configuring the Speech Recognizer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.MaxSpeechEventsToRetain">
+            <summary>
+            Maximum number of past speech events received from the speech recognizer that shall
+            be retained
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.MountServiceWriteBlockSize">
+            <summary>
+            Block size with which files are written to the mount service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.state">
+            <summary>
+            Service state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.mainPort">
+            <summary>
+            Main port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.speechRecoPort">
+            <summary>
+            Speech recognizer partner ports
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.httpUtilities">
+            <summary>
+            HTTP utilities port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default service constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.Start">
+            <summary>
+            Service start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.EventsQueryHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQuery)">
+            <summary>
+            Events query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerStateQueryHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerStateQuery)">
+            <summary>
+            SpeechRecognizer state query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Http query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.EventsHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Events HTTP query handler
+            </summary>
+            <param name="query"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerStateHttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            SpeechRecognizerState HTTP query handler
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.HttpPostHandler(Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            Http post handler
+            </summary>
+            <param name="post">Request from the web page</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SaveDictionaryHttpPostHandler(System.Collections.Specialized.NameValueCollection,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            SaveDictionary HTTP post handler
+            </summary>
+            <param name="parameters">Dictionary entries</param>
+            <param name="post">Request from the web page</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.UploadSrgsFileHttpPostHandler(Microsoft.Dss.Core.DsspHttpUtilities.HttpPostRequestData,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            UploadSrgsFile HTTP post handler
+            </summary>
+            <param name="postData"></param>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.UseExistingSrgsFileHttpPostHandler(System.Collections.Specialized.NameValueCollection,Microsoft.Dss.Core.DsspHttp.HttpPost)">
+            <summary>
+            UseExistingSrgsFile HTTP post handler
+            </summary>
+            <param name="parameters"></param>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizerReplaceHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.Replace)">
+            <summary>
+            Speech recognizer replace handler
+            </summary>
+            <param name="replace"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechDetectedHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechDetected)">
+            <summary>
+            Speech detected handler
+            </summary>
+            <param name="detected"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognizedHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechRecognized)">
+            <summary>
+            Speech recognized handler
+            </summary>
+            <param name="recognized"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.SpeechRecognitionRejectedHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechRecognitionRejected)">
+            <summary>
+            Speech recognition rejected handler
+            </summary>
+            <param name="rejected"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.BeamDirectionChangedHandler(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.BeamDirectionChanged)">
+            <summary>
+            Mic array beam directin changed event handler
+            </summary>
+            <param name="beamDirectionChanged"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.WriteFileToMountService(System.String,System.IO.Stream,Microsoft.Ccr.Core.SuccessFailurePort)">
+            <summary>
+            Writes a binary file from a stream to the mount service
+            </summary>
+            <param name="filename">Filename and path where the file shall be store on the mount service</param>
+            <param name="fileStream">Stream containing the file data</param>
+            <param name="responsePort">File writer response port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGui.PostHttpPostParameterError(Microsoft.Dss.Core.DsspHttp.HttpPost,System.String)">
+            <summary>
+            Posts a HTTP error message with a supplied error message back to the client
+            </summary>
+            <param name="post"></param>
+            <param name="errorMsg"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGuiState">
+            <summary>
+            The SpeechRecognizerGui state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGuiState.SpeechRecognizerState">
+            <summary>
+            The speech recognizer's state
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGuiState.SpeechEvents">
+            <summary>
+            Past speech events received from speech recognizer
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry">
+            <summary>
+            EventListEntry - A list of events that have occurred
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechDetectedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Detected notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechRecognizedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Recognized notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechRecognitionRejectedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Rejected notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.BeamDirectionChangedNotification)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Beam changed notification event</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.#ctor(Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizer.Proxy.SpeechInformation)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="content">Info on the recognized speech</param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.Timestamp">
+            <summary>
+            Timestamp when the event occurred
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.SpeechDetected">
+            <summary>
+            Speech Detected Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.SpeechRecognized">
+            <summary>
+            Speech Recognized Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.RecognitionRejected">
+            <summary>
+            Speech Rejected Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.BeamDirectionChanged">
+            <summary>
+            Speech Detected Notification
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventListEntry.SpeechInformation">
+            <summary>
+            Speech Information
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQueryRequestType">
+            <summary>
+            Events query request type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQueryRequestType.NewerThanTimestamp">
+            <summary>
+            Newer Than Timestamp
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerStateQueryRequestType">
+            <summary>
+            SpeechRecognizer state query request type
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.HttpPostSuccess">
+            <summary>
+            HTTP POST success type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.HttpPostSuccess.Instance">
+            <summary>
+            Default response instance
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Contract">
+            <summary>
+            SpeechRecognizerGui Contract class
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Contract.Identifier">
+            <summary>
+            The Dss Service contract
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGuiOperations">
+            <summary>
+            SpeechRecognizerGui Main Operations Port
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Get">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Get.#ctor">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType)">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.Get.#ctor(Microsoft.Dss.ServiceModel.Dssp.GetRequestType,Microsoft.Dss.ServiceModel.Dssp.DsspResponsePort{Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerGuiState})">
+            <summary>
+            SpeechRecognizerGui Get Operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQuery">
+            <summary>
+            Events query operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.SpeechRecognizerStateQuery">
+            <summary>
+            Speech recognizer state query operation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQueryResponse">
+            <summary>
+            Events query response
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sensors.Kinect.MicArraySpeechRecognizerGui.EventsQueryResponse.Events">
+            <summary>
+            List of events
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial3.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:RoboticsServiceTutorial3.Proxy.ServiceTutorial3State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ServiceTutorial3State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.ServiceTutorial3State.Clone">
+             <summary>
+            Clones ServiceTutorial3State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.ServiceTutorial3State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ServiceTutorial3State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.ServiceTutorial3State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ServiceTutorial3State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ServiceTutorial3State</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.IncrementTickRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current IncrementTickRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.IncrementTickRequest.Clone">
+             <summary>
+            Clones IncrementTickRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.IncrementTickRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current IncrementTickRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.IncrementTickRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes IncrementTickRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized IncrementTickRequest</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial3.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

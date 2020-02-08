@@ -1,0 +1,14 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.WpfTextToSpeechUI.Y2008.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WpfTextToSpeechUI.Y2008.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WpfTextToSpeechUI.Y2008.M08.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.WpfTextToSpeechUI.Y2008.M08.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\TextToSpeechUI.baml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\TextToSpeechUI.g.cs
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\User.WpfTextToSpeechUI.Y2008.M08_MarkupCompile.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\User.WpfTextToSpeechUI.Y2008.M08.g.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\Microsoft.Dss.Services.Samples.Properties.Resources.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\User.WpfTextToSpeechUI.Y2008.M08.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\WpfTextToSpeechUI\obj\Debug\User.WpfTextToSpeechUI.Y2008.M08.pdb

@@ -1,0 +1,122 @@
+﻿/**
+ * This file is part of Microsoft Robotics Developer Studio Code Samples.
+ *
+ * Copyright (C) Microsoft Corporation.  All rights reserved.
+ *
+ * $File: Style.css $ $Revision: 2 $
+ */
+
+/* Event log styles */
+#EventLog
+{
+	height: 250px;
+	width: 100%;
+	overflow: scroll;
+	border: 1px solid #a0a0a0;
+}
+
+#EventLog hr
+{
+	border: 0;
+	margin: 1px 5px;
+	background-color: #a0a0a0;
+	height: 1px;
+}
+
+#EventLogEntry
+{
+	margin-left: 5px;
+}
+
+#ClearEventLogDiv
+{
+	width: 100%;
+	overflow: auto;
+	text-align: right;
+	margin-top: 5px;
+}
+
+.SpeechDetected
+{
+	color: #0000aa;
+}
+
+.SpeechRecognized
+{
+	color: #007700;
+}
+
+.RecognitionRejected
+{
+	color: #aa0000;
+}
+
+.BeamDirectionChangedStyle
+{
+	color: #990099;
+}
+
+#EventLogEntry ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#EventLogEntry li
+{
+	color: #000000;
+	font-weight:normal;
+	margin-left: 20px;
+}
+
+#EventLog #divider
+{
+	width: 100%;
+	height: 2px;
+	background-color: #a0a0a0;
+}
+
+
+/* Configuration styles */
+#SrgsInputCell
+{
+	vertical-align: top;
+}
+
+.ControlEnabled
+{
+	color: #000000;
+}
+
+.ControlDisabled
+{
+	color: #a0a0a0;
+}
+
+#AddDictEntryButton,
+#DelDictEntryButton
+{
+	width: 30px;
+}
+
+.DictEntryTextField
+{
+	width: 200px;
+}
+
+#SrgsFile
+{
+	display: block;
+}
+
+#SrgsFileLocation
+{
+	display: block;
+}
+
+#MountPointSaveLocation
+{
+	display: block;
+}

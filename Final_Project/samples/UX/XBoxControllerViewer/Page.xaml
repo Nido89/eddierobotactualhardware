@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="XBoxCtrlViewer.Page"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="640" Height="480" xmlns:XBoxCtrlViewer="clr-namespace:XBoxCtrlViewer">
+    <Grid x:Name="LayoutRoot" Background="White">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="50"/>
+    		<RowDefinition Height="*"/>
+    	</Grid.RowDefinitions>
+    	<StackPanel Grid.Row="0" Height="50" >
+			<TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Text="TextBox" Width="Auto" x:Name="Server_Uri"/>
+    	</StackPanel>
+    	<XBoxCtrlViewer:XBoxCtrlGraphic Grid.Row="1"  HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="Controller_Graphic"/>
+    </Grid>
+</UserControl>

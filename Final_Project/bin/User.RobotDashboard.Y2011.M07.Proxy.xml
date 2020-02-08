@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.RobotDashboard.Y2011.M07.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.RobotDashboardState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RobotDashboardState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.RobotDashboardState.Clone">
+             <summary>
+            Clones RobotDashboardState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.RobotDashboardState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RobotDashboardState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.RobotDashboardState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RobotDashboardState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RobotDashboardState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.GUIOptions.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current GUIOptions to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.GUIOptions.Clone">
+             <summary>
+            Clones GUIOptions
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.GUIOptions.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current GUIOptions to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.GUIOptions.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes GUIOptions
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized GUIOptions</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.RobotDashboard.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

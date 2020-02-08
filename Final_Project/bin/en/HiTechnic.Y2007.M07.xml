@@ -1,0 +1,724 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HiTechnic.Y2007.M07</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor">
+            <summary>
+            HiTechnic Accelerometer sensor Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor._state">
+            <summary>
+            _state
+            </summary>v2
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor._internalMainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor._legoBrickPort">
+            <summary>
+            Partner with the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor._subMgrPort">
+            <summary>
+            Subscription manager partner for Accelerometer Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor._genericSubMgrPort">
+            <summary>
+            Subscription manager partner for generic analog sensor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.NotificationHandler(Microsoft.Robotics.Services.Sample.Lego.Nxt.Brick.Proxy.LegoSensorUpdate)">
+            <summary>
+            Handle periodic sensor readings from the brick
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.GetAccelerometerHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Get)">
+            <summary>
+            Get Accelerometer Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.HttpGetAccelerometerHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet Accelerometer Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.AccelerometerUpdateHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerUpdate)">
+            <summary>
+            AccelerometerUpdate Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.SubscribeHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop Handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.HiTechnicAccelerationSensor.ConnectToBrickHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ConnectToBrick)">
+            <summary>
+            ConnectToBrick Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Contract">
+            <summary>
+            HiTechnic Accelerometer Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Contract.Identifier">
+            The Unique DSS Contract Identifier for the HiTechnic Acceleration Sensor service
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Contract.Vendor">
+            <summary>
+            The I2C Vendor code
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Contract.DeviceModel">
+            <summary>
+            The Accelerometer Sensor Device Type
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Contract.DefaultPollingFrequencyMs">
+            <summary>
+            Default Polling Frequency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState">
+            <summary>
+            HiTechnic Accelerometer State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.Connected">
+            <summary>
+            Is the Sensor connected to a LEGO Brick?
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.Name">
+            <summary>
+            The name of this Accelerometer Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.ZeroOffset">
+            <summary>
+            Setting ZeroOffset with the initial Tilt values of the robot
+            will calibrate the acceleration sensor to an initial pose of X=0, Y=0, Z=0.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState.Tilt">
+            <summary>
+            The current tilt readings received from the Accelerometer Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Get">
+            <summary>
+            Get the HiTechnic Accelerometer Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerUpdate">
+            <summary>
+            Get the HiTechnic Accelerometer Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ConnectToBrick">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ConnectToBrick.#ctor">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ConnectToBrick.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Configure Device Connection
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig">
+            <summary>
+            HiTechnic Accelerometer Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig.#ctor">
+            <summary>
+            HiTechnic Accelerometer Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            HiTechnic Accelerometer Sensor Configuration.
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig.Name">
+            <summary>
+            The name of this Accelerometer Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.ReliableSubscribe">
+            <summary>
+            Subscribe to the HiTechnic Acceleration Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.Subscribe">
+            <summary>
+            Subscribe to the HiTechnic Acceleration Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerOperations">
+            <summary>
+            HiTechnic Accelerometer Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerOperations.#ctor">
+            <summary>
+            Accelerometer Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerConfig)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerState)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+            <param name="sensorPort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CReadHiTechnicAccelerationSensor">
+            <summary>
+            HiTechnic Read Accelerometer Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CReadHiTechnicAccelerationSensor.#ctor">
+            <summary>
+            HiTechnic Read Accelerometer Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CReadHiTechnicAccelerationSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            HiTechnic Read Accelerometer Sensor Data
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CReadHiTechnicAccelerationSensor.GetResponse(System.Byte[])">
+            <summary>
+            The matching LegoResponse
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.Int10(System.Byte,System.Byte)">
+            <summary>
+            Calculate a signed 10-bit integer
+            </summary>
+            <param name="low2"></param>
+            <param name="high8"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.SetInt10(System.Int32,System.Byte@,System.Byte@)">
+            <summary>
+            Set low and high bytes for a 10-bit integer
+            </summary>
+            <param name="source"></param>
+            <param name="high8"></param>
+            <param name="low2"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.X">
+            <summary>
+            X Axis 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.Y">
+            <summary>
+            Y Axis 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.Z">
+            <summary>
+            Z Axis 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.I2CResponseHiTechnicAccelerationSensor.Success">
+            <summary>
+            Valid Accelerometer Response Packet
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerMode">
+            <summary>
+            HiTechnic Accelerometer Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerMode.Sensor">
+            <summary>
+            The Accelerometer is in Sensor Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerMode.CalibrationFailed">
+            <summary>
+            The Accelerometer failed Calibration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerMode.Calibration">
+            <summary>
+            The Accelerometer is in Calibration Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Accelerometer.AccelerometerMode.Unknown">
+            <summary>
+            The Accelerometer is in an Unknown Mode
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor">
+            <summary>
+            HiTechnic Compass sensor Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor._internalMainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor._legoBrickPort">
+            <summary>
+            Partner with the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor._subMgrPort">
+            <summary>
+            Subscription manager partner for Compass Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor._genericSubMgrPort">
+            <summary>
+            Subscription manager partner for generic analog sensor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.SyncGenericState">
+            <summary>
+            Sync the generic analog sensor state with our compass sensor.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.NotificationHandler(Microsoft.Robotics.Services.Sample.Lego.Nxt.Brick.Proxy.LegoSensorUpdate)">
+            <summary>
+            Handle periodic sensor readings from the pxbrick
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.GetCompassSensorHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Get)">
+            <summary>
+            Get Compass Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.GetAnalogSensorHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Get)">
+            <summary>
+            Get Analog Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.HttpGetCompassSensorHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet CompassSensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.HttpGetAnalogSensorHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet AnalogSensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+            [ServiceHandler(ServiceHandlerBehavior.Concurrent, PortFieldName = "_genericPort")]
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.ReplaceHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.CompassSensorUpdateHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorUpdate)">
+            <summary>
+            CompassSensorUpdate Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.SubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.GenericReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.GenericSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop Handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.HiTechnicCompassSensor.ConnectToBrickHandler(Microsoft.Robotics.Services.Sample.HiTechnic.Compass.ConnectToBrick)">
+            <summary>
+            ConnectToBrick Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Contract">
+            <summary>
+            HiTechnic Compass Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Contract.Identifier">
+            The Unique DSS Contract Identifier for the HiTechnic Compass Sensor service.
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Contract.Vendor">
+            <summary>
+            The I2C Vendor code
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Contract.DeviceModel">
+            <summary>
+            The I2C Device Model
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Contract.DefaultPollingFrequencyMs">
+            <summary>
+            Default Polling Frequency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState">
+            <summary>
+            HiTechnic Compass State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState.Connected">
+            <summary>
+            Is the Sensor connected to a LEGO Brick?
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState.Name">
+            <summary>
+            The name of this Compass Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState.Heading">
+            <summary>
+            The current compass heading received from the Compass Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassReading">
+            <summary>
+            The current compass heading received from the Compass Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassReading.Degrees">
+            <summary>
+            The current compass heading (degrees) received from the Compass Sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassReading.TimeStamp">
+            <summary>
+            The time of the last sensor update
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.Get">
+            <summary>
+            Get the HiTechnic Compass Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorUpdate">
+            <summary>
+            Get the HiTechnic Compass Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.ConnectToBrick">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.ConnectToBrick.#ctor">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.ConnectToBrick.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Configure Device Connection
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig">
+            <summary>
+            HiTechnic Compass Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig.#ctor">
+            <summary>
+            HiTechnic Compass Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            HiTechnic Compass Sensor Configuration.
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig.Name">
+            <summary>
+            The name of this Compass Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorOperations">
+            <summary>
+            HiTechnic Compass Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorOperations.#ctor">
+            <summary>
+            Compass Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassConfig)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorState)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+            <param name="sensorPort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CReadHiTechnicCompassSensor">
+            <summary>
+            HiTechnic Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CReadHiTechnicCompassSensor.#ctor">
+            <summary>
+            HiTechnic Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CReadHiTechnicCompassSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            HiTechnic Read Compass Sensor Data
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CReadHiTechnicCompassSensor.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor.ModeControl">
+            <summary>
+            HiTechnic Compass Mode
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor.Heading">
+            <summary>
+            Compass Heading
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.I2CResponseHiTechnicCompassSensor.Success">
+            <summary>
+            Validate the Compass Mode
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassMode">
+            <summary>
+            HiTechnic Compass Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassMode.Sensor">
+            <summary>
+            The Compass is in Sensor Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassMode.CalibrationFailed">
+            <summary>
+            The Compass failed Calibration
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassMode.Calibration">
+            <summary>
+            The Compass is in Calibration Mode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.HiTechnic.Compass.CompassMode.Unknown">
+            <summary>
+            The Compass is in an Unknown Mode
+            </summary>
+        </member>
+    </members>
+</doc>

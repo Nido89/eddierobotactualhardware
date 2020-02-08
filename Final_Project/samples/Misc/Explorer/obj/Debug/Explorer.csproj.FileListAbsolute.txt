@@ -1,0 +1,5 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.Explorer.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.Explorer.Y2006.M06.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Explorer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Explorer\obj\Debug\User.Explorer.Y2006.M06.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Misc\Explorer\obj\Debug\User.Explorer.Y2006.M06.pdb

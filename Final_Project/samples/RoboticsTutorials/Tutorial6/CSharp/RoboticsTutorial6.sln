@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxtBrick", "..\..\..\Platforms\LEGO\NXT\V2\NxtBrick\NxtBrick.csproj", "{2641C69C-33AE-45B8-AE3E-49A869A934F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE46A925-38BF-44DD-AFB1-A0601D7AAA43} = {EE46A925-38BF-44DD-AFB1-A0601D7AAA43}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NxtCommon", "..\..\..\Platforms\LEGO\NXT\V2\NxtCommon\NxtCommon.csproj", "{EE46A925-38BF-44DD-AFB1-A0601D7AAA43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2641C69C-33AE-45B8-AE3E-49A869A934F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2641C69C-33AE-45B8-AE3E-49A869A934F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2641C69C-33AE-45B8-AE3E-49A869A934F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2641C69C-33AE-45B8-AE3E-49A869A934F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE46A925-38BF-44DD-AFB1-A0601D7AAA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE46A925-38BF-44DD-AFB1-A0601D7AAA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE46A925-38BF-44DD-AFB1-A0601D7AAA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE46A925-38BF-44DD-AFB1-A0601D7AAA43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

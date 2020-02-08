@@ -1,0 +1,659 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MindSensors.Y2007.M07</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor">
+            <summary>
+            MindSensors Accelerometer sensor Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor._internalMainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor._legoBrickPort">
+            <summary>
+            Partner with the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor._subMgrPort">
+            <summary>
+            Subscription manager partner for Accelerometer Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor._genericSubMgrPort">
+            <summary>
+            Subscription manager partner for generic analog sensor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.NotificationHandler(Microsoft.Robotics.Services.Sample.Lego.Nxt.Brick.Proxy.LegoSensorUpdate)">
+            <summary>
+            Handle periodic sensor readings from the brick
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.GetAccelerometerHandler(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Get)">
+            <summary>
+            Get Accelerometer Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.HttpGetAccelerometerHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet Accelerometer Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.AccelerometerUpdateHandler(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerUpdate)">
+            <summary>
+            AccelerometerUpdate Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.SubscribeHandler(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop Handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.MindSensorsAccelerationSensor.ConnectToBrickHandler(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ConnectToBrick)">
+            <summary>
+            ConnectToBrick Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Contract">
+            <summary>
+            MindSensors Accelerometer Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Contract.Identifier">
+            The Unique DSS Contract Identifier for the MindSensors Acceleration Sensor service.
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Contract.Vendor">
+            <summary>
+            The I2C Vendor code
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Contract.DeviceModel">
+            <summary>
+            I2C Device Model: Generic Accelerometer Sensor 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Contract.DefaultPollingFrequencyMs">
+            <summary>
+            Default Polling Frequency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState">
+            <summary>
+            MindSensors Accelerometer State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.Connected">
+            <summary>
+            Is the Sensor connected to a LEGO Brick?
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.Name">
+            <summary>
+            The name of this Accelerometer Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.ZeroOffset">
+            <summary>
+            Setting ZeroOffset with the initial Tilt values of the robot
+            will calibrate the acceleration sensor to an initial pose of X=0, Y=0, Z=0.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState.Tilt">
+            <summary>
+            The current tilt readings received from the Accelerometer Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Get">
+            <summary>
+            Get the MindSensors Accelerometer Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerUpdate">
+            <summary>
+            Get the MindSensors Accelerometer Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ConnectToBrick">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ConnectToBrick.#ctor">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ConnectToBrick.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Configure Device Connection
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig">
+            <summary>
+            MindSensors Accelerometer Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig.#ctor">
+            <summary>
+            MindSensors Accelerometer Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            MindSensors Accelerometer Sensor Configuration.
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig.Name">
+            <summary>
+            The name of this Accelerometer Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.ReliableSubscribe">
+            <summary>
+            Subscribe to the MindSensors Acceleration Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.Subscribe">
+            <summary>
+            Subscribe to the MindSensors Acceleration Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerOperations">
+            <summary>
+            MindSensors Accelerometer Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerOperations.#ctor">
+            <summary>
+            Accelerometer Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerConfig)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerState)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.AccelerometerOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+            <param name="sensorPort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CReadMindSensorsAccelerationSensor">
+            <summary>
+            MindSensors Read Accelerometer Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CReadMindSensorsAccelerationSensor.#ctor">
+            <summary>
+            MindSensors Read Accelerometer Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CReadMindSensorsAccelerationSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            MindSensors Read Accelerometer Sensor Data
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CReadMindSensorsAccelerationSensor.GetResponse(System.Byte[])">
+            <summary>
+            The matching LegoResponse
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor.X">
+            <summary>
+            X Axis 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor.Y">
+            <summary>
+            Y Axis 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Accelerometer.I2CResponseMindSensorsAccelerationSensor.Z">
+            <summary>
+            Z Axis 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor">
+            <summary>
+            MindSensors Compass sensor Service
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor._state">
+            <summary>
+            _state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor._internalMainPort">
+            <summary>
+            _main Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor._legoBrickPort">
+            <summary>
+            Partner with the LEGO NXT Brick
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor._subMgrPort">
+            <summary>
+            Subscription manager partner for Compass Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor._genericSubMgrPort">
+            <summary>
+            Subscription manager partner for generic analog sensor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            Default Service Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.Start">
+            <summary>
+            Service Start
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.SyncGenericState">
+            <summary>
+            Sync the generic analog sensor state with our compass sensor.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.NotificationHandler(Microsoft.Robotics.Services.Sample.Lego.Nxt.Brick.Proxy.LegoSensorUpdate)">
+            <summary>
+            Handle periodic sensor readings from the pxbrick
+            </summary>
+            <param name="update"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.GetCompassSensorHandler(Microsoft.Robotics.Services.Sample.MindSensors.Compass.Get)">
+            <summary>
+            Get Compass Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.GetAnalogSensorHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Get)">
+            <summary>
+            Get Analog Sensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.HttpGetCompassSensorHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet CompassSensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.HttpGetAnalogSensorHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            HttpGet AnalogSensor Handler
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+            [ServiceHandler(ServiceHandlerBehavior.Concurrent, PortFieldName = "_genericPort")]
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.ReplaceHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Replace)">
+            <summary>
+            Replace Handler
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.CompassSensorUpdateHandler(Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorUpdate)">
+            <summary>
+            CompassSensorUpdate Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.ReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.SubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.GenericReliableSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            ReliableSubscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.GenericSubscribeHandler(Microsoft.Robotics.Services.AnalogSensor.Proxy.Subscribe)">
+            <summary>
+            Subscribe Handler
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.DropHandler(Microsoft.Dss.ServiceModel.Dssp.DsspDefaultDrop)">
+            <summary>
+            Drop Handler
+            </summary>
+            <param name="drop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.MindSensorsCompassSensor.ConnectToBrickHandler(Microsoft.Robotics.Services.Sample.MindSensors.Compass.ConnectToBrick)">
+            <summary>
+            ConnectToBrick Handler
+            </summary>
+            <param name="update"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Contract">
+            <summary>
+            MindSensors Compass Sensor Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Contract.Identifier">
+            The Unique DSS Contract Identifier for the MindSensors Compass Sensor service.
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Contract.Vendor">
+            <summary>
+            The I2C Vendor code
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Contract.DeviceModel">
+            <summary>
+            The I2C Device Model
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Contract.DefaultPollingFrequencyMs">
+            <summary>
+            Default Polling Frequency (ms)
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState">
+            <summary>
+            MindSensors Compass State
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState.Connected">
+            <summary>
+            Is the Sensor connected to a LEGO Brick?
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState.Name">
+            <summary>
+            The name of this Compass Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState.Heading">
+            <summary>
+            The current compass heading received from the Compass Sensor
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassReading">
+            <summary>
+            The current compass heading received from the Compass Sensor
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassReading.Degrees">
+            <summary>
+            The current compass heading (degrees) received from the Compass Sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassReading.TimeStamp">
+            <summary>
+            The time of the last sensor update
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.Get">
+            <summary>
+            Get the MindSensors Compass Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorUpdate">
+            <summary>
+            Get the MindSensors Compass Sensor State
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorOperations">
+            <summary>
+            MindSensors Compass Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorOperations.#ctor">
+            <summary>
+            Compass Sensor Operations Port
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorState)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassSensorOperations.ConnectToBrick(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Post Configure Sensor Connection with body and return the response port.
+            </summary>
+            <param name="sensorPort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CReadMindSensorsCompassSensor">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CReadMindSensorsCompassSensor.#ctor">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CReadMindSensorsCompassSensor.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CReadMindSensorsCompassSensor.GetResponse(System.Byte[])">
+            <summary>
+            The matching LEGO Response
+            </summary>
+            <param name="responseData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CInitializeMindSensorsCompass">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CInitializeMindSensorsCompass.#ctor">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CInitializeMindSensorsCompass.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            MindSensors Read Compass Sensor Data
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CResponseMindSensorsCompassSensor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CResponseMindSensorsCompassSensor.#ctor">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CResponseMindSensorsCompassSensor.#ctor(System.Byte[])">
+            <summary>
+            LegoResponse: I2C Sensor Type
+            </summary>
+            <param name="responseData"></param>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Sample.MindSensors.Compass.I2CResponseMindSensorsCompassSensor.Heading">
+            <summary>
+            Compass Heading
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.ConnectToBrick">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.ConnectToBrick.#ctor">
+            <summary>
+            Configure Device Connection
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.ConnectToBrick.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            Configure Device Connection
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig">
+            <summary>
+            MindSensors Compass Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig.#ctor">
+            <summary>
+            MindSensors Compass Sensor Configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig.#ctor(Microsoft.Robotics.Services.Sample.Lego.Nxt.Common.NxtSensorPort)">
+            <summary>
+            MindSensors Compass Sensor Configuration.
+            </summary>
+            <param name="sensorPort"></param>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig.Name">
+            <summary>
+            The name of this Compass Sensor instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig.SensorPort">
+            <summary>
+            LEGO NXT Sensor Port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Sample.MindSensors.Compass.CompassConfig.PollingFrequencyMs">
+            <summary>
+            Polling Freqency (ms)
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>User.SimulatedDepthcam.Y2011.M02</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources.FrameRateOutOfRange">
+            <summary>
+              Looks up a localized string similar to The frame rate must be between 1 and 30..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Resources.InvalidTiltAngle">
+            <summary>
+              Looks up a localized string similar to The tilt angle must be between 30 and -30 degrees..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService">
+            <summary>
+            Provides access to a simulated Depth Camera contract
+            using physics raycasting and the LaserRangeFinderEntity
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService._state">
+            <summary>
+            The DepthCam sensor state
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService._mainPort">
+            <summary>
+            The main port
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService._subMgrPort">
+            <summary>
+            The SubscriptionManager Partner
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.webcamPort">
+            <summary>
+            The WebCam partner
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.xslttransform">
+            <summary>
+            Depth Camera transform used to render the depth cam on a web page.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.utilitiesPort">
+            <summary>
+            Dssp Http Utilities port used as a parameter for the http helper methods.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimulatedDepthCameraService constructor that takes a PortSet to notify when the service is created
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.Start">
+            <summary>
+            Start initializes SimulatedDepthcamService and listens for drop messages
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.GetHandler(Microsoft.Robotics.Services.DepthCamSensor.Get)">
+            <summary>
+            Get the SimulatedDepthcam state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.ReplaceHandler(Microsoft.Robotics.Services.DepthCamSensor.Replace)">
+            <summary>
+            Processes a replace message
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.SubscribeHandler(Microsoft.Robotics.Services.DepthCamSensor.Subscribe)">
+            <summary>
+            Subscribe to SimulatedDepthcam service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.HttpGetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Http Get handler 
+            </summary>
+            <param name="get">Http Get Request</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.SimulatedDepthCameraService.HttpQueryHandler(Microsoft.Dss.Core.DsspHttp.HttpQuery)">
+            <summary>
+            Http Query Handler
+            </summary>
+            <param name="query">Htt Query Request</param>
+            <returns>CCR Task Chunk</returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Contract">
+            <summary>
+            Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.DepthCamera.Contract.Identifier">
+            <summary>
+            unique contract identifier 
+            </summary>
+        </member>
+    </members>
+</doc>

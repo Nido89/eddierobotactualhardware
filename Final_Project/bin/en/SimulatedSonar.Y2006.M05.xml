@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedSonar.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SonarEntity">
+            <summary>
+            Models a sonar sensor using physics raycasting to determine impact points
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SonarEntity.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SonarEntity.#ctor(Microsoft.Robotics.PhysicalModel.Pose)">
+            <summary>
+            Initialization constructor
+            </summary>
+            <param name="localPose"></param>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService">
+            <summary>
+            Provides access to a simulated Sonar contract
+            using physics raycasting and the SonarEntity
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimulatedSonarService constructor that takes a PortSet to notify when the service is created
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.Start">
+            <summary>
+            Start initializes SimulatedSonarService and listens for drop messages
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.GetHandler(Microsoft.Robotics.Services.Sonar.Get)">
+            <summary>
+            Get the SimulatedSonar state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.GetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Get the SimulatedSonar state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.ReplaceHandler(Microsoft.Robotics.Services.Sonar.Replace)">
+            <summary>
+            Processes a replace message
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.SubscribeHandler(Microsoft.Robotics.Services.Sonar.Subscribe)">
+            <summary>
+            Subscribe to SimulatedSonar service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.SimulatedSonarService.ReliableSubscribeHandler(Microsoft.Robotics.Services.Sonar.ReliableSubscribe)">
+            <summary>
+            Subscribe to SimulatedSonar service
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Contract">
+            <summary>
+            LaserRangeFinder Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.Sonar.Contract.Identifier">
+            <summary>
+            LaserRangeFinder unique contract identifier 
+            </summary>
+        </member>
+    </members>
+</doc>

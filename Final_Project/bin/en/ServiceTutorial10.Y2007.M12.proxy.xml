@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial10.Y2007.M12.Proxy</name>
+    </assembly>
+    <members>
+        <member name="T:ServiceTutorial10.Proxy.ServiceTutorial10State">
+            <summary>
+                       The ServiceTutorial10 State
+                       </summary>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.ServiceTutorial10State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ServiceTutorial10State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.ServiceTutorial10State.Clone">
+             <summary>
+            Clones ServiceTutorial10State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.ServiceTutorial10State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ServiceTutorial10State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.ServiceTutorial10State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ServiceTutorial10State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ServiceTutorial10State</returns>
+        </member>
+        <member name="P:ServiceTutorial10.Proxy.ServiceTutorial10State.FirstName">
+            <summary>
+                       This property specifies the first name of a person. 
+                       </summary>
+        </member>
+        <member name="P:ServiceTutorial10.Proxy.ServiceTutorial10State.Initials">
+            <summary>
+                       This property specifies any middle initials of a person. 
+                       </summary>
+        </member>
+        <member name="P:ServiceTutorial10.Proxy.ServiceTutorial10State.LastName">
+            <summary>
+                       This property specifies the last name of a person. 
+                       </summary>
+        </member>
+        <member name="P:ServiceTutorial10.Proxy.ServiceTutorial10State.LastModified">
+            <summary>
+                       This property specifies the last time this state was modified. 
+                       </summary>
+        </member>
+        <member name="T:ServiceTutorial10.Proxy.TutorialCategories">
+            <summary>
+                       Categories present a mechanism for grouping together related services.
+                       </summary>
+        </member>
+        <member name="F:ServiceTutorial10.Proxy.TutorialCategories.ServiceTutorial">
+            <summary>
+                       Indicates that the service is a DSS service tutorial.
+                       </summary>
+        </member>
+        <member name="F:ServiceTutorial10.Proxy.TutorialCategories.RoboticsTutorial">
+            <summary>
+                       Indicates that the service is a robotics tutorial.
+                       </summary>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.TutorialCategories.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TutorialCategories to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.TutorialCategories.Clone">
+             <summary>
+            Clones TutorialCategories
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.TutorialCategories.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TutorialCategories to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.TutorialCategories.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TutorialCategories
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TutorialCategories</returns>
+        </member>
+        <member name="T:ServiceTutorial10.Proxy.Get">
+            <summary>
+                       The ServiceTutorial10 Get Operation returns the current state of the service
+                       </summary>
+        </member>
+        <member name="T:ServiceTutorial10.Proxy.ServiceTutorial10Operations">
+            <summary>
+                       The ServiceTutorial10 Main Operations Port defines public operarations supported by this service
+                       </summary>
+        </member>
+        <member name="T:ServiceTutorial10.Proxy.Contract">
+            <summary>
+                       Implementation class for ServiceTutorial10
+                       </summary>
+            <remarks>
+                       This tutorial shows how to document a service using several features.
+                       </remarks>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:ServiceTutorial10.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

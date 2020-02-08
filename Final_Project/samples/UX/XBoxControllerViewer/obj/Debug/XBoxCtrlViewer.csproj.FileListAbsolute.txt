@@ -1,0 +1,13 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.XBoxCtrlViewer.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.XBoxCtrlViewer.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\AppManifest.xaml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.XBoxCtrlViewer.xap
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\TestPage.html
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\App.g.cs
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\XBoxCtrlGraphic.g.cs
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\Page.g.cs
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\User.XBoxCtrlViewer.g.resources
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\User.XBoxCtrlViewer.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\User.XBoxCtrlViewer.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\UX\XBoxControllerViewer\obj\Debug\XapCacheFile.xml

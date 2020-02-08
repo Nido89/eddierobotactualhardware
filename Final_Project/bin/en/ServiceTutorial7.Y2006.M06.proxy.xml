@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceTutorial7.Y2006.M06.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:RoboticsServiceTutorial7.Proxy.ServiceTutorial7State.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ServiceTutorial7State to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.ServiceTutorial7State.Clone">
+             <summary>
+            Clones ServiceTutorial7State
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.ServiceTutorial7State.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ServiceTutorial7State to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.ServiceTutorial7State.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ServiceTutorial7State
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ServiceTutorial7State</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.TickCount.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current TickCount to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.TickCount.Clone">
+             <summary>
+            Clones TickCount
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.TickCount.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current TickCount to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.TickCount.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes TickCount
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized TickCount</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.IncrementTickRequest.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current IncrementTickRequest to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.IncrementTickRequest.Clone">
+             <summary>
+            Clones IncrementTickRequest
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.IncrementTickRequest.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current IncrementTickRequest to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.IncrementTickRequest.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes IncrementTickRequest
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized IncrementTickRequest</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:RoboticsServiceTutorial7.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

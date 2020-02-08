@@ -1,0 +1,42 @@
+newmtl default
+illum 2
+Ka .20 .20 .20
+Kd .80 .80 .80
+Ks 1.00 1.00 1.00
+Ns 64.00
+
+newmtl Flat_Black
+illum 2
+Ka .00 .00 .00
+Kd .13 .13 .13
+Ks 1.00 1.00 1.00
+Ns 32.00
+
+newmtl Silver1
+illum 2
+Ka .00 .00 .00
+Kd .88 .88 .88
+Ks 1.00 1.00 1.00
+Ns 32.00
+
+newmtl Translucent
+illum 2
+Ka .00 .00 .00
+Kd .87 .87 .87
+Ks .50 .50 .50
+Ns 32.00
+
+newmtl blinn4SG
+illum 2
+Ka .00 .00 .00
+Kd .13 .13 .13
+Ks 1.00 1.00 1.00
+Ns 32.00
+
+newmtl initialShadingGroup
+illum 2
+Ka .00 .00 .00
+Kd .50 .50 .50
+Ks 1.00 1.00 1.00
+Ns 32.00
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoombaState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/01/irobot.html">
+  <BaudRate>0</BaudRate>
+  <Name>Johnny</Name>
+  <SerialPort>0</SerialPort>
+  <IRobotModel>Create</IRobotModel>
+  <ConnectionType>BluetoothAdapterModule</ConnectionType>
+  <PollingInterval>0</PollingInterval>
+  <SongDefinitions />
+  <CreateNotifications>
+  <CreateSensorPacket>AllBumpsCliffsAndWalls</CreateSensorPacket>
+  </CreateNotifications>
+</RoombaState>

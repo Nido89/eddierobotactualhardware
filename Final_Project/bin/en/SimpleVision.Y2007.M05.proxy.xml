@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleVision.Y2007.M05.Proxy</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.SimpleVisionState.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current SimpleVisionState to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.SimpleVisionState.Clone">
+             <summary>
+            Clones SimpleVisionState
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.SimpleVisionState.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current SimpleVisionState to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.SimpleVisionState.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes SimpleVisionState
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized SimpleVisionState</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ColorVector.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ColorVector to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ColorVector.Clone">
+             <summary>
+            Clones ColorVector
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ColorVector.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ColorVector to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ColorVector.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ColorVector
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ColorVector</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ObjectResult.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current ObjectResult to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ObjectResult.Clone">
+             <summary>
+            Clones ObjectResult
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ObjectResult.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current ObjectResult to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.ObjectResult.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes ObjectResult
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized ObjectResult</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.FaceResult.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current FaceResult to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.FaceResult.Clone">
+             <summary>
+            Clones FaceResult
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.FaceResult.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current FaceResult to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.FaceResult.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes FaceResult
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized FaceResult</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.RectangleType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current RectangleType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.RectangleType.Clone">
+             <summary>
+            Clones RectangleType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.RectangleType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current RectangleType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.RectangleType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes RectangleType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized RectangleType</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.HandGestureResult.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current HandGestureResult to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.HandGestureResult.Clone">
+             <summary>
+            Clones HandGestureResult
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.HandGestureResult.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current HandGestureResult to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.HandGestureResult.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes HandGestureResult
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized HandGestureResult</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.PointType.CopyTo(Microsoft.Dss.Core.IDssSerializable)">
+             <summary>
+            Copies the data member values of the current PointType to the specified target object
+            </summary>
+            <param name="target">target object (must be an instance of)</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.PointType.Clone">
+             <summary>
+            Clones PointType
+            </summary>
+            <returns>cloned value</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.PointType.Serialize(System.IO.BinaryWriter)">
+             <summary>
+            Serializes the data member values of the current PointType to the specified writer
+            </summary>
+            <param name="writer">the writer to which to serialize</param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.PointType.Deserialize(System.IO.BinaryReader)">
+             <summary>
+            Deserializes PointType
+            </summary>
+            <param name="reader">the reader from which to deserialize</param>
+            <returns>deserialized PointType</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,System.String,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="service">service path</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Sample.SimpleVision.Proxy.Contract.CreateService(Microsoft.Dss.Services.Constructor.ConstructorPort,Microsoft.Dss.ServiceModel.Dssp.PartnerType[])">
+            <summary>Creates a new instance of the service.</summary>
+            <param name="constructorServicePort">Service constructor port</param>
+            <param name="partners">the partners of the service instance</param>
+            <returns>create service response port</returns>
+        </member>
+    </members>
+</doc>

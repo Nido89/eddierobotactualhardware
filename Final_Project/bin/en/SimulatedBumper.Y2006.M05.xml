@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimulatedBumper.Y2006.M05</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService">
+            <summary>
+            Provides access to a simulated contact sensor array used as bumpers.\n(Uses the Generic Contacts contract.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.#ctor(Microsoft.Dss.ServiceModel.Dssp.DsspServiceCreationPort)">
+            <summary>
+            SimulatedBumperService constructor that takes a PortSet to notify when it is created
+            </summary>
+            <param name="creationPort"></param>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.Start">
+            <summary>
+            Start initializes SimulatedBumperService and listens for drop messages 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.GetHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Get)">
+            <summary>
+            Get SimulatedBumperService state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.GetHandler(Microsoft.Dss.Core.DsspHttp.HttpGet)">
+            <summary>
+            Get SimulatedBumperService state
+            </summary>
+            <param name="get"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.ReplaceHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Replace)">
+            <summary>
+            Handler for replace messages
+            </summary>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.SubscribeHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.Subscribe)">
+            <summary>
+            Handler for subscribe messages
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.SimulatedBumperService.ReliableSubscribeHandler(Microsoft.Robotics.Services.ContactSensor.Proxy.ReliableSubscribe)">
+            <summary>
+            Handler for subscribe messages
+            </summary>
+            <param name="subscribe"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.Contract">
+            <summary>
+            SimulatedBumperService Contract
+            </summary>
+        </member>
+        <member name="F:Microsoft.Robotics.Services.Simulation.Sensors.Bumper.Contract.Identifier">
+            <summary>
+            SimulatedBumperService unique contract identifier 
+            </summary>
+        </member>
+    </members>
+</doc>

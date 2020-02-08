@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FlexDialogState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/robotics/2007/08/flexdialog.html">
+	<Title>Skeleton Position</Title>
+	<Visible>true</Visible>
+	<Controls>
+		<FlexControl>
+			<Id>Position</Id>
+			<ControlType>TextBox</ControlType>
+			<Text />
+			<Value />
+		</FlexControl>
+	</Controls>
+	<Buttons />
+</FlexDialogState>

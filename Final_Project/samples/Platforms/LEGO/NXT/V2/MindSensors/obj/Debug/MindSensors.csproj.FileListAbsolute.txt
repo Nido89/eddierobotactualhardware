@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\LEGO\NXT\V2\MindSensors\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.MindSensors.Y2007.M07.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.MindSensors.Y2007.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.MindSensors.Y2007.M07.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.MindSensors.Y2007.M07.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\LEGO\NXT\V2\MindSensors\obj\Debug\User.MindSensors.Y2007.M07.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Platforms\LEGO\NXT\V2\MindSensors\obj\Debug\User.MindSensors.Y2007.M07.pdb

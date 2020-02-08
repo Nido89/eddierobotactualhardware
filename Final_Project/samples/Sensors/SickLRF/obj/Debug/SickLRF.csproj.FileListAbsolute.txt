@@ -1,0 +1,7 @@
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\en\User.SickLRF.Y2005.M12.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SickLRF.Y2005.M12.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SickLRF.Y2005.M12.pdb
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\bin\User.SickLRF.Y2005.M12.xml
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\SickLRF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\SickLRF\obj\Debug\User.SickLRF.Y2005.M12.dll
+C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\Sensors\SickLRF\obj\Debug\User.SickLRF.Y2005.M12.pdb

@@ -1,0 +1,6 @@
+<RoboticsProject xmlns="clr-namespace:Microsoft.Robotics.Authoring.Project;assembly=Microsoft.VisualProgrammingLanguage.Editor" Version="RoboticsDevStudio2008">
+  <RoboticsProject.Settings>
+    <ProjectSettings ClrNamespacePrefix="Robotics" KeyFile="C:\Users\EWHA\Microsoft Robotics Dev Studio 4\samples\mrisamples.snk" IncludeDebuggingInformation="True" ContractPrefix="http://schemas.microsoft.com" />
+  </RoboticsProject.Settings>
+  <Dataflow Source="Dataflow.xml.compressed" />
+</RoboticsProject>
